@@ -1,8 +1,11 @@
 @import 'normalize.css';
 @import 'mixins.scss';
+@import 'carousel.css';
 
 body{
     background:#eee;
+    font-family: 'Source Sans Pro';
+    color:$black;
 }
 
 #main-header{
@@ -54,6 +57,7 @@ body{
   width:100% !important;
   right:0;
   transition: all 0.3s;
+  height:50px;
 }
 
 .sub-nav.hidden{
@@ -84,9 +88,19 @@ body{
 }
 
 #main-content{
-    section{
+    .section{
         background: #fff;
         min-height: 400px;
         margin-bottom: 10px;
+        padding:15px;
+        h2{
+            font-family: 'Gentium Basic';
+            font-weight: bold;
+            font-style: italic;
+            color:$purple;
+            font-size:1.4375em;
+            width:100%;
+            border-bottom: 1px solid $gray;
+        }
     }
 }
