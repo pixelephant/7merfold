@@ -175,15 +175,15 @@ $(document).ready(function(){
       });
 
       $("#search-trigger").click(function(){
-        $("#search-form").stop().slideToggle(500,"easeInOutQuad",function(){
-          $("#search-trigger").parent().toggleClass("arrow_box");
+        $("#search-form").toggleClass("open").stop().slideToggle(500,"easeInOutQuad",function(){
+          if($("#search-form").hasClass("open")){
+            $("#search-form input[type='search']").focus();
+          }
+          else{
+            $("#search-form input[type='search']").blur(); 
+           }
         });
-        if($("#search-form").hasClass("open")){
-          $("#search-form input[type='search']").focus();
-        }
-        else{
-          $("#search-form input[type='search']").blur(); 
-        }
+        
         return false;
       });
       
