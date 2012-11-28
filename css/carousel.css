@@ -101,3 +101,20 @@
 	color: #fff;
 	opacity: .8;
 }
+
+.slag {
+	 float: left;
+	 width: 50%;
+ }
+ @media (min-width: 30em){
+	 .slag {
+		 width: 33.333333333333333333%;
+	 }
+ 
+ }
+ @media (min-width: 50em){
+	 .slag {
+		 width: 25%;
+	 }
+ 
+ }

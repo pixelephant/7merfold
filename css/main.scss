@@ -6,15 +6,25 @@ body{
     background:#eee;
     font-family: 'Source Sans Pro';
     color:$black;
+    background:$blue;
 }
 
 #main-header{
     width:100%;
-    overflow:hidden;
+    //overflow:hidden;
     background:#fff;
-    height:50px;
-    border-bottom:1px solid;
+    //height:50px;
+    border-bottom:1px solid $gray;
     margin-bottom: 10px;
+    position:relative;
+    z-index:2;
+    @include box-shadow;
+}
+
+#z-wrap{
+  overflow:hidden;
+  position:relative;
+  z-index:2;
 }
 
 #logo{
@@ -35,6 +45,7 @@ body{
         float: left;
         height:100%;
         text-align: center;
+        border-left:1px solid $gray;
     }
     a{
         font-size: 0.6em;
@@ -89,13 +100,14 @@ body{
 
 #main-content{
     .section{
+        @include box-shadow;
         background: #fff;
         min-height: 400px;
         margin-bottom: 10px;
         padding:15px;
         h2{
             font-family: 'Gentium Basic';
-            font-weight: bold;
+            font-weight:normal;
             font-style: italic;
             color:$purple;
             font-size:1.4375em;
@@ -103,4 +115,34 @@ body{
             border-bottom: 1px solid $gray;
         }
     }
+}
+
+#search-form{
+  padding:1%;
+  background:#fff;
+  display:none;
+  //@include t;
+  position:relative;
+  z-index:1;
+  border-top:1px solid $gray;
+  input[type="search"]{
+    border:none;
+    padding: 0.8em 1em;
+    width: 82%;
+    outline:none;
+  }
+  input[type="submit"]{
+    width:10%;
+    @include purple-button;
+  }
+}
+
+::-webkit-input-placeholder {
+   font-family:'Source Sans Pro';
+   font-weight:200;
+}
+
+:-moz-placeholder {  
+  font-family:'Source Sans Pro';
+   font-weight:200;
 }

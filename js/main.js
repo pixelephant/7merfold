@@ -22,7 +22,7 @@ $(document).ready(function(){
       });
 
       $("#sub-grid li a").click(function(){
-      		console.log(12);
+      		
           var $this = $(this);
           var t = $this.attr("href");
           var ul = $("#jPanelMenu-menu #sub-grid");
@@ -37,6 +37,15 @@ $(document).ready(function(){
           return false;
       });
 
+      $("#search-trigger").click(function(){
+        $("#search-form").slideToggle().toggleClass("open");
+        if($("#search-form").hasClass("open")){
+          $("#search-form input[type='search']").focus();
+        }
+        else{
+          $("#search-form input[type='search']").blur(); 
+        }
+      });
       
 
 });
