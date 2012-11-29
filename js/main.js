@@ -201,6 +201,67 @@ $(document).ready(function(){
         return false;
       });
 
-      $('.carousel').carousel();
+      $('.carousel').carousel({
+         elements: {       // which navigational elements to show
+        prevNext: true,   // buttons for previous / next slide
+        handles: true,    // button for each slide showing its index
+        counter: false     // "Slide x of y"
+    },
+    behavior: {
+        horizontal: true, // set to false for vertical slider
+        circular: true,  // go to first slide after last one
+        autoplay: 0,      // auto-advance interval (0: no autoplay)
+        keyboardNav: true // enable arrow and [p][n] keys for prev / next actions
+    },
+        text:{
+          next: ">",
+          prev: "<",
+          handle: "•"
+        }
+      });
+
+
+      function sleep(ms)
+  {
+    var dt = new Date();
+    dt.setTime(dt.getTime() + ms);
+    while (new Date().getTime() < dt.getTime());
+  }
+
+    $(".ajax h2 a").click(function(){
+      $(this).find("span").html("...");
+      var $this = $(this);
+      var $h2 = $this.parent();
+      var $cont = $h2.next();
+      var $tog = $h2.find("span");
+      if(!$h2.hasClass("loaded")){
+        $cont.load($this.attr("href"),function(resp){
+          $h2.addClass("loaded");
+          $cont.slideToggle();
+          $h2.toggleClass("open");
+      if($h2.hasClass("open")){
+        $tog.html("-");
+      }
+      else{
+       $tog.html("+"); 
+      }
+        });
+      }
+      else{
+        $cont.slideToggle();
+        $h2.toggleClass("open");
+      if($h2.hasClass("open")){
+        $tog.html("-");
+      }
+      else{
+       $tog.html("+"); 
+      }
+      }
+      return false;
+    });
+
+
+
+
 
 });

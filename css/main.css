@@ -16,6 +16,9 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
+.hidden {
+  display: none; }
+
 body {
   background: #eee;
   font-family: 'Source Sans Pro';
@@ -142,6 +145,16 @@ body {
     /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
     background: #fff;
     margin-bottom: 10px; }
+    #main-content .section.ajax a {
+      display: block;
+      overflow: hidden;
+      text-decoration: none;
+      color: #69297d; }
+      #main-content .section.ajax a span {
+        float: right;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        color: #333; }
     #main-content .section h2 {
       font-family: 'Gentium Basic';
       font-weight: normal;

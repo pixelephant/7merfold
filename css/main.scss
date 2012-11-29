@@ -25,6 +25,10 @@
 }
 
 
+.hidden{
+  display: none;
+}
+
 body{
     background:#eee;
     font-family: 'Source Sans Pro';
@@ -168,6 +172,20 @@ body{
 #main-content{
   margin-top: 10px;
     .section{
+      &.ajax{
+        a{
+          display: block;
+          overflow: hidden;
+          text-decoration: none;
+          color: $purple;
+          span{
+            float: right;
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            color:#333;
+          }
+        }
+      }
         @include box-shadow;
         background: #fff;
         margin-bottom: 10px;
