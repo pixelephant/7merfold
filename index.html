@@ -32,22 +32,28 @@
                   </a>
                   <nav id="mobile-nav">
                       <ul class="clearfix">
-                          <li><a id="contact-trigger" href="#">Kapcsolat</a></li>
-                          <li><a id="search-trigger" href="#">Keresés</a></li>
-                          <li><a id="sub-trigger" href="#">Menü</a></li>
+                          <li><a id="contact-trigger" href="#">
+                          <span aria-hidden="true" data-icon="c"></span>
+                          Kapcsolat</a></li>
+                          <li><a id="search-trigger" href="#">
+                          <span aria-hidden="true" data-icon="f"></span>
+                          Keresés</a></li>
+                          <li><a id="sub-trigger" href="#">
+                          <span aria-hidden="true" data-icon="t"></span>
+                          Menü</a></li>
                       </ul>
                   </nav>
                 <nav id="mobile-submenu">
-                    <h2><a href="#" class="close">&times;</a><span>Menü</span></h2>
+                    <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
                     <ul id="sub-grid">
-                      <li><a href="#sub1">1</a></li>
-                      <li><a href="#sub2">2</a></li>
-                      <li><a href="#sub3">3</a></li>
-                      <li><a href="#sub4">4</a></li>
-                      <li><a href="#sub5">5</a></li>
+                      <li><a href="#sub1">Városi kalandok</a></li>
+                      <li><a href="#sub2">Körutazások</a></li>
+                      <li><a href="#sub3">Üveghegyen túl</a></li>
+                      <li><a href="#sub4">Üveghegyen innen</a></li>
+                      <li><a href="#sub5">Felfedezőutak</a></li>
                       
-                      <li><a href="#sub5">5</a></li>
-                      <li><a href="#sub6">6</a></li><li><a href="#sub6">6</a></li>
+                      <li><a href="#sub6">Cégeknek</a></li>
+                      <li><a href="#sub7">Szolgáltatások</a></li>
                     </ul>
                     <ul class="sub-nav hidden" id="sub1">
                       <li>1</li>
@@ -80,6 +86,7 @@
                       <li>3</li>
                       <li>4</li>
                       <li>5</li>
+                      <li class="top"><a href="#">&uarr;</a></li>
                     </ul>
                 </nav>
             </header>
@@ -92,45 +99,65 @@
                 </div>
             
             <div id="main-content">
-                <section class="section" id="usp">
-                    <h2>Árvíztűrő tükörfúrógép</h2>
+                <section class="section arrow_box" id="usp">
+                    <h2>Személyre szabunk!</h2>
                     <div class="cont">
-                      <p>A kormány november elején döntött arról, hogy a felsőoktatási intézmények idei költségvetéséből 7,33 milliárd forintot zárolnak. Hoffmann Rózsa oktatásért felelős államtitkár miután elismerte a zárolás tényét, cáfolta, hogy ez pénzkivonást jelentene. Mint megjegyezte, senki számára sem meglepetés, hogy „meg kell húzni a nadrágszíjat", miután az Országgyűlés nemrég tárgyalt az ország eladósodásáról.</p>
+                      <p> A 7mérföld a személyre szabott utak specialistája, legyen az egy családi nyaralás, hétvégi városlátogatás, vagy céges csapatépítő túra. Irodánk a vízumintézéstől a programok megszervezésén át egészen az asztalfoglalásokig elintéz mindent.</p>
+                      <h3>Fedezd fel!</h3>
                     </div>
-                </section>
-                <section class="section" id="usp">
-                    <h2>Slider vagyok</h2>
-                    <div class="carousel" data-transition="slide">
-                        <div class="slag">
-                            <img src="http://placekitten.com/400/400" alt="">
-                        </div>
-                        <div class="slag">
-                            <img src="http://placekitten.com/g/400/400" alt="">
-                        </div>
-                        <div class="slag">
-                            <img src="http://placekitten.com/400/400" alt="">
-                        </div>
-                        <div class="slag">
-                            <img src="http://placekitten.com/g/400/400" alt="">
-                        </div>
-                        <div class="slag">
-                            <img src="http://placekitten.com/400/400" alt="">
-                        </div>
-                        <div class="slag">
-                            <img src="http://placekitten.com/g/400/400" alt="">
-                        </div>
-                    </div>
-                </section>
-                <section class="section" id="usp">
-                    
-                </section>
-                <section class="section" id="usp">
-                    
-                </section>
-                <section class="section" id="usp">
-                    
                 </section>
                 
+                
+                <section class="" id="explore">
+                  <a class="offer pulse" href="#">
+                    <img src="img/1.png" alt="">
+                    <h3>Városi kalandok</h3>
+                  </a>
+                  <a class="offer pulse" href="#">
+                    <img src="img/1.png" alt="">
+                    <h3>Felfedezőutak</h3>
+                  </a>
+                  <a class="offer pulse" href="#">
+                    <img src="img/1.png" alt="">
+                    <h3>Üveghegyen innen</h3>
+                  </a>
+                </section>
+                
+                
+                
+                <section class="slider section">
+                <h2>Legfrisebb utak</h2>
+                  <ul class="carousel cont" data-transition="slide">
+                        <li class="slag">
+                            <a class="offer" href="#">
+                              <img src="img/1.png" alt="">
+                              <h3>Korfu</h3>
+                            </a>
+                            <a class="offer" href="#">
+                              <img src="img/2.png" alt="">
+                              <h3>Tel-Aviv</h3>
+                            </a>
+                            <a class="offer" href="#">
+                              <img src="img/3.png" alt="">
+                              <h3>Portugál körutazás</h3>
+                            </a>
+                        </li>
+                        <li class="slag">
+                            <a class="offer" href="#">
+                              <img src="img/2.png" alt="">
+                              <h3>Tel-Aviv</h3>
+                            </a>
+                            <a class="offer" href="#">
+                              <img src="img/3.png" alt="">
+                              <h3>Portugál körutazás</h3>
+                            </a>
+                            <a class="offer" href="#">
+                              <img src="img/1.png" alt="">
+                              <h3>Korfu</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
             </div>
         
 

@@ -2,6 +2,29 @@
 @import 'mixins.scss';
 @import 'carousel.css';
 
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+
 body{
     background:#eee;
     font-family: 'Source Sans Pro';
@@ -20,20 +43,20 @@ body{
     @include box-shadow;
 }
 
-#z-wrap{
-  overflow:hidden;
-  position:relative;
-  z-index:2;
-}
-
 #logo{
     float: left;
-    width:52%;
+    width:43.75%;
+    text-align: center;
+}
+
+#logo img{
+  max-width:80%;
+  padding-top: 3%;
 }
 
 #mobile-nav{
     float:left;
-    width:48%;
+    width:56.25%;
     height:100%;
     ul{
         
@@ -47,27 +70,55 @@ body{
         border-left:1px solid $gray;
     }
     a{
-        font-size: 0.6em;
-        line-height: 50px;
+        height: 50px;
+        font-size: 0.75em;
+        line-height: 1;
         text-decoration: none;
         display:block;
-        height:100%;
+        padding-top:8px;
+        color:#000;
+        span{
+          line-height: 1;
+          display: block;
+          font-size: 2em;
+        }
     }
 }
 
 #jPanelMenu-menu h2{
     height: 50px;
-    border-bottom: 1px solid;
+    line-height: 50px;
+    overflow: hidden;
+    span{
+      height: 50px;
+      float: left;
+    }
+    border-bottom: 1px solid $gray;
+    font-family: 'Gentium Basic';
+    font-style: italic;
+    color:$purple;
+    padding:0 0.5em;
+    a{
+      float:right;
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      color:#000;
+    }
 }
 
 .sub-nav li{
   float: none !important;
   border: none !important;
-  border-bottom: 1px solid !important;
+  border-bottom: 1px solid $gray !important;
   width:100% !important;
   right:0;
   transition: all 0.3s;
   height:50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2em;
 }
 
 .sub-nav.hidden{
@@ -80,11 +131,28 @@ body{
   position: relative;
   overflow-y:scroll;
   li{
-    border:1px solid;
+    border:1px solid $gray;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    a{
+      font-family: 'Gentium Basic';
+      font-style: italic;
+      text-decoration: none;
+      color:#000;
+      font-size: 1em;
+      display: block;
+    }
+    &:nth-child(odd){
+      border-right:none;
+      border-left:none;
+    }
+    &:nth-child(even){
+     // border-left: none;
+    }
     border-top: none;
     width:50%;
     float:left;
-    height:50px;
   }
 }
 
@@ -94,7 +162,7 @@ body{
 
 #jPanelMenu-menu{
   background: white;
-  border-left: 1px solid;
+  right:-3% !important;
 }
 
 #main-content{
@@ -102,7 +170,6 @@ body{
     .section{
         @include box-shadow;
         background: #fff;
-        min-height: 400px;
         margin-bottom: 10px;
         h2{
             font-family: 'Gentium Basic';
@@ -112,7 +179,11 @@ body{
             font-size:1.25em;
             width:100%;
             border-bottom: 1px solid $gray;
-            padding:0.5em 0.25em;
+            padding:0.5em 3%;
+        }
+        .cont{
+           padding:0.8em 3%;
+           font-size: 0.875em;
         }
     }
 }
@@ -120,6 +191,90 @@ body{
 .no-touch #search-trigger{
   &:hover,&:focus{
     //@extend .arrow_box;
+  }
+}
+
+
+.arrow_box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ccc;
+}
+.arrow_box:after, .arrow_box:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+}
+.arrow_box:before {
+  border-color: rgba(204, 204, 204, 0);
+  border-top-color: #ccc;
+  border-width: 11px;
+  left: 50%;
+  margin-left: -11px;
+}
+
+#usp{
+  h3{
+    text-align: center;
+    font-weight: 200;
+    padding:1em 0;
+    font-size: 1.5em;
+  }
+}
+
+#explore{
+  overflow: hidden;
+  padding:6.25% 0;
+}
+
+a.offer{
+  img{
+    max-width: 100%;
+    display: inline;
+  }
+  a{
+    text-decoration: none;
+  }
+  h3{
+    font-family: 'Gentium Basic';
+    color: #fff;
+    font-style: italic;
+    padding-top: 10px;
+    font-weight: normal;
+  }
+  text-align: center;
+  text-decoration: none;
+  width: 33.33333%;
+  float: left;
+}
+
+.slider{
+  .carousel{
+    overflow: hidden;
+  }
+  .slag{
+    text-align: center;
+    background: #fff;
+    overflow: hidden;
+    a{
+      float: left;
+      width: 33.333333%;
+      h3{
+        color:#333;
+      }
+    }
   }
 }
 
@@ -135,11 +290,13 @@ body{
   input[type="search"]{
     border:none;
     padding: 0.8em 1em;
-    width: 82%;
+    width: 70%;
     outline:none;
+    font-weight:200;
+    margin-top: 3px;
   }
   input[type="submit"]{
-    width:10%;
+    width:16%;
     @include purple-button;
     float: right;
   }
@@ -157,4 +314,55 @@ body{
 :-moz-placeholder {  
   font-family:'Source Sans Pro';
    font-weight:200;
+}
+
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+
+@-webkit-keyframes pulse {
+    0% { -webkit-transform: scale(1); } 
+  50% { -webkit-transform: scale(1.1); }
+    100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulse {
+    0% { -moz-transform: scale(1); }  
+  50% { -moz-transform: scale(1.1); }
+    100% { -moz-transform: scale(1); }
+}
+@-o-keyframes pulse {
+    0% { -o-transform: scale(1); }  
+  50% { -o-transform: scale(1.1); }
+    100% { -o-transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); } 
+  50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-font-smoothing: antialiased; 
 }

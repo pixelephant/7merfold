@@ -140,7 +140,8 @@ $(document).ready(function(){
 	var jPM = $.jPanelMenu({
         menu: '#mobile-submenu',
         trigger: '#sub-trigger',
-        openPosition:"80%"
+        openPosition:"80%",
+        keyboardShortcuts: false
       });
      jPM.on();
 
@@ -166,7 +167,7 @@ $(document).ready(function(){
           ul.animate({
             left: "-100%"
           },300,function(){
-          	console.log(ul);
+          	
             ul.hide();
             ul.siblings(t).removeClass("hidden");
             $(".close").addClass("back").removeClass("close").html("&larr;").parent().find("span").text($this.text());
@@ -186,6 +187,20 @@ $(document).ready(function(){
         
         return false;
       });
-      
+
+      var t = setInterval(function(){
+        $("#explore a:not('.animated')").eq(0).addClass("animated");
+        if(!$("#explore a:not('.animated')").length){
+          clearInterval(t);
+        }
+      },400);
+
+
+      $(".sub-nav .top").click(function(){
+        $("#jPanelMenu-menu").animate({ scrollTop: 0 }, "slow");
+        return false;
+      });
+
+      $('.carousel').carousel();
 
 });
