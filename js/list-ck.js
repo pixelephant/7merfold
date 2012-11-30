@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".select-trigger").click(function(){$(this).parent().next().slideToggle()});$(".selecter ul .close").click(function(){$(this).parents("ul").slideToggle()});$(".selecter ul a").click(function(){var e=$(this).attr("href"),t=$(e);$("html,body").animate({scrollTop:t.offset().top},"slow");return!1})});

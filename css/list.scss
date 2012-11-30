@@ -1,0 +1,80 @@
+@import 'mixins.scss';
+
+
+.selecter h2{
+  overflow: hidden;
+  padding:0 !important;
+  span{
+    float:left;
+      padding:0.8em 1em;
+  }
+}
+
+.selecter ul{
+  display: none;
+  li{
+    padding:0.8em 2em;
+    border-bottom: 1px solid $gray;
+    &.close a{
+      text-align: right;
+      font-weight: bold;
+      font-style: normal;
+      font-family: 'Source Sans';
+    }
+    a{
+      display: block;
+      text-decoration: none;
+      color:$black;
+      font-family: 'Gentium Basic';
+      font-style: italic;
+    }
+  }
+}
+
+.offer-list{
+  overflow: hidden;
+  a.offer{
+    width: 50%;
+    text-align: center;
+    h3{
+      color:$black;
+      font-style: normal;
+      padding-top: 0;
+    }
+    .stars{
+      color:$yellow;
+      display: block;
+      text-align: center;
+      padding: 0.5em 0;
+    }
+  }
+}
+
+.region{
+  margin-bottom: 40px;
+  overflow: hidden;
+  h3{
+    font-family: 'Gentium Basic';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.25em;
+    padding:0.8em 1em;
+  }
+}
+
+.select-trigger{
+  float:right;
+  @include purple-button;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+//small tablet (600px,37.5em)
+
+@media all and (min-width: 37.5em){
+  #explore .t{
+    display: block;
+  }
+}
+
+

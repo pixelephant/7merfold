@@ -2,6 +2,8 @@ $black: #333333;
 $purple :#69297D;
 $gray:#CCCCCC;
 $blue:#4897C8;
+$darkblue:#1A7DBA;
+$yellow:#FBB03B;
 
 @mixin purple-button{
 	padding:0;
@@ -13,6 +15,21 @@ $blue:#4897C8;
 	text-align:center;
 	padding:0.8em 1em;
 	color:#fff;
+}
+
+@mixin input{
+	margin:0;
+	padding:0;
+	border: none;
+	background: none;
+
+	border: 1px solid $gray;
+	background: #fff;
+	padding:0.5em;
+	font-weight: 200;
+	display: block;
+	margin:10px 0;
+	width: 100%;
 }
 
 @mixin t($dur:0.3s){

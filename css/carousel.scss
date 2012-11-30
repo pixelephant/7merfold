@@ -38,6 +38,7 @@
 .carousel-nav span {
     cursor: pointer;
     float: left;
+    font-size: 1.2em;
 }
 .carousel-nav .carousel-next {
     float: right;
@@ -57,18 +58,19 @@
 .carousel-handles {
     margin: 0.5em 0;
     text-align: center;
+    font-size: 1.2em;
 }
 .carousel-handles span {
     cursor: pointer;
     margin: 0 0.5em;
 }
 .carousel-handles .state-disabled {
-    color: #999;
+    color: $black;
     cursor: default;
     outline: none;
 }
 .carousel-handles .state-current {
-    color: #c30;
+    color: $blue;
     cursor: default;
     outline: none;
 }

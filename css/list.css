@@ -1,0 +1,66 @@
+.selecter h2 {
+  overflow: hidden;
+  padding: 0 !important; }
+  .selecter h2 span {
+    float: left;
+    padding: 0.8em 1em; }
+
+.selecter ul {
+  display: none; }
+  .selecter ul li {
+    padding: 0.8em 2em;
+    border-bottom: 1px solid #cccccc; }
+    .selecter ul li.close a {
+      text-align: right;
+      font-weight: bold;
+      font-style: normal;
+      font-family: 'Source Sans'; }
+    .selecter ul li a {
+      display: block;
+      text-decoration: none;
+      color: #333333;
+      font-family: 'Gentium Basic';
+      font-style: italic; }
+
+.offer-list {
+  overflow: hidden; }
+  .offer-list a.offer {
+    width: 50%;
+    text-align: center; }
+    .offer-list a.offer h3 {
+      color: #333333;
+      font-style: normal;
+      padding-top: 0; }
+    .offer-list a.offer .stars {
+      color: #fbb03b;
+      display: block;
+      text-align: center;
+      padding: 0.5em 0; }
+
+.region {
+  margin-bottom: 40px;
+  overflow: hidden; }
+  .region h3 {
+    font-family: 'Gentium Basic';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 1.25em;
+    padding: 0.8em 1em; }
+
+.select-trigger {
+  float: right;
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  background: #69297d;
+  text-align: center;
+  padding: 0.8em 1em;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none; }
+
+@media all and (min-width: 37.5em) {
+  #explore .t {
+    display: block; } }
