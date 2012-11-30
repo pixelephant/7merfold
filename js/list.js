@@ -2,6 +2,7 @@ $(document).ready(function(){
 
   $(".select-trigger").click(function(){
     $(this).parent().next().slideToggle();
+    $(this).toggleClass("purple-arrow");
   });
 
   $(".selecter ul .close").click(function(){

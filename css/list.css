@@ -1,5 +1,59 @@
+.white-arrow {
+  position: relative;
+  background: #fff; }
+
+.white-arrow:after, .white-arrow:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.white-arrow:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px; }
+
+.white-arrow:before {
+  border-color: rgba(204, 204, 204, 0);
+  border-top-color: #ccc;
+  border-width: 11px;
+  left: 50%;
+  margin-left: -11px; }
+
+.purple-arrow {
+  position: relative;
+  background: 69297D;
+  border: 1px solid #69297D; }
+
+.purple-arrow:after, .purple-arrow:before {
+  top: 99%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.purple-arrow:after {
+  border-color: rgba(146, 151, 13, 0);
+  border-top-color: 69297D;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px; }
+
+.purple-arrow:before {
+  border-color: rgba(105, 41, 125, 0);
+  border-top-color: #69297D;
+  border-width: 11px;
+  left: 50%;
+  margin-left: -11px; }
+
 .selecter h2 {
-  overflow: hidden;
   padding: 0 !important; }
   .selecter h2 span {
     float: left;

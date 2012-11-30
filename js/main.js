@@ -617,6 +617,7 @@ $(document).ready(function(){
 
       $("#search-trigger").click(function(){
         $("#search-form").toggleClass("open").stop().slideToggle(500,"easeInOutQuad",function(){
+          $("#search-trigger").toggleClass("white-arrow");
           if($("#search-form").hasClass("open")){
             $("#search-form input[type='search']").focus();
           }
