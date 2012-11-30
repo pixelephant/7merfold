@@ -150,6 +150,7 @@ body {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
   font-family: 'Gentium Basic';
+  font-weight: normal;
   font-style: italic;
   color: #69297d;
   padding: 0 0.5em; }
@@ -194,6 +195,7 @@ body {
     float: left; }
     #sub-grid li a {
       font-family: 'Gentium Basic';
+      font-weight: normal;
       font-style: italic;
       text-decoration: none;
       color: #000;
@@ -219,17 +221,23 @@ body {
     /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
     background: #fff;
     margin-bottom: 10px; }
+    #main-content .section h3 {
+      font-family: 'Gentium Basic';
+      font-weight: normal;
+      font-style: italic; }
     #main-content .section.half {
       float: left;
       width: 50%; }
       #main-content .section.half:nth-child(even) + * {
         clear: both; }
-    #main-content .section.ajax a {
+    #main-content .section.collapsible.closed .cont {
+      display: none; }
+    #main-content .section.ajax a, #main-content .section.collapsible a {
       display: block;
       overflow: hidden;
       text-decoration: none;
       color: #69297d; }
-      #main-content .section.ajax a span {
+      #main-content .section.ajax a span, #main-content .section.collapsible a span {
         float: right;
         font-family: 'Source Sans Pro';
         font-style: normal;
@@ -305,10 +313,10 @@ a.offer {
     text-decoration: none; }
   a.offer h3 {
     font-family: 'Gentium Basic';
-    color: #fff;
+    font-weight: normal;
     font-style: italic;
-    padding-top: 10px;
-    font-weight: normal; }
+    color: #fff;
+    padding-top: 10px; }
 
 .slider .carousel {
   overflow: hidden; }
@@ -348,6 +356,7 @@ a.offer {
     text-align: center;
     padding: 0.8em 1em;
     color: #fff;
+    text-decoration: none;
     float: right; }
 
 .news {
@@ -371,8 +380,8 @@ a.offer {
     font-size: 0.875em; }
   .news h3 {
     font-family: 'Gentium Basic';
-    font-style: italic;
     font-weight: normal;
+    font-style: italic;
     font-size: 1.25em; }
 
 #newsletter {
@@ -411,6 +420,7 @@ a.offer {
       text-align: center;
       padding: 0.8em 1em;
       color: #fff;
+      text-decoration: none;
       float: right; }
 
 .cta {
@@ -427,9 +437,30 @@ a.offer {
   .cta h2 a {
     font-size: 1.5em;
     font-family: 'Gentium Basic';
-    font-style: italic;
     font-weight: normal;
+    font-style: italic;
     color: #fff; }
+
+.getquote {
+  overflow: hidden;
+  text-align: center; }
+  .getquote a {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    background: #bc193c;
+    text-align: center;
+    padding: 0.8em 1em;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 40%;
+    margin: 20px auto; }
+  .getquote p {
+    width: 60%;
+    margin: 0 auto 20px auto; }
 
 #main-footer {
   width: 100%;

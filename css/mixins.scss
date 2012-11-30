@@ -4,6 +4,14 @@ $gray:#CCCCCC;
 $blue:#4897C8;
 $darkblue:#1A7DBA;
 $yellow:#FBB03B;
+$red:#BC193C;
+
+
+@mixin gi{
+	font-family: 'Gentium Basic';
+	font-weight: normal;
+	font-style: italic;
+}
 
 @mixin purple-button{
 	padding:0;
@@ -15,6 +23,20 @@ $yellow:#FBB03B;
 	text-align:center;
 	padding:0.8em 1em;
 	color:#fff;
+	text-decoration: none;
+}
+
+@mixin red-button{
+	padding:0;
+	margin:0;
+	border:none;
+	font-family:'Source Sans Pro';
+	font-style:italic;
+	background:$red;
+	text-align:center;
+	padding:0.8em 1em;
+	color:#fff;
+	text-decoration: none;
 }
 
 @mixin input{

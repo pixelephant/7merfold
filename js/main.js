@@ -637,6 +637,24 @@ $(document).ready(function(){
       });
 
 
+
+$(".collapsible h2 a").click(function(){
+  var $this = $(this);
+      var $h2 = $this.parent();
+      var $cont = $h2.next();
+      var $tog = $h2.find("span");
+  $cont.slideToggle();
+  $h2.toggleClass("open");
+  if($h2.hasClass("open")){
+        $tog.html("-");
+      }
+      else{
+       $tog.html("+"); 
+      }
+
+  return false;
+});
+
     $(".ajax h2 a").click(function(){
       $(this).find("span").html("...");
       var $this = $(this);

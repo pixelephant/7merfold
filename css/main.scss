@@ -103,8 +103,7 @@ body{
       float: left;
     }
     border-bottom: 1px solid $gray;
-    font-family: 'Gentium Basic';
-    font-style: italic;
+    @include gi;
     color:$purple;
     padding:0 0.5em;
     a{
@@ -145,8 +144,7 @@ body{
     text-align: center;
     line-height: 50px;
     a{
-      font-family: 'Gentium Basic';
-      font-style: italic;
+      @include gi;
       text-decoration: none;
       color:#000;
       font-size: 1em;
@@ -177,6 +175,9 @@ body{
 #main-content{
   margin-top: 10px;
     .section{
+      h3{
+        @include gi;
+      }
       &.half{
         float: left;
         width: 50%;
@@ -184,7 +185,12 @@ body{
           clear: both;
         }
       }
-      &.ajax{
+      &.collapsible.closed{
+        .cont{
+          display: none;
+        }
+      }
+      &.ajax,&.collapsible{
         a{
           display: block;
           overflow: hidden;
@@ -202,9 +208,7 @@ body{
         background: #fff;
         margin-bottom: 10px;
         h2{
-            font-family: 'Gentium Basic';
-            font-weight:normal;
-            font-style: italic;
+            @include gi;
             color:$purple;
             font-size:1.25em;
             width:100%;
@@ -289,11 +293,9 @@ a.offer{
     text-decoration: none;
   }
   h3{
-    font-family: 'Gentium Basic';
+    @include gi;
     color: #fff;
-    font-style: italic;
     padding-top: 10px;
-    font-weight: normal;
   }
   text-align: center;
   text-decoration: none;
@@ -372,9 +374,7 @@ a.offer{
     font-size: 0.875em;
   }
   h3{
-    font-family: 'Gentium Basic';
-    font-style: italic;
-    font-weight: normal;
+    @include gi;
     font-size: 1.25em;
   }
 }
@@ -421,10 +421,24 @@ a.offer{
   }
   h2 a{
     font-size: 1.5em;
-    font-family: 'Gentium Basic';
-    font-style: italic;
-    font-weight: normal;
+    @include gi;
     color:#fff;
+  }
+}
+
+
+.getquote{
+  overflow: hidden;
+  text-align: center;
+  a{
+    @include red-button;
+    display: block;
+    width:40%;
+    margin: 20px auto;
+  }
+  p{
+    width: 60%;
+    margin: 0 auto 20px auto;
   }
 }
 

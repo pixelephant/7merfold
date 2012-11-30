@@ -25,8 +25,7 @@
       display: block;
       text-decoration: none;
       color:$black;
-      font-family: 'Gentium Basic';
-      font-style: italic;
+      @include gi;
     }
   }
 }
@@ -54,9 +53,7 @@
   margin-bottom: 40px;
   overflow: hidden;
   h3{
-    font-family: 'Gentium Basic';
-    font-style: italic;
-    font-weight: normal;
+    @include gi;
     font-size: 1.25em;
     padding:0.8em 1em;
   }

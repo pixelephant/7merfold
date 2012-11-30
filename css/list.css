@@ -20,6 +20,7 @@
       text-decoration: none;
       color: #333333;
       font-family: 'Gentium Basic';
+      font-weight: normal;
       font-style: italic; }
 
 .offer-list {
@@ -42,8 +43,8 @@
   overflow: hidden; }
   .region h3 {
     font-family: 'Gentium Basic';
-    font-style: italic;
     font-weight: normal;
+    font-style: italic;
     font-size: 1.25em;
     padding: 0.8em 1em; }
 
@@ -58,6 +59,7 @@
   text-align: center;
   padding: 0.8em 1em;
   color: #fff;
+  text-decoration: none;
   font-size: 1em;
   text-decoration: none; }
 
