@@ -547,6 +547,53 @@ a.offer{
 
 
 
+#top-contact{
+  display:none;
+  width:100%;
+  background:#fff;
+  overflow:hidden;
+  @include box-shadow;
+  margin-bottom:10px;
+  a{
+    display:block;
+    float:left;
+    text-decoration:none;
+    color:$black;
+    width:20%;
+    text-align:center;
+    padding:0.5em 0;
+  }
+}
+
+// large tablet (1000px, 62.5em)
+
+@media all and (min-width: 62.5em){
+  #top-contact{
+    display:block;
+  }
+  #mobile-nav{
+    display:none;
+  }
+  #mobile-submenu{
+    display:block;
+  }
+  #search-form{
+    display:block;
+    width:30%;
+    float:right;
+    border:none;
+    padding:1em 0;
+    input[type="search"]{
+      border:1px solid $gray;
+      float:left;
+      margin-top:0;
+    }
+    input[type="submit"]{
+      float:left;
+    }
+  }
+}
+
 //small tablet (600px,37.5em)
 
 @media all and (min-width: 37.5em){
