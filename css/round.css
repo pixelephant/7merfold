@@ -152,6 +152,65 @@
       box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
       /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
 
+#prices .cont {
+  overflow: hidden; }
+
+#prices .getquote {
+  display: none; }
+
+#inline-nav {
+  display: none;
+  float: left;
+  width: 20%; }
+  #inline-nav a {
+    display: block;
+    color: #4897c8;
+    line-height: 2; }
+
+.shares {
+  display: none;
+  float: left;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  font-size: 0.8em; }
+  .shares span {
+    display: block; }
+  .shares .icon {
+    display: inline; }
+  .shares a {
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #333333; }
+
+@media all and (min-width: 62.5em) {
+  #prices .half {
+    width: 45%;
+    float: left;
+    margin-right: 10%; }
+    #prices .half:nth-child(even) {
+      margin-right: 0; }
+
+  .section.getquote {
+    display: none; }
+
+  #prices .getquote {
+    display: block;
+    background: #cccccc; }
+    #prices .getquote a {
+      color: #fff !important; }
+
+  .lead {
+    float: left;
+    width: 80%; }
+
+  .important {
+    display: none; }
+
+  .sum .quote {
+    float: right; }
+
+  .shares, #inline-nav {
+    display: block; } }
 @media all and (min-width: 37.5em) {
   #explore .t {
     display: block; } }

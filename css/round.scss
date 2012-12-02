@@ -95,6 +95,82 @@
   }
 }
 
+#prices .cont{
+  overflow:hidden;
+}
+
+#prices .getquote{
+  display:none;
+}
+
+#inline-nav{
+  display:none;
+  a{
+    display:block;
+    color:$blue;
+    line-height:2;
+  }
+  float:left;
+  width:20%;
+}
+
+.shares{
+  display:none;
+  float:left;
+  font-family:'Source Sans Pro';
+  font-weight:200;
+  font-size:0.8em;
+  span{
+    display:block;
+  }
+  .icon{
+    display:inline;
+  }
+  a{
+    font-size:1.8em;
+    text-decoration:none;
+    color:$black;
+  }
+}
+
+//large tablet (1000px,62.5em)
+@media all and (min-width: 62.5em){
+ 
+#prices .half{
+  width:45%;
+  float:left;
+  margin-right:10%;
+  &:nth-child(even){
+    margin-right:0;
+  }
+}
+ 
+ .section.getquote{
+  display:none;
+ }
+
+ #prices .getquote{
+  display:block;
+  background:$gray;
+  a{
+    color:#fff !important;
+  }
+ }
+
+ .lead{
+  float:left;
+  width:80%;
+ }
+ .important{
+  display:none;
+ }
+ .sum .quote{
+  float:right;
+ }
+ .shares,#inline-nav{
+    display:block;
+  }
+}
 //small tablet (600px,37.5em)
 
 @media all and (min-width: 37.5em){

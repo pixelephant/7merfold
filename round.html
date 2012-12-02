@@ -27,8 +27,18 @@
         
         
         
+            <section id="top-contact">
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">info@7merfold.com</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket facebookon!</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+            </section>
+
+
             <header id="main-header" class="clearfix">
-                  <a href="/" id="logo">
+                  <div class="clearfix">
+                    <a href="/" id="logo">
                     <img src="img/logo.png" alt="7mérföld Utazási Iroda">
                   </a>
                   <nav id="mobile-nav">
@@ -44,10 +54,17 @@
                           Menü</a></li>
                       </ul>
                   </nav>
+                <div id="search-form">
+                  <form action="#">
+                    <input type="search" name="" id="" placeholder="Keresés...">
+                    <input type="submit" value="Ok">
+                  </form>
+                </div>
+                  </div>
                 <nav id="mobile-submenu">
                     <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
                     <ul id="sub-grid">
-                      <li><a href="#sub1">Városi kalandok</a></li>
+                      <li id="varosi"><a href="#sub1">Városi kalandok</a></li>
                       <li><a href="#sub2">Körutazások</a></li>
                       <li><a href="#sub3">Üveghegyen túl</a></li>
                       <li><a href="#sub4">Üveghegyen innen</a></li>
@@ -56,58 +73,29 @@
                       <li><a href="#sub6">Cégeknek</a></li>
                       <li><a href="#sub7">Szolgáltatások</a></li>
                     </ul>
-                    <ul class="sub-nav hidden" id="sub1">
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li class="top"><a href="#">&uarr;</a></li>
-                    </ul>
                 </nav>
             </header>
             
-            <div id="search-form">
-                  <form action="#">
-                    <input type="search" name="" id="" placeholder="Keresés...">
-                    <input type="submit" value="Ok">
-                  </form>
-                </div>
             
             <div id="main-content">
               
               <section class="sum section">
-                <h2>Klasszikus Portugál körutazás</h2>
+                <h2><span class="shares"><span>Megosztás</span><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="f"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></span>Klasszikus Portugál körutazás</h2>
                 <img src="img/lisabon.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget augue non metus molestie interdum fermentum vel elit. Praesent ut ullamcorper libero. Lorem ipsum dolor sit amet.</p>
+                <div class="clearfix">
+                  <nav id="inline-nav">
+                  <a href="#program">Program</a>
+                  <a href="#">Ár</a>
+                  <a href="#">Vízum</a>
+                  <a href="#">Blala</a>
+                  <a href="#">Salala</a>
+                  <a href="#">Tehén</a>
+                </nav>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget augue non metus molestie interdum fermentum vel elit. Praesent ut ullamcorper libero. Lorem ipsum dolor sit amet.</p>
                 <div>
                   <a class="important" href="#prices">Időpontok &amp; ár &darr;</a>
                   <a class="quote" href="#">Ajánlatkérés &raquo;</a>
+                </div>
                 </div>
               </section>
               
@@ -125,7 +113,7 @@
                 </div>
               </section>
                                               
-              <section class="section collapsible closed">
+              <section id="program" class="section collapsible closed">
                <h2><a href="#">Program <span>+</span></a></h2>
                 <div class="cont">
                   <div class="day">
@@ -192,18 +180,24 @@
               <section id="prices" class="section collapsible closed">
                 <h2><a href="#">Árak <span>+</span></a></h2>
                 <div class="cont">
-                  <div class="block">
-                    <h3>Részvételi díj</h3>
-                    <p>Olcsó nyugi</p>
+                  <div class="half">
+                    <div class="block">
+                      <h3>Részvételi díj</h3>
+                      <p>Olcsó nyugi</p>
+                    </div>
+                    <div class="block">
+                      <h3>Belépők ára</h3>
+                      <p>~ 10 EUR/kopf</p>
+                    </div>
+                    <div class="block">
+                      <p class="extra">
+                        A részvételi díj tartalmazza az utazást és programot a fenitek szerint magyar idegenvezetéssel, 7 éjszaka szállást kétágyas szobában, félpanziót, és a betegség-, baleset-, poggyász- és útlemondási biztosítást.
+                      </p>
+                    </div>
                   </div>
-                  <div class="block">
-                    <h3>Belépők ára</h3>
-                    <p>~ 10 EUR/kopf</p>
-                  </div>
-                  <div class="block">
-                    <p class="extra">
-                      A részvételi díj tartalmazza az utazást és programot a fenitek szerint magyar idegenvezetéssel, 7 éjszaka szállást kétágyas szobában, félpanziót, és a betegség-, baleset-, poggyász- és útlemondási biztosítást.
-                    </p>
+                  <div class="half getquote">
+                    <a href="#">Ajánlatkérés &raquo;</a>
+                    <p>Ne aggódj, ha valamin változtatnál nálunk megteheted!</p>
                   </div>
                 </div>
               </section>
