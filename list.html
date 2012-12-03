@@ -27,8 +27,18 @@
         
         
         
+            <section id="top-contact">
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span> <span class="data">info@7merfold.com</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket facebookon!</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+            </section>
+
+
             <header id="main-header" class="clearfix">
-                  <a href="/" id="logo">
+                  <div class="clearfix">
+                    <a href="/" id="logo">
                     <img src="img/logo.png" alt="7mérföld Utazási Iroda">
                   </a>
                   <nav id="mobile-nav">
@@ -44,10 +54,17 @@
                           Menü</a></li>
                       </ul>
                   </nav>
+                <div id="search-form">
+                  <form action="#">
+                    <input type="search" name="" id="" placeholder="Keresés...">
+                    <input type="submit" value="Ok">
+                  </form>
+                </div>
+                  </div>
                 <nav id="mobile-submenu">
                     <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
                     <ul id="sub-grid">
-                      <li><a href="#sub1">Városi kalandok</a></li>
+                      <li id="varosi"><a href="#sub1">Városi kalandok</a></li>
                       <li><a href="#sub2">Körutazások</a></li>
                       <li><a href="#sub3">Üveghegyen túl</a></li>
                       <li><a href="#sub4">Üveghegyen innen</a></li>
@@ -56,48 +73,8 @@
                       <li><a href="#sub6">Cégeknek</a></li>
                       <li><a href="#sub7">Szolgáltatások</a></li>
                     </ul>
-                    <ul class="sub-nav hidden" id="sub1">
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                      <li>5</li>
-                      <li class="top"><a href="#">&uarr;</a></li>
-                    </ul>
                 </nav>
             </header>
-            
-            <div id="search-form">
-                  <form action="#">
-                    <input type="search" name="" id="" placeholder="Keresés...">
-                    <input type="submit" value="Ok">
-                  </form>
-                </div>
             
             <div id="main-content">
                 <section class="section selecter">
@@ -116,14 +93,15 @@
                   <div class="region" id="kreta">
                     <h3>Kréta</h3>
                     <a href="#" class="offer">
-                      <img src="img/1.png" alt="">
-                      <span class="stars">&star;&star;&star;&star;</span>
-                      <h3>Magic Life Candia Maris Imperial</h3>
-                    </a>
-                    <a href="#" class="offer">
-                      <img src="img/2.png" alt="">
-                      <span class="stars">&star;&star;&star;</span>
-                      <h3>Magic Life Candia Maris Imperial</h3>
+                      <div class="img">
+                        <img src="img/1.png" alt="" />
+                      </div>                      
+                      <div class="data">
+                        <span class="stars">&star;&star;&star;&star;</span>
+                        <h3>Magic Life Candia Maris Imperial</h3>
+                        <p class="lead">A Lorem Ipsum egy egyszerû szövegrészlete, szövegutánzata a betûszedõ és nyomdaiparnak. A Lorem Ipsum az 1500-as évek óta standard szövegrészletként szolgált az iparban; mikor egy ismeretlen nyomdász összeállította a betûkészletét és egy példa-könyvet vagy szöveget nyomott papírra, ezt használta.</p>
+                        <span class="fake-a">Tovább &raquo;</span>
+                      </div>
                     </a>
                     <a href="#" class="offer">
                       <img src="img/1.png" alt="">

@@ -39,10 +39,7 @@ body{
 
 #main-header{
     width:100%;
-    //overflow:hidden;
     background:#fff;
-    //height:50px;
-    border-bottom:1px solid $gray;
     position:relative;
     z-index:2;
     @include box-shadow;
@@ -50,13 +47,14 @@ body{
 
 #logo{
     float: left;
+    height:36px;
+    padding:12px 10px;
+    text-align: left;
     width:43.75%;
-    text-align: center;
 }
 
 #logo img{
-  max-width:80%;
-  padding-top: 3%;
+  height:36px;
 }
 
 #mobile-nav{
@@ -75,17 +73,17 @@ body{
         border-left:1px solid $gray;
     }
     a{
-        height: 50px;
+        height: 60px;
         font-size: 0.75em;
-        line-height: 1;
+        line-height: 1.5;
         text-decoration: none;
         display:block;
-        padding-top:8px;
-        color:#000;
+        padding-top:15px;
+        color:$black;
         span{
           line-height: 1;
           display: block;
-          font-size: 2em;
+          font-size: 1.66666666667em;
         }
     }
 }
@@ -208,37 +206,6 @@ body{
   &:hover,&:focus{
     //@extend .arrow_box;
   }
-}
-
-
-.arrow_box {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid #ccc;
-}
-.arrow_box:after, .arrow_box:before {
-  top: 100%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.arrow_box:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: #ffffff;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-.arrow_box:before {
-  border-color: rgba(204, 204, 204, 0);
-  border-top-color: #ccc;
-  border-width: 11px;
-  left: 50%;
-  margin-left: -11px;
 }
 
 #usp{
@@ -468,11 +435,13 @@ a.offer{
 ::-webkit-input-placeholder {
    font-family:'Source Sans Pro';
    font-weight:200;
+   font-size:1em;
 }
 
 :-moz-placeholder {  
   font-family:'Source Sans Pro';
    font-weight:200;
+   font-size:1em;
 }
 
 .animated {

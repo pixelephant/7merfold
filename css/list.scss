@@ -3,6 +3,7 @@
 
 .selecter h2{
   padding:0 !important;
+  border:none !important;
   span{
     float:left;
       padding:0.8em 1em;
@@ -11,9 +12,14 @@
 
 .selecter ul{
   display: none;
+  background:#fff;
   li{
+    list-style:none;
     padding:0.8em 2em;
     border-bottom: 1px solid $gray;
+    &:first-child{
+      border-top:1px solid $gray;
+    }
     &.close a{
       text-align: right;
       font-weight: bold;
@@ -63,6 +69,71 @@
   @include purple-button;
   font-size: 1em;
   text-decoration: none;
+}
+
+
+.offer{
+  overflow:hidden;
+}
+
+.lead{
+  color:$black;
+  display:none;
+  .fake-a{
+    float:right;
+    color:$blue;
+  }
+}
+
+// large tablet (1000px, 62.5em)
+
+@media all and (min-width: 62.5em){
+  
+  .selecter ul{
+    li{
+      width:25%;
+      float:left;
+      border-right:1px solid $gray;
+      &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){
+        border-top:1px solid $gray;
+      }
+      &:nth-child(4n){
+        border-right:none;
+      }
+      &.close{
+        display:none;
+      }
+    }
+  }
+
+
+  .offer-list{
+    a.offer{
+      width:100%;
+      float:none;
+      .img{
+        float:left;
+        width:30%;
+        img{
+          max-width:100%;
+        }
+      }
+      .stars{
+        text-align:left;
+      }
+      h3{
+        padding-left:0;
+      }
+    }
+  }
+  .offer .data{
+    float:left;
+    width:70%;
+    text-align:left;
+  }
+  .lead{
+    display:block;
+  }
 }
 
 //small tablet (600px,37.5em)
