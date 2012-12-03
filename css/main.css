@@ -382,17 +382,17 @@ a.offer {
   .news .bd {
     overflow: hidden;
     _overflow: visible;
-    zoom: 1; }
+    zoom: 1;
+    width: 66.66666667%; }
   .news .img {
     float: left;
-    margin-right: 2%; }
+    margin-right: 2%;
+    width: 31.3333333%; }
   .news .imgExt {
     float: right;
     margin-left: 10px; }
   .news a {
     color: #4897c8; }
-  .news p, .news a {
-    font-size: 0.875em; }
   .news h3 {
     font-family: 'Gentium Basic';
     font-weight: normal;
@@ -407,10 +407,12 @@ a.offer {
     padding-bottom: 0 !important; }
   #newsletter h3 {
     font-size: 1em;
-    font-weight: normal;
-    text-align: center; }
+    font-weight: 200 !important;
+    font-family: 'Source Sans Pro' !important;
+    text-align: center;
+    font-style: italic; }
   #newsletter form {
-    width: 40%;
+    width: 70%;
     margin: 20px auto;
     overflow: hidden; }
     #newsletter form input[type="text"], #newsletter form input[type="email"] {
@@ -605,6 +607,11 @@ a.offer {
     padding: 0.5em 0; }
 
 @media all and (min-width: 62.5em) {
+  body {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 0 5%; }
+
   #usp, #explore {
     width: 50%;
     float: left; }
