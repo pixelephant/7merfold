@@ -200,8 +200,9 @@ body {
   color: #69297d !important; }
 
 #jPanelMenu-menu h2 {
-  height: 50px;
-  line-height: 50px;
+  font-size: 1.25em;
+  height: 60px;
+  line-height: 60px;
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
   font-family: 'Gentium Basic';
@@ -210,7 +211,7 @@ body {
   color: #69297d;
   padding: 0 0.5em; }
   #jPanelMenu-menu h2 span {
-    height: 50px;
+    height: 60px;
     float: left; }
   #jPanelMenu-menu h2 a {
     float: right;
@@ -218,30 +219,30 @@ body {
     font-style: normal;
     font-weight: bold;
     text-decoration: none;
-    color: #000; }
+    color: #333333;
+    font-size: 1.25em; }
 
 #sub-grid {
   list-style: none;
   position: relative;
   overflow-y: scroll; }
   #sub-grid li {
-    border: 1px solid #cccccc;
-    height: 50px;
+    border-bottom: 1px solid #cccccc;
     text-align: center;
-    line-height: 50px;
     border-top: none;
     width: 50%;
     float: left; }
     #sub-grid li a {
-      font-family: 'Gentium Basic';
-      font-weight: normal;
-      font-style: italic;
+      padding: 0.625em 0;
       text-decoration: none;
       color: #000;
-      font-size: 1em;
+      font-size: 0.875em;
       display: block; }
+      #sub-grid li a img {
+        margin: 0 auto 0.3em auto;
+        display: block; }
     #sub-grid li:nth-child(odd) {
-      border-right: none;
+      border-right: 1px solid #cccccc;
       border-left: none; }
 
 #mobile-submenu {

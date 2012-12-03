@@ -93,11 +93,12 @@ body{
 }
 
 #jPanelMenu-menu h2{
-    height: 50px;
-    line-height: 50px;
+    font-size:1.25em;
+    height: 60px;
+    line-height: 60px;
     overflow: hidden;
     span{
-      height: 50px;
+      height: 60px;
       float: left;
     }
     border-bottom: 1px solid $gray;
@@ -110,7 +111,8 @@ body{
       font-style: normal;
       font-weight: bold;
       text-decoration: none;
-      color:#000;
+      color:$black;
+      font-size:1.25em;
     }
 }
 
@@ -119,23 +121,23 @@ body{
   position: relative;
   overflow-y:scroll;
   li{
-    border:1px solid $gray;
-    height: 50px;
+    //border:1px solid $gray;
+    border-bottom:1px solid $gray;
     text-align: center;
-    line-height: 50px;
     a{
-      @include gi;
+      padding:0.625em 0;
       text-decoration: none;
       color:#000;
-      font-size: 1em;
+      font-size: 0.875em;
       display: block;
+      img{
+        margin:0 auto 0.3em auto;
+        display:block;
+      }
     }
     &:nth-child(odd){
-      border-right:none;
+      border-right:1px solid $gray;
       border-left:none;
-    }
-    &:nth-child(even){
-     // border-left: none;
     }
     border-top: none;
     width:50%;
