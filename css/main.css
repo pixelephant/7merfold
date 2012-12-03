@@ -498,18 +498,15 @@ a.offer {
     padding: 2%; }
 
 #contact a {
-  padding: 0 10%;
-  overflow: hidden;
   display: block;
   font-size: 1em;
-  border-bottom: 1px solid #515151; }
+  border-bottom: 1px solid #515151;
+  text-align: center;
+  padding: 0.5em 0;
+  line-height: 1; }
   #contact a .icon {
     font-size: 2em;
-    float: left; }
-  #contact a .data {
-    float: left;
-    margin-top: 10px;
-    padding-left: 20%; }
+    display: block; }
 
 ::-webkit-input-placeholder {
   font-family: 'Source Sans Pro';
@@ -610,7 +607,13 @@ a.offer {
   body {
     max-width: 80em;
     margin: 0 auto;
-    padding: 0 5%; }
+    padding: 0 5%;
+    background: url(../img/bg.png) no-repeat center #4897c8; }
+
+  #logo {
+    padding: 6px 20px; }
+    #logo img {
+      height: auto; }
 
   #usp, #explore {
     width: 50%;
@@ -640,17 +643,25 @@ a.offer {
   #contact {
     overflow: hidden; }
     #contact a {
+      display: block;
       float: left;
+      text-decoration: none;
+      color: #fff;
       width: 20%;
-      padding: 0;
-      text-align: center; }
-      #contact a .icon, #contact a .data {
-        display: inline;
-        float: none;
-        padding: 0; }
+      text-align: center;
+      padding: 0.5em 0;
+      font-size: 0.8em; }
+
+  .totop {
+    display: none !important; }
 
   #top-contact {
-    display: block; }
+    display: block;
+    font-size: 0.8em; }
+    #top-contact .icon {
+      font-size: 1.2em;
+      position: relative;
+      top: 2px; }
 
   #mobile-nav {
     display: none; }
@@ -663,9 +674,12 @@ a.offer {
       overflow: hidden;
       border-top: 1px solid #cccccc; }
       #mobile-submenu #sub-grid li {
+        border: none;
         float: left;
         width: 14.2857142857%;
-        border-bottom: none; }
+        border-right: 1px solid #cccccc; }
+        #mobile-submenu #sub-grid li:last-child {
+          border-right: none; }
 
   #search-form {
     display: block;

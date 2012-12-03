@@ -422,19 +422,17 @@ a.offer{
 }
 
 #contact a{
-  padding: 0 10%;
-  overflow: hidden;
   display: block;
   font-size: 1em;
   border-bottom: 1px solid #515151;
+  text-align:center;
+  padding:0.5em 0;
+  line-height:1;
   .icon{
     font-size: 2em;
-    float: left;
+    display:block;    
   }
   .data{
-    float: left;
-    margin-top:10px;
-    padding-left: 20%;
   }
 }
 
@@ -530,6 +528,14 @@ a.offer{
     max-width:80em;
     margin:0 auto;
     padding:0 5%;
+    background: url(../img/bg.png) no-repeat center $blue;
+  }
+
+  #logo{
+    padding: 6px 20px;
+    img{
+      height:auto;
+    }
   }
 
   #usp,#explore{
@@ -569,20 +575,29 @@ a.offer{
   #contact{
     overflow:hidden;
     a{
-      float:left;
-      width:20%;
-      padding:0;
-      text-align:center;
-      .icon,.data{
-        display:inline;
-        float:none;
-        padding:0;
-      }
-    }
+    display:block;
+    float:left;
+    text-decoration:none;
+    color:#fff;
+    width:20%;
+    text-align:center;
+    padding:0.5em 0;
+    font-size:0.8em;
+  }
+  }
+
+  .totop{
+    display:none !important;
   }
 
   #top-contact{
     display:block;
+    font-size:0.8em;
+    .icon{
+      font-size:1.2em;
+      position:relative;
+      top:2px;
+    }
   }
   #mobile-nav{
     display:none;
@@ -596,9 +611,13 @@ a.offer{
       overflow:hidden;
       border-top:1px solid $gray;
       li{
+        border:none;
         float:left;
         width:14.2857142857%;
-        border-bottom:none;
+        border-right:1px solid $gray;
+        &:last-child{
+          border-right:none;
+        }
       }
     }
   }
