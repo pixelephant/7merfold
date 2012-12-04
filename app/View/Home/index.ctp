@@ -91,31 +91,6 @@
   </div>
 </section>
 
-<section class="section ajax">
-  <h2><a href="ajax.html">Ajaxolok <span>+</span></a></h2>
-  <div class="cont hidden">
-    
-  </div>
-</section>
-<section class="section ajax">
-  <h2><a href="ajax.html">Én is <span>+</span></a></h2>
-  <div class="cont hidden">
-    
-  </div>
-</section>
-<section class="section ajax">
-  <h2><a href="ajax.html">Akkor már hárman vagyunk <span>+</span></a></h2>
-  <div class="cont hidden">
-    
-  </div>
-</section>
-<section class="section ajax">
-  <h2><a href="ajax.html">Ne hagyjatok ki! <span>+</span></a></h2>
-  <div class="cont hidden">
-    
-  </div>
-</section>
-
 <section class="section" id="news">
   <h2>Hírek</h2>
   <div class="cont">
