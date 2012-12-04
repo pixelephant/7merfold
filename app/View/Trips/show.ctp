@@ -1,7 +1,7 @@
 <?php $this->Html->script('round', array('inline' => false)); ?>
 <?php $this->Html->css('round', null, array('inline' => false)); ?>
 <section class="sum section">
-<h2><span class="shares"><span>Megosztás</span><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></span>Klasszikus Portugál körutazás</h2>
+<h2><span class="shares"><span>Megosztás</span><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></span><?php echo $trip['Trip']['name']; ?></h2>
 <img src="img/lisabon.jpeg" alt="">
 <div class="clearfix">
   <nav id="inline-nav">
@@ -12,7 +12,8 @@
   <a href="#">Salala</a>
   <a href="#">Tehén</a>
 </nav>
-<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget augue non metus molestie interdum fermentum vel elit. Praesent ut ullamcorper libero. Lorem ipsum dolor sit amet.</p>
+
+<p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
 <div>
   <a class="important" href="#prices">Időpontok &amp; ár &darr;</a>
   <a class="quote" href="#">Ajánlatkérés &raquo;</a>
@@ -20,16 +21,18 @@
 </div>
 </section>
 
+<?php print_r($trip); ?>
+
 <section class="section">
 <h2>Információk</h2>
 <div class="cont">
   <div class="block">
     <h3>Időpontok</h3>
-    <p>2012 január és február</p>
+    <p><?php echo $trip['Trip']['travel_date']; ?></p>
   </div>
   <div class="block">
     <h3>Elhelyezés</h3>
-    <p>Középkategóriájú (helyi háromcsillagos) szállodákban, kétágyas szobákban, 2 éj Edinburgh, 2 éj Fort William környéke, 2 éj Inverness környéke, 1 éj Perth.</p>
+    <p><?php echo $trip['Trip']['description']; ?></p>
   </div>
 </div>
 </section>
@@ -79,6 +82,11 @@
 <section class="section gallery">
 <h2>Látnivalók</h2>
 <div class="cont">
+  <?php
+    foreach($trip['Sight'] as $sight){
+      echo $this->Html->link(($this->Html->image($sight['image_file'], array('alt' => $sight['name'])) . '<span>' . $sight['name'] . '</span>'), '#', array('escape' => false));
+    } 
+  ?>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>

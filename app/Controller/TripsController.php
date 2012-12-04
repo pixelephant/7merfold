@@ -31,31 +31,27 @@ App::uses('AppController', 'Controller');
  */
 class TripsController extends AppController {
 
-/**
- * Controller name
- *
- * @var string
- */
 	public $name = 'Trips';
+	public $uses = array('Trip');
+	public $helpers = array('Html', 'Form');
 
-/**
- * This controller does not use a model
- *
- * @var array
- */
-	public $uses = array();
-
-/**
- * Displays a view
- *
- * @param mixed What page to display
- * @return void
- */
 	public function index() {
+
+		$newest_trips = $this->Trip->find('all', array('order' => 'updated desc', 'limit' => 12));
+
+		$this->set('newest_trips', $newest_trips);
+
 		$this->render('index');
 	}
 
-	public function round() {
-		$this->render('round');
+	public function show() {
+
+		$trip_id = 1;
+
+		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
+
+		$this->set('trip', $trip);
+
+		$this->render('show');
 	}
 }
