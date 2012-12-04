@@ -59,8 +59,10 @@ $(".important,#inline-nav a").click(function(){
 });
 
 
-$('.fancybox').fancybox({
+if(!$("html").hasClass("touch")){
+	$('.fancybox').fancybox({
 	openEffect  : 'elastic'
 });
+}
 
 });
