@@ -34,6 +34,8 @@
 	Router::connect('/quote', array('controller' => 'home', 'action' => 'quote'));
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
 
+	Router::connect('/:category_slug', array('controller' => 'trips', 'action' => 'index'));
+
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

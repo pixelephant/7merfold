@@ -56,6 +56,9 @@
 <h2>Legfrisebb utak</h2>
   <div class="cont">
     <ul class="carousel" data-transition="slide">
+        <?php 
+            echo $this->element('newest_trips_carousel', array('trips' => $newest_trips));
+        ?>
         <li class="slag">
             <a class="offer" href="#">
               <img src="img/temp.png" alt="">

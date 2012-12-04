@@ -14,11 +14,6 @@
   </ul>
 </section>
 <section class="section offer-list">
-  <?php 
-    foreach($newest_trips as $trip){
-      echo $this->element('trip_offer', array('trip' => $trip));
-    }
-  ?>
   <div class="region" id="kreta">
     <h3>Kréta</h3>
     <a href="#" class="offer">

@@ -43,7 +43,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array();
+	public $uses = array('Trip');
 
 /**
  * Displays a view
@@ -52,6 +52,11 @@ class HomeController extends AppController {
  * @return void
  */
 	public function index() {
+
+		$newest_trips = $this->Trip->find('all', array('order' => 'updated desc', 'limit' => 12));
+
+		$this->set('newest_trips', $newest_trips);
+
 		$this->render('index');
 	}
 

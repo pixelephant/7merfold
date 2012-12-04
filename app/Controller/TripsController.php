@@ -37,9 +37,8 @@ class TripsController extends AppController {
 
 	public function index() {
 
-		$newest_trips = $this->Trip->find('all', array('order' => 'updated desc', 'limit' => 12));
-
-		$this->set('newest_trips', $newest_trips);
+		$params = $this->request->params;
+		$unit_id = $params['id'];
 
 		$this->render('index');
 	}
