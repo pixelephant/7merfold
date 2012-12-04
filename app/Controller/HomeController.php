@@ -54,4 +54,9 @@ class HomeController extends AppController {
 	public function index() {
 		$this->render('index');
 	}
+
+	public function quote() {
+		$this->render('quote');
+	}
+
 }
