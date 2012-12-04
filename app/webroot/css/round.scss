@@ -105,6 +105,7 @@
 
 #inline-nav{
   display:none;
+  padding-left: 3%;
   a{
     display:block;
     color:$blue;
@@ -160,6 +161,7 @@
  .lead{
   float:left;
   width:80%;
+  padding-top:0 !important;
  }
  .important{
   display:none;

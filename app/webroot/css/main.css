@@ -28,8 +28,7 @@
 
 .purple-arrow {
   position: relative;
-  background: 69297D;
-  border: 1px solid #69297D; }
+  background: 69297D; }
 
 .purple-arrow:after, .purple-arrow:before {
   top: 99%;

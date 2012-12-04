@@ -27,8 +27,7 @@
 
 .purple-arrow {
   position: relative;
-  background: 69297D;
-  border: 1px solid #69297D; }
+  background: 69297D; }
 
 .purple-arrow:after, .purple-arrow:before {
   top: 99%;
@@ -160,6 +159,7 @@
 
 #inline-nav {
   display: none;
+  padding-left: 3%;
   float: left;
   width: 20%; }
   #inline-nav a {
@@ -201,7 +201,8 @@
 
   .lead {
     float: left;
-    width: 80%; }
+    width: 80%;
+    padding-top: 0 !important; }
 
   .important {
     display: none; }
