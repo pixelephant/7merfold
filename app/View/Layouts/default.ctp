@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
+
+        <?php echo $this->fetch('css'); ?>
+        <?php echo $this->Html->css(array('main')); ?>
+        <?php echo $this->Html->script(array('vendor/modernizr-2.6.2.min')); ?>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        
+            <section id="top-contact">
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+            </section>
+
+
+            <header id="main-header" class="clearfix">
+                  <div class="clearfix">
+                    <a href="/" id="logo">
+                    <img src="img/logo.png" alt="7mérföld Utazási Iroda">
+                  </a>
+                  <nav id="mobile-nav">
+                      <ul class="clearfix">
+                          <li><a id="contact-trigger" href="#contact">
+                          <span aria-hidden="true" data-icon="c"></span>
+                          Kapcsolat</a></li>
+                          <li><a id="search-trigger" href="#">
+                          <span aria-hidden="true" data-icon="s"></span>
+                          Keresés</a></li>
+                          <li><a id="sub-trigger" href="#">
+                          <span aria-hidden="true" data-icon="m"></span>
+                          Menü</a></li>
+                      </ul>
+                  </nav>
+                <div id="search-form">
+                  <form action="#">
+                    <input type="search" name="" id="" placeholder="Keresés...">
+                    <input type="submit" value="Ok">
+                  </form>
+                </div>
+                  </div>
+                <nav id="mobile-submenu">
+                    <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
+                    <ul id="sub-grid">
+                      <li id="varosi"><a href="#sub1">
+                        <img src="img/varos.png" alt="Városi kalandok">
+                        Városi kalandok
+                      </a></li>
+                      <li><a href="#sub2">
+                        <img src="img/korut.png" alt="Körutazások">
+                        Körutazások
+                      </a></li>
+                      <li><a href="#sub3">
+                        <img src="img/tul.png" alt="Nyaralások üveghegyen túl">
+                        Üveghegyen túl
+                      </a></li>
+                      <li><a href="#sub4">
+                        <img src="img/innen.png" alt="Nyaralások üveghegyen innen">
+                        Üveghegyen innen
+                      </a></li>
+                      <li><a href="#sub5">
+                        <img src="img/felfedezo.png" alt="Felfedezőutak">
+                        Felfedezőutak
+                      </a></li>
+                      
+                      <li><a href="#sub6">
+                        <img src="img/cegeknek.png" alt="Cégeknek">
+                        Cégeknek
+                      </a></li>
+                      <li><a href="#sub7">
+                        <img src="img/szolg.png" alt="Szolgáltatások">
+                        Szolgáltatások
+                      </a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+                
+                
+            
+            <div id="main-content">
+                <?php echo $this->fetch('content'); ?>
+            </div>
+        
+          <footer id="main-footer">
+            <div id="contact">
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+            </div>
+            <a href="#" class="totop"><span aria-hidden="true" data-icon="u"></span>Oldal tetejére</a>
+            <p>
+              <a href="#">hajozz.eu</a> | <a href="#">felfedezoutak.hu</a> | <a href="#">utazási feltételek</a> | <a href="#">állás</a>
+            </p>
+            <p>&copy; 7mérföld Utazási Iroda 2012</p>
+          </footer>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="js/index.js"></script>
+        <?php echo $this->fetch('script'); ?>
+        <?php echo $this->Html->script(array('jpanel','carousel','main')); ?>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
