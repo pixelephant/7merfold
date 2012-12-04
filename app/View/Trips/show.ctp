@@ -87,7 +87,12 @@
       echo $this->Html->link(($this->Html->image($sight['image_file'], array('alt' => $sight['name'])) . '<span>' . $sight['name'] . '</span>'), '#', array('escape' => false));
     } 
   ?>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
+  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
+  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
+  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
+  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
+
+  <a href="#"><img src="img/asd.jpeg" alt=""><span>Két ember háta</span></a>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
   <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
