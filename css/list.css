@@ -128,9 +128,11 @@
 .lead {
   color: #333333;
   display: none; }
-  .lead .fake-a {
-    float: right;
-    color: #4897c8; }
+
+.fake-a {
+  display: none;
+  float: right;
+  color: #4897c8 !important; }
 
 @media all and (min-width: 62.5em) {
   .selecter ul li {
@@ -145,8 +147,11 @@
       display: none; }
 
   .offer-list a.offer {
+    display: block;
+    padding: 0.8em 1em;
     width: 100%;
-    float: none; }
+    float: none;
+    overflow: hidden; }
     .offer-list a.offer .img {
       float: left;
       width: 30%; }
@@ -163,7 +168,7 @@
     text-align: left; }
 
   .lead {
-    display: block; } }
-@media all and (min-width: 37.5em) {
-  #explore .t {
+    display: block; }
+
+  .fake-a {
     display: block; } }

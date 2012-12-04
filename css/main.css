@@ -445,6 +445,10 @@ a.offer {
   padding: 4%;
   margin-bottom: 10px;
   text-align: center; }
+  .cta.boat span {
+    color: #fff;
+    font-size: 8em;
+    line-height: 1; }
   .cta h3 {
     color: #fff;
     font-weight: normal; }
@@ -603,15 +607,34 @@ a.offer {
     text-align: center;
     padding: 0.5em 0; }
 
+@media all and (min-width: 37.5em) {
+  body {
+    font-size: 110%; } }
 @media all and (min-width: 62.5em) {
+  body {
+    font-size: 120%; }
+
+  #sub-grid {
+    font-size: 95%; } }
+@media all and (min-width: 79em) {
+  body {
+    font-size: 130%; } }
+@media all and (min-width: 62.5em) {
+  #main-content .section, #top-contact, .cta {
+    margin-bottom: 1%; }
+
+  #main-content {
+    margin-top: 1%; }
+
   body {
     max-width: 80em;
     margin: 0 auto;
     padding: 0 5%;
-    background: url(../img/bg.png) no-repeat center #4897c8; }
+    background: url(../img/bg.png) no-repeat center top #4897c8; }
 
   #logo {
-    padding: 6px 20px; }
+    height: auto;
+    padding: 12px 20px; }
     #logo img {
       height: auto; }
 
@@ -623,19 +646,21 @@ a.offer {
     clear: both; }
 
   #main-content .section.half {
-    width: 47.5%;
-    margin-right: 5%; }
+    width: 49.5%;
+    margin-right: 1%; }
     #main-content .section.half:nth-child(even) {
       margin-right: 0; }
 
   #news {
-    width: 60%;
+    width: 63%;
     float: left;
-    margin-right: 5%; }
+    margin-right: 1%; }
 
   #newsletter {
-    width: 35%;
+    width: 36%;
     float: left; }
+    #newsletter h3 {
+      padding: 0 1%; }
 
   #newsletter + section {
     clear: both; }
@@ -684,15 +709,22 @@ a.offer {
   #search-form {
     display: block;
     width: 30%;
+    margin-right: 20px;
     float: right;
+    overflow: hidden;
     border: none;
     padding: 1em 0; }
     #search-form input[type="search"] {
       border: 1px solid #cccccc;
       float: left;
-      margin-top: 0; }
+      margin-top: 0;
+      padding-left: 2%;
+      padding-right: 2%;
+      width: 70%; }
     #search-form input[type="submit"] {
-      float: left; } }
+      float: left;
+      width: 25%;
+      border: none; } }
 @media all and (min-width: 37.5em) {
   #explore .t {
     display: block; } }

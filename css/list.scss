@@ -79,11 +79,13 @@
 .lead{
   color:$black;
   display:none;
-  .fake-a{
-    float:right;
-    color:$blue;
-  }
 }
+
+.fake-a{
+    display: none;
+    float:right;
+    color:$blue !important;
+  }
 
 // large tablet (1000px, 62.5em)
 
@@ -109,8 +111,11 @@
 
   .offer-list{
     a.offer{
+      display: block;
+      padding: 0.8em 1em;
       width:100%;
       float:none;
+      overflow: hidden;
       .img{
         float:left;
         width:30%;
@@ -134,13 +139,7 @@
   .lead{
     display:block;
   }
-}
-
-//small tablet (600px,37.5em)
-@media all and (min-width: 37.5em){
-  #explore .t{
+  .fake-a{
     display: block;
   }
 }
-
-
