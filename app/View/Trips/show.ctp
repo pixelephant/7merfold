@@ -137,17 +137,19 @@
   </div>
 </section>
 <section class="section ajax">
-  <h2><a href="ajax.html">Portugália <span>+</span></a></h2>
+  <h2><a href="ajax.html"><?php echo $trip['Country']['name']; ?> <span>+</span></a></h2>
   <div class="cont hidden">
     
   </div>
 </section>                                
 
-<div class="cta boat">
-  <h3>Gyere hajózni!</h3>
-  <span class="icon" aria-hidden="true" data-icon="b"></span>
-  <h2><a href="#">hajozz.eu</a></h2>
-</div>
+<?php if($trip['Trip']['hajozz'] == 1){ ?>
+  <div class="cta boat">
+    <h3>Gyere hajózni!</h3>
+    <span class="icon" aria-hidden="true" data-icon="b"></span>
+    <h2><a href="#">hajozz.eu</a></h2>
+  </div>
+<?php } ?>
                                                                                                                                                                                                 
 <div class="cta">
   <h3>Nem találja az utazást amit keres?</h3>

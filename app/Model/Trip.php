@@ -2,6 +2,8 @@
 class Trip extends AppModel {
     public $name = 'Trip';
 
+    public $belongsTo = 'Country';
+
     public $hasAndBelongsToMany = array(
         'Sight' =>
             array(
