@@ -405,12 +405,14 @@ a.offer{
 }
 
 #main-footer{
+  font-weight: 200;
   width: 100%;
   background: $black;
   color: #fff;
   a{
     text-decoration: none;
     color: #fff;
+    font-weight: 200;
   }
 
   .totop{
@@ -700,4 +702,25 @@ a.offer{
 }
 
 
+
+
+//quote.scss lesz belőle
+
+#quote-form{
+  margin: 20px auto;
+  background: #eee;
+  padding: 3%;
+  width: 100%;
+  label{
+    
+  }
+  input[type="text"],input[type="tel"],input[type="email"],textarea{
+    @include input;
+    margin-top:0;
+    margin-bottom:20px;
+  }
+  input[type="submit"]{
+    @include purple-button;
+  }
+}
   

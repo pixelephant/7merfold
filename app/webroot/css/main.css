@@ -483,12 +483,14 @@ a.offer {
     margin: 0 auto 20px auto; }
 
 #main-footer {
+  font-weight: 200;
   width: 100%;
   background: #333333;
   color: #fff; }
   #main-footer a {
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    font-weight: 200; }
   #main-footer .totop {
     text-align: center;
     width: 100%;
@@ -727,3 +729,33 @@ a.offer {
 @media all and (min-width: 37.5em) {
   #explore .t {
     display: block; } }
+#quote-form {
+  margin: 20px auto;
+  background: #eee;
+  padding: 3%;
+  width: 100%; }
+  #quote-form input[type="text"], #quote-form input[type="tel"], #quote-form input[type="email"], #quote-form textarea {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    border: 1px solid #cccccc;
+    background: #fff;
+    padding: 0.5em;
+    font-weight: 200;
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px; }
+  #quote-form input[type="submit"] {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    background: #69297d;
+    text-align: center;
+    padding: 0.8em 1em;
+    color: #fff;
+    text-decoration: none; }
