@@ -59,8 +59,8 @@ class HomeController extends AppController {
 		$this->render('quote');
 	}
 
-	public function static() {
-		$this->render('static');
+	public function static_page() {
+		$this->render('static_page');
 	}
 
 }
