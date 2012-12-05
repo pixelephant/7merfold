@@ -1,6 +1,6 @@
 <section class="section">
 	<h2>Utasbiztosítás</h2>
-	<div class="cont">
+	<div class="cont formatted">
 		<h3>Betegség-, baleset-, és poggyászbiztosítás</h3>
 		<p>Legyen szó akár városnézésről, tengerparti pihenésről, síelésről az utazás legnagyobb élményeink egyike. Egy baleset, betegség, vagy más, nem várt esemény azonban rémálommá teheti az utazást. Otthonunktól távol ezeket a helyzeteket kezelni sokkal nehezebb, és nem egy <strong>esetben megdöbbentően költséges is lehet</strong>. Ezért azt tanácsoljuk, hogy soha ne induljon el külföldre megfelelő utasbiztosítás nélkül. A nyugodt pihenéshez, kikapcsolódáshoz ma már hozzátartozik annak biztos tudata, hogy vészhelyzetben is biztosított a segítség.</p>
 		<p>Az utasbiztosítási termékek a biztosítási összegek erejéig állnak helyt - többek között - a sürgős betegségi és baleseti ellátások tetemes orvosi költségeire és az <strong>setlegesen felmerülő jogi költség terén is számíthatunk fedezetükre</strong>esetlegesen felmerülő jogi költség terén is számíthatunk fedezetükre. Természetesen nem minden utasbiztosítás nyújt egyformán teljes körű fedezetet, sőt még a megegyező elnevezések is különböző szolgáltatásokat takarhatnak.</p>

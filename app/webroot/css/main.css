@@ -296,15 +296,15 @@ body {
     #main-content .section .cont {
       padding: 0.8em 3%;
       font-size: 0.875em; }
-      #main-content .section .cont ul.list {
+      #main-content .section .cont.formatted ul.list {
         list-style-position: inside;
         line-height: 1.5;
         margin-top: 0.5em; }
-      #main-content .section .cont p {
+      #main-content .section .cont.formatted a, #main-content .section .cont.formatted a:visited {
+        color: #4897c8; }
+      #main-content .section .cont.formatted p {
         margin: 1em 0;
         display: block; }
-        #main-content .section .cont p a {
-          color: #4897c8; }
 
 .breadcrumb {
   width: 100%;
@@ -371,11 +371,13 @@ body {
   top: 50%;
   margin-top: -4px; }
 
-#usp h3 {
-  text-align: center;
-  font-weight: 200;
-  padding: 1em 0;
-  font-size: 1.5em; }
+#usp {
+  background: url(../img/szab.png); }
+  #usp h3 {
+    text-align: center;
+    font-weight: 200;
+    padding: 1em 0;
+    font-size: 1.5em; }
 
 #explore {
   overflow: hidden;
