@@ -35,6 +35,8 @@
 
 	Router::connect('/utjaink/:trip_id', array('controller' => 'trips', 'action' => 'show'));
 
+	Router::connect('/kereses', array('controller' => 'home', 'action' => 'search'));
+	
 	Router::connect('/list', array('controller' => 'trips', 'action' => 'index'));
 	Router::connect('/round', array('controller' => 'trips', 'action' => 'show'));
 	Router::connect('/ajanlat', array('controller' => 'home', 'action' => 'quote'));

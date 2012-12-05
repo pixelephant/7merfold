@@ -48,7 +48,7 @@
                       </ul>
                   </nav>
                 <div id="search-form">
-                  <form action="#">
+                  <form method="get" action="<?php echo $this->webroot ?>kereses">
                     <input type="search" name="" id="" placeholder="Keresés...">
                     <input type="submit" value="Ok">
                   </form>
