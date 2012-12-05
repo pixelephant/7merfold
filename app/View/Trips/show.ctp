@@ -16,12 +16,10 @@
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
 <div>
   <a class="important" href="#prices">Időpontok &amp; ár &darr;</a>
-  <a class="quote" href="#">Ajánlatkérés &raquo;</a>
+  <a class="quote" href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>
 </div>
 </div>
 </section>
-
-<?php print_r($trip); ?>
 
 <section class="section">
 <h2>Információk</h2>
@@ -99,7 +97,7 @@
 </section>
 
 <section class="section getquote">
-<a href="#">Ajánlatkérés &raquo;</a>
+<a href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>
 <p>Ne aggódj, ha valamin változtatnál nálunk megteheted!</p>
 </section>
 
@@ -122,7 +120,7 @@
     </div>
   </div>
   <div class="half getquote">
-    <a href="#">Ajánlatkérés &raquo;</a>
+    <a href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>
     <p>Ne aggódj, ha valamin változtatnál nálunk megteheted!</p>
   </div>
 </div>

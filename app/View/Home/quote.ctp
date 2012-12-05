@@ -1,6 +1,6 @@
 <section class="section">
 	
-	<h2>Árajánlatkérés - Balázs ide írjad, hogy mire kéri jó?</h2>
+	<h2>Árajánlatkérés - <?php echo $quote_text; ?></h2>
 	<div class="cont">
 	<p>Ha már kezd körvonalazódni álmaid utazása, írd le nekünk elképzeléseidet és mi segítünk a legmegfelelőbb utat megszervezni! Kérlek ne felejtsd el megírni, hogy mikor, hányan és mennyi időre utaznátok! Köszönjük.</p>
 		<form action="#" id="quote-form">

@@ -63,6 +63,7 @@ class HomeController extends AppController {
 	}
 
 	public function quote() {
+		$this->set('quote_text', $this->Session->read('quote_text'));
 		$this->render('quote');
 	}
 

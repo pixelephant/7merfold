@@ -56,6 +56,8 @@ class TripsController extends AppController {
 
 		$this->set('trip', $trip);
 
+		$this->Session->write('quote_text', $trip['Trip']['name']);
+
 		$this->render('show');
 	}
 }

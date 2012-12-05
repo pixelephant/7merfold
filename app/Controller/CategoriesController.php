@@ -47,12 +47,20 @@ class CategoriesController extends AppController {
 		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
 		$trips = $this->Trip->find('all', array('conditions' => array('Trip.category_id' => $category['Category']['id']), 'order' => 'Trip.region_id ASC'));
 
-		$regions = $this->Region->find('all', array('conditions' => array('Region.country_id' => $trips[0]['Country']['id'])));
+		$regions = array();
+
+		$regioned = ($category['Category']['id'] == 3 || $category['Category']['id'] == 4) ? true : false;
+
+		if($regioned){
+			$regions = $this->Region->find('all', array('conditions' => array('Region.country_id' => $trips[0]['Country']['id'])));	
+		}
+		
+		$this->Session->write('quote_text', $category['Category']['name']);
 
 		$this->set('trips', $trips);
 		$this->set('regions', $regions);
+		$this->set('regioned', $regioned);
 		$this->set('category_id', $category['Category']['id']);
-
 
 		$this->render('show');
 	}
