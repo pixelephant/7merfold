@@ -296,6 +296,15 @@ body {
     #main-content .section .cont {
       padding: 0.8em 3%;
       font-size: 0.875em; }
+      #main-content .section .cont ul.list {
+        list-style-position: inside;
+        line-height: 1.5;
+        margin-top: 0.5em; }
+      #main-content .section .cont p {
+        margin: 1em 0;
+        display: block; }
+        #main-content .section .cont p a {
+          color: #4897c8; }
 
 #usp h3 {
   text-align: center;

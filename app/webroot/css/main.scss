@@ -203,6 +203,18 @@ body{
         .cont{
            padding:0.8em 3%;
            font-size: 0.875em;
+           ul.list{
+              list-style-position:inside;
+              line-height:1.5;
+              margin-top:0.5em;
+            }
+           p{
+            margin:1em 0;
+            display:block;
+            a{
+              color:$blue;
+            }
+           }
         }
     }
 }
