@@ -151,6 +151,25 @@
       box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
       /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
 
+.no-touch .day a, .no-touch .gallery a {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch .day a:hover, .no-touch .day a:focus, .no-touch .gallery a:hover, .no-touch .gallery a:focus {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+
 #prices .cont {
   overflow: hidden; }
 
