@@ -94,22 +94,16 @@
 <section class="section" id="news">
   <h2>Hírek</h2>
   <div class="cont">
+  <?php foreach($news as $new){ ?>
     <div class="news">
-      <img class="img" src="img/3.jpeg" alt="">
+      <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'])); ?>
       <div class="bd">
-        <h3>Sokan szeretnek nyaralni!</h3>
-        <p>Kutatók megállapították, hogy a nyaralás jó.</p>
-        <a href="#">Tovább &raquo;</a>
+        <h3><?php echo $new['News']['title']; ?></h3>
+        <p><?php echo $new['News']['content']; ?></p>
+        <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['id'], array('escape' => false)); ?>
       </div>
     </div>
-    <div class="news">
-      <img class="img" src="img/4.jpeg" alt="">
-      <div class="bd">
-        <h3>A hajó utak menők!</h3>
-        <p>Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?</p>
-        <a href="#">Tovább &raquo;</a>
-      </div>
-    </div>
+  <?php } ?>
   </div>
 </section>
 

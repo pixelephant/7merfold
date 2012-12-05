@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 05. 15:37
+-- Létrehozás ideje: 2012. dec. 05. 15:57
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`id`, `slug`, `name`, `created`) VALUES
-(1, 'varosi-kalandok', 'Városi kalandok', '2012-12-05 14:02:27'),
+(1, 'varosi-kalandok', 'Városi kalandok', '2012-12-05 14:45:27'),
 (2, 'korutazasok', 'Körutazások', '0000-00-00 00:00:00'),
 (3, 'nyaralasok-uveghegyen-tul', 'Üveghegyen túl', '0000-00-00 00:00:00'),
 (4, 'nyaralasok-uveghegyen-innen', 'Üveghegyen innen', '0000-00-00 00:00:00'),
@@ -90,9 +90,9 @@ CREATE TABLE IF NOT EXISTS `regions` (
 --
 
 INSERT INTO `regions` (`id`, `country_id`, `description`, `created`, `name`) VALUES
-(1, 1, 'Kréta leírása', '2012-12-05 14:02:27', 'Kréta'),
+(1, 1, 'Kréta leírása', '2012-12-05 14:45:27', 'Kréta'),
 (2, 1, 'Korfu leírása', '0000-00-00 00:00:00', 'Korfu'),
-(3, 2, 'Korzika leírása', '2012-12-05 14:02:27', 'Korzika'),
+(3, 2, 'Korzika leírása', '2012-12-05 14:45:27', 'Korzika'),
 (4, 2, 'Cote d azur', '0000-00-00 00:00:00', 'Cote d azur');
 
 -- --------------------------------------------------------
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `sights` (
 --
 
 INSERT INTO `sights` (`id`, `name`, `image_file`, `created`) VALUES
-(1, 'Teszt látnivaló', '3.jpeg', '2012-12-05 14:02:28');
+(1, 'Teszt látnivaló', '3.jpeg', '2012-12-05 14:45:27');
 
 -- --------------------------------------------------------
 
