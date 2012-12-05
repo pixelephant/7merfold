@@ -32,7 +32,7 @@
             <header id="main-header" class="clearfix">
                   <div class="clearfix">
                     <a href="<?php echo $this->webroot; ?>" id="logo">
-                    <img src="img/logo.png" alt="7mérföld Utazási Iroda">
+                    <?php echo $this->Html->image('logo.png', array('alt' => '7mérföld Utazási Iroda')); ?>
                   </a>
                   <nav id="mobile-nav">
                       <ul class="clearfix">
