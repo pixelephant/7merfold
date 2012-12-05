@@ -49,7 +49,7 @@
                   </nav>
                 <div id="search-form">
                   <form method="get" action="<?php echo $this->webroot ?>kereses">
-                    <input type="search" name="" id="" placeholder="Keresés...">
+                    <input type="search" name="search" id="search" placeholder="Keresés...">
                     <input type="submit" value="Ok">
                   </form>
                 </div>
@@ -65,7 +65,7 @@
                     </ul>
                 </nav>
             </header>
-            
+            <?php echo $this->element('breadcrumb'); ?>
             <div id="main-content">
                 <?php echo $this->fetch('content'); ?>
             </div>

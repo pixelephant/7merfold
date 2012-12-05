@@ -18,7 +18,7 @@
 
 <?php echo $this->element('content', array('trip' => $trip, 'trip_type' => $trip_type)); ?>
 
-<section class="section">
+<!-- <section class="section">
 <h2>Információk</h2>
 <div class="cont">
   <div class="block">
@@ -108,7 +108,7 @@
     <p>Ne aggódj, ha valamin változtatnál nálunk megteheted!</p>
   </div>
 </div>
-</section>
+</section> -->
 <section class="section ajax">
   <h2><a href="ajax.html">Vízum <span>+</span></a></h2>
   <div class="cont hidden">

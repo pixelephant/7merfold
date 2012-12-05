@@ -4,7 +4,7 @@ class Trip extends AppModel {
 
     public $belongsTo = array('Country', 'Region');
 
-    public $hasMany = array('Program');
+    public $hasMany = array('Program','Hotel');
 
     public $hasAndBelongsToMany = array(
         'Sight' =>

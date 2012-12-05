@@ -87,7 +87,14 @@ class HomeController extends AppController {
 	}
 
 	public function search(){
-		
+		$params = $this->request->query;
+		$search = $params['search'];
+
+		$cond = array('OR' => array("Trip.description LIKE '%$search%'","Trip.name LIKE '%$search%'", "Trip.short_description LIKE '%$search%'", "Trip.accommodation LIKE '%$search%'", "Trip.travel_method LIKE '%$search%'", "Trip.extra LIKE '%$search%'", "Trip.extra_title LIKE '%$search%'", "Trip.service LIKE '%$search%'"));
+		$trips = $this->Trip->find('all', array('conditions' => $cond));
+
+		$this->set('trips', $trips);
+		$this->render('search');
 	}
 
 }

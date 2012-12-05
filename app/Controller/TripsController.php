@@ -53,6 +53,7 @@ class TripsController extends AppController {
 		$trip_id = (int)$params['trip_id'];
 
 		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
+
 		$trip_type = $trip['Trip']['category_id'];
 
 		$this->set('trip', $trip);
