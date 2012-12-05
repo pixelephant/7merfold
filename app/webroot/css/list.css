@@ -82,6 +82,7 @@
       font-style: italic; }
 
 .offer-list {
+  clear: both;
   overflow: hidden; }
   .offer-list a.offer {
     width: 50%;
