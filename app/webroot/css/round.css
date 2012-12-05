@@ -67,7 +67,8 @@
   padding: 1em; }
 .sum div {
   overflow: hidden;
-  padding: 1em; }
+  padding: 1em;
+  width: 100%; }
 .sum .important {
   float: left;
   padding: 0;
