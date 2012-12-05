@@ -53,8 +53,10 @@ class TripsController extends AppController {
 		$trip_id = (int)$params['trip_id'];
 
 		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
+		$trip_type = $trip['Trip']['category_id'];
 
 		$this->set('trip', $trip);
+		$this->set('trip_type', $trip_type);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
 

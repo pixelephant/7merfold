@@ -5,13 +5,8 @@
 <img src="img/lisabon.jpeg" alt="">
 <div class="clearfix">
   <nav id="inline-nav">
-  <a href="#program">Program</a>
-  <a href="#">Ár</a>
-  <a href="#">Vízum</a>
-  <a href="#">Blala</a>
-  <a href="#">Salala</a>
-  <a href="#">Tehén</a>
-</nav>
+    <?php echo $this->element('nav', array('trip_type' => $trip_type)) ?>
+  </nav>
 
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
 <div>
@@ -20,6 +15,8 @@
 </div>
 </div>
 </section>
+
+<?php echo $this->element('content', array('trip' => $trip, 'trip_type' => $trip_type)); ?>
 
 <section class="section">
 <h2>Információk</h2>
@@ -77,20 +74,7 @@
 </div>
 </section>
 
-<section class="section gallery">
-<h2>Látnivalók</h2>
-<div class="cont">
-  <?php
-    foreach($trip['Sight'] as $sight){
-      echo $this->Html->link(($this->Html->image($sight['image_file'], array('alt' => $sight['name'], 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $sight['name'])) . '<span>' . $sight['name'] . '</span>'), '#', array('escape' => false));
-    } 
-  ?>
-  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
-  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
-  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
-  <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
-</div>
-</section>
+
 
 <section class="section share">
 <h2>Megosztás</h2> <div><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></div>
