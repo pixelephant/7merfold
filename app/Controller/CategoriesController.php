@@ -29,32 +29,32 @@ App::uses('AppController', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
-class TripsController extends AppController {
+class CategoriesController extends AppController {
 
-	public $name = 'Trips';
-	public $uses = array('Trip');
+	public $name = 'Categories';
+	public $uses = array('Trip', 'Category', 'Region');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
-
-		$params = $this->request->params;
-		$slug = $params['category_slug'];
-
-		$trip = $this->Trip->find('all');
-
-		$this->set('trip', $trip);
-
 		$this->render('index');
 	}
 
 	public function show() {
 
-		$trip_id = 1;
+		$params = $this->request->params;
+		$slug = $params['category_slug'];
 
-		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
+		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
+		$trips = $this->Trip->find('all', array('conditions' => array('Trip.category_id' => $category['Category']['id']), 'order' => 'Trip.region_id ASC'));
 
-		$this->set('trip', $trip);
+		$regions = $this->Region->find('all', array('conditions' => array('Region.country_id' => $trips[0]['Country']['id'])));
+
+		$this->set('trips', $trips);
+		$this->set('regions', $regions);
+		$this->set('category_id', $category['Category']['id']);
+
 
 		$this->render('show');
 	}
 }
+

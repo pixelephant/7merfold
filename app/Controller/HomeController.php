@@ -43,7 +43,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category');
+	public $uses = array('Trip', 'Category', 'Region');
 
 /**
  * Displays a view
@@ -71,6 +71,15 @@ class HomeController extends AppController {
 	public function get_menu(){
 		if ($this->request->is('requested')){
 			return $this->Category->find('list', array('fields' => array('Category.slug', 'Category.name')));
+		}
+	}
+
+	public function get_trips(){
+		if ($this->request->is('requested')){
+			$params = $this->request->params;
+			$cat_id = (int)$params['category_id'];
+			$reg_id = (int)$params['region_id'];
+			return $this->Trip->find('all', array('conditions' => array('Trip.region_id' => $reg_id, 'Trip.category_id' => $cat_id)));
 		}
 	}
 

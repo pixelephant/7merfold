@@ -2,6 +2,6 @@
 class Country extends AppModel {
     public $name = 'Country';
 
-    public $hasMany = 'Trip';
+    public $hasMany = array('Trip', 'Region');
 }
 ?>

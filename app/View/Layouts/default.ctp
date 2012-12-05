@@ -12,8 +12,6 @@
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-
-
         <?php echo $this->fetch('css'); ?>
         <?php echo $this->Html->css(array('main')); ?>
         <?php echo $this->Html->script(array('vendor/modernizr-2.6.2.min')); ?>
@@ -22,8 +20,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
-        
         
             <section id="top-contact">
               <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
@@ -32,7 +28,6 @@
               <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
               <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
             </section>
-
 
             <header id="main-header" class="clearfix">
                   <div class="clearfix">
@@ -74,9 +69,6 @@
                     </ul>
                 </nav>
             </header>
-            
-                
-                
             
             <div id="main-content">
                 <?php echo $this->fetch('content'); ?>
