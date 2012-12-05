@@ -91,14 +91,6 @@
   <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
   <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
   <a rel="gallery" href="img/asd.jpeg" class="fancybox" title="Sample title"><img src="img/asd.jpeg" /></a>
-
-  <a href="#"><img src="img/asd.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
-  <a href="#"><img src="img/3.jpeg" alt=""><span>Két ember háta</span></a>
 </div>
 </section>
 
