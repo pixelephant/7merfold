@@ -695,7 +695,7 @@ a.offer {
   body {
     font-size: 130%; } }
 @media all and (min-width: 62.5em) {
-  #main-content .section, #top-contact, .cta {
+  #main-content .section, #top-contact, .cta, .breadcrumb {
     margin-bottom: 1%; }
 
   #main-content {
