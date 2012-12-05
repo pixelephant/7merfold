@@ -12,9 +12,9 @@
 <section class="" id="explore">
   <div class="m">
     <a class="offer pulse" href="#">
-    <img src="img/1.png" alt="">
-    <h3>Városi kalandok</h3>
-  </a>
+      <img src="img/1.png" alt="">
+      <h3>Városi kalandok</h3>
+    </a>
     <a class="offer pulse" href="#">
       <img src="img/1.png" alt="">
       <h3>Felfedezőutak</h3>
