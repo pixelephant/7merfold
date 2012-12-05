@@ -33,8 +33,11 @@
 	Router::connect('/round', array('controller' => 'trips', 'action' => 'show'));
 	Router::connect('/quote', array('controller' => 'home', 'action' => 'quote'));
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
+	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
 
 	Router::connect('/:category_slug', array('controller' => 'trips', 'action' => 'index'));
+
+
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on

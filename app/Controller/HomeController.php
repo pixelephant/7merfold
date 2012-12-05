@@ -43,7 +43,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip');
+	public $uses = array('Trip', 'Category');
 
 /**
  * Displays a view
@@ -66,6 +66,12 @@ class HomeController extends AppController {
 
 	public function static_page() {
 		$this->render('static_page');
+	}
+
+	public function get_menu(){
+		if ($this->request->is('requested')){
+			return $this->Category->find('list', array('fields' => array('Category.slug', 'Category.name')));
+		}
 	}
 
 }

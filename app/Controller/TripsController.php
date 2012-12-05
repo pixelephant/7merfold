@@ -37,8 +37,7 @@ class TripsController extends AppController {
 
 	public function index() {
 
-		$params = $this->request->params;
-		$unit_id = $params['id'];
+		// $params = $this->request->params;
 
 		$this->render('index');
 	}

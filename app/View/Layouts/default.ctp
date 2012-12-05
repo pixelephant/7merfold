@@ -62,27 +62,7 @@
                 <nav id="mobile-submenu">
                     <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
                     <ul id="sub-grid">
-                      <li id="varosi"><a href="#sub1">
-                        <img src="img/varos.png" alt="Városi kalandok">
-                        Városi kalandok
-                      </a></li>
-                      <li><a href="#sub2">
-                        <img src="img/korut.png" alt="Körutazások">
-                        Körutazások
-                      </a></li>
-                      <li><a href="#sub3">
-                        <img src="img/tul.png" alt="Nyaralások üveghegyen túl">
-                        Üveghegyen túl
-                      </a></li>
-                      <li><a href="#sub4">
-                        <img src="img/innen.png" alt="Nyaralások üveghegyen innen">
-                        Üveghegyen innen
-                      </a></li>
-                      <li><a href="#sub5">
-                        <img src="img/felfedezo.png" alt="Felfedezőutak">
-                        Felfedezőutak
-                      </a></li>
-                      
+                      <?php echo $this->element('top_menu_dynamic'); ?>
                       <li><a href="#sub6">
                         <img src="img/cegeknek.png" alt="Cégeknek">
                         Cégeknek
