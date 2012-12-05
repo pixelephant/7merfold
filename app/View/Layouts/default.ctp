@@ -58,14 +58,10 @@
                     <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
                     <ul id="sub-grid">
                       <?php echo $this->element('top_menu_dynamic'); ?>
-                      <li><a href="#sub6">
-                        <img src="img/cegeknek.png" alt="Cégeknek">
-                        Cégeknek
-                      </a></li>
-                      <li><a href="#sub7">
-                        <img src="img/szolg.png" alt="Szolgáltatások">
-                        Szolgáltatások
-                      </a></li>
+                      <li><?php echo $this->Html->link($this->Html->image('cegeknek.png', array('alt' => 'Cégeknek')) . 'Cégeknek', '/cegeknek', array('escape' => false)); ?></li>
+                      <li>
+                        <?php echo $this->Html->link($this->Html->image('szolg.png', array('alt' => 'Szolgáltatások')) . 'Szolgáltatások', '/szolgaltatasok', array('escape' => false)); ?>
+                      </li>
                     </ul>
                 </nav>
             </header>

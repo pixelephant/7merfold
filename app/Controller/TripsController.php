@@ -49,7 +49,8 @@ class TripsController extends AppController {
 
 	public function show() {
 
-		$trip_id = 1;
+		$params = $this->request->params;
+		$trip_id = (int)$params['trip_id'];
 
 		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
 

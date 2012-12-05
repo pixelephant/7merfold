@@ -156,7 +156,4 @@
   </div>
 <?php } ?>
                                                                                                                                                                                                 
-<div class="cta">
-  <h3>Nem találja az utazást amit keres?</h3>
-  <h2><a href="#">Írjon és valóra váltjuk!</a></h2>    
-</div>
+<?php echo $this->element('quote'); ?>

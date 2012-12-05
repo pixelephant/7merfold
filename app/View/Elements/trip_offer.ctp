@@ -1,4 +1,4 @@
-<a href="#" class="offer">
+<a href="<?php echo $this->webroot; ?>utjaink/<?php echo $trip['Trip']['id']; ?>" class="offer">
   <div class="img">
     <?php echo $this->Html->image('temp.png') ?>
   </div>                      

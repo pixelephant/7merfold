@@ -29,15 +29,19 @@
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
+
+	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
+	Router::connect('/region/get_trips/:region_id/:category_id', array('controller' => 'home', 'action' => 'get_trips'));
+
+	Router::connect('/utjaink/:trip_id', array('controller' => 'trips', 'action' => 'show'));
+
 	Router::connect('/list', array('controller' => 'trips', 'action' => 'index'));
 	Router::connect('/round', array('controller' => 'trips', 'action' => 'show'));
-	Router::connect('/quote', array('controller' => 'home', 'action' => 'quote'));
+	Router::connect('/ajanlat', array('controller' => 'home', 'action' => 'quote'));
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));
 
-	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
-	Router::connect('/region/get_trips/:region_id/:category_id', array('controller' => 'home', 'action' => 'get_trips'));
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
