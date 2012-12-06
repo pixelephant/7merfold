@@ -171,7 +171,8 @@
     text-align: left; }
 
   .lead {
-    display: block; }
+    display: block;
+    font-size: 0.8em; }
 
   .fake-a {
     display: block; } }
