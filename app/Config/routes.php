@@ -50,6 +50,7 @@
 	Router::connect('/list', array('controller' => 'trips', 'action' => 'index'));
 	Router::connect('/round', array('controller' => 'trips', 'action' => 'show'));
 	Router::connect('/ajanlat', array('controller' => 'home', 'action' => 'quote'));
+	Router::connect('/ajanlat/email', array('controller' => 'home', 'action' => 'quote_email'));
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));

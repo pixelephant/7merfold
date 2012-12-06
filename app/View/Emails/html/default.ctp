@@ -16,10 +16,9 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<?php
-$content = explode("\n", $content);
 
-foreach ($content as $line):
-	echo '<p> ' . $line . "</p>\n";
-endforeach;
-?>
+Név: <?php echo $name; ?> <br>
+Telefonszám: <?php echo $phone; ?> <br>
+Email: <?php echo $email; ?> <br>
+Ajánlatkérés helye: <?php echo $referal; ?> <br>
+Üzenet: <?php echo $message; ?>

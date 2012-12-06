@@ -3,7 +3,10 @@
 	<h2>Árajánlatkérés - <?php echo $quote_text; ?></h2>
 	<div class="cont">
 	<p>Ha már kezd körvonalazódni álmaid utazása, írd le nekünk elképzeléseidet és mi segítünk a legmegfelelőbb utat megszervezni! Kérlek ne felejtsd el megírni, hogy mikor, hányan és mennyi időre utaznátok! Köszönjük.</p>
-		<form action="#" id="quote-form">
+		<form action="<?php echo $this->webroot; ?>ajanlat/email" method="POST" id="quote-form">
+			<div>
+				<input type="hidden" name="referal" id="referal" value="<?php echo $quote_text; ?>">
+			</div>
 			<div>
 				<label for="name">Név</label>
 				<input type="text" name="name" id="name" required>

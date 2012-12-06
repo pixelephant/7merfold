@@ -20,6 +20,8 @@
  */
 
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
+
 
 /**
  * Static content controller
@@ -95,6 +97,28 @@ class HomeController extends AppController {
 
 		$this->set('trips', $trips);
 		$this->render('search');
+	}
+
+	public function quote_email(){
+
+		$params = $this->params['data'];
+
+		$user_email = $params['e-mail'];
+		$user_name = $params['name'];
+		$user_phone = $params['telephone'];
+		$user_message = $params['message'];
+		$user_referal = $params['referal'];
+
+		$email = new CakeEmail('smtp');
+		$email->from(array($user_email => $user_name));
+		$email->template('default');
+		$email->emailFormat('both');
+		$email->viewVars(array('name' => $user_name, 'email' => $user_email, 'phone' => $user_phone, 'message' => $user_message, 'referal' => $user_referal));
+
+		$email->send();
+
+		$this->render('email_thankyou');
+
 	}
 
 }

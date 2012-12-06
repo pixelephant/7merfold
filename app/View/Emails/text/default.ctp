@@ -16,4 +16,8 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<?php echo $content; ?>
+Név: <?php echo $name; ?>
+Telefonszám: <?php echo $phone; ?>
+Email: <?php echo $email; ?>
+Ajánlatkérés helye: <?php echo $referal; ?>
+Üzenet: <?php echo $message; ?>
