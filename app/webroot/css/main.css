@@ -381,11 +381,13 @@ body {
     color: #fff !important;
     border-bottom: none !important;
     font-size: 1.65em !important;
-    padding-left: 0 !important; }
+    padding-left: 0 !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
   #usp .cont {
     float: right;
     width: 60% !important; }
   #usp p {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 1em;
     clear: both;
