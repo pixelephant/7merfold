@@ -3,7 +3,7 @@
 <div class="cont">
 	<?php foreach($hotels as $hotel){ ?>
 	  <div class="hotel">
-	    <h3><?php echo $hotel['name']; ?><span><?php echo $hotel['star_rating']; ?></span></h3>
+	    <h3><?php echo $hotel['name']; ?><?php echo $this->App->hotel_stars($hotel['star_rating']); ?></h3>
 	    <p><?php echo $hotel['description']; ?></p>
 	    <p class="accommodation"><?php echo $hotel['accommodation']; ?></p>
 	    <p class="price"><?php echo $hotel['price']; ?></p>
