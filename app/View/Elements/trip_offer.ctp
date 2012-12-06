@@ -6,7 +6,7 @@
   	<?php if($trip['Trip']['star_rating'] > 0){ ?>
     	<span class="stars">
     		<?php for($i=0;$i<$trip['Trip']['star_rating'];$i++){ ?>
-    			&star;
+    			<span class="icon star" aria-hidden="true" data-icon="*"></span>
     		<?php } ?>
     	</span>
     <?php } ?>

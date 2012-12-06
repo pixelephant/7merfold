@@ -135,6 +135,9 @@
   color: #4897c8 !important; }
 
 @media all and (min-width: 62.5em) {
+  .offer-list a.offer .stars {
+    margin-top: 20px; }
+
   .selecter ul li {
     width: 25%;
     float: left;
