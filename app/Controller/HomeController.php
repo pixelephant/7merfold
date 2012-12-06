@@ -130,7 +130,6 @@ class HomeController extends AppController {
 		$this->set('breadcrumb', array());
 
 		$this->render('email_thankyou');
-
 	}
 
 }

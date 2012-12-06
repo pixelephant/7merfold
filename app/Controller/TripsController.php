@@ -57,26 +57,35 @@ class TripsController extends AppController {
 		$trip_type = $trip['Trip']['category_id'];
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $trip_type)));
+		$country = $this->Country->find('first', array('conditions' => array('Country.id' => $trip['Trip']['country_id'])));
 
 		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
 
 		if($trip_type == 3 || $trip_type == 4){
-			$country = $this->Country->find('first', array('conditions' => array('Country.id' => $trip['Trip']['country_id'])));
 			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id'])] = $country['Country']['name'];
-			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id']) . '/' . $trip_id] = $trip['Trip']['name'];
-		}else{
-			$breadcrumb[$category['Category']['slug'] . '/' . $trip_id] = $trip['Trip']['name'];
 		}
 
-		
+		$breadcrumb[('utjaink/' . $trip_id)] = $trip['Trip']['name'];
 
 		$this->set('trip', $trip);
 		$this->set('trip_type', $trip_type);
+		$this->set('country', $country);
 
 		$this->set('breadcrumb', $breadcrumb);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
 
 		$this->render('show');
+	}
+
+	public function visa_info(){
+
+		$country_id = (int)($this->request->params['country_id']);
+
+		$c = $this->Country->find('first', array('conditions' => array('Country.id' => $country_id)));
+
+		$this->set('content', $c['Country']['visa_info']);
+
+		$this->render('ajax', 'ajax');
 	}
 }

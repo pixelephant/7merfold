@@ -110,7 +110,7 @@
 </div>
 </section> -->
 <section class="section ajax">
-  <h2><a href="ajax.html">Vízum <span>+</span></a></h2>
+  <h2><?php echo $this->Html->link('Vízum <span>+</span>', '/visa_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">
     
   </div>
