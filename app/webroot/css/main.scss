@@ -314,15 +314,15 @@ body{
     border-bottom: none !important;
     font-size: 1.65em !important;
     padding-left: 0 !important;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.8); /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
-  }
-  overflow: hidden;
+    @include text-shadow; 
+    }
+    overflow: hidden;
   .cont{
     float: right;
     width: 60% !important;
   }
   p{
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    @include text-shadow; 
     color: #fff;
     font-size: 1em;
     clear: both;
@@ -331,6 +331,7 @@ body{
   a{
     clear: both;
    @include purple-button;
+
    float:right;
   }
 }
