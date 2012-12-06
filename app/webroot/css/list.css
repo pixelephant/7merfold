@@ -135,7 +135,7 @@
   color: #4897c8 !important; }
 
 @media all and (min-width: 62.5em) {
-  .offer-list a.offer .stars {
+  .offer-list a.offer .data {
     margin-top: 20px; }
 
   .selecter ul li {
