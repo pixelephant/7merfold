@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 06. 12:09
+-- Létrehozás ideje: 2012. dec. 06. 14:14
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -87,7 +87,14 @@ CREATE TABLE IF NOT EXISTS `hotels` (
   `trip_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `trip_id` (`trip_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=2 ;
+
+--
+-- A tábla adatainak kiíratása `hotels`
+--
+
+INSERT INTO `hotels` (`id`, `name`, `star_rating`, `description`, `accommodation`, `price`, `trip_id`) VALUES
+(1, 'Teszt hotel 1.', 4, 'Teszt hotel 1 leírása', 'Teszt hotel 1 ellátása', '100000', 1);
 
 -- --------------------------------------------------------
 
