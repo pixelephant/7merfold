@@ -224,6 +224,7 @@ body{
 }
 
 .breadcrumb{
+  margin-top: 10px;
   width:100%;
   height:35px;
   line-height:35px;
@@ -305,7 +306,7 @@ body{
 }
 
 #usp{
-  background: url(../img/szab.png);
+  background: url(../img/szab.png) !important;
   h3{
     text-align: center;
     font-weight: 200;
@@ -656,7 +657,7 @@ a.offer{
     margin-bottom: 1%;
   }
 
-  #main-content{
+  #main-content,.breadcrumb{
     margin-top: 1%;
   }
 

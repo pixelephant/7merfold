@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".carousel").carousel({elements:{prevNext:!1,handles:!0,counter:!1},behavior:{horizontal:!0,circular:!0,autoplay:0,keyboardNav:!0},text:{next:"▶",prev:"◀",handle:"●"}});var e=setInterval(function(){$("#explore a:not('.animated')").eq(0).addClass("animated");$("#explore a:not('.animated')").length||clearInterval(e)},400)});
