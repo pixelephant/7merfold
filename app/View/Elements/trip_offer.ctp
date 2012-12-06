@@ -3,13 +3,7 @@
     <?php echo $this->Html->image($trip['Trip']['circle_image_file']); ?>
   </div>                      
   <div class="data">
-  	<?php if($trip['Trip']['star_rating'] > 0){ ?>
-    	<span class="stars">
-    		<?php for($i=0;$i<$trip['Trip']['star_rating'];$i++){ ?>
-    			<span class="icon star" aria-hidden="true" data-icon="*"></span>
-    		<?php } ?>
-    	</span>
-    <?php } ?>
+  	<?php echo $this->App->hotel_stars($trip['Trip']['star_rating']); ?>
     <h3><?php echo $trip['Trip']['name']; ?></h3>
     <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
     <span class="fake-a">Tovább &raquo;</span>

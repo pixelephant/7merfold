@@ -31,4 +31,21 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+
+	public function hotel_stars($star_number){
+		
+		$star_number = (int)$star_number;
+		$content = '';
+
+		if($star_number > 0){
+    	$content .= '<span class="stars">';
+    		for($i=0;$i<$star_number;$i++){
+    			$content .= '<span class="icon star" aria-hidden="true" data-icon="*"></span>';
+    		}
+    	$content .= '</span>';
+    }
+
+    return $content;
+	}
+
 }
