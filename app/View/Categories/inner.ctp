@@ -5,7 +5,7 @@
   <?php foreach($countries as $country){ ?>
       <a href="<?php echo $this->webroot . $category['Category']['slug'] . '/' . $country['Country']['id']; ?>" class="offer">
         <div class="img">
-          <?php #echo $this->Html->image($country['Country']['image_file']); ?>
+          <?php echo $this->Html->image($country['Country']['image_file'], array('alt' => $country['Country']['name'])); ?>
         </div>                      
         <div class="data">
           <h3><?php echo $country['Country']['name']; ?></h3>

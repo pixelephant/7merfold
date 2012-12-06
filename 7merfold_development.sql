@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 05. 17:42
+-- Létrehozás ideje: 2012. dec. 06. 09:53
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`id`, `slug`, `name`, `created`) VALUES
-(1, 'varosi-kalandok', 'Városi kalandok', '2012-12-05 16:41:19'),
+(1, 'varosi-kalandok', 'Városi kalandok', '2012-12-06 08:51:26'),
 (2, 'korutazasok', 'Körutazások', '0000-00-00 00:00:00'),
 (3, 'nyaralasok-uveghegyen-tul', 'Üveghegyen túl', '0000-00-00 00:00:00'),
 (4, 'nyaralasok-uveghegyen-innen', 'Üveghegyen innen', '0000-00-00 00:00:00'),
@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `name` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `visa_info` text COLLATE utf8_hungarian_ci,
+  `image_file` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=3 ;
 
@@ -66,9 +67,9 @@ CREATE TABLE IF NOT EXISTS `countries` (
 -- A tábla adatainak kiíratása `countries`
 --
 
-INSERT INTO `countries` (`id`, `information`, `useful_information`, `created`, `name`, `visa_info`) VALUES
-(1, 'Görögország', 'Görögország hasznos', '0000-00-00 00:00:00', 'Görögország', 'Vízum Görögországba'),
-(2, 'Franciaország leírása', 'Franciaország haszno', '0000-00-00 00:00:00', 'Franciaország', 'Vízum Franciaországba');
+INSERT INTO `countries` (`id`, `information`, `useful_information`, `created`, `name`, `visa_info`, `image_file`) VALUES
+(1, 'Görögország', 'Görögország hasznos', '0000-00-00 00:00:00', 'Görögország', 'Vízum Görögországba', 'gorogo.png'),
+(2, 'Franciaország leírása', 'Franciaország haszno', '0000-00-00 00:00:00', 'Franciaország', 'Vízum Franciaországba', 'franciao.png');
 
 -- --------------------------------------------------------
 
@@ -109,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`id`, `title`, `content`, `image_file`, `created`) VALUES
 (1, 'Sokan szeretnek nyaralni!', 'Kutatók megállapították, hogy a nyaralás jó.', '3.jpeg', '0000-00-00 00:00:00'),
-(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '4.jpeg', '2012-12-05 16:41:20');
+(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '4.jpeg', '2012-12-06 08:51:26');
 
 -- --------------------------------------------------------
 
@@ -155,9 +156,9 @@ CREATE TABLE IF NOT EXISTS `regions` (
 --
 
 INSERT INTO `regions` (`id`, `country_id`, `description`, `created`, `name`) VALUES
-(1, 1, 'Kréta leírása', '2012-12-05 16:41:19', 'Kréta'),
+(1, 1, 'Kréta leírása', '2012-12-06 08:51:26', 'Kréta'),
 (2, 1, 'Korfu leírása', '0000-00-00 00:00:00', 'Korfu'),
-(3, 2, 'Korzika leírása', '2012-12-05 16:41:19', 'Korzika'),
+(3, 2, 'Korzika leírása', '2012-12-06 08:51:26', 'Korzika'),
 (4, 2, 'Cote d azur', '0000-00-00 00:00:00', 'Cote d azur');
 
 -- --------------------------------------------------------
@@ -179,7 +180,7 @@ CREATE TABLE IF NOT EXISTS `sights` (
 --
 
 INSERT INTO `sights` (`id`, `name`, `image_file`, `created`) VALUES
-(1, 'Teszt látnivaló', '3.jpeg', '2012-12-05 16:41:19');
+(1, 'Teszt látnivaló', '3.jpeg', '2012-12-06 08:51:26');
 
 -- --------------------------------------------------------
 
