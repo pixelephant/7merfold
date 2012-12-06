@@ -407,6 +407,7 @@ body {
     float: right; }
 
 #explore {
+  display: none;
   overflow: hidden;
   padding: 6.25% 0; }
   #explore .m {
