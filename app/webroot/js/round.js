@@ -47,7 +47,8 @@ b=a.children(),b=b.innerWidth()-b.height(99).innerWidth();a.remove();return b});
 
 $(document).ready(function(){
 
-$(".important,#inline-nav a").click(function(){
+$(".important,#inline-nav a").click(function(e){
+   e.preventDefault();
    var href = $(this).attr("href");
    var $e = $(href);
     $("html,body").animate({ scrollTop: $e.offset().top }, "slow",function(){

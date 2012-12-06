@@ -193,7 +193,6 @@ $(".collapsible h2 a").click(function(){
       else{
        $tog.html("+"); 
       }
-
   return false;
 });
 

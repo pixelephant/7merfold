@@ -129,9 +129,9 @@
     color: #333333;
     font-size: 2em; }
 
-.block {
+.block, .hotel {
   margin-bottom: 20px; }
-  .block .extra {
+  .block .extra, .hotel .extra {
     font-size: 1.2em;
     font-weight: 200; }
 

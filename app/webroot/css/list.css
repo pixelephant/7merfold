@@ -82,6 +82,7 @@
       font-style: italic; }
 
 .offer-list {
+  padding: 1em 0;
   clear: both;
   overflow: hidden; }
   .offer-list a.offer {
