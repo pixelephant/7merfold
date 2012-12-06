@@ -85,7 +85,17 @@ class TripsController extends AppController {
 		$c = $this->Country->find('first', array('conditions' => array('Country.id' => $country_id)));
 
 		$this->set('content', $c['Country']['visa_info']);
-
 		$this->render('ajax', 'ajax');
 	}
+
+	public function country_info(){
+
+		$country_id = (int)($this->request->params['country_id']);
+
+		$c = $this->Country->find('first', array('conditions' => array('Country.id' => $country_id)));
+
+		$this->set('content', $c['Country']['information']);
+		$this->render('ajax', 'ajax');
+	}
+
 }

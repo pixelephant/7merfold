@@ -6,6 +6,8 @@
 <div class="clearfix">
   <nav id="inline-nav">
     <?php echo $this->element('nav', array('trip_type' => $trip_type)) ?>
+    <a href="#vizum">Vízum</a>
+    <a href="#<?php echo $trip['Country']['name']; ?>"><?php echo $trip['Country']['name']; ?></a>
   </nav>
 
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
@@ -109,14 +111,14 @@
   </div>
 </div>
 </section> -->
-<section class="section ajax">
+<section id="vizum" class="section ajax">
   <h2><?php echo $this->Html->link('Vízum <span>+</span>', '/visa_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">
     
   </div>
 </section>
-<section class="section ajax">
-  <h2><a href="ajax.html"><?php echo $trip['Country']['name']; ?> <span>+</span></a></h2>
+<section id="<?php echo $trip['Country']['name']; ?>" class="section ajax">
+  <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '/visa_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">
     
   </div>
