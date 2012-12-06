@@ -373,12 +373,36 @@ body {
   margin-top: -4px; }
 
 #usp {
-  background: url(../img/szab.png) !important; }
-  #usp h3 {
+  background: url(../img/szab.png) no-repeat !important;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  overflow: hidden; }
+  #usp h2 {
+    color: #fff !important;
+    border-bottom: none !important;
+    font-size: 1.65em !important;
+    padding-left: 0 !important; }
+  #usp .cont {
+    float: right;
+    width: 60% !important; }
+  #usp p {
+    color: #fff;
+    font-size: 1em;
+    clear: both;
+    margin-bottom: 1em; }
+  #usp a {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    background: #69297d;
     text-align: center;
-    font-weight: 200;
-    padding: 1em 0;
-    font-size: 1.5em; }
+    padding: 0.8em 1em;
+    color: #fff;
+    text-decoration: none;
+    float: right; }
 
 #explore {
   overflow: hidden;
@@ -715,10 +739,6 @@ a.offer {
     padding: 12px 20px; }
     #logo img {
       height: auto; }
-
-  #usp, #explore {
-    width: 50%;
-    float: left; }
 
   #explore + section {
     clear: both; }
