@@ -9,6 +9,7 @@
         </div>                      
         <div class="data">
           <h3><?php echo $country['Country']['name']; ?></h3>
+          <p class="lead"><?php echo $country['Country']['useful_information']; ?></p>
           <span class="fake-a">Tovább &raquo;</span>
         </div>
       </a>

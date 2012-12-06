@@ -47,7 +47,10 @@ class NewsController extends AppController {
 		$news_id = (int)$params['news_id'];
 		$news = $this->News->find('first', array('condition' => array('News.id' => $news_id)));
 
+		$breadcrumb = array(('hirek/' . $news_id) => $news['News']['title']);
+
 		$this->set('news', $news);
+		$this->set('breadcrumb', $breadcrumb);
 
 		$this->render('show');
 	}

@@ -1,8 +1,10 @@
+<?php if(count($breadcrumb) > 0){ ?>
 <section class="breadcrumb clearfix">
 	<ul>
 		<li class="home"><a href="<?php echo $this->webroot; ?>"><span class="icon" aria-hidden="true" data-icon="a"></span></a></li>
-		<li><a href="#">Üveghegyen innen</a></li>
-		<li><a href="#">Spanyolország</a></li>
-		<li><a href="#">Hotel Santa Anna</a></li>
+		<?php foreach($breadcrumb as $link => $name){ ?>
+			<li><a href="<?php echo $this->webroot . $link; ?>"><?php echo $name; ?></a></li>
+		<?php } ?>
 	</ul>
 </section>
+<?php } ?>

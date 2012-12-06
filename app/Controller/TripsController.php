@@ -32,7 +32,7 @@ App::uses('AppController', 'Controller');
 class TripsController extends AppController {
 
 	public $name = 'Trips';
-	public $uses = array('Trip');
+	public $uses = array('Trip', 'Country', 'Category');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -56,8 +56,24 @@ class TripsController extends AppController {
 
 		$trip_type = $trip['Trip']['category_id'];
 
+		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $trip_type)));
+
+		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
+
+		if($trip_type == 3 || $trip_type == 4){
+			$country = $this->Country->find('first', array('conditions' => array('Country.id' => $trip['Trip']['country_id'])));
+			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id'])] = $country['Country']['name'];
+			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id']) . '/' . $trip_id] = $trip['Trip']['name'];
+		}else{
+			$breadcrumb[$category['Category']['slug'] . '/' . $trip_id] = $trip['Trip']['name'];
+		}
+
+		
+
 		$this->set('trip', $trip);
 		$this->set('trip_type', $trip_type);
+
+		$this->set('breadcrumb', $breadcrumb);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
 

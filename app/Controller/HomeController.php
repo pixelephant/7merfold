@@ -65,15 +65,19 @@ class HomeController extends AppController {
 		$this->set('categories_top', $categories_top);
 		$this->set('categories_bottom', $categories_bottom);
 
+		$this->set('breadcrumb', array());
+
 		$this->render('index');
 	}
 
 	public function quote() {
+		$this->set('breadcrumb', array());
 		$this->set('quote_text', $this->Session->read('quote_text'));
 		$this->render('quote');
 	}
 
 	public function static_page() {
+		$this->set('breadcrumb', array());
 		$this->render('static_page');
 	}
 
@@ -99,6 +103,8 @@ class HomeController extends AppController {
 		$cond = array('OR' => array("Trip.description LIKE '%$search%'","Trip.name LIKE '%$search%'", "Trip.short_description LIKE '%$search%'", "Trip.accommodation LIKE '%$search%'", "Trip.travel_method LIKE '%$search%'", "Trip.extra LIKE '%$search%'", "Trip.extra_title LIKE '%$search%'", "Trip.service LIKE '%$search%'"));
 		$trips = $this->Trip->find('all', array('conditions' => $cond));
 
+		$this->set('breadcrumb', array());
+
 		$this->set('trips', $trips);
 		$this->render('search');
 	}
@@ -120,6 +126,8 @@ class HomeController extends AppController {
 		$email->viewVars(array('name' => $user_name, 'email' => $user_email, 'phone' => $user_phone, 'message' => $user_message, 'referal' => $user_referal));
 
 		$email->send();
+
+		$this->set('breadcrumb', array());
 
 		$this->render('email_thankyou');
 

@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
 class CategoriesController extends AppController {
 
 	public $name = 'Categories';
-	public $uses = array('Trip', 'Category', 'Region');
+	public $uses = array('Trip', 'Category', 'Region', 'Country');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -23,7 +23,16 @@ class CategoriesController extends AppController {
 		}
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
-		$trips = $this->Trip->find('all', array('conditions' => array('Trip.category_id' => $category['Category']['id']), 'order' => 'Trip.region_id ASC'));
+
+		$breadcrumb = array($slug => $category['Category']['name']);
+
+		$cond = array('Trip.category_id' => $category['Category']['id']);
+		if(isset($params['pass'][0])){
+			$cond['Trip.country_id'] = $params['country_id'];
+			$country = $this->Country->find('first', array('conditions' => array('Country.id' => $params['country_id'])));
+			$breadcrumb[($slug . '/' . $params['country_id'])] = $country['Country']['name'];
+		}
+		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC'));
 
 		$regions = array();
 
@@ -40,6 +49,8 @@ class CategoriesController extends AppController {
 		$this->set('regioned', $regioned);
 		$this->set('category_id', $category['Category']['id']);
 
+		$this->set('breadcrumb', $breadcrumb);
+
 		$this->render('show');
 	}
 
@@ -51,7 +62,7 @@ class CategoriesController extends AppController {
 		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $cat_id)));
 		$countries = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.country_id'));
 
-		// print_r($countries);
+		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
 
 		$this->Session->write('quote_text', 'Nyaralás');
 
@@ -60,6 +71,8 @@ class CategoriesController extends AppController {
 		$this->set('regioned', false);
 		$this->set('countries', $countries);
 		$this->set('category', $category);
+
+		$this->set('breadcrumb', $breadcrumb);
 
 		$this->render('inner');
 	}

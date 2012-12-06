@@ -65,7 +65,7 @@
                     </ul>
                 </nav>
             </header>
-            <?php echo $this->element('breadcrumb'); ?>
+            <?php echo $this->element('breadcrumb', array('breadcrumb' => $breadcrumb)); ?>
             <div id="main-content">
                 <?php echo $this->fetch('content'); ?>
             </div>
