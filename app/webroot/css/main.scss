@@ -306,12 +306,30 @@ body{
 }
 
 #usp{
-  background: url(../img/szab.png) !important;
-  h3{
-    text-align: center;
-    font-weight: 200;
-    padding:1em 0;
-    font-size: 1.5em;
+  background: url(../img/szab.png) no-repeat !important;
+   -webkit-background-size: 100% 100%; 
+          background-size: 100% 100%; 
+  h2{
+    color:#fff !important;
+    border-bottom: none !important;
+    font-size: 1.65em !important;
+    padding-left: 0 !important;
+  }
+  overflow: hidden;
+  .cont{
+    float: right;
+    width: 60% !important;
+  }
+  p{
+    color: #fff;
+    font-size: 1em;
+    clear: both;
+    margin-bottom: 1em;
+  }
+  a{
+    clear: both;
+   @include purple-button;
+   float:right;
   }
 }
 
@@ -677,8 +695,8 @@ a.offer{
   }
 
   #usp,#explore{
-    width:50%;
-    float:left;
+    //width:50%;
+    //float:left;
   }
 
   #explore + section{

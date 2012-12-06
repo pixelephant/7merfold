@@ -1,10 +1,10 @@
 <?php $this->Html->script('index', array('inline' => false)); ?>
 
 <section class="section arrow_box" id="usp">
-    <h2>Személyre szabunk!</h2>
     <div class="cont">
+    <h2>Személyre szabunk!</h2>
       <p> A 7mérföld a személyre szabott utak specialistája, legyen az egy családi nyaralás, hétvégi városlátogatás, vagy céges csapatépítő túra. Irodánk a vízumintézéstől a programok megszervezésén át egészen az asztalfoglalásokig elintéz mindent.</p>
-      <h3>Fedezd fel!</h3>
+      <a class="animated bounceIn" href="#">Fedezd fel!</a>
     </div>
 </section>
 
