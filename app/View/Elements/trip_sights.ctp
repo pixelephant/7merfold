@@ -3,7 +3,7 @@
 <div class="cont">
   <?php
     foreach($trip['Sight'] as $sight){
-      echo $this->Html->link(($this->Html->image($sight['image_file'], array('alt' => $sight['name'], 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $sight['name'])) . '<span>' . $sight['name'] . '</span>'), '#', array('escape' => false));
+      echo $this->Html->link(($this->Html->image('/img/thumbnails/'.$sight['image_file'], array('alt' => $sight['name'], 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $sight['name'])) . '<span>' . $sight['name'] . '</span>'), '/img/' . $sight['image_file'], array('escape' => false));
     } 
   ?>
 </div>
