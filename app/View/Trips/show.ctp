@@ -12,7 +12,7 @@
 
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
 <div>
-  <a class="important" href="#prices">Időpontok &amp; ár &darr;</a>
+  <?php echo $this->App->important_link($trip['Trip']['category_id']); ?>
   <a class="quote" href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>
 </div>
 </div>

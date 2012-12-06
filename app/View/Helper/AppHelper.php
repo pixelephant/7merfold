@@ -38,14 +38,33 @@ class AppHelper extends Helper {
 		$content = '';
 
 		if($star_number > 0){
-    	$content .= '<span class="stars">';
-    		for($i=0;$i<$star_number;$i++){
-    			$content .= '<span class="icon star" aria-hidden="true" data-icon="*"></span>';
-    		}
-    	$content .= '</span>';
-    }
+        	$content .= '<span class="stars">';
+        		for($i=0;$i<$star_number;$i++){
+        			$content .= '<span class="icon star" aria-hidden="true" data-icon="*"></span>';
+        		}
+        	$content .= '</span>';
+        }
 
-    return $content;
+        return $content;
 	}
+
+    public function important_link($category_id){
+        $category_id = (int)$category_id;
+
+        if($category_id == 1){
+            $name = 'Hotelek';
+            $link = 'hotelek';
+        }
+        if($category_id == 2 || $category_id == 5){
+            $name = 'Időpontok &amp; ár &darr';
+            $link = 'arak';
+        }
+        if($category_id == 4 || $category_id == 3){
+            $name = 'Árak &amp; infók &darr';
+            $link = 'arak';
+        }
+
+        return '<a class="important" href="#'.$link.'">'.$name.'</a>';
+    }
 
 }
