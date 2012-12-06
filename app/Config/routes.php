@@ -37,6 +37,7 @@
 	Router::connect('/region/get_trips/:region_id/:category_id', array('controller' => 'home', 'action' => 'get_trips'));
 	Router::connect('/visa_info/:country_id', array('controller' => 'trips', 'action' => 'visa_info'));
 	Router::connect('/country_info/:country_id', array('controller' => 'trips', 'action' => 'country_info'));
+	Router::connect('/region_info/:region_id', array('controller' => 'trips', 'action' => 'region_info'));
 
 	Router::connect('/nyaralasok-uveghegyen-innen', array('controller' => 'categories', 'action' => 'inner', '4'));
 	Router::connect('/nyaralasok-uveghegyen-tul', array('controller' => 'categories', 'action' => 'inner', '3'));

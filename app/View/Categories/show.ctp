@@ -22,14 +22,14 @@
 
 <?php if($regioned){ ?>
   <section class="section ajax">
-      <h2><a href="ajax.html"><?php echo $trips[0]['Country']['name']; ?> <span>+</span></a></h2>
+      <h2><?php echo $this->Html->link(($trips[0]['Country']['name'] . ' <span>+</span>'), '/country_info/' . $trips[0]['Country']['id'], array('escape' => false)); ?></h2>
       <div class="cont hidden">
       
       </div>
   </section>
   <?php foreach($regions as $region){ ?>
     <section class="section ajax">
-      <h2><a href="ajax.html"><?php echo $region['Region']['name']; ?> <span>+</span></a></h2>
+      <h2><?php echo $this->Html->link(($region['Region']['name'] . ' <span>+</span>'), '/region_info/' . $region['Region']['id'], array('escape' => false)); ?></h2>
       <div class="cont hidden">
       
       </div>

@@ -32,7 +32,7 @@ App::uses('AppController', 'Controller');
 class TripsController extends AppController {
 
 	public $name = 'Trips';
-	public $uses = array('Trip', 'Country', 'Category');
+	public $uses = array('Trip', 'Country', 'Category', 'Region');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -95,6 +95,16 @@ class TripsController extends AppController {
 		$c = $this->Country->find('first', array('conditions' => array('Country.id' => $country_id)));
 
 		$this->set('content', $c['Country']['information']);
+		$this->render('ajax', 'ajax');
+	}
+
+	public function region_info(){
+
+		$region_id = (int)($this->request->params['region_id']);
+
+		$c = $this->Region->find('first', array('conditions' => array('Region.id' => $region_id)));
+
+		$this->set('content', $c['Region']['description']);
 		$this->render('ajax', 'ajax');
 	}
 
