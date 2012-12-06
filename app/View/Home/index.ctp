@@ -11,7 +11,10 @@
 
 <section class="" id="explore">
   <div class="m">
-    <a class="offer pulse" href="#">
+    <?php foreach($categories as $category){
+      echo $this->Html->link($this->Html->image('1.png', array('alt' => $category['Category']['name'])) . '<h3>' . $category['Category']['name'] .'</h3>', '/'.$category['Category']['slug'], array('class' => 'offer pulse', 'escape' => false));
+    } ?>
+    <!-- <a class="offer pulse" href="#">
       <img src="img/1.png" alt="">
       <h3>Városi kalandok</h3>
     </a>
@@ -22,7 +25,7 @@
     <a class="offer pulse" href="#">
       <img src="img/1.png" alt="">
       <h3>Üveghegyen innen</h3>
-    </a>
+    </a> -->
   </div>
   <div class="t">
     <a class="offer pulse" href="#">
@@ -96,8 +99,8 @@
   <div class="cont">
   <?php foreach($news as $new){ ?>
     <div class="news">
-      <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'])); ?>
-      <div class="bd">
+      <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
+      <div class="bd imgExt">
         <h3><?php echo $new['News']['title']; ?></h3>
         <p><?php echo $new['News']['content']; ?></p>
         <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['id'], array('escape' => false)); ?>
