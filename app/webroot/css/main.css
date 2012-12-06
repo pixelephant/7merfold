@@ -373,7 +373,7 @@ body {
   margin-top: -4px; }
 
 #usp {
-  background: url(../img/szab.png) no-repeat !important;
+  background: url(../img/szab.jpg) no-repeat !important;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
   overflow: hidden; }
@@ -407,6 +407,7 @@ body {
     float: right; }
 
 #explore {
+  display: none;
   overflow: hidden;
   padding: 6.25% 0; }
   #explore .m {
