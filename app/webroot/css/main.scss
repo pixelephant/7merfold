@@ -319,7 +319,7 @@ body{
     overflow: hidden;
   .cont{
     float: right;
-    width: 60% !important;
+    background: rgba(0,0,0,0.5);
   }
   p{
     @include text-shadow; 
@@ -644,7 +644,9 @@ a.offer{
   }
 }
 
-
+.stars{
+      color:$yellow;
+}
 //Font size
 
 @media all and (min-width: 37.5em){
@@ -818,6 +820,13 @@ a.offer{
       &:nth-last-child(2) a:before{
         content:"" !important;
       }
+    }
+  }
+
+  #usp{
+    .cont{
+      width: 60% !important;
+      background: none;
     }
   }
 

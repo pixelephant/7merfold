@@ -385,7 +385,7 @@ body {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8); }
   #usp .cont {
     float: right;
-    width: 60% !important; }
+    background: rgba(0, 0, 0, 0.5); }
   #usp p {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -712,6 +712,9 @@ a.offer {
     text-align: center;
     padding: 0.5em 0; }
 
+.stars {
+  color: #fbb03b; }
+
 @media all and (min-width: 37.5em) {
   body {
     font-size: 110%; } }
@@ -831,6 +834,10 @@ a.offer {
     display: block !important; }
     .breadcrumb li:nth-last-child(2) a:before {
       content: "" !important; }
+
+  #usp .cont {
+    width: 60% !important;
+    background: none; }
 
   #explore .t {
     display: block; } }
