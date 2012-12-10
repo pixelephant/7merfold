@@ -429,6 +429,7 @@ body {
       width: 50%; }
 
 a.offer {
+  height: 300px;
   text-align: center;
   text-decoration: none;
   width: 33.33333%;
