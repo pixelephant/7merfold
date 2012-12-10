@@ -52,15 +52,15 @@ class AppHelper extends Helper {
         $category_id = (int)$category_id;
 
         if($category_id == 1){
-            $name = 'Hotelek &darr;';
+            $name = 'Hotelek';
             $link = 'hotelek';
         }
         if($category_id == 2 || $category_id == 5){
-            $name = 'Időpontok &amp; ár &darr;';
+            $name = 'Időpontok &amp; ár';
             $link = 'arak';
         }
         if($category_id == 4 || $category_id == 3){
-            $name = 'Árak &amp; infók &darr;';
+            $name = 'Árak &amp; infók';
             $link = 'arak';
         }
 

@@ -23,13 +23,15 @@
   .important{
     float: left;
     @include red-button;
-    width:45%;
-    margin-right: 10%;
+    font-size: 90%;
+    width:49%;
+    margin-right: 2%;
   }
   .quote{
     @include purple-button;
     float:left;
-    width:45%;
+    width:49%;
+    font-size: 90%;
   }
 }
 
@@ -99,6 +101,13 @@
     img{
       max-width: 100%;
       @include box-shadow(0px 1px 5px rgba(50, 50, 50, 0.75));
+
+    }
+    span{
+      margin-top: 10px;
+      display: block;
+      float: none !important;
+      font-family: 'Gentium Basic' !important;
     }
   }
 }
