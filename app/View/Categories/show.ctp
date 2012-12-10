@@ -20,6 +20,8 @@
   ?>
 </section>
 
+<?php echo $this->element('quote_box'); ?>
+
 <?php if($regioned){ ?>
   <section class="section ajax">
       <h2><?php echo $this->Html->link(($trips[0]['Country']['name'] . ' <span>+</span>'), '/country_info/' . $trips[0]['Country']['id'], array('escape' => false)); ?></h2>

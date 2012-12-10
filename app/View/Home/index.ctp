@@ -2,9 +2,9 @@
 
 <section class="section arrow_box" id="usp">
     <div class="cont">
-    <h2>Személyre szabunk!</h2>
-      <p> A 7mérföld a személyre szabott utak specialistája, legyen az egy családi nyaralás, hétvégi városlátogatás, vagy céges csapatépítő túra. Irodánk a vízumintézéstől a programok megszervezésén át egészen az asztalfoglalásokig elintéz mindent.</p>
-      <a class="animated pulse" href="#">Fedezd fel &raquo;</a>
+    <h2 class="fadeInRight">Személyre szabunk!</h2>
+      <p class="fadeInRight"> A 7mérföld a személyre szabott utak specialistája, legyen az egy családi nyaralás, hétvégi városlátogatás, vagy céges csapatépítő túra. Irodánk a vízumintézéstől a programok megszervezésén át egészen az asztalfoglalásokig elintéz mindent.</p>
+      <a class="fadeInRight" href="#">Fedezd fel &raquo;</a>
     </div>
 </section>
 

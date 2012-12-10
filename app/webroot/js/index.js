@@ -19,11 +19,25 @@ $('.carousel').carousel({
         }
       });
 
-var t = setInterval(function(){
-        $("#explore a:not('.animated')").eq(0).addClass("animated");
-        if(!$("#explore a:not('.animated')").length){
+$('<img/>').attr('src', 'img/szab.png').load(function() {
+    $("#usp").css({
+      "background":"url(img/szab.png) no-repeat"
+    });
+    var t = setInterval(function(){
+        $("#usp .cont *:not('.animated')").eq(0).css("visibility","visible").addClass("animated");
+        if(!$("#usp .cont *:not('.animated')").length){
           clearInterval(t);
         }
       },400);
+  });
+
+$("#usp a").click(function(){
+  if($("#mobile-nav").css("display") === "none")
+    $("html,body").animate({ scrollTop: $(".slider").offset().top }, "slow");
+  else{
+   jPM.open();
+  }
+  return false;
+});
 
 });

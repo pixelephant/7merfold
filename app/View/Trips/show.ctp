@@ -85,11 +85,6 @@
 <h2>Megosztás</h2> <div><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></div>
 </section>
 
-<section class="section getquote">
-<a href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>
-<p>Ne aggódj, ha valamin változtatnál nálunk megteheted!</p>
-</section>
-
 <section id="prices" class="section collapsible closed">
 <h2><a href="#">Árak <span>+</span></a></h2>
 <div class="cont">
@@ -114,6 +109,9 @@
   </div>
 </div>
 </section> -->
+
+<?php echo $this->element('quote_box'); ?>
+
 <section id="vizum" class="section ajax">
   <h2><?php echo $this->Html->link('Vízum <span>+</span>', '/visa_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">

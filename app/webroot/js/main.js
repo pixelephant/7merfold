@@ -134,14 +134,17 @@ jQuery.extend( jQuery.easing,
   }
 });
 
-$(document).ready(function(){
+var jPM;
+
+$(document).ready(function(){  
+  
 
   $(".totop").click(function(){
     $("html,body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 
-	var jPM = $.jPanelMenu({
+	jPM = $.jPanelMenu({
         menu: '#mobile-submenu',
         trigger: '#sub-trigger',
         openPosition:"80%",

@@ -382,11 +382,11 @@ body {
   margin-top: -4px; }
 
 #usp {
-  background: url(../img/szab.png) no-repeat !important;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
   overflow: hidden; }
   #usp h2 {
+    visibility: hidden;
     color: #fff !important;
     border-bottom: none !important;
     font-size: 1.65em !important;
@@ -396,12 +396,14 @@ body {
     float: right;
     background: rgba(0, 0, 0, 0.5); }
   #usp p {
+    visibility: hidden;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 1em;
     clear: both;
     margin-bottom: 1em; }
   #usp a {
+    visibility: hidden;
     clear: both;
     padding: 0;
     margin: 0;
@@ -656,6 +658,49 @@ a.offer {
   -ms-animation-duration: 2s;
   -o-animation-duration: 2s;
   animation-duration: 2s; }
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0); } }
+
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0); } }
+
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px); }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+.fadeInRight {
+  display: block;
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
 
 @-webkit-keyframes pulse {
   0% {
