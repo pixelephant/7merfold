@@ -152,6 +152,7 @@
       display: none; }
 
   .offer-list a.offer {
+    height: 300px;
     display: block;
     padding: 0.8em 1em;
     width: 100%;
