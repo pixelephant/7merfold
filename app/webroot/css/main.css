@@ -458,6 +458,7 @@ a.offer {
       color: #333333; }
 
 #search-form {
+  clear: both;
   background: #fff;
   display: none;
   z-index: 1;
@@ -821,6 +822,7 @@ a.offer {
 
   #search-form {
     display: block !important;
+    clear: none;
     width: 30%;
     margin-right: 20px;
     float: right;

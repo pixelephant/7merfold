@@ -167,6 +167,7 @@ $(document).ready(function(){
 
       $("#search-trigger").click(function(){
         $("#search-form").toggleClass("open").stop().slideToggle(500,"easeInOutQuad",function(){
+          $(this).css("overflow","visible")
           if($("#search-form").hasClass("open")){
             $("#search-form input[type='search']").focus();
           }

@@ -401,6 +401,7 @@ a.offer{
 }
 
 #search-form{
+  clear: both;
   background:#fff;
   //@include t;
   display: none;
@@ -798,6 +799,7 @@ a.offer{
   }
   #search-form{
     display:block !important;
+    clear: none;
     width:30%;
     margin-right: 20px;
     float:right;
