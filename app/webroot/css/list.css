@@ -179,3 +179,7 @@
 
   .fake-a {
     display: block; } }
+@media all and (min-width: 79em) {
+  .offer-list a.offer {
+    width: 50%;
+    float: left; } }
