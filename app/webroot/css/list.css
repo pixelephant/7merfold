@@ -133,7 +133,8 @@
 .fake-a {
   display: none;
   float: right;
-  color: #4897c8 !important; }
+  color: #4897c8 !important;
+  margin-right: 5%; }
 
 @media all and (min-width: 62.5em) {
   .offer-list a.offer .data {

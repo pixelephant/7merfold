@@ -116,6 +116,10 @@
     box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
     /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
 
+.route img {
+  display: block;
+  max-width: 100%; }
+
 .share {
   overflow: hidden; }
   .share h2 {

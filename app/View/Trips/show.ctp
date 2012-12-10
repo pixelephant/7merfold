@@ -20,6 +20,9 @@
 
 <?php echo $this->element('content', array('trip' => $trip, 'trip_type' => $trip_type)); ?>
 
+
+
+
 <!-- <section class="section">
 <h2>Információk</h2>
 <div class="cont">

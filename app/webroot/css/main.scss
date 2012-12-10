@@ -24,9 +24,19 @@
   -webkit-font-smoothing: antialiased;
 }
 
+::-webkit-validation-bubble{
+  z-index:10000;
+  position: relative;
+}
 
 .hidden{
   display: none;
+}
+
+.search-text{
+  font-weight: 200;
+  padding: 0.8em 3%;
+  font-size: 0.875em;
 }
 
 body{
@@ -398,7 +408,6 @@ a.offer{
   width:100%;
   border-top:1px solid $gray;
   position: relative;
-  overflow: hidden;
   input[type="search"]{
     border:none;
     padding: 0.8em 1em;
@@ -411,6 +420,7 @@ a.offer{
     width:16%;
     @include purple-button;
     float: right;
+    border-bottom: 1px solid #69297d;
   }
   &.open{
     //top:0;
@@ -787,11 +797,11 @@ a.offer{
     }
   }
   #search-form{
-    display:block;
+    display:block !important;
     width:30%;
     margin-right: 20px;
     float:right;
-    overflow: hidden;
+    
     border:none;
     padding:1em 0;
     input[type="search"]{
@@ -805,7 +815,7 @@ a.offer{
     input[type="submit"]{
       float:left;
       width:25%;
-      border:none;
+      border:none !important;
     }
   }
 }

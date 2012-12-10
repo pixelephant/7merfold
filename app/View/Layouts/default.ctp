@@ -47,9 +47,9 @@
                           Menü</a></li>
                       </ul>
                   </nav>
-                <div id="search-form">
+                <div id="search-form" class="clearfix">
                   <form method="get" action="<?php echo $this->webroot ?>kereses">
-                    <input type="search" name="search" id="search" placeholder="Keresés...">
+                    <input type="search" name="search" id="search" placeholder="Keresés..." required>
                     <input type="submit" value="Ok">
                   </form>
                 </div>
