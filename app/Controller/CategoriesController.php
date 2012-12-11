@@ -4,6 +4,7 @@ App::uses('AppController', 'Controller');
 
 class CategoriesController extends AppController {
 
+	public $scaffold = 'admin';
 	public $name = 'Categories';
 	public $uses = array('Trip', 'Category', 'Region', 'Country');
 	public $helpers = array('Html', 'Form');

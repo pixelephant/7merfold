@@ -31,7 +31,7 @@ App::uses('AppController', 'Controller');
  */
 class NewsController extends AppController {
 
-
+	public $scaffold = 'admin';
 	public $name = 'News';
 	public $uses = array('News');
 

@@ -31,6 +31,7 @@ App::uses('AppController', 'Controller');
  */
 class TripsController extends AppController {
 
+	public $scaffold = 'admin';
 	public $name = 'Trips';
 	public $uses = array('Trip', 'Country', 'Category', 'Region');
 	public $helpers = array('Html', 'Form');
