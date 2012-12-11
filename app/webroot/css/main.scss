@@ -29,6 +29,12 @@
   position: relative;
 }
 
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="search"],input[type="button"],button,input[type="submit"]{
+  -webkit-appearance: none;
+  -webkit-border-radius:0; 
+  border-radius:0;
+}
+
 .hidden{
   display: none;
 }
@@ -743,7 +749,13 @@ a.offer{
 
 // large tablet (1000px, 62.5em)
 
-@media all and (min-width: 62.5em){
+@media all and (min-device-width: 47em) and (orientation : landscape){
+  body{
+    padding: 0 !important;
+  }
+}
+
+@media all and (min-width: 60em), (min-device-width: 47em) and (orientation : landscape){
 
 
   //álljunk át %-ra mert kell a dobozok közé is ugyanakkora mint alattuk

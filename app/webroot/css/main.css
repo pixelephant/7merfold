@@ -145,6 +145,11 @@
   z-index: 10000;
   position: relative; }
 
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="button"], button, input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+
 .hidden {
   display: none; }
 
@@ -782,7 +787,10 @@ a.offer {
 @media all and (min-width: 79em) {
   body {
     font-size: 130%; } }
-@media all and (min-width: 62.5em) {
+@media all and (min-device-width: 47em) and (orientation: landscape) {
+  body {
+    padding: 0 !important; } }
+@media all and (min-width: 60em), (min-device-width: 47em) and (orientation: landscape) {
   #main-content .section, #top-contact, .cta, .breadcrumb {
     margin-bottom: 1%; }
 
