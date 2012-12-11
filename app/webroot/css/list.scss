@@ -91,8 +91,7 @@
   }
 
 // large tablet (1000px, 62.5em)
-
-@media all and (min-width: 62.5em){
+@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation : landscape){
   
   .offer-list a.offer .data {
     margin-top: 20px;
@@ -121,7 +120,7 @@
       height: 300px;
       display: block;
       padding: 0.8em 1em;
-      width:100%;
+      width:100% !important;
       float:none;
       overflow: hidden;
       .img{
@@ -151,11 +150,20 @@
   .fake-a{
     display: block;
   }
+
+}
+
+//small tablet (700px,43.75em)
+
+@media all and (min-width: 43.75em){
+  .offer-list a.offer{
+    width: 33.333333%;
+  }
 }
 
 @media all and (min-width: 79em){
   .offer-list a.offer{
-    width:50%;
+    width:50% !important;
     float:left;
   }
 }

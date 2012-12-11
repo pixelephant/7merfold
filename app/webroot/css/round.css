@@ -1,9 +1,10 @@
 .white-arrow {
   position: relative;
-  background: #fff; }
+  background: #fff;
+  border: 1px solid #ccc; }
 
 .white-arrow:after, .white-arrow:before {
-  top: 100%;
+  top: 99%;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -213,7 +214,7 @@
     text-decoration: none;
     color: #333333; }
 
-@media all and (min-width: 62.5em) {
+@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
   #prices .half {
     width: 45%;
     float: left;
@@ -242,9 +243,6 @@
     float: right; }
 
   .shares, #inline-nav {
-    display: block; } }
-@media all and (min-width: 37.5em) {
-  #explore .t {
     display: block; } }
 /* fancyBox v2.1.3 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,

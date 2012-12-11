@@ -75,10 +75,10 @@ $red:#BC193C;
 .white-arrow {
 	position: relative;
 	background: #fff;
-	//border: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 .white-arrow:after, .white-arrow:before {
-	top: 100%;
+	top: 99%;
 	border: solid transparent;
 	content: " ";
 	height: 0;

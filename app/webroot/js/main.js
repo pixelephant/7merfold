@@ -138,7 +138,7 @@ var jPM;
 
 $(document).ready(function(){  
   
-  
+
 
   $(".totop").click(function(){
     $("html,body").animate({ scrollTop: 0 }, "slow");
@@ -162,7 +162,20 @@ $(document).ready(function(){
       $("#jPanelMenu-menu").delegate(".close","click",function(){
           jPM.close();
       });
-      		
+      
+
+      $("#sub-grid li a").click(function(){
+        var $li = $(this).parent();
+        if($("#mobile-nav").css("display") === "none"){
+          var sub = $(this).data("href");
+          $(sub).siblings(".sub").slideUp(300,function(){
+            $(sub).slideToggle(300,function(){
+              $li.siblings("li").removeClass("white-arrow").end().toggleClass("white-arrow");
+            }).toggleClass("open");
+          });
+          return false;
+        }
+      });
 
       $("#contact-trigger").click(function(){
         $("html,body").animate({ scrollTop: $("#contact").offset().top }, "slow");

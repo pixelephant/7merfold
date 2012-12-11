@@ -1,9 +1,10 @@
 .white-arrow {
   position: relative;
-  background: #fff; }
+  background: #fff;
+  border: 1px solid #ccc; }
 
 .white-arrow:after, .white-arrow:before {
-  top: 100%;
+  top: 99%;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -136,7 +137,7 @@
   color: #4897c8 !important;
   margin-right: 5%; }
 
-@media all and (min-width: 62.5em) {
+@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
   .offer-list a.offer .data {
     margin-top: 20px; }
 
@@ -155,7 +156,7 @@
     height: 300px;
     display: block;
     padding: 0.8em 1em;
-    width: 100%;
+    width: 100% !important;
     float: none;
     overflow: hidden; }
     .offer-list a.offer .img {
@@ -179,7 +180,10 @@
 
   .fake-a {
     display: block; } }
+@media all and (min-width: 43.75em) {
+  .offer-list a.offer {
+    width: 33.333333%; } }
 @media all and (min-width: 79em) {
   .offer-list a.offer {
-    width: 50%;
+    width: 50% !important;
     float: left; } }
