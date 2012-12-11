@@ -2,7 +2,7 @@
 <li class="slag">
   <?php for($j=0;$j<3;$j++){
           if(isset($trips[$i+$j])){
-          	echo $this->Html->link($this->Html->image('temp.png', array('alt' => $trips[$i+$j]['Trip']['name'])) . '<h3>' . $trips[$i+$j]['Trip']['name'] . '</h3>', '/utjaink/' . $trips[$i+$j]['Trip']['id'] , array('class' => 'offer', 'escape' => false));
+          	echo $this->Html->link($this->Html->image('temp.png', array('alt' => $trips[$i+$j]['Trip']['name'])) . '<h3>' . $trips[$i+$j]['Trip']['name'] . '</h3>', '/utjaink/' . $trips[$i+$j]['Trip']['slug'] , array('class' => 'offer', 'escape' => false));
           
   			} 
           } ?>

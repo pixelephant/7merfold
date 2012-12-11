@@ -42,10 +42,10 @@
 	Router::connect('/nyaralasok-uveghegyen-innen', array('controller' => 'categories', 'action' => 'inner', '4'));
 	Router::connect('/nyaralasok-uveghegyen-tul', array('controller' => 'categories', 'action' => 'inner', '3'));
 
-	Router::connect('/nyaralasok-uveghegyen-innen/:country_id', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-innen'));
-	Router::connect('/nyaralasok-uveghegyen-tul/:country_id', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-tul'));
+	Router::connect('/nyaralasok-uveghegyen-innen/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-innen'));
+	Router::connect('/nyaralasok-uveghegyen-tul/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-tul'));
 
-	Router::connect('/utjaink/:trip_id', array('controller' => 'trips', 'action' => 'show'));
+	Router::connect('/utjaink/:trip_slug', array('controller' => 'trips', 'action' => 'show'));
 	Router::connect('/hirek/:news_id', array('controller' => 'news', 'action' => 'show'));
 
 	Router::connect('/kereses', array('controller' => 'home', 'action' => 'search'));

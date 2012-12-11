@@ -3,7 +3,7 @@
 
 <section class="section offer-list">
   <?php foreach($countries as $country){ ?>
-      <a href="<?php echo $this->webroot . $category['Category']['slug'] . '/' . $country['Country']['id']; ?>" class="offer">
+      <a href="<?php echo $this->webroot . $category['Category']['slug'] . '/' . $country['Country']['slug']; ?>" class="offer">
         <div class="img">
           <?php echo $this->Html->image($country['Country']['image_file'], array('alt' => $country['Country']['name'])); ?>
         </div>                      

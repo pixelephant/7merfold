@@ -50,9 +50,9 @@ class TripsController extends AppController {
 	public function show() {
 
 		$params = $this->request->params;
-		$trip_id = (int)$params['trip_id'];
+		$trip_slug = $params['trip_slug'];
 
-		$trip = $this->Trip->find('first', array('conditions' => array('Trip.id' => $trip_id)));
+		$trip = $this->Trip->find('first', array('conditions' => array('Trip.slug' => $trip_slug)));
 
 		$trip_type = $trip['Trip']['category_id'];
 
@@ -65,7 +65,7 @@ class TripsController extends AppController {
 			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id'])] = $country['Country']['name'];
 		}
 
-		$breadcrumb[('utjaink/' . $trip_id)] = $trip['Trip']['name'];
+		$breadcrumb[('utjaink/' . $trip_slug)] = $trip['Trip']['name'];
 
 		$this->set('trip', $trip);
 		$this->set('trip_type', $trip_type);
@@ -107,5 +107,15 @@ class TripsController extends AppController {
 		$this->set('content', $c['Region']['description']);
 		$this->render('ajax', 'ajax');
 	}
+
+	/* Callbacks */
+
+	// public function beforeSave($options = array()) {
+	//     if (!empty($this->data['Trip']['name']) && !empty($this->data['Event']['enddate'])) {
+	//         $this->data['Event']['begindate'] = $this->dateFormatBeforeSave($this->data['Event']['begindate']);
+	//         $this->data['Event']['enddate'] = $this->dateFormatBeforeSave($this->data['Event']['enddate']);
+	//     }
+ 	//    	return true;
+	// }
 
 }

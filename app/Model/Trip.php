@@ -16,5 +16,6 @@ class Trip extends AppModel {
                 'unique'                 => true,
             )
     );
+
 }
 ?>

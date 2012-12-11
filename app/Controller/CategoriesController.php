@@ -28,9 +28,9 @@ class CategoriesController extends AppController {
 
 		$cond = array('Trip.category_id' => $category['Category']['id']);
 		if(isset($params['pass'][0])){
-			$cond['Trip.country_id'] = $params['country_id'];
-			$country = $this->Country->find('first', array('conditions' => array('Country.id' => $params['country_id'])));
-			$breadcrumb[($slug . '/' . $params['country_id'])] = $country['Country']['name'];
+			$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $params['country_slug'])));
+			$cond['Trip.country_id'] = $country['Country']['id'];
+			$breadcrumb[($slug . '/' . $params['country_slug'])] = $country['Country']['name'];
 		}
 		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC'));
 
