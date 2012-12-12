@@ -30,7 +30,7 @@
               <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
             </section>
 
-            <header id="main-header" class="clearfix">
+            <header id="main-header" class="clearfix no-flick">
                   <div class="clearfix">
                     <a href="<?php echo $this->webroot; ?>" id="logo">
                     <?php echo $this->Html->image('logo.png', array('alt' => '7mérföld Utazási Iroda')); ?>

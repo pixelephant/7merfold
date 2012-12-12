@@ -27,6 +27,9 @@
   left: 50%;
   margin-left: -11px; }
 
+.no-touch .white-arrow:hover:after {
+  border-top-color: #e6e6e6; }
+
 .purple-arrow {
   position: relative;
   background: 69297D; }
@@ -53,6 +56,9 @@
   border-width: 11px;
   left: 50%;
   margin-left: -11px; }
+
+.no-touch .purple-arrow:hover:after {
+  border-top-color: #875497; }
 
 /*
  * jQuery FlexSlider v2.0
@@ -280,6 +286,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
   padding: 0.8em 3%;
   font-size: 0.875em; }
 
+.no-flick {
+  -webkit-transform: translate3d(0, 0, 0); }
+
 body {
   background: #eee;
   font-family: 'Source Sans Pro';
@@ -470,6 +479,8 @@ body {
         display: block; }
       .breadcrumb ul li:nth-last-child(2) a:before {
         content: '← '; }
+      .breadcrumb ul li.home a:before {
+        content: ''; }
       .breadcrumb ul li:last-child, .breadcrumb ul li:last-child:before, .breadcrumb ul li:last-child:after {
         border: none; }
       .breadcrumb ul li a {
@@ -1132,15 +1143,16 @@ a.offer {
       width: 25%;
       float: left;
       text-align: center;
-      padding: 1% 3%;
       border-bottom: 1px solid #cccccc;
       border-right: 1px solid #cccccc; }
       .sub li a {
+        padding: 5% 15%;
         font-family: 'Gentium Basic';
         font-style: italic;
         font-size: 0.8em;
         text-decoration: none;
-        color: #333333; } }
+        color: #333333;
+        display: block; } }
 @media all and (min-width: 43.75em) {
   #card {
     float: left;
@@ -1201,7 +1213,115 @@ a.offer {
     transition: all 0.3s ease-in-out;
     /* Firefox 16+, Opera 12.50+ */ }
 
+.no-touch .breadcrumb a {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch .breadcrumb a:hover, .no-touch .breadcrumb a:focus {
+    background: #e6e6e6; }
+.no-touch #top-contact a {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch #top-contact a:hover, .no-touch #top-contact a:focus {
+    background: #e6e6e6; }
+.no-touch .sub li a {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */
+  margin-top: 5px; }
+  .no-touch .sub li a:hover, .no-touch .sub li a:focus {
+    background: #e6e6e6; }
+.no-touch #mobile-nav ul li a, .no-touch #sub-grid li a {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch #mobile-nav ul li a:hover, .no-touch #mobile-nav ul li a:focus, .no-touch #sub-grid li a:hover, .no-touch #sub-grid li a:focus {
+    background: #e6e6e6; }
+.no-touch #contact a, .no-touch .totop {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch #contact a:hover, .no-touch #contact a:focus, .no-touch .totop:hover, .no-touch .totop:focus {
+    background: #000; }
+.no-touch .close {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch .close:hover, .no-touch .close:focus {
+    color: #bc193c !important; }
+.no-touch .slider a.offer {
+  padding-bottom: 30px;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch .slider a.offer:hover, .no-touch .slider a.offer:focus {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
+.no-touch #main-content .section h2 a span {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+.no-touch #main-content .section h2 a:hover span {
+  -webkit-perspective: 300;
+  -moz-perspective: 300;
+  -ms-perspective: 300;
+  perspective: 300;
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform: rotateY(180deg);
+  -moz-transform-style: preserve-3d;
+  -ms-transform: rotateY(180deg);
+  -ms-transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d; }
 .no-touch #quote-form input[type="submit"]:hover, .no-touch #quote-form input[type="submit"]:focus, .no-touch #newsletter form input[type="submit"]:hover, .no-touch #newsletter form input[type="submit"]:focus, .no-touch #usp a:hover, .no-touch #usp a:focus, .no-touch #card .cont a:hover, .no-touch #card .cont a:focus, .no-touch #company .cont a:hover, .no-touch #company .cont a:focus, .no-touch #search-form input[type="submit"]:hover, .no-touch #search-form input[type="submit"]:focus {
   background: #875497; }
-.no-touch .get-quote:hover, .no-touch .get-quote:focus {
+.no-touch .getquote a:hover, .no-touch .getquote a:focus {
   background: #c94763; }

@@ -26,6 +26,9 @@
   left: 50%;
   margin-left: -11px; }
 
+.no-touch .white-arrow:hover:after {
+  border-top-color: #e6e6e6; }
+
 .purple-arrow {
   position: relative;
   background: 69297D; }
@@ -53,6 +56,9 @@
   left: 50%;
   margin-left: -11px; }
 
+.no-touch .purple-arrow:hover:after {
+  border-top-color: #875497; }
+
 .selecter h2 {
   padding: 0 !important;
   border: none !important; }
@@ -65,7 +71,6 @@
   background: #fff; }
   .selecter ul li {
     list-style: none;
-    padding: 0.8em 2em;
     border-bottom: 1px solid #cccccc; }
     .selecter ul li:first-child {
       border-top: 1px solid #cccccc; }
@@ -75,6 +80,7 @@
       font-style: normal;
       font-family: 'Source Sans'; }
     .selecter ul li a {
+      padding: 0.8em 2em;
       display: block;
       text-decoration: none;
       color: #333333;
@@ -195,3 +201,39 @@
   .offer-list a.offer {
     width: 50% !important;
     float: left; } }
+.no-touch .offer-list a.offer img {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+.no-touch .offer-list a.offer:hover .fake-a, .no-touch .offer-list a.offer:focus .fake-a {
+  text-decoration: underline; }
+.no-touch .offer-list a.offer:hover img, .no-touch .offer-list a.offer:focus img {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1); }
+.no-touch .selecter ul li a {
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */ }
+  .no-touch .selecter ul li a:hover, .no-touch .selecter ul li a:focus {
+    background: #e6e6e6; }
+.no-touch .selecter ul .close a:hover, .no-touch .selecter ul .close a:focus {
+  background: #fff !important;
+  color: #bc193c !important; }
+.no-touch .select-trigger:hover, .no-touch .select-trigger:focus {
+  background: #875497; }

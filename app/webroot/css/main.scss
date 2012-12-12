@@ -45,6 +45,8 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
   font-size: 0.875em;
 }
 
+.no-flick{-webkit-transform:translate3d(0,0,0);}
+
 body{
     background:#eee;
     font-family: 'Source Sans Pro';
@@ -269,6 +271,9 @@ body{
       }
       &:nth-last-child(2) a:before{
         content: '← ';
+      }
+      &.home a:before{
+       content: ''; 
       }
       &:last-child,&:last-child:before,&:last-child:after{
         border:none;
@@ -941,15 +946,17 @@ a.offer{
         width: 25%;
         float: left;
         text-align: center;
-        padding: 1% 3%;
+       
         border-bottom: 1px solid $gray;
         border-right: 1px solid $gray;
         a{
+           padding: 5% 15%;
           font-family: 'Gentium Basic';
           font-style: italic;
           font-size: 0.8em;
           text-decoration: none;
           color: $black;
+          display: block;
         }
       }
     }
@@ -973,6 +980,8 @@ a.offer{
       #company + section{
         clear: both;
       }
+
+
 
   .breadcrumb{
     li{
@@ -1025,12 +1034,73 @@ a.offer{
 //hoverek
 
 .no-touch{
+
+
+
+  .breadcrumb a{
+    @include t;
+     &:hover,&:focus{
+      background:#e6e6e6;
+     }
+  }
+
+  #top-contact a{
+    @include t;
+     &:hover,&:focus{
+      background:#e6e6e6;
+     }
+  }
+
+  .sub li a{
+    @include t;
+    margin-top: 5px;
+     &:hover,&:focus{
+      background:#e6e6e6;
+     }
+  }
+
+  #mobile-nav ul li a,#sub-grid li a{
+    @include t;
+     &:hover,&:focus{
+      background:#e6e6e6;
+     }
+  }
+
+  #contact a,.totop {
+    @include t;
+    &:hover,&:focus{
+      background: #000;
+    }
+  }
+
+  .close{
+    @include t;
+    &:hover,&:focus{
+      color:$red !important;
+    }
+  }
+
+  .slider a.offer{
+    padding-bottom: 30px;
+    @include t;
+    &:hover,&:focus{
+      @include grow;
+    }
+  }
+
+   #main-content .section h2 a span{
+    @include t;
+   }
+  #main-content .section h2 a:hover span{
+          @include flip;
+  }
+
   #quote-form input[type="submit"],#newsletter form input[type="submit"], #usp a,#card .cont a,#company .cont a,#search-form input[type="submit"]{
     &:hover,&:focus{
       @include purple-button-hover;
     }
   } 
-  .get-quote{
+  .getquote a{
     &:hover,&:focus{
       @include red-button-hover;
     }

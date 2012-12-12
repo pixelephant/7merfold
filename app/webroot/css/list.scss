@@ -15,7 +15,6 @@
   background:#fff;
   li{
     list-style:none;
-    padding:0.8em 2em;
     border-bottom: 1px solid $gray;
     &:first-child{
       border-top:1px solid $gray;
@@ -27,6 +26,7 @@
       font-family: 'Source Sans';
     }
     a{
+      padding:0.8em 2em;
       display: block;
       text-decoration: none;
       color:$black;
@@ -166,4 +166,45 @@
     width:50% !important;
     float:left;
   }
+}
+
+
+
+//hoverek
+
+.no-touch{
+
+    .offer-list a.offer{
+      img{
+        @include t;
+      }
+     &:hover,&:focus{
+      .fake-a{
+        text-decoration: underline;
+      }
+      img{
+        @include grow;
+      }
+     }
+    }
+
+    .selecter ul li a{
+      @include t;
+     &:hover,&:focus{
+      background:#e6e6e6;
+     }
+    }
+
+    .selecter ul .close a{
+      &:hover,&:focus{
+      background:#fff !important;
+      color:$red !important;
+     }
+    }
+
+  .select-trigger{
+    &:hover,&:focus{
+      @include purple-button-hover;
+    }
+  } 
 }

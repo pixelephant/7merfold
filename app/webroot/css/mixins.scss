@@ -7,6 +7,28 @@ $yellow:#FBB03B;
 $red:#BC193C;
 
 
+@mixin grow{
+	   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1); 
+      -ms-transform: scale(1.1);
+       -o-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@mixin flip{
+	-webkit-perspective: 300;  
+     -moz-perspective: 300;   
+      -ms-perspective: 300;   
+          perspective: 300;
+  -webkit-transform: rotateY(180deg);  -webkit-transform-style: preserve-3d;
+     -moz-transform: rotateY(180deg);     -moz-transform-style: preserve-3d;
+      -ms-transform: rotateY(180deg);      -ms-transform-style: preserve-3d;
+          transform: rotateY(180deg);          transform-style: preserve-3d;  
+}
+
 @mixin gi{
 	font-family: 'Gentium Basic';
 	font-weight: normal;
@@ -112,6 +134,11 @@ $red:#BC193C;
 	margin-left: -11px;
 }
 
+
+.no-touch .white-arrow:hover:after{
+	border-top-color:#e6e6e6;
+}
+
 .purple-arrow {
 	position: relative;
 	background: 69297D;
@@ -140,4 +167,8 @@ $red:#BC193C;
 	border-width: 11px;
 	left: 50%;
 	margin-left: -11px;
+}
+
+.no-touch .purple-arrow:hover:after{
+	border-top-color:#875497;
 }
