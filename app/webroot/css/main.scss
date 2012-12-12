@@ -754,6 +754,7 @@ a.offer{
   width: auto;
 }
 
+
 //Font size
 
 @media all and (min-width: 37.5em){
@@ -1010,5 +1011,28 @@ a.offer{
   }
   input[type="submit"]{
     @include purple-button;
+  }
+}
+
+
+
+
+
+
+
+
+
+//hoverek
+
+.no-touch{
+  #quote-form input[type="submit"],#newsletter form input[type="submit"], #usp a,#card .cont a,#company .cont a,#search-form input[type="submit"]{
+    &:hover,&:focus{
+      @include purple-button-hover;
+    }
+  } 
+  .get-quote{
+    &:hover,&:focus{
+      @include red-button-hover;
+    }
   }
 }

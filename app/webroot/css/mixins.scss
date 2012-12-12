@@ -24,6 +24,11 @@ $red:#BC193C;
 	padding:0.8em 1em;
 	color:#fff;
 	text-decoration: none;
+	@include t;
+}
+
+@mixin purple-button-hover{
+	background: #875497; 
 }
 
 @mixin red-button{
@@ -37,6 +42,11 @@ $red:#BC193C;
 	padding:0.8em 1em;
 	color:#fff;
 	text-decoration: none;
+	@include t;
+}
+
+@mixin red-button-hover{
+	background: #c94763;
 }
 
 @mixin input{

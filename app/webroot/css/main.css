@@ -545,6 +545,14 @@ body {
     padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */
     float: right; }
 
 #explore {
@@ -577,6 +585,14 @@ body {
     padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */
     -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
@@ -604,6 +620,14 @@ body {
     padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */
     -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
@@ -660,6 +684,14 @@ a.offer {
     padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */
     float: right;
     border-bottom: 1px solid #69297d; }
 
@@ -727,6 +759,14 @@ a.offer {
       padding: 0.8em 1em;
       color: #fff;
       text-decoration: none;
+      -webkit-transition: all 0.3s ease-in-out;
+      /* Safari 3.2+, Chrome */
+      -moz-transition: all 0.3s ease-in-out;
+      /* Firefox 4-15 */
+      -o-transition: all 0.3s ease-in-out;
+      /* Opera 10.5–12.00 */
+      transition: all 0.3s ease-in-out;
+      /* Firefox 16+, Opera 12.50+ */
       float: right; }
 
 .cta {
@@ -765,6 +805,14 @@ a.offer {
     padding: 0.8em 1em;
     color: #fff;
     text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */
     display: block;
     width: 40%;
     margin: 20px auto; }
@@ -1143,4 +1191,17 @@ a.offer {
     text-align: center;
     padding: 0.8em 1em;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    /* Safari 3.2+, Chrome */
+    -moz-transition: all 0.3s ease-in-out;
+    /* Firefox 4-15 */
+    -o-transition: all 0.3s ease-in-out;
+    /* Opera 10.5–12.00 */
+    transition: all 0.3s ease-in-out;
+    /* Firefox 16+, Opera 12.50+ */ }
+
+.no-touch #quote-form input[type="submit"]:hover, .no-touch #quote-form input[type="submit"]:focus, .no-touch #newsletter form input[type="submit"]:hover, .no-touch #newsletter form input[type="submit"]:focus, .no-touch #usp a:hover, .no-touch #usp a:focus, .no-touch #card .cont a:hover, .no-touch #card .cont a:focus, .no-touch #company .cont a:hover, .no-touch #company .cont a:focus, .no-touch #search-form input[type="submit"]:hover, .no-touch #search-form input[type="submit"]:focus {
+  background: #875497; }
+.no-touch .get-quote:hover, .no-touch .get-quote:focus {
+  background: #c94763; }

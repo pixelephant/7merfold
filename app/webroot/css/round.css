@@ -82,6 +82,14 @@
   padding: 0.8em 1em;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */
   font-size: 90%;
   width: 49%;
   margin-right: 2%; }
@@ -96,6 +104,14 @@
   padding: 0.8em 1em;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */
   float: left;
   width: 49%;
   font-size: 90%; }
