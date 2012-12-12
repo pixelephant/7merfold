@@ -165,15 +165,8 @@ $(document).ready(function(){
       
 
       $("#sub-grid li a").click(function(){
-        var $li = $(this).parent();
         if($("#mobile-nav").css("display") === "none" && $(this).hasClass("drop")){
-          var sub = $(this).data("href");
-          $(sub).siblings(".sub").slideUp(300,function(){
-            $(sub).slideDown(300,function(){
-              $li.siblings("li").removeClass("white-arrow").end().toggleClass("white-arrow");
-            }).toggleClass("open");
-          });
-          return false;
+          alert(12);
         }
       });
 
