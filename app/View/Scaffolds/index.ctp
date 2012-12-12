@@ -40,11 +40,17 @@ foreach (${$pluralVar} as ${$singularVar}):
 				}
 			}
 			if ($isKey !== true) {
-				if(strlen(h(${$singularVar}[$modelClass][$_field])) > 100){
-					echo '<td>' . mb_substr(h(${$singularVar}[$modelClass][$_field]),0,100) . '...</td>';
+				/* Balázs */
+				if(stripos($_field, "file")){
+					echo '<td>' . $this->Html->image('thumbnails/'.h(${$singularVar}[$modelClass][$_field])) . '</td>';
 				}else{
-					echo '<td>' . h(${$singularVar}[$modelClass][$_field]) . '</td>';
+					if(strlen(h(${$singularVar}[$modelClass][$_field])) > 100){
+						echo '<td>' . mb_substr(h(${$singularVar}[$modelClass][$_field]),0,100) . '...</td>';
+					}else{
+						echo '<td>' . h(${$singularVar}[$modelClass][$_field]) . '</td>';
+					}
 				}
+				/* Balázs */
 			}
 		}
 

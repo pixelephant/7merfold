@@ -37,4 +37,21 @@ class AppController extends Controller {
 	    $this->layout = 'default_orig';
 	  } 
 	}
+
+	function beforeRender(){
+		$file_fields = array();
+		$form_type = 'post';
+		if($this->request->action == 'add' || $this->request->action == 'edit'){
+			foreach($this->viewVars['scaffoldFields'] as $k => $v){
+				if(stripos($v, 'file')){
+					$form_type = 'file';
+					array_push($file_fields, $this->viewVars['scaffoldFields'][$k]);
+					unset($this->viewVars['scaffoldFields'][$k]);
+				}
+			}
+		}
+		$this->set('file_fields', $file_fields);
+		$this->set('form_type', $form_type);
+	}
+
 }

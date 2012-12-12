@@ -33,6 +33,7 @@ App::uses('Model', 'Model');
 class AppModel extends Model {
 
 	public function beforeSave($options = array()) {
+		/* SLUG */
     foreach($this->data as $model => $v){
     	foreach($this->data[$model] as $field => $value){
     		if($field == 'title' || $field == 'name'){
@@ -43,6 +44,18 @@ class AppModel extends Model {
   			$this->data[$model]['slug'] = $this->create_slug($text, $model);
   		}
     }
+    /* SLUG */
+    /* FILE */
+    foreach($this->data as $model => $v){
+    	foreach($this->data[$model] as $field => $value){
+    		if(stripos($field, 'file')){
+    			$name = $this->data[$model][$field]['name'];
+    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
+    			$this->data[$model][$field] = $name;
+    		}
+    	}
+    }
+    /* FILE */
    	return true;
 	}
 

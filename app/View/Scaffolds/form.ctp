@@ -18,8 +18,11 @@
 ?>
 <div class="<?php echo $pluralVar; ?> form">
 <?php
-	echo $this->Form->create();
+	echo $this->Form->create($modelClass, array('type' => $form_type));
 	echo $this->Form->inputs($scaffoldFields, array('created', 'modified', 'updated'));
+	foreach ($file_fields as $field_name) {
+		echo $this->Form->input($field_name, array('type' => 'file'));
+	}
 	echo $this->Form->end(__d('cake', 'Submit'));
 ?>
 </div>
