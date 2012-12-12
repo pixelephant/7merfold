@@ -6,7 +6,7 @@ class CategoriesController extends AppController {
 
 	public $scaffold = 'admin';
 	public $name = 'Categories';
-	public $uses = array('Trip', 'Category', 'Region', 'Country');
+	public $uses = array('Category', 'Trip', 'Region', 'Country');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {

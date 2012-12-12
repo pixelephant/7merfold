@@ -1,4 +1,4 @@
-<?php $this->Html->script('index', array('inline' => false)); ?>
+<?php $this->Html->script('carousel','index', array('inline' => false)); ?>
 
 <section class="section arrow_box" id="usp">
     <div class="cont">

@@ -26,6 +26,13 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
+
+/**
+ * Admin routes
+ */
+
+	Router::redirect('/admin', '/admin/trips');	
+
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */
@@ -58,12 +65,6 @@
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));
-
-/**
- * Admin routes
- */
-
-	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));	
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
