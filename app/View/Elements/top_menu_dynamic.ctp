@@ -1,12 +1,14 @@
 <ul id="sub-grid">
 <?php 
+	$i = 1;
 	$menu = $this->requestAction('home/get_menu');
  	foreach($menu as $k => $e){
 ?>
 	<li>
 <?php
 		$img = $this->Html->image($k . '.png', array('alt' => $e));
- 		echo $this->Html->link($img . $e, '/' . $k, array('escape' => false));
+ 		echo $this->Html->link($img . $e, '/' . $k, array('escape' => false, 'data-href' => "#sub" . $i));
+ 		$i++;
 ?>
 	</li>
 <?php
