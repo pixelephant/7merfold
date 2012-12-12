@@ -45,7 +45,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category', 'Region', 'News');
+	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country');
 
 /**
  * Displays a view
@@ -84,6 +84,30 @@ class HomeController extends AppController {
 	public function get_menu(){
 		if ($this->request->is('requested')){
 			return $this->Category->find('list', array('fields' => array('Category.slug', 'Category.name')));
+		}
+	}
+
+	public function get_sub_menu(){
+		if ($this->request->is('requested')){
+			$params = $this->request->params;
+			$cat_slug = $params['category_slug'];
+			$cat = $this->Category->find('first', array('conditions' => array('Category.slug' => $cat_slug)));
+			$content = '';
+
+			if($cat_slug == 'nyaralasok-uveghegyen-innen' || $cat_slug == 'nyaralasok-uveghegyen-tul'){
+				$countries = $this->Trip->find('list', array('fields' => array('Trip.id', 'Trip.country_id'), 'conditions' => array('Trip.category_id' => $cat['Category']['id']), 'group' => 'Trip.country_id'));
+				$ids = implode(",", $countries);
+				$countries = $this->Country->find('list', array('fields' => array('Country.slug', 'Country.name'), 'conditions' => array('Country.id' => $ids)));
+				foreach ($countries as $country_slug => $name) {
+					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';
+				}
+			}else{
+				$trips = $this->Trip->find('list', array('fields' => array('Trip.slug', 'Trip.name'), 'conditions' => array('Trip.category_id' => $cat['Category']['id'])));
+				foreach ($trips as $slug => $name){
+					$content .= '<li><a href="' . $this->webroot . 'utjaink/' . $slug . '">' . $name . '</a></li>';
+				}
+			}
+			return $content;
 		}
 	}
 

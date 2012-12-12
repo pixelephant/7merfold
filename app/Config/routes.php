@@ -34,6 +34,7 @@
 	Router::connect('/szolgaltatasok', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
+	Router::connect('/menu/get_sub_menu/:category_slug', array('controller' => 'home', 'action' => 'get_sub_menu'));
 	Router::connect('/region/get_trips/:region_id/:category_id', array('controller' => 'home', 'action' => 'get_trips'));
 	Router::connect('/visa_info/:country_id', array('controller' => 'trips', 'action' => 'visa_info'));
 	Router::connect('/country_info/:country_id', array('controller' => 'trips', 'action' => 'country_info'));

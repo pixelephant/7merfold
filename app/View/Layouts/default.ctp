@@ -56,13 +56,7 @@
                   </div>
                 <nav id="mobile-submenu">
                     <h2><span>Menü</span><a href="#" class="close">&times;</a></h2>
-                    <ul id="sub-grid">
-                      <?php echo $this->element('top_menu_dynamic'); ?>
-                      <li><?php echo $this->Html->link($this->Html->image('cegeknek.png', array('alt' => 'Cégeknek')) . 'Cégeknek', '/cegeknek', array('escape' => false)); ?></li>
-                      <li>
-                        <?php echo $this->Html->link($this->Html->image('szolg.png', array('alt' => 'Szolgáltatások')) . 'Szolgáltatások', '/szolgaltatasok', array('escape' => false)); ?>
-                      </li>
-                    </ul>
+                    <?php echo $this->element('top_menu_dynamic'); ?>
                 </nav>
             </header>
             <?php echo $this->element('breadcrumb', array('breadcrumb' => $breadcrumb)); ?>
