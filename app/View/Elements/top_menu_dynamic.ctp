@@ -7,7 +7,7 @@
 	<li>
 <?php
 		$img = $this->Html->image($k . '.png', array('alt' => $e));
- 		echo $this->Html->link($img . $e, '/' . $k, array('escape' => false, 'data-href' => "#sub" . $i));
+ 		echo $this->Html->link($img . $e, '/' . $k, array('escape' => false, 'data-href' => "#sub" . $i, 'class' => 'drop'));
  		$i++;
 ?>
 	</li>
@@ -25,9 +25,7 @@
 	foreach($menu as $k => $e){
 		echo '<ul id="sub' . $i . '" class="sub">';
 		echo $this->requestAction('menu/get_sub_menu/' . $k);
-		// foreach ($sub_menu as $slug => $name){
-		// 	echo '<li>' . $this->Html->link($name, '/utjaink/' . $slug) . '</li>';
-		// }
+		echo '<li>' . $this->Html->link('Összes', '/' . $k, array('escape' => false)) . '</li>';
 		echo '</ul>';
 		$i++;
 	}
