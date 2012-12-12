@@ -4,7 +4,7 @@ $('.flexslider').flexslider({
     animation: "slide",
     animationLoop: false,
     itemWidth: 180,
-    minItems: 2,
+    minItems: 2
 });
 
 $('<img/>').attr('src', 'img/szab.png').load(function() {
