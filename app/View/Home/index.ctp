@@ -42,17 +42,20 @@
   </div>
 </section>
 
-<section class="section half" id="card">
+<section class="section" id="card">
   <h2>Ajándékozzon élményt!</h2>
   <div class="cont">
-    <img src="img/1.jpeg" height="187px" alt="">
+    <img src="img/loyalty.png" alt="">
+    <a href="#">Ajándékutalványok &raquo;</a>
   </div>
 </section>
 
-<section class="section half" id="company">
+<section class="section" id="company">
   <h2>Csapatépítés</h2>
   <div class="cont">
-    <img src="img/2.jpeg" height="187px" alt="">
+    <p>Egy csapat akkor működik jól, ha a tagok megbíznak egymában. Nézze meg céges ajánlatainkat!</p>
+    <a href="#">Ajánlatunk &raquo;</a>
+    <img src="img/csapat.gif" alt="">
   </div>
 </section>
 
@@ -61,39 +64,15 @@
 <section class="slider section">
 <h2>Legfrisebb utak</h2>
   <div class="cont">
-    <ul class="carousel" data-transition="slide">
-        <?php 
+    <div class="flex-container">
+      <div class="flexslider">
+        <ul class="slides">
+          <?php 
             echo $this->element('newest_trips_carousel', array('trips' => $newest_trips));
-        ?>
-        <li class="slag">
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Korfu</h3>
-            </a>
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Tel-Aviv</h3>
-            </a>
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Portugál körutazás</h3>
-            </a>
-        </li>
-        <li class="slag">
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Tel-Aviv</h3>
-            </a>
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Portugál körutazás</h3>
-            </a>
-            <a class="offer" href="#">
-              <img src="img/temp.png" alt="">
-              <h3>Korfu</h3>
-            </a>
-        </li>
-    </ul>  
+          ?>  
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
