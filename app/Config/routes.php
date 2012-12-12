@@ -47,7 +47,7 @@
 	Router::connect('/nyaralasok-uveghegyen-tul/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-tul'));
 
 	Router::connect('/utjaink/:trip_slug', array('controller' => 'trips', 'action' => 'show'));
-	Router::connect('/hirek/:news_id', array('controller' => 'news', 'action' => 'show'));
+	Router::connect('/hirek/:news_slug', array('controller' => 'news', 'action' => 'show'));
 
 	Router::connect('/kereses', array('controller' => 'home', 'action' => 'search'));
 
@@ -58,6 +58,12 @@
 	Router::connect('/static_page', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));
+
+/**
+ * Admin routes
+ */
+
+	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));	
 
 /**
  * Load all plugin routes.  See the CakePlugin documentation on

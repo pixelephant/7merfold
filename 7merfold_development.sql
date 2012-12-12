@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 12. 11:29
+-- Létrehozás ideje: 2012. dec. 12. 12:05
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `content` text COLLATE utf8_hungarian_ci NOT NULL,
   `image_file` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `slug` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=3 ;
 
@@ -122,9 +123,9 @@ CREATE TABLE IF NOT EXISTS `news` (
 -- A tábla adatainak kiíratása `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `content`, `image_file`, `created`) VALUES
-(1, 'Sokan szeretnek nyaralni!', 'Kutatók megállapították, hogy a nyaralás jó.', '3.jpeg', '0000-00-00 00:00:00'),
-(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '4.jpeg', '2012-12-06 08:51:26');
+INSERT INTO `news` (`id`, `title`, `content`, `image_file`, `created`, `slug`) VALUES
+(1, 'Sokan szeretnek nyaralni!', 'Kutatók megállapították, hogy a nyaralás jó.', '3.jpeg', '2012-12-12 11:03:10', '1'),
+(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '4.jpeg', '2012-12-12 11:03:10', '2');
 
 -- --------------------------------------------------------
 
