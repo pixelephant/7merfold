@@ -166,7 +166,14 @@ $(document).ready(function(){
 
       $("#sub-grid li a").click(function(){
         if($("#mobile-nav").css("display") === "none" && $(this).hasClass("drop")){
-          alert(12);
+          var href = $(this).data("href");
+          var $sub = $("#mobile-submenu").find(href);
+          var $li = $(this).parent();
+          $sub.siblings(".sub").slideUp();
+          $sub.slideToggle(300,function(){
+            $li.toggleClass("white-arrow").siblings().removeClass("white-arrow");
+          });
+          return false;
         }
       });
 
