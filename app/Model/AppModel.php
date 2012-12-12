@@ -50,7 +50,11 @@ class AppModel extends Model {
     	foreach($this->data[$model] as $field => $value){
     		if(stripos($field, 'file')){
     			$name = $this->data[$model][$field]['name'];
+    			while(file_exists($this->webroot.'img/'.$name)){
+    				$name = '1' . $name;
+    			}
     			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
+    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 50);
     			$this->data[$model][$field] = $name;
     		}
     	}
@@ -78,8 +82,7 @@ class AppModel extends Model {
 		return $slug;
 	}
 
-	static public function slugify($text)
-	{ 
+	static public function slugify($text){ 
 	  // replace non letter or digits by -
 	  $text = preg_replace('~[^\\pL\d]+~u', '-', $text);
 
@@ -100,6 +103,25 @@ class AppModel extends Model {
 	    return 'n-a';
 	  }
 	  return $text;
+	}
+
+	function make_thumb($src, $dest, $desired_width) {
+	  /* read the source image */
+	  $source_image = imagecreatefromjpeg($src);
+	  $width = imagesx($source_image);
+	  $height = imagesy($source_image);
+	  
+	  /* find the "desired height" of this thumbnail, relative to the desired width  */
+	  $desired_height = floor($height * ($desired_width / $width));
+	  
+	  /* create a new, "virtual" image */
+	  $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+	  
+	  /* copy source image at a resized size */
+	  imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
+	  
+	  /* create the physical thumbnail image to its destination */
+	  imagejpeg($virtual_image, $dest);
 	}
 
 }
