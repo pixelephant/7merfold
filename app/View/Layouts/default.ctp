@@ -9,6 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
@@ -81,9 +82,7 @@
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-        <script src="js/script.js"></script>
         <script src="js/index.js"></script>
-        <?php echo $this->fetch('script'); ?>
         <?php echo $this->Html->script(array('jpanel','carousel','main')); ?>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
