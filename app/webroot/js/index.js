@@ -20,8 +20,9 @@ $('<img/>').attr('src', 'img/szab.png').load(function() {
   });
 
 $("#usp a").click(function(){
-  if($("#mobile-nav").css("display") === "none")
+  if($("#mobile-nav").css("display") === "none"){
     $("html,body").animate({ scrollTop: $(".slider").offset().top }, "slow");
+  }
   else{
    jPM.open();
   }
