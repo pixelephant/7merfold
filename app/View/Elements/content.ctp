@@ -20,3 +20,5 @@
 	echo $this->element('trip_programs', array('program' => $trip['Program']));
 	echo $this->element('trip_map',$trip);
 } ?>
+
+<?php echo $this->element('trip_share', array('title' => $trip['Trip']['name'])); ?>
