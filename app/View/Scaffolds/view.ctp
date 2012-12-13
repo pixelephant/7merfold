@@ -17,7 +17,8 @@
  */
 ?>
 <div class="<?php echo $pluralVar; ?> view">
-<h2><?php echo __d('cake', 'View %s', $singularHumanName); ?></h2>
+<!-- <h2><?php echo __d('cake', 'View %s', $singularHumanName); ?></h2> -->
+	<h2><?php echo __('View %s', __($singularHumanName)); ?></h2>
 	<dl>
 <?php
 $i = 0;
@@ -46,46 +47,13 @@ foreach ($scaffoldFields as $_field) {
 ?>
 	</dl>
 </div>
-<div class="actions">
-	<h3><?php echo __d('cake', 'Actions'); ?></h3>
-	<ul>
+<div class="actions">	
 <?php
-	echo "\t\t<li>";
-	echo $this->Html->link(__d('cake', 'Edit %s', $singularHumanName),   array('action' => 'edit', ${$singularVar}[$modelClass][$primaryKey]));
-	echo " </li>\n";
+	$additional = "\t\t<li>";
+	$additional .= $this->Form->postLink(__d('cake', '%s törlése', $singularHumanName), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __d('cake', 'Biztosan törlöd?').' #' . ${$singularVar}[$modelClass][$primaryKey] . '?');
+	$additional .= " </li>\n";
 
-	echo "\t\t<li>";
-	echo $this->Form->postLink(__d('cake', 'Delete %s', $singularHumanName), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __d('cake', 'Are you sure you want to delete').' #' . ${$singularVar}[$modelClass][$primaryKey] . '?');
-	echo " </li>\n";
-
-	echo "\t\t<li>";
-	echo $this->Html->link(__d('cake', 'List %s', $pluralHumanName), array('action' => 'index'));
-	echo " </li>\n";
-
-	echo "\t\t<li>";
-	echo $this->Html->link(__d('cake', 'New %s', $singularHumanName), array('action' => 'add'));
-	echo " </li>\n";
-
-	$done = array();
-	foreach ($associations as $_type => $_data) {
-		foreach ($_data as $_alias => $_details) {
-			if ($_details['controller'] != $this->name && !in_array($_details['controller'], $done)) {
-				echo "\t\t<li>";
-				echo $this->Html->link(
-					__d('cake', 'List %s', Inflector::humanize($_details['controller'])),
-					array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'index')
-				);
-				echo "</li>\n";
-				echo "\t\t<li>";
-				echo $this->Html->link(
-					__d('cake', 'New %s', Inflector::humanize(Inflector::underscore($_alias))),
-					array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'add')
-				);
-				echo "</li>\n";
-				$done[] = $_details['controller'];
-			}
-		}
-	}
+	echo $this->element('admin/admin_menu', array('additional' => $additional));
 ?>
 	</ul>
 </div>

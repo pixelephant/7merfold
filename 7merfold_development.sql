@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 13. 12:29
+-- Létrehozás ideje: 2012. dec. 13. 13:35
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -52,6 +52,22 @@ INSERT INTO `categories` (`id`, `slug`, `name`, `created`, `keywords`, `title`) 
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet: `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE IF NOT EXISTS `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `display` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
+  `value` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
+  `contact_type` varchar(5) COLLATE utf8_hungarian_ci NOT NULL,
+  `order` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet: `countries`
 --
 
@@ -75,10 +91,10 @@ CREATE TABLE IF NOT EXISTS `countries` (
 --
 
 INSERT INTO `countries` (`id`, `information`, `useful_information`, `created`, `name`, `visa_info`, `image_file`, `slug`, `keywords`, `title`) VALUES
-(1, 'Görögország', 'Görögország hasznos', '2012-12-13 11:28:40', 'Görögország', 'Vízum Görögországba', 'gorogo.png', 'Görögország1', 'Görögország', 'Görögország'),
-(2, 'Deviza előírások: a belföldi és külföldi fizetőeszközök be- és kivitele nem korlátozott.\r\nEgészségügyi előírások: kötelező védőoltás nincs, több helyen a palackozott víz fogyasztása javasolt.\r\nElektromos feszültség: 220 V.\r\nPénznem: euro, 1 EUR = 100 cent. Nemzetközi hitelkártyák széles körben elfogadottak.\r\nIdőjárás: kontinentális', 'Franciaország nemzeti szimbóluma Marianne, a gall-sapkás nőalak, aki egyben a szabadság és a francia forradalom jelképe is. Az előző szimbólum a Gall Kakas volt, a vakmerő bátorság jelképe.', '2012-12-13 11:28:40', 'Franciaország', 'Vízum Franciaországba', 'franciao.png', 'Franciaország2', 'Franciaország', 'Franciaország'),
-(3, '', 'A spanyol szó végső eredete a latin HISPANIOLUS, azaz kb. ’hispánka’, amely espaignol alakban került a provanszálba, onnan español írásmóddal a spanyolba, majd a többi (újlatin) nyelvbe. A magyar nyelvben egy északolasz nyelvjárási – s-sel ejtett – spagnol alak honosodott meg.', '2012-12-13 11:28:40', 'Spanyolország', NULL, '3.jpeg', 'Spanyolország3', 'Spanyolország', 'Spanyolország'),
-(4, '', 'Skócia (angolul Scotland, skót gaelül Alba) Nyugat-Európában található, Nagy-Britannia második legnagyobb országrésze terület és népesség alapján. A Brit-sziget északi harmadát foglalja el, délről Anglia, keletről az Északi-tenger, északról és nyugatról az Atlanti-óceán határolja, délnyugatról pedig az Északi-csatorna és az Ír-tenger. Mintegy 790 sziget tartozik hozzá.', '2012-12-13 11:28:40', 'Skócia', NULL, '3.jpeg', 'Skócia4', 'Skócia', 'Skócia');
+(1, 'Görögország', 'Görögország hasznos', '2012-12-13 12:34:53', 'Görögország', 'vízum információ: Görögország', 'gorogo.png', 'Görögország1', 'Görögország', 'Görögország'),
+(2, 'Deviza előírások: a belföldi és külföldi fizetőeszközök be- és kivitele nem korlátozott.\r\nEgészségügyi előírások: kötelező védőoltás nincs, több helyen a palackozott víz fogyasztása javasolt.\r\nElektromos feszültség: 220 V.\r\nPénznem: euro, 1 EUR = 100 cent. Nemzetközi hitelkártyák széles körben elfogadottak.\r\nIdőjárás: kontinentális', 'Franciaország nemzeti szimbóluma Marianne, a gall-sapkás nőalak, aki egyben a szabadság és a francia forradalom jelképe is. Az előző szimbólum a Gall Kakas volt, a vakmerő bátorság jelképe.', '2012-12-13 12:34:53', 'Franciaország', 'vízum információ: Franciaország', 'franciao.png', 'Franciaország2', 'Franciaország', 'Franciaország'),
+(3, 'országinformáció: Spanyolország', 'A spanyol szó végső eredete a latin HISPANIOLUS, azaz kb. ’hispánka’, amely espaignol alakban került a provanszálba, onnan español írásmóddal a spanyolba, majd a többi (újlatin) nyelvbe. A magyar nyelvben egy északolasz nyelvjárási – s-sel ejtett – spagnol alak honosodott meg.', '2012-12-13 12:35:30', 'Spanyolország', 'vízum információ: Spanyolország', '3.jpeg', 'Spanyolország3', 'Spanyolország', 'Spanyolország'),
+(4, 'országinformáció: Skócia', 'Skócia (angolul Scotland, skót gaelül Alba) Nyugat-Európában található, Nagy-Britannia második legnagyobb országrésze terület és népesség alapján. A Brit-sziget északi harmadát foglalja el, délről Anglia, keletről az Északi-tenger, északról és nyugatról az Atlanti-óceán határolja, délnyugatról pedig az Északi-csatorna és az Ír-tenger. Mintegy 790 sziget tartozik hozzá.', '2012-12-13 12:35:30', 'Skócia', 'vízum információ: Skócia', '3.jpeg', 'Skócia4', 'Skócia', 'Skócia');
 
 -- --------------------------------------------------------
 
@@ -131,13 +147,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`id`, `title`, `content`, `image_file`, `created`, `slug`, `keywords`, `page_title`) VALUES
 (1, 'Sokan szeretnek nyaralni!', 'Kutatók megállapították, hogy a nyaralás jó.', '3.jpeg', '2012-12-13 11:27:52', '1', 'Sokan szeretnek nyaralni!', 'Sokan szeretnek nyaralni!'),
-(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '1zoldkek_logo.jpg', '2012-12-13 11:27:52', 'a-hajo-utak-menok', 'A hajó utak menők!', 'A hajó utak menők!'),
-(3, 'Címem az árvíztűrő tükörfúrógép #!%', 'Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem az árvíztűrő tükörfúrógép #!%\r\n            [content] => Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem\r\n            [content] => Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem\r\n            [content] => Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem\r\n            [content] => Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem\r\n            [content] => Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 3\r\n            [title] => Címem\r\n            [content] => 1\r\n            [image_file] => saasd.jpg\r\n            [slug] => asdasdsda\r\n        )\r\n\r\n)\r\n\r\n            [image_file] => saasd.jpg\r\n            [slug] => asdasdsda\r\n        )\r\n\r\n)\r\n\r\n            [image_file] => saasd.jpg\r\n            [slug] => qqqwww\r\n        )\r\n\r\n)\r\n\r\n            [image_file] => saasd.jpg\r\n            [slug] => qqqwww\r\n        )\r\n\r\n)\r\n\r\n            [image_file] => saasd.jpg\r\n            [slug] => qqqwww\r\n        )\r\n\r\n)\r\n\r\n            [image_file] => saasd.jpg\r\n            [slug] => cimem\r\n        )\r\n\r\n)\r\n', '1logo_felirattal.jpg', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep-1-1-1', 'Címem az árvíztűrő tükörfúrógép #!%', 'Címem az árvíztűrő tükörfúrógép #!%'),
-(4, 'Címem az árvíztűrő tükörfúrógép #!%?', 'Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => 4\r\n            [title] => Címem az árvíztűrő tükörfúrógép #!%?\r\n            [content] => asdasda\r\n            [image_file] => asdas.asda\r\n            [slug] => \r\n        )\r\n\r\n)\r\n', '11logo_felirattal.jpg', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep', 'Címem az árvíztűrő tükörfúrógép #!%?', 'Címem az árvíztűrő tükörfúrógép #!%?'),
-(5, 'Címem az árvíztűrő tükörfúrógép #!%?/==(', 'Array\n(\n    [News] => Array\n        (\n            [id] => \n            [title] => Címem az árvíztűrő tükörfúrógép #!%?/==(\n            [content] => kontent\n            [image_file] => \n            [slug] => a\n            [created] => 2012-12-12 14:47:06\n        )\n\n)\n', '', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep-1-2', 'Címem az árvíztűrő tükörfúrógép #!%?/==(', 'Címem az árvíztűrő tükörfúrógép #!%?/==('),
-(6, 'Címem az árvíztűrő tükörfúrógép #!%?$ß', 'Array\n(\n    [News] => Array\n        (\n            [id] => \n            [title] => Címem az árvíztűrő tükörfúrógép #!%?$ß\n            [content] => asdasasd\n            [image_file] => \n            [slug] => \n            [created] => 2012-12-12 14:47:33\n        )\n\n)\n', '', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep-ss', 'Címem az árvíztűrő tükörfúrógép #!%?$ß', 'Címem az árvíztűrő tükörfúrógép #!%?$ß'),
-(7, 'Címem az árvíztűrő tükörfúrógép #!%?$ß¤×', 'Array\r\n(\r\n    [News] => Array\r\n        (\r\n            [id] => \r\n            [title] => Tszt címő\r\n            [content] => \r\n            [image_file] => \r\n            [slug] => \r\n            [created] => 2012-12-12 14:48:14\r\n        )\r\n\r\n)\r\n', 'logo_felirattal.jpg', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep-ss-1', 'Címem az árvíztűrő tükörfúrógép #!%?$ß¤×', 'Címem az árvíztűrő tükörfúrógép #!%?$ß¤×'),
-(8, 'Címem az árvíztűrő tükörfúrógép #!%?/==', '', 'zoldkek_logo.jpg', '2012-12-13 11:27:52', 'cimem-az-arvizturo-tukorfurogep-1-1', 'Címem az árvíztűrő tükörfúrógép #!%?/==', 'Címem az árvíztűrő tükörfúrógép #!%?/==');
+(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '3.jpeg', '2012-12-13 12:31:07', 'a-hajo-utak-menok', 'A hajó utak menők!', 'A hajó utak menők!');
 
 -- --------------------------------------------------------
 
