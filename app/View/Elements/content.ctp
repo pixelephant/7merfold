@@ -22,3 +22,9 @@
 } ?>
 
 <?php echo $this->element('trip_share', array('title' => $trip['Trip']['name'])); ?>
+
+<?php 
+	if(!empty($trip['Trip']['extra']) && !empty($trip['Trip']['extra_title'])){
+		echo $this->element('trip_extra', array('id' => $trip['Trip']['extra_title'], 'title' => $trip['Trip']['extra_title'], 'content' => $trip['Trip']['extra']));
+	}
+?>
