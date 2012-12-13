@@ -7,6 +7,8 @@
 	?>
 	<li><?php echo $this->Html->link('Utazások', '/admin/trips'); ?></li>
 	<li><?php echo $this->Html->link('Új utazás', '/admin/trips/add'); ?></li>
+	<li><?php echo $this->Html->link('Hírek', '/admin/news'); ?></li>
+	<li><?php echo $this->Html->link('Új hír', '/admin/news/add'); ?></li>
 	<li><?php echo $this->Html->link('Országok', '/admin/countries'); ?></li>
 	<li><?php echo $this->Html->link('Új ország', '/admin/countries/add'); ?></li>
 	<li><?php echo $this->Html->link('Régiók', '/admin/regions'); ?></li>
