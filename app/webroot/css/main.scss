@@ -332,36 +332,21 @@ body{
 }
 
 #usp{
-  
-   -webkit-background-size: 100% 100%; 
-          background-size: 100% 100%; 
-  h2{
-    visibility: hidden;
-    color:#fff !important;
-    border-bottom: none !important;
-    font-size: 1.65em !important;
-    padding-left: 0 !important;
-    @include text-shadow; 
-    }
-    overflow: hidden;
-  .cont{
-    float: right;
-    background: rgba(0,0,0,0.5);
+  li{
+    position: relative;
   }
+  img{
+    max-width: 100%;
+  }
+  h2{
+    position: absolute;
+    color:#fff !important;
+    }
   p{
-    visibility: hidden;
-    @include text-shadow; 
-    color: #fff;
-    font-size: 1em;
-    clear: both;
-    margin-bottom: 1em;
+    
   }
   a{
-    visibility: hidden;
-    clear: both;
    @include purple-button;
-
-   float:right;
   }
 }
 

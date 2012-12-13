@@ -7,7 +7,15 @@ $('.flexslider').flexslider({
     minItems: 2
 });
 
-$('<img/>').attr('src', 'img/szab.png').load(function() {
+$(".flexslider1").flexslider({
+    animation: "fade",
+    animationLoop: true,
+    slideshowSpeed: 5000,
+    animationSpeed: 1000
+    
+});
+
+/*$('<img/>').attr('src', 'img/szab.png').load(function() {
     $("#usp").css({
       "background":"url(img/szab.png) no-repeat"
     });
@@ -17,7 +25,7 @@ $('<img/>').attr('src', 'img/szab.png').load(function() {
           clearInterval(t);
         }
       },400);
-  });
+  });*/
 
 $("#usp a").click(function(){
   if($("#mobile-nav").css("display") === "none"){

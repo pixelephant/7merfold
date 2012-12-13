@@ -2,11 +2,22 @@
 <?php $this->Html->css('carousel', null, array('inline' => false)); ?>
 
 <section class="section arrow_box" id="usp">
-    <div class="cont">
-    <h2 class="fadeInRight">Személyre szabunk!</h2>
-      <p class="fadeInRight"> A 7mérföld a személyre szabott utak specialistája, legyen az egy családi nyaralás, hétvégi városlátogatás, vagy céges csapatépítő túra. Irodánk a vízumintézéstől a programok megszervezésén át egészen az asztalfoglalásokig elintéz mindent.</p>
-      <a class="fadeInRight" href="#">Fedezd fel &raquo;</a>
-    </div>
+      <div class="flex-container">
+        <div class="flexslider1">
+          <ul class="slides">
+            <li>
+              <img src="img/szab.png" alt="">
+              <h2>Subidubi</h2>
+            </li>
+            <li>
+              <img src="img/szab1.png" alt="">
+            </li>
+            <li>
+              <img src="img/szab2.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
 </section>
 
 
