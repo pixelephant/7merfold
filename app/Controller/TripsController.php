@@ -73,6 +73,8 @@ class TripsController extends AppController {
 		$this->set('country', $country);
 
 		$this->set('breadcrumb', $breadcrumb);
+		$this->set('page_title', $trip['Trip']['title']);
+		$this->set('page_keywords', $trip['Trip']['keywords']);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
 

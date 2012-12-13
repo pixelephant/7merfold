@@ -66,18 +66,26 @@ class HomeController extends AppController {
 		$this->set('categories_bottom', $categories_bottom);
 
 		$this->set('breadcrumb', array());
+		$this->set('page_title', 'Főoldal');
+		$this->set('page_keywords', 'utazás, utazási iroda');
 
 		$this->render('index');
 	}
 
 	public function quote() {
 		$this->set('breadcrumb', array());
+		$this->set('page_title', $this->Session->read('quote_text'));
+		$this->set('page_keywords', 'utazás, utazási iroda');
+
 		$this->set('quote_text', $this->Session->read('quote_text'));
 		$this->render('quote');
 	}
 
 	public function static_page() {
 		$this->set('breadcrumb', array());
+		$this->set('page_title', 'Statikus oldal');
+		$this->set('page_keywords', 'utazás, utazási iroda');
+
 		$this->render('static_page');
 	}
 
@@ -128,6 +136,8 @@ class HomeController extends AppController {
 		$trips = $this->Trip->find('all', array('conditions' => $cond));
 
 		$this->set('breadcrumb', array());
+		$this->set('page_title', 'Keresés: ' . $search);
+		$this->set('page_keywords', 'utazás, utazási iroda,' . $search);
 
 		$this->set('trips', $trips);
 		$this->render('search');
@@ -152,6 +162,8 @@ class HomeController extends AppController {
 		$email->send();
 
 		$this->set('breadcrumb', array());
+		$this->set('page_title', 'Köszönjük a leveledet!');
+		$this->set('page_keywords', 'utazás, utazási iroda, köszönjük');
 
 		$this->render('email_thankyou');
 	}

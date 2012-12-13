@@ -26,12 +26,16 @@ class CategoriesController extends AppController {
 		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
 
 		$breadcrumb = array($slug => $category['Category']['name']);
+		$page_title = $category['Category']['title'];
+		$page_keywords = $category['Category']['keywords'];
 
 		$cond = array('Trip.category_id' => $category['Category']['id']);
 		if(isset($params['pass'][0])){
 			$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $params['country_slug'])));
 			$cond['Trip.country_id'] = $country['Country']['id'];
 			$breadcrumb[($slug . '/' . $params['country_slug'])] = $country['Country']['name'];
+			$page_title .= " - " . $country['Country']['title'];
+			$page_keywords .= "," . $country['Country']['keywords'];
 		}
 		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC'));
 
@@ -51,6 +55,8 @@ class CategoriesController extends AppController {
 		$this->set('category_id', $category['Category']['id']);
 
 		$this->set('breadcrumb', $breadcrumb);
+		$this->set('page_title', $page_title);
+		$this->set('page_keywords', $page_keywords);
 
 		$this->render('show');
 	}
@@ -74,6 +80,8 @@ class CategoriesController extends AppController {
 		$this->set('category', $category);
 
 		$this->set('breadcrumb', $breadcrumb);
+		$this->set('page_title', $category['Category']['title']);
+		$this->set('page_keywords', $category['Category']['keywords']);
 
 		$this->render('inner');
 	}

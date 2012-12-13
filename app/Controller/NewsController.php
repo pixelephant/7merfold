@@ -51,6 +51,8 @@ class NewsController extends AppController {
 
 		$this->set('news', $news);
 		$this->set('breadcrumb', $breadcrumb);
+		$this->set('page_title', $news['News']['page_title']);
+		$this->set('page_keywords', $news['News']['keywords']);
 
 		$this->render('show');
 	}
