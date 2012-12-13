@@ -39,6 +39,7 @@
 
 	Router::connect('/cegeknek', array('controller' => 'home', 'action' => 'static_page'));
 	Router::connect('/szolgaltatasok', array('controller' => 'home', 'action' => 'static_page'));
+	Router::connect('/ajandekutalvany', array('controller' => 'home', 'action' => 'static_page'));
 
 	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
 	Router::connect('/menu/get_sub_menu/:category_slug', array('controller' => 'home', 'action' => 'get_sub_menu'));

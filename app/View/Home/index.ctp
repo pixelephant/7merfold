@@ -47,7 +47,7 @@
   <h2>Ajándékozzon élményt!</h2>
   <div class="cont">
     <img src="img/loyalty.png" alt="">
-    <a href="#">Ajándékutalványok &raquo;</a>
+    <?php echo $this->Html->link('Ajándékutalványok &raquo;', '/ajandekutalvany', array('escape' => false)); ?>
   </div>
 </section>
 
@@ -55,7 +55,7 @@
   <h2>Csapatépítés</h2>
   <div class="cont">
     <p>Egy csapat akkor működik jól, ha a tagok megbíznak egymában. Nézze meg céges ajánlatainkat!</p>
-    <a href="#">Ajánlatunk &raquo;</a>
+    <?php echo $this->Html->link('Ajánlatunk &raquo;', '/cegeknek', array('escape' => false)); ?>
     <img src="img/csapat.gif" alt="">
   </div>
 </section>
