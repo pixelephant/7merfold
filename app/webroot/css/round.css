@@ -61,7 +61,8 @@
 
 .sum h2 {
   border-bottom: none !important;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.7em !important; }
 .sum img {
   max-width: 100%;
   display: block;
@@ -83,7 +84,7 @@
   border: none;
   font-family: 'Source Sans Pro';
   font-style: italic;
-  background: #bc193c;
+  background: #69297d;
   text-align: center;
   padding: 0.8em 1em;
   color: #fff;
@@ -105,7 +106,7 @@
   border: none;
   font-family: 'Source Sans Pro';
   font-style: italic;
-  background: #69297d;
+  background: #bc193c;
   text-align: center;
   padding: 0.8em 1em;
   color: #fff;
@@ -184,10 +185,10 @@
       float: none !important;
       font-family: 'Gentium Basic' !important; }
 
-#prices .cont {
+#prices .cont, #hotelek .cont, #leiras .cont, #arak .cont {
   overflow: hidden; }
 
-#prices .getquote {
+#prices .getquote, #hotelek .getquote, #leiras .getquote, #arak .getquote {
   display: none; }
 
 #inline-nav {
@@ -205,7 +206,7 @@
   float: left;
   font-family: 'Source Sans Pro';
   font-weight: 200;
-  font-size: 0.8em; }
+  font-size: 0.6em !important; }
   .shares span {
     display: block; }
   .shares .icon {
@@ -216,20 +217,20 @@
     color: #333333; }
 
 @media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
-  #prices .half {
+  #prices .half, #hotelek .half, #leiras .half, #arak .half {
     width: 45%;
     float: left;
     margin-right: 10%; }
-    #prices .half:nth-child(even) {
+    #prices .half:nth-child(even), #hotelek .half:nth-child(even), #leiras .half:nth-child(even), #arak .half:nth-child(even) {
       margin-right: 0; }
 
   .section.getquote {
     display: none; }
 
-  #prices .getquote {
+  #prices .getquote, #hotelek .getquote, #leiras .getquote, #arak .getquote {
     display: block;
-    background: #cccccc; }
-    #prices .getquote a {
+    background: #e6e6e6; }
+    #prices .getquote a, #hotelek .getquote a, #leiras .getquote a, #arak .getquote a {
       color: #fff !important; }
 
   .lead {
@@ -283,9 +284,9 @@
   .no-touch .shares a:hover, .no-touch .shares a:focus {
     color: #000; }
 .no-touch .sum .quote:hover, .no-touch .sum .quote:focus {
-  background: #875497; }
-.no-touch .sum .important:hover, .no-touch .sum .important:focus {
   background: #c94763; }
+.no-touch .sum .important:hover, .no-touch .sum .important:focus {
+  background: #875497; }
 
 /* fancyBox v2.1.3 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,

@@ -4,6 +4,7 @@
   h2{
     border-bottom:none !important;
     text-align: center;
+    font-size: 1.7em !important;
   }
   img{
     max-width: 100%;
@@ -22,13 +23,13 @@
   }
   .important{
     float: left;
-    @include red-button;
+    @include purple-button;
     font-size: 90%;
     width:49%;
     margin-right: 2%;
   }
   .quote{
-    @include purple-button;
+    @include red-button;
     float:left;
     width:49%;
     font-size: 90%;
@@ -111,11 +112,11 @@
   }
 }
 
-#prices .cont{
+#prices .cont,#hotelek .cont,#leiras .cont,#arak .cont{
   overflow:hidden;
 }
 
-#prices .getquote{
+#prices .getquote,#hotelek .getquote,#leiras .getquote,#arak .getquote{
   display:none;
 }
 
@@ -136,7 +137,7 @@
   float:left;
   font-family:'Source Sans Pro';
   font-weight:200;
-  font-size:0.8em;
+  font-size:0.6em !important;
   span{
     display:block;
   }
@@ -153,7 +154,7 @@
 //large tablet (1000px,62.5em)
 @media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation : landscape){
  
-#prices .half{
+#prices .half,#hotelek .half,#leiras .half,#arak .half{
   width:45%;
   float:left;
   margin-right:10%;
@@ -166,9 +167,9 @@
   display:none;
  }
 
- #prices .getquote{
+ #prices .getquote,#hotelek .getquote,#leiras .getquote,#arak .getquote{
   display:block;
-  background:$gray;
+  background:#e6e6e6;
   a{
     color:#fff !important;
   }
@@ -226,12 +227,12 @@
 
   .sum .quote{
     &:hover,&:focus{
-      @include purple-button-hover;
+      @include red-button-hover;
     }
   } 
   .sum .important{
     &:hover,&:focus{
-      @include red-button-hover;
+      @include purple-button-hover;
     }
   }
 }
