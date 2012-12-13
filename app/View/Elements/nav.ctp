@@ -17,6 +17,7 @@
 <?php } ?>
 
 <?php if($trip_type == '5'){ ?>
-	<a href="#arak">Árak és infók</a>
 	<a href="#program">Program</a>
+	<a href="#arak">Árak és infók</a>
+	<a href="#utvonal">Útvonal</a>
 <?php } ?>

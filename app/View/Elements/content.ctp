@@ -16,8 +16,8 @@
 } ?>
 
 <?php if($trip_type == '5'){
-	echo $this->element('trip_prices_info', array('trip' => $trip));
 	echo $this->element('trip_programs', array('program' => $trip['Program']));
+	echo $this->element('trip_prices_info', array('trip' => $trip));
 	echo $this->element('trip_map',$trip);
 } ?>
 
