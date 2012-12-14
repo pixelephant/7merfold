@@ -8,6 +8,8 @@ $('.flexslider').flexslider({
 });
 
 $(".flexslider1").flexslider({
+    controlNav: false,
+    directionNav: false,
     animation: "fade",
     animationLoop: true,
     slideshowSpeed: 5000,
