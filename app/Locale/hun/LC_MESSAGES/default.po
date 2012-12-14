@@ -208,6 +208,13 @@ msgstr "Vízum információ"
 msgid "Content"
 msgstr "Tartalom"
 
+#: Útvonalak
+msgid "Lat"
+msgstr "Szélesség"
+
+msgid "Lng"
+msgstr "Hosszúság"
+
 #: Adatbázis táblák
 msgid "Country"
 msgstr "Ország"
@@ -253,3 +260,9 @@ msgstr "Látnivaló, Hotel kép"
 
 msgid "Sights"
 msgstr "Látnivalók, Hotel képek"
+
+msgid "Map"
+msgstr "Útvonal"
+
+msgid "Maps"
+msgstr "Útvonalak"

@@ -69,14 +69,14 @@ class AppHelper extends Helper {
 
     public function map_route($points){
 
-        empty($points);
-        $points = array(array(40.737102,-73.990318),array(40.749825,-73.987963),array(40.752946,-73.987384),array(40.755823,-73.986397));
+        // empty($points);
+        // $points = array(array(40.737102,-73.990318),array(40.749825,-73.987963),array(40.752946,-73.987384),array(40.755823,-73.986397));
         //lecserélni
         $api_key = "&key=AIzaSyAAYzbqZTGF0buhn2MFujznTcMxr1rpP_Y";
 
         $url = "http://maps.googleapis.com/maps/api/staticmap?sensor=true&scale=2&size=640x640";
 
-        $url .= $url+$api_key;
+        $url .= $api_key;
 
         $path = "&path=color:0x69297d%7Cweight:5|";
         $markers = "&markers=color:blue|";
@@ -85,12 +85,12 @@ class AppHelper extends Helper {
         $i = 0;
         foreach($points as $point){
             if($i != $len - 1){
-                $path .= $point[0].",".$point[1]."|";
-                $markers .= $point[0].",".$point[1]."|";
+                $path .= $point['lat'].",".$point['lng']."|";
+                $markers .= $point['lat'].",".$point['lng']."|";
             }
             else{
-                $path .= $point[0].",".$point[1];
-                $markers .= $point[0].",".$point[1];
+                $path .= $point['lat'].",".$point['lng'];
+                $markers .= $point['lat'].",".$point['lng'];
             }
             $i++;
         }

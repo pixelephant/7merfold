@@ -21,4 +21,6 @@
 	<li><?php echo $this->Html->link('Új hotel', '/admin/hotels/add'); ?></li>
 	<li><?php echo $this->Html->link('Látnivalók, Hotel képek', '/admin/sights'); ?></li>
 	<li><?php echo $this->Html->link('Új látnivaló, Hotel kép', '/admin/sights/add'); ?></li>
+	<li><?php echo $this->Html->link('Útvonalak', '/admin/maps'); ?></li>
+	<li><?php echo $this->Html->link('Új útvonal', '/admin/maps/add'); ?></li>
 </ul>

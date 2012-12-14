@@ -45,6 +45,26 @@ foreach ($scaffoldFields as $_field) {
 }
 ?>
 	</dl>
+
+	<?php 
+		/* Térkép kirajzolás útvonalnál */
+		if($pluralVar == 'maps'){
+			$api_key = "&key=AIzaSyAAYzbqZTGF0buhn2MFujznTcMxr1rpP_Y";
+      $url = "http://maps.googleapis.com/maps/api/staticmap?sensor=true&scale=2&size=352x352";
+      $url .= $api_key;
+      $path = "&path=color:0x69297d%7Cweight:5|";
+      $markers = "&markers=color:blue|";
+
+      $path .= ${$singularVar}[$modelClass]['lat'].",".${$singularVar}[$modelClass]['lng'];
+      $markers .= ${$singularVar}[$modelClass]['lat'].",".${$singularVar}[$modelClass]['lng'];
+
+      $url .= $path . $markers;
+
+      echo '<br /><img src=' . $url . ' alt="Útvonal" />';
+
+		}
+	 ?>
+
 </div>
 <div class="actions">	
 <?php
