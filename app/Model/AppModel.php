@@ -49,13 +49,17 @@ class AppModel extends Model {
     foreach($this->data as $model => $v){
     	foreach($this->data[$model] as $field => $value){
     		if(stripos($field, 'file')){
-    			$name = $this->data[$model][$field]['name'];
-    			while(file_exists($this->webroot.'img/'.$name)){
-    				$name = '1' . $name;
+    			if(!empty($this->data[$model][$field]['name'])){
+    				$name = $this->data[$model][$field]['name'];
+	    			while(file_exists($this->webroot.'img/'.$name)){
+	    				$name = '1' . $name;
+	    			}
+	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
+	    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 50);
+	    			$this->data[$model][$field] = $name;
+    			}else{
+    				unset($this->data[$model][$field]);
     			}
-    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
-    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 50);
-    			$this->data[$model][$field] = $name;
     		}
     	}
     }

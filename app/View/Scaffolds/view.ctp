@@ -59,7 +59,6 @@ foreach ($scaffoldFields as $_field) {
 
 	echo $this->element('admin/admin_menu', array('additional' => $additional));
 ?>
-	</ul>
 </div>
 <?php
 if (!empty($associations['hasOne'])) :
