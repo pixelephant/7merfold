@@ -253,7 +253,7 @@ class Scaffold {
 					}
 				} else {
 					if ($this->_validSession) {
-						$this->controller->Session->setFlash(__d('cake', 'Please correct errors below.'));
+						$this->controller->Session->setFlash(__d('cake', __('Please correct errors below.')));
 					}
 				}
 			}

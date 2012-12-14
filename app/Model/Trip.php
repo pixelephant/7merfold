@@ -17,5 +17,43 @@ class Trip extends AppModel {
             )
     );
 
+    public $validate = array(
+        'name' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'description' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'image_file' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'circle_image_file' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'short_description' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'country_id' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'category_id' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        )
+    );
+
 }
 ?>

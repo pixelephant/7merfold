@@ -17,3 +17,6 @@ msgstr ""
 
 msgid "The %1$s with id: %2$s has been deleted."
 msgstr "A %2$s azonosítójú %1$s sikeresen törlődött."
+
+msgid "Please correct errors below."
+msgstr "Kérlek javítsd az alábbi hibákat."

@@ -12,5 +12,18 @@ class Sight extends AppModel {
                 'unique'                 => true,
             )
     );
+
+    public $validate = array(
+        'name' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        ),
+        'image_file' => array(
+            'rule' => 'notEmpty',
+            'required'   => true,
+            'message'    => 'Kötelező megadni'
+        )
+    );
 }
 ?>
