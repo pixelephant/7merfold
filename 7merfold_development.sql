@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 13. 13:35
+-- Létrehozás ideje: 2012. dec. 14. 12:29
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -125,6 +125,30 @@ INSERT INTO `hotels` (`id`, `name`, `star_rating`, `description`, `accommodation
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet: `maps`
+--
+
+DROP TABLE IF EXISTS `maps`;
+CREATE TABLE IF NOT EXISTS `maps` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `lat` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
+  `lng` varchar(20) COLLATE utf8_hungarian_ci NOT NULL,
+  `trip_id` int(11) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=3 ;
+
+--
+-- A tábla adatainak kiíratása `maps`
+--
+
+INSERT INTO `maps` (`id`, `lat`, `lng`, `trip_id`, `created`) VALUES
+(1, '40.737102', '-73.990318', 6, '2012-12-14 11:15:48'),
+(2, '40.749825', '-73.987963', 6, '2012-12-14 11:15:48');
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet: `news`
 --
 
@@ -172,14 +196,14 @@ CREATE TABLE IF NOT EXISTS `programs` (
 
 INSERT INTO `programs` (`id`, `name`, `description`, `image_file`, `trip_id`) VALUES
 (1, '1. nap', 'leírás', NULL, 1),
-(2, '1. nap', 'Elutazás Budapestről menetrend szerinti járattal, átszállással. Érkezés Edinburghba a késő délutáni órákban. Vacsora és szállás Edinburghban.', '3.jpeg', 3),
-(3, '2. nap', 'Egész napos városnézés Edinburghban. Először panorámás városnézés: a város „új” negyede: az 1766 és 1840 között emelt épületek között elbűvölő terek és kertek láthatók. Az óváros látnivalói: a Royal Mile, a Grass market, a Cowgate, a Skót Királyi Múzeum, majd az Edinburgh kastély és a Holyrood House megtekintése, amely a királyi család szálláshelye volt. Vacsora és szállás Edinburghban.', '3.jpeg', 3),
-(4, '3. nap', 'Látogatás Stirlingbe, a vár megtekintése, ami az egyik legnagyobb és – úgy építészetileg, mint történelmileg – legfontosabb vár Skóciában. Látogatás Doune kastélyában, ahol a Gyalog galopp című film több jelenetét is forgatták. A tavakkal és erdőkkel tarkított The Trossachs Nemzeti Parkon, majd Glencoe vidékén keresztül továbbutazás Fort Williambe. Vacsora és szállás Fort William környékén.', '3.jpeg', 3),
-(5, '4. nap', 'Egész napos kirándulás a Skye szigetre. Elsőnek az 1745-ös felkelés emlékére emelt Glenfinnan emlékmű felkeresése. Rövid kompos utazás Mallaigből a sziget déli csücskére, Armadale-be. A Cuillin hegyeken át északra utazva Portree halászfaluig jutunk, ahonnan busszal folytatjuk az utat a szárazföldre. Ezután az 1214-ben épült Eilean Donan vár megtekintésére kerül sor, amely számos filmnek szolgált díszletül. Vacsora és szállás Fort William környékén.', '3.jpeg', 3),
-(6, '5. nap', 'Utazás az Urqhuart kastélyhoz a „rémektől hemzsegő” Loch Ness-i tó melett. Az úton érdemes ébernek lenni, hátha Nessi is felbukkan a tó vizén. Skócia leghíresebb kiállításának a Loch Ness 2000-nek a meglátogatása, majd késő délután utazás Invernessbe. Vacsora és szállás Inverness környékén.', '3.jpeg', 3),
-(7, '6. nap', 'Délelőtt az 1746-os csata helyszíne, Culloden Moor megtekintése, ahol az angol kormány csapatai leverték a lázadást. Majd látogatás a Speyside régióban fekvő híres Glenfiddich whiskey lepárlóba, ahol a helyi szakemberek bemutatják az ital elkészítésének menetét, majd kóstolásra nyílik lehetőség. Ezután az Elgin katedrális romjainak megtekintése, melynek története a 13. századra nyúlik vissza. Vacsora és szállás Inverness környékén.', '3.jpeg', 3),
-(8, '7. nap', 'Továbbutazás Perth irányába. A Blair kastély, majd a Pitlochry felkeresése. Ha valaki az előző nap elmulasztotta volna a whisky kóstolást, akkor most Skócia legkisebb lepárlóját tekintheti meg, az Edradour lepárlót, amely 1825 óta készíti a finom italt. Néhány mérföldre, északra látható a Scone palota, amely a skót uralkodók koronázási helye volt. Délután visszaérkezés Perthbe, vacsora és szállás Perthben.', '3.jpeg', 3),
-(9, '8. nap', 'Transzfer a repülőtérre, elutazás Budapestre a menetrend szerint.', '3.jpeg', 3);
+(2, '1. nap', 'Elutazás Budapestről menetrend szerinti járattal, átszállással. Érkezés Edinburghba a késő délutáni órákban. Vacsora és szállás Edinburghban.', '3.jpeg', 6),
+(3, '2. nap', 'Egész napos városnézés Edinburghban. Először panorámás városnézés: a város „új” negyede: az 1766 és 1840 között emelt épületek között elbűvölő terek és kertek láthatók. Az óváros látnivalói: a Royal Mile, a Grass market, a Cowgate, a Skót Királyi Múzeum, majd az Edinburgh kastély és a Holyrood House megtekintése, amely a királyi család szálláshelye volt. Vacsora és szállás Edinburghban.', '3.jpeg', 6),
+(4, '3. nap', 'Látogatás Stirlingbe, a vár megtekintése, ami az egyik legnagyobb és – úgy építészetileg, mint történelmileg – legfontosabb vár Skóciában. Látogatás Doune kastélyában, ahol a Gyalog galopp című film több jelenetét is forgatták. A tavakkal és erdőkkel tarkított The Trossachs Nemzeti Parkon, majd Glencoe vidékén keresztül továbbutazás Fort Williambe. Vacsora és szállás Fort William környékén.', '3.jpeg', 6),
+(5, '4. nap', 'Egész napos kirándulás a Skye szigetre. Elsőnek az 1745-ös felkelés emlékére emelt Glenfinnan emlékmű felkeresése. Rövid kompos utazás Mallaigből a sziget déli csücskére, Armadale-be. A Cuillin hegyeken át északra utazva Portree halászfaluig jutunk, ahonnan busszal folytatjuk az utat a szárazföldre. Ezután az 1214-ben épült Eilean Donan vár megtekintésére kerül sor, amely számos filmnek szolgált díszletül. Vacsora és szállás Fort William környékén.', '3.jpeg', 6),
+(6, '5. nap', 'Utazás az Urqhuart kastélyhoz a „rémektől hemzsegő” Loch Ness-i tó melett. Az úton érdemes ébernek lenni, hátha Nessi is felbukkan a tó vizén. Skócia leghíresebb kiállításának a Loch Ness 2000-nek a meglátogatása, majd késő délután utazás Invernessbe. Vacsora és szállás Inverness környékén.', '3.jpeg', 6),
+(7, '6. nap', 'Délelőtt az 1746-os csata helyszíne, Culloden Moor megtekintése, ahol az angol kormány csapatai leverték a lázadást. Majd látogatás a Speyside régióban fekvő híres Glenfiddich whiskey lepárlóba, ahol a helyi szakemberek bemutatják az ital elkészítésének menetét, majd kóstolásra nyílik lehetőség. Ezután az Elgin katedrális romjainak megtekintése, melynek története a 13. századra nyúlik vissza. Vacsora és szállás Inverness környékén.', '3.jpeg', 6),
+(8, '7. nap', 'Továbbutazás Perth irányába. A Blair kastély, majd a Pitlochry felkeresése. Ha valaki az előző nap elmulasztotta volna a whisky kóstolást, akkor most Skócia legkisebb lepárlóját tekintheti meg, az Edradour lepárlót, amely 1825 óta készíti a finom italt. Néhány mérföldre, északra látható a Scone palota, amely a skót uralkodók koronázási helye volt. Délután visszaérkezés Perthbe, vacsora és szállás Perthben.', '3.jpeg', 6),
+(9, '8. nap', 'Transzfer a repülőtérre, elutazás Budapestre a menetrend szerint.', '3.jpeg', 6);
 
 -- --------------------------------------------------------
 
@@ -292,7 +316,7 @@ CREATE TABLE IF NOT EXISTS `trips` (
   KEY `country` (`country_id`),
   KEY `region` (`region_id`),
   KEY `category` (`category_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Egyes utak tárolása' AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Egyes utak tárolása' AUTO_INCREMENT=14 ;
 
 --
 -- A tábla adatainak kiíratása `trips`
@@ -307,7 +331,8 @@ INSERT INTO `trips` (`id`, `description`, `name`, `price`, `travel_date`, `image
 (6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Teszt út 6.', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-13 11:27:29', '0000-00-00 00:00:00', 'Teszt út rövid leírása', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 1, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Teszt út 6.6', 'Teszt út 6.', 'Teszt út 6.'),
 (7, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Teszt út 9.', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-13 11:27:29', '0000-00-00 00:00:00', 'Teszt út rövid leírása', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 3, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Teszt út 9.7', 'Teszt út 9.', 'Teszt út 9.'),
 (8, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Teszt út 10.', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-13 11:27:29', '0000-00-00 00:00:00', 'Teszt út rövid leírása', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 4, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Teszt út 10.8', 'Teszt út 10.', 'Teszt út 10.'),
-(9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Teszt út 11', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-13 11:27:29', '0000-00-00 00:00:00', 'Teszt út rövid leírása', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 3, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Teszt út 119', 'Teszt út 11', 'Teszt út 11');
+(9, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Teszt út 11', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-13 11:27:29', '0000-00-00 00:00:00', 'Teszt út rövid leírása', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 3, 4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Teszt út 119', 'Teszt út 11', 'Teszt út 11'),
+(11, '', '', '', '', '1', '2012-12-14 09:58:03', '2012-12-14 09:58:03', '', '', 1, '1', 0, 1, 1, '', '', NULL, '', '', NULL, '', '', '', '1', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
