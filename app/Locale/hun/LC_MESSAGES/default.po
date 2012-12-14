@@ -143,10 +143,7 @@ msgstr "Ár"
 msgid "Travel Date"
 msgstr "Utazás időpontja"
 
-msgid "Image file"
-msgstr "Kép"
-
-msgid "Image file"
+msgid "Image File"
 msgstr "Kép"
 
 msgid "Travel Price Includes"
@@ -155,7 +152,7 @@ msgstr "Benne van az árban"
 msgid "Circle Image File"
 msgstr "Kör alakú kép"
 
-msgid "Accomodation"
+msgid "Accommodation"
 msgstr "Ellátás"
 
 msgid "Travel Method"
@@ -183,11 +180,34 @@ msgid "Keywords"
 msgstr "Kulcsszavak"
 
 msgid "Title"
+msgstr "Cím"
+
+#: Hírek
+msgid "Content"
+msgstr "Tartalom"
+
+msgid "Page Title"
 msgstr "Oldal címe"
+
+#: Országok
+msgid "Information"
+msgstr "Országinformáció"
+
+msgid "Useful Information"
+msgstr "Hasznos információk"
+
+msgid "Visa Info"
+msgstr "Vízum információ"
+
+msgid "Content"
+msgstr "Tartalom"
 
 #: Adatbázis táblák
 msgid "Country"
 msgstr "Ország"
+
+msgid "Countries"
+msgstr "Országok"
 
 msgid "Trip"
 msgstr "Utazás"

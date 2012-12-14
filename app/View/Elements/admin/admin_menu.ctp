@@ -19,6 +19,6 @@
 	<li><?php echo $this->Html->link('Új program', '/admin/programs/add'); ?></li>
 	<li><?php echo $this->Html->link('Hotelek', '/admin/hotels'); ?></li>
 	<li><?php echo $this->Html->link('Új hotel', '/admin/hotels/add'); ?></li>
-	<li><?php echo $this->Html->link('Látványosságok, Hotel képek', '/admin/sights'); ?></li>
-	<li><?php echo $this->Html->link('Új látványosság, hotel kép', '/admin/sights/add'); ?></li>
+	<li><?php echo $this->Html->link('Látnivalók, Hotel képek', '/admin/sights'); ?></li>
+	<li><?php echo $this->Html->link('Új látnivaló, Hotel kép', '/admin/sights/add'); ?></li>
 </ul>
