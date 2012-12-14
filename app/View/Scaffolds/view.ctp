@@ -147,7 +147,11 @@ $otherSingularVar = Inflector::variable($_alias);
 			echo "\t\t<tr>\n";
 
 			foreach ($otherFields as $_field) {
-				echo "\t\t\t<td>" . ${$otherSingularVar}[$_field] . "</td>\n";
+				if(stripos($_field, "file")){
+					echo '<td>' . $this->Html->image('thumbnails/'.${$otherSingularVar}[$_field]) . '</td>';
+				}else{
+					echo "\t\t\t<td>" . ${$otherSingularVar}[$_field] . "</td>\n";
+				}
 			}
 
 			echo "\t\t\t<td class=\"actions\">\n";

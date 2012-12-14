@@ -231,7 +231,7 @@ class Scaffold {
 					$this->ScaffoldModel->id = $request['pass'][0];
 				}
 				if (!$this->ScaffoldModel->exists()) {
-					throw new NotFoundException(__d('cake', 'Invalid %s', Inflector::humanize($this->modelKey)));
+					throw new NotFoundException(__d('cake', 'Invalid %s', __(Inflector::humanize($this->modelKey))));
 				}
 			}
 
@@ -243,9 +243,9 @@ class Scaffold {
 				if ($this->ScaffoldModel->save($request->data)) {
 					if ($this->controller->afterScaffoldSave($action)) {
 						$message = __d('cake',
-							'The %1$s has been %2$s',
-							Inflector::humanize($this->modelKey),
-							$success
+							__('The %1$s has been %2$s'),
+							__(Inflector::humanize($this->modelKey)),
+							__($success)
 						);
 						return $this->_sendMessage($message);
 					} else {

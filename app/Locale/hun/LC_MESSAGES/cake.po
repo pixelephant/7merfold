@@ -20,3 +20,6 @@ msgstr "A %2$s azonosítójú %1$s sikeresen törlődött."
 
 msgid "Please correct errors below."
 msgstr "Kérlek javítsd az alábbi hibákat."
+
+msgid "The %1$s has been %2$s"
+msgstr "A(z) %1$s %2$s sikeres"

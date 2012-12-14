@@ -31,12 +31,14 @@ class Trip extends AppModel {
         'image_file' => array(
             'rule' => 'notEmpty',
             'required'   => true,
-            'message'    => 'Kötelező megadni'
+            'message'    => 'Kötelező megadni',
+            'on' => 'create'
         ),
         'circle_image_file' => array(
             'rule' => 'notEmpty',
             'required'   => true,
-            'message'    => 'Kötelező megadni'
+            'message'    => 'Kötelező megadni',
+            'on' => 'create'
         ),
         'short_description' => array(
             'rule' => 'notEmpty',

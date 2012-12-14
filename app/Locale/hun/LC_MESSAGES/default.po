@@ -266,3 +266,10 @@ msgstr "Útvonal"
 
 msgid "Maps"
 msgstr "Útvonalak"
+
+#: egyéb
+msgid "saved"
+msgstr "mentése"
+
+msgid "updated"
+msgstr "frissítése"

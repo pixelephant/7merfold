@@ -32,7 +32,7 @@ App::uses('Model', 'Model');
  */
 class AppModel extends Model {
 
-	public function beforeSave($options = array()) {
+	public function beforeValidate($options = array()) {
 		/* SLUG */
     foreach($this->data as $model => $v){
     	foreach($this->data[$model] as $field => $value){

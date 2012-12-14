@@ -22,7 +22,8 @@ class Sight extends AppModel {
         'image_file' => array(
             'rule' => 'notEmpty',
             'required'   => true,
-            'message'    => 'Kötelező megadni'
+            'message'    => 'Kötelező megadni',
+            'on' => 'create'
         )
     );
 }
