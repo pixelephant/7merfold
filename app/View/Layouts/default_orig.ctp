@@ -24,7 +24,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo '7Mérföld.com adminisztráció' ?>:
-		<?php echo $title_for_layout; ?>
+		<?php #echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');

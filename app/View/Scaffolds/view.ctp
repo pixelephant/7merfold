@@ -17,7 +17,6 @@
  */
 ?>
 <div class="<?php echo $pluralVar; ?> view">
-<!-- <h2><?php echo __d('cake', 'View %s', $singularHumanName); ?></h2> -->
 	<h2><?php echo __('View %s', __($singularHumanName)); ?></h2>
 	<dl>
 <?php
@@ -28,7 +27,7 @@ foreach ($scaffoldFields as $_field) {
 		foreach ($associations['belongsTo'] as $_alias => $_details) {
 			if ($_field === $_details['foreignKey']) {
 				$isKey = true;
-				echo "\t\t<dt>" . Inflector::humanize($_alias) . "</dt>\n";
+				echo "\t\t<dt>" . __(Inflector::humanize($_alias)) . "</dt>\n";
 				echo "\t\t<dd>\n\t\t\t";
 				echo $this->Html->link(
 					${$singularVar}[$_alias][$_details['displayField']],
@@ -40,7 +39,7 @@ foreach ($scaffoldFields as $_field) {
 		}
 	}
 	if ($isKey !== true) {
-		echo "\t\t<dt>" . Inflector::humanize($_field) . "</dt>\n";
+		echo "\t\t<dt>" . __(Inflector::humanize($_field)) . "</dt>\n";
 		echo "\t\t<dd>" . h(${$singularVar}[$modelClass][$_field]) . "&nbsp;</dd>\n";
 	}
 }
@@ -50,8 +49,13 @@ foreach ($scaffoldFields as $_field) {
 <div class="actions">	
 <?php
 	$additional = "\t\t<li>";
-	$additional .= $this->Form->postLink(__d('cake', '%s törlése', $singularHumanName), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __d('cake', 'Biztosan törlöd?').' #' . ${$singularVar}[$modelClass][$primaryKey] . '?');
+	$additional .= $this->Html->link(__d('cake', '%s szerkesztése', __($singularHumanName)),   array('action' => 'edit', ${$singularVar}[$modelClass][$primaryKey]));
 	$additional .= " </li>\n";
+
+	$additional .= "\t\t<li>";
+	$additional .= $this->Form->postLink(__d('cake', '%s törlése', __($singularHumanName)), array('action' => 'delete', ${$singularVar}[$modelClass][$primaryKey]), null, __d('cake', 'Biztosan törlöd?').' #' . ${$singularVar}[$modelClass][$primaryKey] . '?');
+	$additional .= " </li>\n";
+	$additional .= "<br /><br />";
 
 	echo $this->element('admin/admin_menu', array('additional' => $additional));
 ?>
@@ -61,14 +65,14 @@ foreach ($scaffoldFields as $_field) {
 if (!empty($associations['hasOne'])) :
 foreach ($associations['hasOne'] as $_alias => $_details): ?>
 <div class="related">
-	<h3><?php echo __d('cake', "Related %s", Inflector::humanize($_details['controller'])); ?></h3>
+	<h3><?php echo __d('cake', "Kapcsolódó %s", __(Inflector::humanize($_details['controller']))); ?></h3>
 <?php if (!empty(${$singularVar}[$_alias])): ?>
 	<dl>
 <?php
 		$i = 0;
 		$otherFields = array_keys(${$singularVar}[$_alias]);
 		foreach ($otherFields as $_field) {
-			echo "\t\t<dt>" . Inflector::humanize($_field) . "</dt>\n";
+			echo "\t\t<dt>" . __(Inflector::humanize($_field)) . "</dt>\n";
 			echo "\t\t<dd>\n\t" . ${$singularVar}[$_alias][$_field] . "\n&nbsp;</dd>\n";
 		}
 ?>
@@ -102,7 +106,7 @@ foreach ($relations as $_alias => $_details):
 $otherSingularVar = Inflector::variable($_alias);
 ?>
 <div class="related">
-	<h3><?php echo __d('cake', "Related %s", Inflector::humanize($_details['controller'])); ?></h3>
+	<h3><?php echo __d('cake', "Kapcsolódó %s", __(Inflector::humanize($_details['controller']))); ?></h3>
 <?php if (!empty(${$singularVar}[$_alias])): ?>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -113,7 +117,7 @@ $otherSingularVar = Inflector::variable($_alias);
 			unset($otherFields[$index]);
 		}
 		foreach ($otherFields as $_field) {
-			echo "\t\t<th>" . Inflector::humanize($_field) . "</th>\n";
+			echo "\t\t<th>" . __(Inflector::humanize($_field)) . "</th>\n";
 		}
 ?>
 		<th class="actions">Actions</th>
@@ -130,22 +134,22 @@ $otherSingularVar = Inflector::variable($_alias);
 			echo "\t\t\t<td class=\"actions\">\n";
 			echo "\t\t\t\t";
 			echo $this->Html->link(
-				__d('cake', 'View'),
+				__d('cake', __('View')),
 				array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'view', ${$otherSingularVar}[$_details['primaryKey']])
 			);
 			echo "\n";
 			echo "\t\t\t\t";
 			echo $this->Html->link(
-				__d('cake', 'Edit'),
+				__d('cake', __('Edit')),
 				array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'edit', ${$otherSingularVar}[$_details['primaryKey']])
 			);
 			echo "\n";
 			echo "\t\t\t\t";
 			echo $this->Form->postLink(
-				__d('cake', 'Delete'),
+				__d('cake', __('Delete')),
 				array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'delete', ${$otherSingularVar}[$_details['primaryKey']]),
 				null,
-				__d('cake', 'Are you sure you want to delete', true) .' #' . ${$otherSingularVar}[$_details['primaryKey']] . '?'
+				__d('cake', 'Biztosan törlöd', true) .' #' . ${$otherSingularVar}[$_details['primaryKey']] . '?'
 			);
 			echo "\n";
 			echo "\t\t\t</td>\n";
@@ -157,7 +161,7 @@ $otherSingularVar = Inflector::variable($_alias);
 	<div class="actions">
 		<ul>
 			<li><?php echo $this->Html->link(
-				__d('cake', "New %s", Inflector::humanize(Inflector::underscore($_alias))),
+				__d('cake', "Új %s", __(Inflector::humanize(Inflector::underscore($_alias)))),
 				array('plugin' => $_details['plugin'], 'controller' => $_details['controller'], 'action' => 'add')
 			); ?> </li>
 		</ul>

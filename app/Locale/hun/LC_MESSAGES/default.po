@@ -125,6 +125,9 @@ msgstr "Biztosan törölni szeretné ezt: %s?"
 msgid "Id"
 msgstr "Id"
 
+msgid "Trip Id"
+msgstr "Utazás Id"
+
 msgid "Name"
 msgstr "Név"
 
@@ -136,6 +139,9 @@ msgstr "Létrehozás"
 
 msgid "Description"
 msgstr "Leírás"
+
+msgid "Short Description"
+msgstr "Rövid Leírás"
 
 msgid "Price"
 msgstr "Ár"
@@ -243,4 +249,7 @@ msgid "Regions"
 msgstr "Régiók"
 
 msgid "Sights"
-msgstr "Látnivalók, hotel képek"
+msgstr "Látnivaló, Hotel kép"
+
+msgid "Sights"
+msgstr "Látnivalók, Hotel képek"
