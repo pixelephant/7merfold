@@ -255,7 +255,7 @@ msgstr "Régió"
 msgid "Regions"
 msgstr "Régiók"
 
-msgid "Sights"
+msgid "Sight"
 msgstr "Látnivaló, Hotel kép"
 
 msgid "Sights"
