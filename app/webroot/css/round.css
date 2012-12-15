@@ -59,6 +59,12 @@
 .no-touch .purple-arrow:hover:after {
   border-top-color: #875497; }
 
+.stars {
+  margin-left: 6px; }
+
+p.accommodation, p.price {
+  margin-top: 10px; }
+
 .sum h2 {
   border-bottom: none !important;
   text-align: center;
@@ -199,14 +205,17 @@
   #inline-nav a {
     display: block;
     color: #4897c8;
-    line-height: 2; }
+    line-height: 1.5; }
 
 .shares {
+  text-align: center;
   display: none;
-  float: left;
+  float: right;
   font-family: 'Source Sans Pro';
   font-weight: 200;
-  font-size: 0.6em !important; }
+  font-size: 0.8em;
+  padding: 0.8em;
+  line-height: 1; }
   .shares span {
     display: block; }
   .shares .icon {
@@ -216,7 +225,7 @@
     text-decoration: none;
     color: #333333; }
 
-@media all and (min-width: 62.5em) {
+@media all and (min-width: 59.375em) {
   #prices .half, #hotelek .half, #leiras .half, #arak .half {
     width: 45%;
     float: left;
