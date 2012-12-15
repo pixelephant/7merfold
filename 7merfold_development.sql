@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 15. 16:23
+-- Létrehozás ideje: 2012. dec. 15. 16:45
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -252,14 +252,14 @@ CREATE TABLE IF NOT EXISTS `sights` (
   `image_file` varchar(255) COLLATE utf8_hungarian_ci NOT NULL COMMENT 'Látnivaló képe',
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Látnivalók tárolása' AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Látnivalók tárolása' AUTO_INCREMENT=21 ;
 
 --
 -- A tábla adatainak kiíratása `sights`
 --
 
 INSERT INTO `sights` (`id`, `name`, `image_file`, `created`) VALUES
-(1, 'Teszt látnivaló', '3.jpeg', '2012-12-06 08:51:26'),
+(1, 'Barcelona-1', 'bcn1.jpg', '2012-12-15 15:38:37'),
 (2, 'Hotel képe', 'ufrascone1.jpg', '2012-12-15 15:10:55'),
 (3, 'Hamburg-1', '1Hamburg2.jpg', '2012-12-15 14:01:31'),
 (4, 'Hamburg-2', 'Hamburg4.jpg', '2012-12-15 14:01:00'),
@@ -276,7 +276,9 @@ INSERT INTO `sights` (`id`, `name`, `image_file`, `created`) VALUES
 (15, 'A szoba belülről', 'Mouettes3.jpg', '2012-12-15 15:13:42'),
 (16, 'Látkép', 'funtana1.jpg', '2012-12-15 15:17:30'),
 (17, 'A hotel szobája', 'funtana2.jpg', '2012-12-15 15:17:52'),
-(18, 'A szálloda medencéje', 'funtana3.jpg', '2012-12-15 15:18:39');
+(18, 'A szálloda medencéje', 'funtana3.jpg', '2012-12-15 15:18:39'),
+(19, 'Barcelona-2', 'bcn2.jpg', '2012-12-15 15:38:48'),
+(20, 'Barcelona-3', 'bcn4.jpg', '2012-12-15 15:38:59');
 
 -- --------------------------------------------------------
 
@@ -297,7 +299,6 @@ CREATE TABLE IF NOT EXISTS `sights_trips` (
 --
 
 INSERT INTO `sights_trips` (`sight_id`, `trip_id`) VALUES
-(1, 1),
 (4, 2),
 (3, 2),
 (5, 2),
@@ -314,7 +315,10 @@ INSERT INTO `sights_trips` (`sight_id`, `trip_id`) VALUES
 (14, 14),
 (16, 15),
 (17, 15),
-(18, 15);
+(18, 15),
+(1, 1),
+(19, 1),
+(20, 1);
 
 -- --------------------------------------------------------
 
