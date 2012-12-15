@@ -6,8 +6,8 @@
 <?php } ?>
 
 <?php if($trip_type == '2'){ ?>
-	<a href="#arak">Árak és infók</a>
 	<a href="#program">Program</a>
+	<a href="#arak">Árak és infók</a>
 <?php } ?>
 
 <?php if($trip_type == '3' || $trip_type == '4'){ ?>

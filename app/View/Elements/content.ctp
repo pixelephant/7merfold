@@ -5,8 +5,8 @@
 } ?>
 
 <?php if($trip_type == '2'){ 
-	echo $this->element('trip_prices_info', array('trip' => $trip));
 	echo $this->element('trip_programs', array('programs' => $trip['Program']));
+	echo $this->element('trip_prices_info', array('trip' => $trip));
 } ?>
 
 <?php if($trip_type == '3' || $trip_type == '4'){	
