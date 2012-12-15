@@ -94,7 +94,8 @@
   overflow: hidden; }
   .offer-list a.offer {
     width: 50%;
-    text-align: center; }
+    text-align: center;
+    height: 305px; }
     .offer-list a.offer h3 {
       color: #333333;
       font-style: normal;
@@ -167,10 +168,10 @@
       display: none; }
 
   .offer-list a.offer {
-    height: 300px;
     display: block;
     padding: 0.8em 1em;
     width: 100% !important;
+    height: auto;
     float: none;
     overflow: hidden; }
     .offer-list a.offer .img {
@@ -200,6 +201,7 @@
 @media all and (min-width: 79em) {
   .offer-list a.offer {
     width: 50% !important;
+    height: 315px;
     float: left; } }
 .no-touch .offer-list a.offer img {
   -webkit-transition: all 0.3s ease-in-out;

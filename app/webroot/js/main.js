@@ -199,6 +199,9 @@ $(document).ready(function(){
 
 
 $(".collapsible h2 a").click(function(){
+   if($("#mobile-nav").css("display") === "none"){
+    return false;
+   }
   var $this = $(this);
       var $h2 = $this.parent();
       var $cont = $h2.next();
