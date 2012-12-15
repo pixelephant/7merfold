@@ -1,5 +1,5 @@
 <section class="section collapsible <?php echo $closed ? "closed" : ""; ?>" id="arak">
-<h2><a href="#">Árak és infók<span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
+<h2 <?php echo $closed ? "" : 'class="open"'; ?>><a href="#">Árak és infók<span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
 <div class="cont">
     <div class="half">
         <div class="block">

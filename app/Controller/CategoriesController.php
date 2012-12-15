@@ -45,6 +45,7 @@ class CategoriesController extends AppController {
 
 		if($regioned){
 			$regions = $this->Region->find('all', array('conditions' => array('Region.country_id' => $trips[0]['Country']['id'])));	
+			$regioned = (count($regions) > 0 ? true : false);
 		}
 		
 		$this->Session->write('quote_text', $category['Category']['name']);

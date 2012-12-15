@@ -1,5 +1,5 @@
 <section class="section collapsible <?php echo $closed ? "closed" : ""; ?>" id="hotelek">
-<h2><a href="#">Hotelek<span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
+<h2> <?php echo $closed ? "" : 'class="open"'; ?><a href="#">Hotelek<span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
 <div class="cont">
 	<div class="half">
 	<?php foreach($hotels as $hotel){ ?>

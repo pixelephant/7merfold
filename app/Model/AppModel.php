@@ -55,7 +55,7 @@ class AppModel extends Model {
 	    				$name = '1' . $name;
 	    			}
 	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
-	    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 50);
+	    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200);
 	    			$this->data[$model][$field] = $name;
     			}else{
     				unset($this->data[$model][$field]);
