@@ -1,25 +1,25 @@
+<?php $closed = true; ?>
 <?php if($trip_type == '1'){
-	echo $this->element('trip_description', array('description' => $trip['Trip']['description']));
-	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Látnivalók', 'id' => 'latnivalok'));
-	echo $this->element('trip_hotels', array('hotels' => $trip['Hotel']));
+	echo $this->element('trip_description', array('description' => $trip['Trip']['description'], 'closed' => false));
+	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Látnivalók', 'id' => 'latnivalok', 'closed' => $closed));
+	echo $this->element('trip_hotels', array('hotels' => $trip['Hotel'], 'closed' => $closed));
 } ?>
 
 <?php if($trip_type == '2'){ 
-	echo $this->element('trip_programs', array('programs' => $trip['Program']));
-	echo $this->element('trip_prices_info', array('trip' => $trip));
+	echo $this->element('trip_programs', array('programs' => $trip['Program'], 'closed' => false));
+	echo $this->element('trip_prices_info', array('trip' => $trip, 'closed' => $closed));
 } ?>
 
 <?php if($trip_type == '3' || $trip_type == '4'){	
-	echo $this->element('trip_description', array('description' => $trip['Trip']['description']));
-	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Képek a hotelről', 'id' => 'hotel'));
-	echo $this->element('trip_prices_info_uveghegy', array('trip' => $trip));
+	echo $this->element('trip_description', array('description' => $trip['Trip']['description'], 'closed' => false));
+	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Képek a hotelről', 'id' => 'hotel', 'closed' => $closed));
+	echo $this->element('trip_prices_info_uveghegy', array('trip' => $trip, 'closed' => $closed));
 } ?>
 
 <?php if($trip_type == '5'){
-	
-	echo $this->element('trip_programs', array('programs' => $trip['Program']));
-	echo $this->element('trip_prices_info', array('trip' => $trip));
-	echo $this->element('trip_map',$trip);
+	echo $this->element('trip_programs', array('programs' => $trip['Program'], 'closed' => false));
+	echo $this->element('trip_prices_info', array('trip' => $trip, 'closed' => $closed));
+	echo $this->element('trip_map', array('trip' => $trip, 'closed' => $closed));
 } ?>
 
 <?php echo $this->element('trip_share', array('title' => $trip['Trip']['name'])); ?>

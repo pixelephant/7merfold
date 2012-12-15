@@ -1,5 +1,5 @@
-<section id="program" class="section collapsible closed">
-<h2><a href="#">Program <span>+</span></a></h2>
+<section id="program" class="section collapsible <?php echo $closed ? "closed" : ""; ?>">
+<h2><a href="#">Program <span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
 <div class="cont">
   <?php foreach($programs as $program){ ?>
     <div class="day">
