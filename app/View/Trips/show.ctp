@@ -1,7 +1,7 @@
 <?php $this->Html->script('round', array('inline' => false)); ?>
 <?php $this->Html->css('round', null, array('inline' => false)); ?>
 <section class="sum section">
-<h2><span class="shares"><span>Megosztás</span><a href="mailto:pixelephant@pixelephant.hu?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.pixelephant.hu"><span class="icon" aria-hidden="true" data-icon="f"></span></a></span><?php echo $trip['Trip']['name']; ?></h2>
+<h2><span class="shares"><span>Megosztás</span><a href="mailto:info@7merfold.com?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=www.7merfold.com"><span class="icon" aria-hidden="true" data-icon="f"></span></a></span><?php echo $trip['Trip']['name']; ?></h2>
 <?php echo $this->Html->image($trip['Trip']['image_file'], array('alt' => $trip['Trip']['name'])); ?>
 <div class="clearfix">
   <nav id="inline-nav">

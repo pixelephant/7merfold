@@ -63,7 +63,7 @@ class TripsController extends AppController {
 		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
 
 		if($trip_type == 3 || $trip_type == 4){
-			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['id'])] = $country['Country']['name'];
+			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['slug'])] = $country['Country']['name'];
 		}
 
 		$breadcrumb[('utjaink/' . $trip_slug)] = $trip['Trip']['name'];

@@ -77,9 +77,9 @@
             </div>
             <a href="#" class="totop"><span aria-hidden="true" data-icon="u"></span>Oldal tetejére</a>
             <p>
-              <a href="#">hajozz.eu</a> | <a href="#">felfedezoutak.hu</a> | <a href="#">utazási feltételek</a> | <a href="#">állás</a>
+              <a href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <a href="#">utazási feltételek</a> | <a href="#">állás</a>
             </p>
-            <p>&copy; 7Mérföld Utazási Iroda 2012 | Eng. szám: U-001052</p>
+            <p>7Mérföld Utazási Iroda &copy; 2012 | Eng. szám: U-001052</p>
           </footer>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
