@@ -112,13 +112,13 @@
 
 <?php echo $this->element('quote_box'); ?>
 
-<section id="vizum" class="section ajax">
+<section id="vizum" class="section">
   <h2><?php echo $this->Html->link('Vízum <span>+</span>', '/visa_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">
     <?php echo $trip['Country']['visa_info']; ?>    
   </div>
 </section>
-<section id="<?php echo $trip['Country']['name']; ?>" class="section ajax">
+<section id="<?php echo $trip['Country']['name']; ?>" class="section">
   <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '/country_info/' . $trip['Country']['id'], array('escape' => false)); ?></h2>
   <div class="cont hidden">
     <?php echo $trip['Country']['information']; ?>
