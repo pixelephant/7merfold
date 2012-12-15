@@ -23,19 +23,19 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         
-            <section id="top-contact">
-              <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
-              <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 70 634-8889</span></a>
-              <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
-              <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
-              <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
-            </section>
 
             <header id="main-header" class="clearfix no-flick">
                   <div class="clearfix">
                     <a href="<?php echo $this->webroot; ?>" id="logo">
-                    <?php echo $this->Html->image('logo.png', array('alt' => '7mérföld Utazási Iroda')); ?>
-                  </a>
+                      <?php echo $this->Html->image('logo.png', array('alt' => '7mérföld Utazási Iroda')); ?>
+                    </a>
+                    <section id="top-contact">
+                      <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+                      <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 70 634-8889</span></a>
+                      <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
+                     <!-- <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
+                      <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a> -->
+                    </section>
                   <nav id="mobile-nav">
                       <ul class="clearfix">
                           <li><a id="contact-trigger" href="#contact">

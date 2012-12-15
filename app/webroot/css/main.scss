@@ -794,6 +794,29 @@ a.offer{
 
 
 @media all and (min-width: 59.375em){
+
+#logo{
+  width:26%;
+}
+
+#top-contact{
+  float:left;
+  width:40%;
+  background:none;
+  @include box-shadow(none);
+  a{
+    padding-top:1.5em;
+    font-size:0.8em;
+    width:33.33333%;
+    span{
+      display:block;
+    }
+    &:hover,&:focus{
+      background:none !important;
+    }
+  }
+}
+
 #card,#company{
   height:330px;
     width:31%;

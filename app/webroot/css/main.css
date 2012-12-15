@@ -1017,6 +1017,26 @@ a.offer {
   body {
     font-size: 130%; } }
 @media all and (min-width: 59.375em) {
+  #logo {
+    width: 26%; }
+
+  #top-contact {
+    float: left;
+    width: 40%;
+    background: none;
+    -webkit-box-shadow: none;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    box-shadow: none;
+    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
+    #top-contact a {
+      padding-top: 1.5em;
+      font-size: 0.8em;
+      width: 33.33333%; }
+      #top-contact a span {
+        display: block; }
+      #top-contact a:hover, #top-contact a:focus {
+        background: none !important; }
+
   #card, #company {
     height: 330px;
     width: 31%;
