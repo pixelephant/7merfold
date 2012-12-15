@@ -130,14 +130,16 @@ p.accommodation,p.price{
 
 #inline-nav{
   display:none;
-  padding-left: 3%;
+  padding:1em;
+  background:#eee;
   a{
     display:block;
     color:$blue;
     line-height:1.5;
   }
-  float:left;
-  width:20%;
+  float:right;
+  width:18%;
+  margin-right:2%;
 }
 
 .shares{
@@ -165,6 +167,16 @@ p.accommodation,p.price{
 //large tablet (1000px,62.5em)
 @media all and (min-width: 59.375em){
  
+
+.section{
+  .cont{
+    display:block !important;
+  }
+  h2 a span{
+    display:none;
+  }
+}
+
 #prices .half,#hotelek .half,#leiras .half,#arak .half{
   width:45%;
   float:left;

@@ -199,9 +199,11 @@ p.accommodation, p.price {
 
 #inline-nav {
   display: none;
-  padding-left: 3%;
-  float: left;
-  width: 20%; }
+  padding: 1em;
+  background: #eee;
+  float: right;
+  width: 18%;
+  margin-right: 2%; }
   #inline-nav a {
     display: block;
     color: #4897c8;
@@ -226,6 +228,11 @@ p.accommodation, p.price {
     color: #333333; }
 
 @media all and (min-width: 59.375em) {
+  .section .cont {
+    display: block !important; }
+  .section h2 a span {
+    display: none; }
+
   #prices .half, #hotelek .half, #leiras .half, #arak .half {
     width: 45%;
     float: left;
