@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 15. 16:45
+-- Létrehozás ideje: 2012. dec. 15. 16:52
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
