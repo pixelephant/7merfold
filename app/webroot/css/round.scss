@@ -85,6 +85,12 @@ p.accommodation,p.price{
     text-decoration: none;
     color:$black;
     font-size: 2em;
+    img{
+      width: 20px;
+margin-right: 5px;
+top: -0.2em;
+position: relative;
+    }
   }
 }
 
@@ -135,7 +141,8 @@ p.accommodation,p.price{
   a{
     display:block;
     color:$blue;
-    line-height:1.5;
+    line-height:1;
+    margin:10px 0;
   }
   float:right;
   width:18%;
@@ -161,6 +168,13 @@ p.accommodation,p.price{
     font-size:1.8em;
     text-decoration:none;
     color:$black;
+      img{
+        display:inline;
+      width: 20px;
+margin-right: 5px;
+top: -0.2em;
+position: relative;
+    }
   }
 }
 

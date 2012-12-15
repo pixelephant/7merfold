@@ -164,6 +164,11 @@ p.accommodation, p.price {
     text-decoration: none;
     color: #333333;
     font-size: 2em; }
+    .share a img {
+      width: 20px;
+      margin-right: 5px;
+      top: -0.2em;
+      position: relative; }
 
 .block, .hotel {
   margin-bottom: 20px; }
@@ -207,7 +212,8 @@ p.accommodation, p.price {
   #inline-nav a {
     display: block;
     color: #4897c8;
-    line-height: 1.5; }
+    line-height: 1;
+    margin: 10px 0; }
 
 .shares {
   text-align: center;
@@ -226,6 +232,12 @@ p.accommodation, p.price {
     font-size: 1.8em;
     text-decoration: none;
     color: #333333; }
+    .shares a img {
+      display: inline;
+      width: 20px;
+      margin-right: 5px;
+      top: -0.2em;
+      position: relative; }
 
 @media all and (min-width: 59.375em) {
   .section .cont {
