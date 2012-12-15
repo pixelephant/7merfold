@@ -769,20 +769,7 @@ a.offer{
 }
 
 
-// large tablet (1000px, 62.5em)
-
-@media all and (min-device-width: 47em) and (max-device-width: 62.5em) and  (orientation : landscape){
-  #top-contact{
-   font-size: 0.7em !important; 
-  }
-  body{
-    padding: 0 !important;
-    font-size: 90% !important;
-  }
-
-}
-
-@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation : landscape){
+@media all and (min-width: 59.375em){
 #card,#company{
     .cont{
       margin-bottom:60px;

@@ -216,7 +216,7 @@
     text-decoration: none;
     color: #333333; }
 
-@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
+@media all and (min-width: 62.5em) {
   #prices .half, #hotelek .half, #leiras .half, #arak .half {
     width: 45%;
     float: left;
@@ -245,7 +245,10 @@
     float: right; }
 
   .shares, #inline-nav {
-    display: block; } }
+    display: block; }
+
+  .section.share {
+    display: none; } }
 @media all and (min-width: 43.75em) {
   .day div {
     width: 70%;
