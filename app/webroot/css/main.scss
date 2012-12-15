@@ -779,10 +779,30 @@ a.offer{
     padding: 0 !important;
     font-size: 90% !important;
   }
+
 }
 
 @media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation : landscape){
+#card,#company{
+    .cont{
+      margin-bottom:60px;
+    }
+    width:31%;
+    float:left;
+  }
 
+  #newest{
+    width:36%;
+    float:left;
+  }
+
+  #card,#company{
+    margin-right:1%;
+  }
+
+  #newest + section{
+    clear:both;
+  }
 
   //álljunk át %-ra mert kell a dobozok közé is ugyanakkora mint alattuk
   #main-content .section,#top-contact,.cta,.breadcrumb{
@@ -806,15 +826,6 @@ a.offer{
     img{
       height:auto;
     }
-  }
-
-  #usp,#explore{
-    //width:50%;
-    //float:left;
-  }
-
-  #explore + section{
-    clear:both;
   }
 
   #main-content{
@@ -950,23 +961,6 @@ a.offer{
 //small tablet (700px,43.75em)
 
 @media all and (min-width: 43.75em){
-  
-  #card{
-      float: left;
-      width:49.5%;
-      margin-right:1%;
-      }
-
-      #company{
-        float: left;
-        width:49.5%;
-      }
-
-      #company + section{
-        clear: both;
-      }
-
-
 
   .breadcrumb{
     li{

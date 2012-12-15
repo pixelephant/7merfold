@@ -1009,6 +1009,22 @@ a.offer {
     padding: 0 !important;
     font-size: 90% !important; } }
 @media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
+  #card, #company {
+    width: 31%;
+    float: left; }
+    #card .cont, #company .cont {
+      margin-bottom: 60px; }
+
+  #newest {
+    width: 36%;
+    float: left; }
+
+  #card, #company {
+    margin-right: 1%; }
+
+  #newest + section {
+    clear: both; }
+
   #main-content .section, #top-contact, .cta, .breadcrumb {
     margin-bottom: 1%; }
 
@@ -1026,9 +1042,6 @@ a.offer {
     padding: 12px 20px; }
     #logo img {
       height: auto; }
-
-  #explore + section {
-    clear: both; }
 
   #main-content .section.half {
     width: 49.5%;
@@ -1137,18 +1150,6 @@ a.offer {
         color: #333333;
         display: block; } }
 @media all and (min-width: 43.75em) {
-  #card {
-    float: left;
-    width: 49.5%;
-    margin-right: 1%; }
-
-  #company {
-    float: left;
-    width: 49.5%; }
-
-  #company + section {
-    clear: both; }
-
   .breadcrumb li {
     display: block !important; }
     .breadcrumb li:nth-last-child(2) a:before {

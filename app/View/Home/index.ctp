@@ -7,13 +7,13 @@
           <ul class="slides">
             <li>
               <img src="img/szab.png" alt="">
-              <h2>Subidubi</h2>
+             
             </li>
             <li>
-              <img src="img/szab1.png" alt="">
+              <img src="img/szab1.jpeg" alt="">
             </li>
             <li>
-              <img src="img/szab2.png" alt="">
+              <img src="img/szab2.jpeg" alt="">
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
 <section class="section" id="company">
   <h2>Csapatépítés</h2>
   <div class="cont">
-    <p>Egy csapat akkor működik jól, ha a tagok megbíznak egymában. Nézze meg céges ajánlatainkat!</p>
+   
     <?php echo $this->Html->link('Ajánlatunk &raquo;', '/cegeknek', array('escape' => false)); ?>
     <img src="img/csapat.gif" alt="">
   </div>
@@ -73,7 +73,7 @@
 
 
 
-<section class="slider section">
+<section id="newest" class="slider section">
 <h2>Legfrisebb utak</h2>
   <div class="cont">
     <div class="flex-container">
