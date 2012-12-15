@@ -207,7 +207,7 @@ p.accommodation, p.price {
   padding: 1em;
   background: #eee;
   float: right;
-  width: 18%;
+  width: 20%;
   margin-right: 2%; }
   #inline-nav a {
     display: block;
@@ -263,7 +263,7 @@ p.accommodation, p.price {
 
   .lead {
     float: left;
-    width: 80%;
+    width: 78%;
     padding-top: 0 !important; }
 
   .important {
