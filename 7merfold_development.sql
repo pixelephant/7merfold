@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 15. 16:19
+-- Létrehozás ideje: 2012. dec. 15. 16:23
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -175,9 +175,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`id`, `title`, `content`, `image_file`, `created`, `slug`, `keywords`, `page_title`) VALUES
 (1, 'Sokan szeretnek nyaralni!', 'Kutatók megállapították, hogy a nyaralás jó.2', '3.jpeg', '2012-12-14 11:50:52', 'sokan-szeretnek-nyaralni', 'Sokan szeretnek nyaralni!', 'Sokan szeretnek nyaralni!'),
-(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '3.jpeg', '2012-12-13 12:31:07', 'a-hajo-utak-menok', 'A hajó utak menők!', 'A hajó utak menők!'),
-(9, 'ÚÚj hír', 'asdasd', '11zoldkek_logo.jpg', '2012-12-14 11:45:02', 'uuj-hir', '', ''),
-(10, 'hír2', 'sadasda', '14.jpeg', '2012-12-14 11:47:06', 'hir2', '', '');
+(2, 'A hajó utak menők!', 'Brit tudósok kimutatták, hogy az emberek 98%-a imádja a hajókat. Miért ne nyaralna ön is hajón?', '3.jpeg', '2012-12-13 12:31:07', 'a-hajo-utak-menok', 'A hajó utak menők!', 'A hajó utak menők!');
 
 -- --------------------------------------------------------
 
