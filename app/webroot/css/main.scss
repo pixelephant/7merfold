@@ -367,8 +367,11 @@ body{
   }
 }
 
+#card,#company{
+   position: relative;
+}
+
 #card .cont{
-  position: relative;
   img{
     max-width: 100%;
     margin: 0 auto;
@@ -379,12 +382,11 @@ body{
     @include box-shadow;
     position: absolute;
     right:3%;
-    top:70%;
+    bottom:5%;
   }
 }
 
 #company .cont{
-  position: relative;
   p{
     position: absolute;
     left: 3%;
@@ -397,7 +399,7 @@ body{
     @include box-shadow;
     position: absolute;
     right:3%;
-    top:70%;
+    bottom:5%;
   }
   img{
     max-width: 100%;
@@ -423,6 +425,14 @@ a.offer{
   text-decoration: none;
   width: 33.33333%;
   float: left;
+}
+
+
+#newest a.offer{
+  width:145px;
+  img{
+    max-width:auto;
+  }
 }
 
 #search-form{
@@ -578,6 +588,7 @@ a.offer{
   p{
     text-align: center;
     padding:2%;
+    font-style:italic;
   }
 }
 
@@ -745,12 +756,25 @@ a.offer{
 }
 
 
+
 //Font size
 
 @media all and (min-width: 37.5em){
   body{
     font-size: 110%;
-  }  
+  }
+   #card,#company{
+  float:left;
+  width:49.5%;
+}
+
+#card{
+  margin-right:1%;
+}
+
+#company + section{
+  clear:both;
+} 
 }
 
 @media all and (min-width: 62.5em){
@@ -769,36 +793,52 @@ a.offer{
 }
 
 
-// large tablet (1000px, 62.5em)
+@media all and (min-width: 59.375em){
 
-@media all and (min-device-width: 47em) and (max-device-width: 62.5em) and  (orientation : landscape){
-  #top-contact{
-   font-size: 0.7em !important; 
-  }
-  body{
-    padding: 0 !important;
-    font-size: 90% !important;
-  }
-
+#logo{
+  width:26%;
 }
 
-@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation : landscape){
-#card,#company{
-    .cont{
-      margin-bottom:60px;
+#top-contact{
+  float:left;
+  width:40%;
+  background:none;
+  @include box-shadow(none);
+  a{
+    padding-top:1.5em;
+    font-size:0.8em;
+    width:33.33333%;
+    span{
+      display:block;
     }
+    &:hover,&:focus{
+      background:none !important;
+    }
+  }
+}
+
+#card,#company{
+  height:330px;
     width:31%;
     float:left;
   }
 
   #newest{
+    height:330px;
     width:36%;
     float:left;
   }
 
   #card,#company{
     margin-right:1%;
+    a{
+      bottom:10%;
+    }
   }
+
+  #company + section{
+    clear:none;
+  } 
 
   #newest + section{
     clear:both;

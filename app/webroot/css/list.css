@@ -151,7 +151,7 @@
   color: #4897c8 !important;
   margin-right: 5%; }
 
-@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
+@media all and (min-width: 59.375em) {
   .offer-list a.offer .data {
     margin-top: 20px; }
 

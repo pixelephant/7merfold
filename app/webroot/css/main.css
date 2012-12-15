@@ -562,77 +562,76 @@ body {
     #explore .t .offer {
       width: 50%; }
 
-#card .cont {
+#card, #company {
   position: relative; }
-  #card .cont img {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block; }
-  #card .cont a {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font-family: 'Source Sans Pro';
-    font-style: italic;
-    background: #69297d;
-    text-align: center;
-    padding: 0.8em 1em;
-    color: #fff;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    /* Safari 3.2+, Chrome */
-    -moz-transition: all 0.3s ease-in-out;
-    /* Firefox 4-15 */
-    -o-transition: all 0.3s ease-in-out;
-    /* Opera 10.5–12.00 */
-    transition: all 0.3s ease-in-out;
-    /* Firefox 16+, Opera 12.50+ */
-    -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
-    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
-    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
-    position: absolute;
-    right: 3%;
-    top: 70%; }
 
-#company .cont {
-  position: relative; }
-  #company .cont p {
-    position: absolute;
-    left: 3%;
-    top: 3%;
-    text-align: center;
-    padding: 0 3%; }
-  #company .cont a {
-    padding: 0;
-    margin: 0;
-    border: none;
-    font-family: 'Source Sans Pro';
-    font-style: italic;
-    background: #69297d;
-    text-align: center;
-    padding: 0.8em 1em;
-    color: #fff;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease-in-out;
-    /* Safari 3.2+, Chrome */
-    -moz-transition: all 0.3s ease-in-out;
-    /* Firefox 4-15 */
-    -o-transition: all 0.3s ease-in-out;
-    /* Opera 10.5–12.00 */
-    transition: all 0.3s ease-in-out;
-    /* Firefox 16+, Opera 12.50+ */
-    -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
-    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
-    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
-    position: absolute;
-    right: 3%;
-    top: 70%; }
-  #company .cont img {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block; }
+#card .cont img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block; }
+#card .cont a {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  background: #69297d;
+  text-align: center;
+  padding: 0.8em 1em;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */
+  -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
+  /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+  position: absolute;
+  right: 3%;
+  bottom: 5%; }
+
+#company .cont p {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+  text-align: center;
+  padding: 0 3%; }
+#company .cont a {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  background: #69297d;
+  text-align: center;
+  padding: 0.8em 1em;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  /* Safari 3.2+, Chrome */
+  -moz-transition: all 0.3s ease-in-out;
+  /* Firefox 4-15 */
+  -o-transition: all 0.3s ease-in-out;
+  /* Opera 10.5–12.00 */
+  transition: all 0.3s ease-in-out;
+  /* Firefox 16+, Opera 12.50+ */
+  -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
+  /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+  position: absolute;
+  right: 3%;
+  bottom: 5%; }
+#company .cont img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block; }
 
 a.offer {
   text-align: center;
@@ -650,6 +649,11 @@ a.offer {
     font-style: italic;
     color: #fff;
     padding-top: 10px; }
+
+#newest a.offer {
+  width: 145px; }
+  #newest a.offer img {
+    max-width: auto; }
 
 #search-form {
   clear: both;
@@ -832,7 +836,8 @@ a.offer {
       display: block; }
   #main-footer p {
     text-align: center;
-    padding: 2%; }
+    padding: 2%;
+    font-style: italic; }
 
 #contact a {
   display: block;
@@ -991,7 +996,17 @@ a.offer {
 
 @media all and (min-width: 37.5em) {
   body {
-    font-size: 110%; } }
+    font-size: 110%; }
+
+  #card, #company {
+    float: left;
+    width: 49.5%; }
+
+  #card {
+    margin-right: 1%; }
+
+  #company + section {
+    clear: both; } }
 @media all and (min-width: 62.5em) {
   body {
     font-size: 120%; }
@@ -1001,26 +1016,44 @@ a.offer {
 @media all and (min-width: 79em) {
   body {
     font-size: 130%; } }
-@media all and (min-device-width: 47em) and (max-device-width: 62.5em) and (orientation: landscape) {
-  #top-contact {
-    font-size: 0.7em !important; }
+@media all and (min-width: 59.375em) {
+  #logo {
+    width: 26%; }
 
-  body {
-    padding: 0 !important;
-    font-size: 90% !important; } }
-@media all and (min-width: 62.5em), (min-device-width: 47em) and (orientation: landscape) {
+  #top-contact {
+    float: left;
+    width: 40%;
+    background: none;
+    -webkit-box-shadow: none;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    box-shadow: none;
+    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
+    #top-contact a {
+      padding-top: 1.5em;
+      font-size: 0.8em;
+      width: 33.33333%; }
+      #top-contact a span {
+        display: block; }
+      #top-contact a:hover, #top-contact a:focus {
+        background: none !important; }
+
   #card, #company {
+    height: 330px;
     width: 31%;
     float: left; }
-    #card .cont, #company .cont {
-      margin-bottom: 60px; }
 
   #newest {
+    height: 330px;
     width: 36%;
     float: left; }
 
   #card, #company {
     margin-right: 1%; }
+    #card a, #company a {
+      bottom: 10%; }
+
+  #company + section {
+    clear: none; }
 
   #newest + section {
     clear: both; }
