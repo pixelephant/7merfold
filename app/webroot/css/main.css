@@ -985,7 +985,6 @@ a.offer {
     text-decoration: none;
     color: #333333;
     width: 20%;
-    text-align: center;
     padding: 0.5em 0; }
 
 .stars {
@@ -993,6 +992,10 @@ a.offer {
 
 .slides a.offer {
   width: auto; }
+
+#contact a .icon.fax {
+  font-size: 1.8em;
+  padding-bottom: 0.1em; }
 
 @media all and (min-width: 37.5em) {
   body {
@@ -1027,13 +1030,11 @@ a.offer {
     -webkit-box-shadow: none;
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     box-shadow: none;
-    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
+    /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    padding-top: 1em; }
     #top-contact a {
-      padding-top: 1.5em;
       font-size: 0.8em;
       width: 33.33333%; }
-      #top-contact a span {
-        display: block; }
       #top-contact a:hover, #top-contact a:focus {
         background: none !important; }
 
@@ -1097,7 +1098,8 @@ a.offer {
     clear: both; }
 
   #contact {
-    overflow: hidden; }
+    overflow: hidden;
+    border-bottom: 1px solid #515151; }
     #contact a {
       display: block;
       float: left;
@@ -1107,6 +1109,8 @@ a.offer {
       text-align: center;
       padding: 0.5em 0;
       font-size: 0.8em; }
+      #contact a:last-child {
+        border-bottom: none; }
 
   .totop {
     display: none !important; }
