@@ -31,7 +31,8 @@
  * Admin routes
  */
 
-	Router::redirect('/admin', '/admin/trips');	
+	// Router::redirect('/admin', '/admin/trips');	
+	Router::connect('/admin', array('controller' => 'admins', 'action' => 'index', 'admin' => true));
 
 /**
  * ...and connect the rest of 'Pages' controller's urls.

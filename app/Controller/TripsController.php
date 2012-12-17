@@ -111,14 +111,50 @@ class TripsController extends AppController {
 		$this->render('ajax', 'ajax');
 	}
 
-	/* Callbacks */
+	/* Admin */
 
-	// public function beforeSave($options = array()) {
-	//     if (!empty($this->data['Trip']['name']) && !empty($this->data['Event']['enddate'])) {
-	//         $this->data['Event']['begindate'] = $this->dateFormatBeforeSave($this->data['Event']['begindate']);
-	//         $this->data['Event']['enddate'] = $this->dateFormatBeforeSave($this->data['Event']['enddate']);
-	//     }
- 	//    	return true;
-	// }
+	public function admin_1(){
+
+		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 1)));
+
+		$this->set('trips', $trips);
+		
+	}	
+
+	public function admin_2(){
+
+		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 2)));
+
+		$this->set('trips', $trips);
+		
+		$this->render('admin_1');
+	}	
+
+	public function admin_3(){
+
+		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 3)));
+
+		$this->set('trips', $trips);
+		
+		$this->render('admin_1');
+	}	
+
+	public function admin_4(){
+
+		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 4)));
+
+		$this->set('trips', $trips);
+		
+		$this->render('admin_1');
+	}	
+
+	public function admin_5(){
+
+		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 5)));
+
+		$this->set('trips', $trips);
+		
+		$this->render('admin_1');
+	}	
 
 }
