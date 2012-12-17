@@ -172,6 +172,8 @@ p.accommodation, p.price {
 
 .block, .hotel {
   margin-bottom: 20px; }
+  .block p, .block table, .hotel p, .hotel table {
+    padding-left: 5px; }
   .block .extra, .hotel .extra {
     font-size: 1.2em;
     font-weight: 200; }

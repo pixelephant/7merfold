@@ -756,6 +756,23 @@ a.offer{
   width: auto;
 }
 
+.table{
+  border:1px solid $gray;
+  width:100%;
+  text-align:left;
+  th{
+    font-weight:normal;
+    @include gi;
+  }
+  td,th{
+    border-right:1px solid $gray;
+    padding:5px;
+  }
+  tr{
+    border-bottom:1px solid $gray;
+  }
+}
+
 //Font size
 
 @media all and (min-width: 37.5em){

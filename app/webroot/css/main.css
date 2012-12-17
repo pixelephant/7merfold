@@ -995,6 +995,21 @@ a.offer {
 .slides a.offer {
   width: auto; }
 
+.table {
+  border: 1px solid #cccccc;
+  width: 100%;
+  text-align: left; }
+  .table th {
+    font-weight: normal;
+    font-family: 'Gentium Basic';
+    font-weight: normal;
+    font-style: italic; }
+  .table td, .table th {
+    border-right: 1px solid #cccccc;
+    padding: 5px; }
+  .table tr {
+    border-bottom: 1px solid #cccccc; }
+
 @media all and (min-width: 37.5em) {
   body {
     font-size: 110%; }

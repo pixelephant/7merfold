@@ -87,14 +87,17 @@ p.accommodation,p.price{
     font-size: 2em;
     img{
       width: 20px;
-margin-right: 5px;
-top: -0.2em;
-position: relative;
+      margin-right: 5px;
+      top: -0.2em;
+      position: relative;
     }
   }
 }
 
 .block,.hotel{
+  p,table{
+    padding-left:5px;
+  }
   margin-bottom: 20px;
   .extra{
     font-size: 1.2em;

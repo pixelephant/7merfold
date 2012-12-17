@@ -5,11 +5,34 @@
         <div class="block">
         <h3>Érkezési nap/minimum tartózkodás</h3>
         <p><?php echo $trip['Trip']['day']; ?></p>
-    </div>
+        </div>
     <div class="block">
         <h3>Árak</h3>
         <p><?php echo $trip['Trip']['price']; ?></p>
+        
     </div>
+    <div class="block">
+            <table class="table">
+            <thead>
+                <th>Indulási időpontok (9 nap/7 éj) </th>
+                <th>Ft/fő</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>jún. 15., 22.,<br>
+aug. 17., 24., 31.,<br>
+szept. 7., 14., 21., 28.</td>
+<td>109 990</td>
+                </tr>
+                <tr>
+                    <td>jún. 29.,<br>
+júl. 6., 13., 20., 27.,<br>
+aug. 3., 10.</td>
+<td>119 990</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
     <div class="block">
         <h3>Ár tartalmazza</h3>
         <p><?php echo $trip['Trip']['travel_price_includes']; ?></p>
