@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".flexslider").flexslider({animation:"slide",animationLoop:!1,itemWidth:200,minItems:2})});
+$(document).ready(function(){$(".flexslider").flexslider({animation:"slide",animationLoop:!1,itemWidth:200,minItems:2});$(".flexslider1").flexslider({controlNav:!1,directionNav:!1,animation:"fade",animationLoop:!0,slideshowSpeed:5e3,animationSpeed:1e3})});

@@ -7,7 +7,7 @@ $('.flexslider').flexslider({
     minItems: 2
 });
 
-/*$(".flexslider1").flexslider({
+$(".flexslider1").flexslider({
     controlNav: false,
     directionNav: false,
     animation: "fade",

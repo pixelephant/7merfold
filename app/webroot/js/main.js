@@ -1,37 +1,3 @@
-window.matchMedia = window.matchMedia || (function( doc, undefined ) {
-
-  "use strict";
-
-  var bool,
-      docElem = doc.documentElement,
-      refNode = docElem.firstElementChild || docElem.firstChild,
-      // fakeBody required for <FF4 when executed in <head>
-      fakeBody = doc.createElement( "body" ),
-      div = doc.createElement( "div" );
-
-  div.id = "mq-test-1";
-  div.style.cssText = "position:absolute;top:-100em";
-  fakeBody.style.background = "none";
-  fakeBody.appendChild(div);
-
-  return function(q){
-
-    div.innerHTML = "&shy;<style media=\"" + q + "\"> #mq-test-1 { width: 42px; }</style>";
-
-    docElem.insertBefore( fakeBody, refNode );
-    bool = div.offsetWidth === 42;
-    docElem.removeChild( fakeBody );
-
-    return {
-      matches: bool,
-      media: q
-    };
-
-  };
-
-}( document ));
-
-
 // t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
@@ -187,11 +153,14 @@ $(document).ready(function(){
       });
      jPM.on();
 
-     var width1000Check = window.matchMedia("(min-width: 62.5em)");
-     width1000Check.addListener(jPM.off());
 
-     var width1000MaxCheck = window.matchMedia("(max-width: 62.5em)");
-     width1000MaxCheck.addListener(jPM.on());
+     if(window.matchMedia){
+      var width1000Check = window.matchMedia("(min-width: 62.5em)");
+      width1000Check.addListener(jPM.off());
+
+      var width1000MaxCheck = window.matchMedia("(max-width: 62.5em)");
+      width1000MaxCheck.addListener(jPM.on());
+     }
 
       $("#jPanelMenu-menu").delegate(".close","click",function(){
           jPM.close();

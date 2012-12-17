@@ -72,7 +72,8 @@ p.accommodation, p.price {
 .sum img {
   max-width: 100%;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%; }
 .sum p {
   font-family: 'Gentium Basic';
   font-weight: normal;
