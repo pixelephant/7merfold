@@ -40,7 +40,7 @@ class AppController extends Controller {
 
 	function beforeRender(){
 		/* Kiszedi a nem kellő mezőket */
-		if($this->request->action == 'index'){
+		if($this->request->action == 'index' && $this->request->prefix == 'admin'){
 			$not_to_display = array('keywords', 'slug', 'image_file');
 
 			foreach($this->viewVars['scaffoldFields'] as $key => $field){
