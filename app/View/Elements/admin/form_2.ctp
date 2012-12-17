@@ -1,17 +1,13 @@
-<div class="actions">
-	<?php echo $this->element('admin/admin_menu'); ?>
-</div>
-
-<div class="trips form">
 <?php
-	echo $this->Form->create('Trip', array('type' => $form_type, 'url' => '/admin/trips/new'));
-	echo $this->Form->input('category_id', array('type' => 'hidden', 'value' => 5));
+	print_r($this->validationErrors);
+	echo $this->Form->create('Trip', array('type' => $form_type, 'url' => '/admin/trips/new?type_id=2'));
+	echo $this->Form->input('category_id', array('type' => 'hidden', 'value' => 2));
 	echo $this->Form->input('name');
 	echo $this->Form->input('description');
 	echo $this->Form->input('short_description');
 	echo $this->Form->input('travel_date');
 	echo $this->Form->input('hajozz');
-	echo $this->Form->input('Country');
+	echo $this->Form->input('country_id');
 	echo $this->Form->input('region_id');
 	echo $this->Form->input('accommodation');
 	echo $this->Form->input('travel_method');
@@ -24,16 +20,7 @@
 	echo $this->Form->input('service');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
-	echo $this->Form->end(__d('cake', __('Submit')));
-?>
-
-<?php 
-	echo $this->Form->create('Program', array('type' => 'file'));
-	echo $this->Form->input('name');
-	echo $this->Form->input('description');
 	echo $this->Form->input('image_file', array('type' => 'file'));
+	echo $this->Form->input('circle_image_file', array('type' => 'file'));
 	echo $this->Form->end(__d('cake', __('Submit')));
 ?>
-
-<a href="javascript:history.back()">Mégsem</a> 
-</div>

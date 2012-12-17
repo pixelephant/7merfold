@@ -26,6 +26,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		<?php echo '7Mérföld.com adminisztráció' ?>:
 		<?php #echo $title_for_layout; ?>
 	</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
 	<?php
 		// echo $this->Html->meta('icon');
 
