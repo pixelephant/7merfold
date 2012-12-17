@@ -12,7 +12,7 @@
         
     </div>
     <div class="block">
-            <table class="table">
+            <!-- <table class="table">
             <thead>
                 <th>Indulási időpontok (9 nap/7 éj) </th>
                 <th>Ft/fő</th>
@@ -31,7 +31,7 @@ aug. 3., 10.</td>
 <td>119 990</td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
         </div>
     <div class="block">
         <h3>Ár tartalmazza</h3>
