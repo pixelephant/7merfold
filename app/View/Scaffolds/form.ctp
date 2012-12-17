@@ -25,6 +25,7 @@
 	}
 	echo $this->Form->end(__d('cake', __('Submit')));
 ?>
+<a href="javascript:history.back()">Mégsem</a> 
 </div>
 <div class="actions">
 <?php $additional = ''; ?>

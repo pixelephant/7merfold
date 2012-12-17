@@ -115,46 +115,140 @@ class TripsController extends AppController {
 
 	public function admin_1(){
 
-		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 1)));
+		$this->paginate = array('conditions' => array('Category.id' => 1), 'limit' => 2);
 
+		$trips = $this->paginate('Trip');
+
+		$this->set('name', 'Városi kalandok');
 		$this->set('trips', $trips);
+		$this->set('id', '1');
 		
 	}	
 
 	public function admin_2(){
 
-		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 2)));
+		$this->paginate = array('conditions' => array('Category.id' => 2), 'limit' => 2);
 
+		$trips = $this->paginate('Trip');
+
+		$this->set('name', 'Körutazások');
 		$this->set('trips', $trips);
+		$this->set('id', '2');
 		
 		$this->render('admin_1');
 	}	
 
 	public function admin_3(){
 
-		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 3)));
+		$this->paginate = array('conditions' => array('Category.id' => 3), 'limit' => 2);
 
+		$trips = $this->paginate('Trip');
+
+		$this->set('name', 'Üveghegyen túl');
 		$this->set('trips', $trips);
+		$this->set('id', '3');
 		
 		$this->render('admin_1');
 	}	
 
 	public function admin_4(){
 
-		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 4)));
+		$this->paginate = array('conditions' => array('Category.id' => 4), 'limit' => 2);
 
+		$trips = $this->paginate('Trip');
+
+		$this->set('name', 'Üveghegyen innen');
 		$this->set('trips', $trips);
+		$this->set('id', '4');
 		
 		$this->render('admin_1');
 	}	
 
 	public function admin_5(){
 
-		$trips = $this->Trip->find('all', array('conditions' => array('Category.id' => 5)));
+		$this->paginate = array('conditions' => array('Category.id' => 5), 'limit' => 2);
 
+		$trips = $this->paginate('Trip');
+
+		$this->set('name', 'Felfedezőutak');
 		$this->set('trips', $trips);
+		$this->set('id', '5');
 		
 		$this->render('admin_1');
 	}	
+
+	/* Hozzáadás */ 
+
+	public function admin_new1(){
+		$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
+
+		$this->set('countries', $this->Country->find('list'));
+		$this->set('scaffoldFields', $scaffoldFields);
+	}
+
+	public function admin_new2(){
+		$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
+
+		$this->set('countries', $this->Country->find('list'));
+		$this->set('scaffoldFields', $scaffoldFields);
+	}
+
+	public function admin_new3(){
+		$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
+
+		$this->set('countries', $this->Country->find('list'));
+		$this->set('scaffoldFields', $scaffoldFields);
+	}
+
+	public function admin_new4(){
+		$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
+
+		$this->set('countries', $this->Country->find('list'));
+		$this->set('scaffoldFields', $scaffoldFields);
+	}
+
+	public function admin_new5(){
+		$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
+
+		$this->set('countries', $this->Country->find('list'));
+		$this->set('scaffoldFields', $scaffoldFields);
+	}
+
+	/* Szerkesztés */
+
+	public function admin_edit1(){
+		$params = $this->request->params;
+		
+		$this->request->data = $this->Trip->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+	}
+
+	public function admin_edit2(){
+		$params = $this->request->params;
+		
+		$this->request->data = $this->Trip->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+	}
+
+	public function admin_edit3(){
+		$params = $this->request->params;
+		
+		$this->request->data = $this->Trip->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+	}
+
+	public function admin_edit4(){
+		$params = $this->request->params;
+		
+		$this->request->data = $this->Trip->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+	}
+
+	public function admin_edit5(){
+		$params = $this->request->params;
+		
+		$this->request->data = $this->Trip->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+	}
 
 }
