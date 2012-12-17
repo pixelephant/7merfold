@@ -819,9 +819,11 @@ a.offer {
     margin: 0 auto 20px auto; }
 
 #main-footer {
+  background: #3885AB;
+  border-top: 1px solid #4897c8;
+  margin-top: 30px;
   font-weight: 200;
   width: 100%;
-  background: #333333;
   color: #fff; }
   #main-footer a {
     text-decoration: none;
@@ -831,7 +833,7 @@ a.offer {
     text-align: center;
     width: 100%;
     display: block;
-    border-bottom: 1px solid #515151; }
+    border-bottom: 1px solid #4897c8; }
     #main-footer .totop span {
       display: block; }
   #main-footer p {
@@ -842,7 +844,7 @@ a.offer {
 #contact a {
   display: block;
   font-size: 1em;
-  border-bottom: 1px solid #515151;
+  border-bottom: 1px solid #4897c8;
   text-align: center;
   padding: 0.5em 0;
   line-height: 1; }
@@ -993,10 +995,6 @@ a.offer {
 .slides a.offer {
   width: auto; }
 
-#contact a .icon.fax {
-  font-size: 1.8em;
-  padding-bottom: 0.1em; }
-
 @media all and (min-width: 37.5em) {
   body {
     font-size: 110%; }
@@ -1010,7 +1008,7 @@ a.offer {
 
   #company + section {
     clear: both; } }
-@media all and (min-width: 62.5em) {
+@media all and (min-width: 59.375em) {
   body {
     font-size: 120%; }
 
@@ -1019,13 +1017,43 @@ a.offer {
 @media all and (min-width: 79em) {
   body {
     font-size: 130%; } }
-@media all and (min-width: 59.375em) {
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  input[type="search"] + input[type="submit"] {
+    line-height: 1.4; }
+
+  body {
+    padding: 0 2% !important;
+    font-size: 100% !important; }
+
+  #sub-grid li a {
+    font-size: 0.7em; }
+
+  #newest a.offer {
+    margin-right: 20px; }
+
+  #top-contact {
+    font-size: 0.65em !important; }
+
+  #logo img {
+    padding-top: 10px;
+    width: 120px !important; }
+
+  #top-contact {
+    padding-top: 1.5em !important;
+    width: 40% !important; } }
+@media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  #sub-grid li a {
+    font-size: 0.7em; }
+
+  #top-contact {
+    font-size: 0.7em; }
+
   #logo {
     width: 26%; }
 
   #top-contact {
     float: left;
-    width: 40%;
+    width: 41%;
     background: none;
     -webkit-box-shadow: none;
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -1099,7 +1127,7 @@ a.offer {
 
   #contact {
     overflow: hidden;
-    border-bottom: 1px solid #515151; }
+    border-bottom: 1px solid #4897c8; }
     #contact a {
       display: block;
       float: left;
@@ -1289,7 +1317,7 @@ a.offer {
   transition: all 0.3s ease-in-out;
   /* Firefox 16+, Opera 12.50+ */ }
   .no-touch #contact a:hover, .no-touch #contact a:focus, .no-touch .totop:hover, .no-touch .totop:focus {
-    background: #000; }
+    background: #1A7DBA; }
 .no-touch .close {
   -webkit-transition: all 0.3s ease-in-out;
   /* Safari 3.2+, Chrome */

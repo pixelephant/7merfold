@@ -143,6 +143,7 @@ position: relative;
     color:$blue;
     line-height:1;
     margin:10px 0;
+    word-wrap:break-word;
   }
   float:right;
   width:20%;
@@ -179,7 +180,7 @@ position: relative;
 }
 
 //large tablet (1000px,62.5em)
-@media all and (min-width: 59.375em){
+@media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
  
 
 .section{

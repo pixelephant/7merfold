@@ -213,7 +213,8 @@ p.accommodation, p.price {
     display: block;
     color: #4897c8;
     line-height: 1;
-    margin: 10px 0; }
+    margin: 10px 0;
+    word-wrap: break-word; }
 
 .shares {
   text-align: center;
@@ -239,7 +240,7 @@ p.accommodation, p.price {
       top: -0.2em;
       position: relative; }
 
-@media all and (min-width: 59.375em) {
+@media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
   .section .cont {
     display: block !important; }
   .section h2 a span {

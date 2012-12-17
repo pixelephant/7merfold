@@ -3,11 +3,11 @@ $(document).ready(function(){
 $('.flexslider').flexslider({
     animation: "slide",
     animationLoop: false,
-    itemWidth: 180,
+    itemWidth: 200,
     minItems: 2
 });
 
-$(".flexslider1").flexslider({
+/*$(".flexslider1").flexslider({
     controlNav: false,
     directionNav: false,
     animation: "fade",
@@ -29,7 +29,7 @@ $(".flexslider1").flexslider({
       },400);
   });*/
 
-$("#usp a").click(function(){
+/*$("#usp a").click(function(){
   if($("#mobile-nav").css("display") === "none"){
     $("html,body").animate({ scrollTop: $(".slider").offset().top }, "slow");
   }
@@ -38,5 +38,5 @@ $("#usp a").click(function(){
   }
   return false;
 });
-
+*/
 });
