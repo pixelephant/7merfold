@@ -524,6 +524,9 @@ a.offer{
 
 .cta{
   &.boat{
+    h2{
+      padding-top:0 !important;
+    }
     span{
       color: #fff;
       font-size: 5em;
@@ -531,7 +534,7 @@ a.offer{
     }
   }
   background: $darkblue;
-  padding:4%;
+  padding:2%;
   margin-bottom:10px;
   text-align: center;
   h3{
@@ -568,7 +571,7 @@ a.offer{
 #main-footer{
   background:#3885AB;
   border-top:1px solid $blue;
-  margin-top:30px;
+  
   font-weight: 200;
   width: 100%;
   color: #fff;
@@ -762,6 +765,14 @@ a.offer{
     border-bottom:1px solid $gray;
   }
 }
+
+.flexslider2{
+  position:relative;
+  .flex-control-nav {
+    bottom:-10px;
+  }
+}
+
 
 //Font size
 
@@ -1045,6 +1056,20 @@ a.offer{
         }
       }
     }
+
+
+    #newsletter,#news{
+      height:310px;
+    }
+
+    #news .cont{
+      padding:20px !important;
+    }
+
+    #news ul li{
+      
+    }
+
 }
 
 //small tablet (700px,43.75em)
