@@ -68,7 +68,8 @@
 
 .selecter ul {
   display: none;
-  background: #fff; }
+  background: #fff;
+  overflow: hidden; }
   .selecter ul li {
     list-style: none;
     border-bottom: 1px solid #cccccc; }

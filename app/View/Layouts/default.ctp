@@ -33,7 +33,8 @@
                       <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Bp, Bécsi út 81.</span></a>
                       <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 70 634-8889</span></a>
                        <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 1 240-1978</span></a>
-                        <a href="tel:+3612401978"><span class="icon fax" aria-hidden="true" data-icon="x"></span> <span class="data">+36 1 240-1978</span></a>
+                        <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
+              <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">7Mérföld hírlevél</span></a>
                       <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
                      <!-- <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
                       <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a> -->
@@ -77,8 +78,8 @@
               <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
               <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
               <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+              <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="u"></span>Oldal tetejére</a>
             </div>
-            <a href="#" class="totop"><span aria-hidden="true" data-icon="u"></span>Oldal tetejére</a>
             <p>
               <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <a href="#">utazási feltételek</a> | <a href="#">állás</a>
             </p>

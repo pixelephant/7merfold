@@ -13,6 +13,7 @@
 .selecter ul{
   display: none;
   background:#fff;
+  overflow:hidden;
   li{
     list-style:none;
     border-bottom: 1px solid $gray;

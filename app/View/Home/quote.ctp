@@ -24,6 +24,10 @@
 				<textarea name="message" id="message" rows="5"></textarea>
 			</div>
 			<div>
+				<label for="newsl">Feliratkozom a 7Mérföld hírlevélre.</label>
+				<input type="checkbox" name="newsl" id="newsl">
+			</div>
+			<div>
 				<input type="submit" value="Küldés &raquo;">
 			</div>
 		</form>

@@ -774,7 +774,7 @@ a.offer {
   text-align: center; }
   .cta.boat span {
     color: #fff;
-    font-size: 8em;
+    font-size: 5em;
     line-height: 1; }
   .cta h3 {
     color: #fff;
@@ -783,7 +783,7 @@ a.offer {
     padding: 0;
     padding-top: 1em; }
   .cta h2 a {
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: 'Gentium Basic';
     font-weight: normal;
     font-style: italic;
@@ -829,13 +829,6 @@ a.offer {
     text-decoration: none;
     color: #fff;
     font-weight: 200; }
-  #main-footer .totop {
-    text-align: center;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid #4897c8; }
-    #main-footer .totop span {
-      display: block; }
   #main-footer p {
     text-align: center;
     padding: 10px 0;
@@ -1152,11 +1145,8 @@ a.offer {
       text-align: center;
       padding: 0.5em 0;
       font-size: 0.8em; }
-      #contact a:last-child {
+      #contact a:last-child, #contact a:nth-last-child(2) {
         border-bottom: none; }
-
-  .totop {
-    display: none !important; }
 
   #top-contact {
     display: block;
@@ -1257,6 +1247,8 @@ a.offer {
     width: 100%;
     margin-top: 0;
     margin-bottom: 20px; }
+  #quote-form input[type="checkbox"] {
+    margin-bottom: 20px; }
   #quote-form input[type="submit"] {
     padding: 0;
     margin: 0;
@@ -1322,7 +1314,7 @@ a.offer {
   /* Firefox 16+, Opera 12.50+ */ }
   .no-touch #mobile-nav ul li a:hover, .no-touch #mobile-nav ul li a:focus, .no-touch #sub-grid li a:hover, .no-touch #sub-grid li a:focus {
     background: #e6e6e6; }
-.no-touch #contact a, .no-touch .totop {
+.no-touch #contact a {
   -webkit-transition: all 0.3s ease-in-out;
   /* Safari 3.2+, Chrome */
   -moz-transition: all 0.3s ease-in-out;
@@ -1331,7 +1323,7 @@ a.offer {
   /* Opera 10.5–12.00 */
   transition: all 0.3s ease-in-out;
   /* Firefox 16+, Opera 12.50+ */ }
-  .no-touch #contact a:hover, .no-touch #contact a:focus, .no-touch .totop:hover, .no-touch .totop:focus {
+  .no-touch #contact a:hover, .no-touch #contact a:focus {
     background: #1A7DBA; }
 .no-touch .close {
   -webkit-transition: all 0.3s ease-in-out;
