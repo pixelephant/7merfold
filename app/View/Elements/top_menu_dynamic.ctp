@@ -25,7 +25,7 @@
 	foreach($menu as $k => $e){
 		echo '<ul id="sub' . $i . '" class="sub">';
 		echo $this->requestAction('menu/get_sub_menu/' . $k);
-		echo '<li>' . $this->Html->link('Összes', '/' . $k, array('escape' => false)) . '</li>';
+		// echo '<li>' . $this->Html->link('Összes', '/' . $k, array('escape' => false)) . '</li>';
 		echo '</ul>';
 		$i++;
 	}
