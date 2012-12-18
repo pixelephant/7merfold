@@ -278,6 +278,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
   -webkit-border-radius: 0;
   border-radius: 0; }
 
+#sidebar {
+  display: none; }
+
 .hidden {
   display: none; }
 
@@ -401,37 +404,37 @@ body {
   background: white;
   border-left: 10px solid #4897c8; }
 
-#main-content {
+#main-content, #sidebar {
   margin-top: 10px; }
-  #main-content .section {
+  #main-content .section, #sidebar .section {
     -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
     /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
     /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
     background: #fff;
     margin-bottom: 10px; }
-    #main-content .section h3 {
+    #main-content .section h3, #sidebar .section h3 {
       font-family: 'Gentium Basic';
       font-weight: normal;
       font-style: italic; }
-    #main-content .section.half {
+    #main-content .section.half, #sidebar .section.half {
       float: left;
       width: 50%; }
-      #main-content .section.half:nth-child(even) + * {
+      #main-content .section.half:nth-child(even) + *, #sidebar .section.half:nth-child(even) + * {
         clear: both; }
-    #main-content .section.collapsible.closed .cont {
+    #main-content .section.collapsible.closed .cont, #sidebar .section.collapsible.closed .cont {
       display: none; }
-    #main-content .section.ajax a, #main-content .section.collapsible a {
+    #main-content .section.ajax a, #main-content .section.collapsible a, #sidebar .section.ajax a, #sidebar .section.collapsible a {
       display: block;
       overflow: hidden;
       text-decoration: none;
       color: #69297d; }
-      #main-content .section.ajax a span, #main-content .section.collapsible a span {
+      #main-content .section.ajax a span, #main-content .section.collapsible a span, #sidebar .section.ajax a span, #sidebar .section.collapsible a span {
         float: right;
         font-family: 'Source Sans Pro';
         font-style: normal;
         color: #333333; }
-    #main-content .section h2 {
+    #main-content .section h2, #sidebar .section h2 {
       font-family: 'Gentium Basic';
       font-weight: normal;
       font-style: italic;
@@ -441,16 +444,16 @@ body {
       border-bottom: 1px solid #cccccc;
       padding: 0.6em 3% 0.5em 3%;
       line-height: 1; }
-    #main-content .section .cont {
+    #main-content .section .cont, #sidebar .section .cont {
       padding: 0.8em 3%;
       font-size: 0.875em; }
-      #main-content .section .cont.formatted ul.list {
+      #main-content .section .cont.formatted ul.list, #sidebar .section .cont.formatted ul.list {
         list-style-position: inside;
         line-height: 1.5;
         margin-top: 0.5em; }
-      #main-content .section .cont.formatted a, #main-content .section .cont.formatted a:visited {
+      #main-content .section .cont.formatted a, #main-content .section .cont.formatted a:visited, #sidebar .section .cont.formatted a, #sidebar .section .cont.formatted a:visited {
         color: #4897c8; }
-      #main-content .section .cont.formatted p {
+      #main-content .section .cont.formatted p, #sidebar .section .cont.formatted p {
         margin: 1em 0;
         display: block; }
 

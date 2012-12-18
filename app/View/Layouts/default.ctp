@@ -68,7 +68,14 @@
             <div id="main-content">
                 <?php echo $this->fetch('content'); ?>
             </div>
-        
+            <div id="sidebar">
+              <?php echo $this->element('quote_box'); ?>
+              <section class="section" id="side-share">
+                <div class="cont" syle="overflow:hidden;">
+                  <span class="shares"><span>Megosztás</span><a href="mailto:info@7merfold.com?body=szuper&subject=7merfold"><span class="icon" aria-hidden="true" data-icon="e"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=<?php echo $this->Html->url( null, true ); ?>"><?php echo $this->Html->image('f_logo.png'); ?></a></span>
+                </div>
+              </section>
+            </div>
           <footer id="main-footer">
             <div id="contact">
               <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>

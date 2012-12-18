@@ -247,6 +247,31 @@ p.accommodation, p.price {
   margin: 1em 0; }
 
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  #main-content {
+    width: 75%;
+    float: left; }
+
+  #side-share .shares {
+    position: static;
+    font-size: 1.5em;
+    float: none; }
+
+  #sidebar {
+    display: block !important;
+    width: 22%;
+    margin-left: 3%;
+    float: left;
+    font-size: 80%; }
+    #sidebar .getquote {
+      display: block !important; }
+      #sidebar .getquote a {
+        width: 80%; }
+      #sidebar .getquote p {
+        width: 80%; }
+
+  #main-footer {
+    clear: both; }
+
   .section .cont {
     display: block !important; }
   .section h2 a span {

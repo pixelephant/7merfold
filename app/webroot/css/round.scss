@@ -187,9 +187,46 @@ position: relative;
   margin:1em 0;
 }
 
+
+
 //large tablet (1000px,62.5em)
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
  
+
+ #main-content{
+  width:75%;
+  float:left;
+ }
+
+ #side-share{
+  .shares{
+    position:static;
+    font-size:1.5em;
+    float:none;
+  }
+ }
+
+ #sidebar{
+  display:block !important;
+  width:22%;
+  margin-left:3%;
+  float:left;
+  font-size:80%;
+  .getquote{
+
+    a{
+      width:80%;
+    }
+    p{
+      width:80%;
+    }
+    display:block !important;
+  }
+ }
+
+ #main-footer{
+  clear:both;
+ }
 
 .section{
   .cont{

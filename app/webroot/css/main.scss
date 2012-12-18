@@ -35,6 +35,11 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
   border-radius:0;
 }
 
+
+#sidebar{
+  display:none;
+}
+
 .hidden{
   display: none;
 }
@@ -179,7 +184,7 @@ body{
   border-left: 10px solid $blue;
 }
 
-#main-content{
+#main-content,#sidebar{
   margin-top: 10px;
     .section{
       h3{
