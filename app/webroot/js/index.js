@@ -17,6 +17,17 @@ $(".flexslider1").flexslider({
     
 });
 
+$(".flexslider2").flexslider({
+    controlNav: true,
+    directionNav: false,
+    animation: "slide",
+    animationLoop: true,
+    slideshowSpeed: 8000,
+    animationSpeed: 1000,
+    minItems: 1,
+    maxItems: 1
+});
+
 /*$('<img/>').attr('src', 'img/szab.png').load(function() {
     $("#usp").css({
       "background":"url(img/szab.png) no-repeat"

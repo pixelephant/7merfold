@@ -769,9 +769,11 @@ a.offer {
 
 .cta {
   background: #1a7dba;
-  padding: 4%;
+  padding: 2%;
   margin-bottom: 10px;
   text-align: center; }
+  .cta.boat h2 {
+    padding-top: 0 !important; }
   .cta.boat span {
     color: #fff;
     font-size: 5em;
@@ -821,7 +823,6 @@ a.offer {
 #main-footer {
   background: #3885AB;
   border-top: 1px solid #4897c8;
-  margin-top: 30px;
   font-weight: 200;
   width: 100%;
   color: #fff; }
@@ -1002,6 +1003,11 @@ a.offer {
     padding: 5px; }
   .table tr {
     border-bottom: 1px solid #cccccc; }
+
+.flexslider2 {
+  position: relative; }
+  .flexslider2 .flex-control-nav {
+    bottom: -10px; }
 
 @media all and (min-width: 37.5em) {
   body {
@@ -1218,7 +1224,13 @@ a.offer {
         font-size: 0.8em;
         text-decoration: none;
         color: #333333;
-        display: block; } }
+        display: block; }
+
+  #newsletter, #news {
+    height: 310px; }
+
+  #news .cont {
+    padding: 20px !important; } }
 @media all and (min-width: 43.75em) {
   .breadcrumb li {
     display: block !important; }

@@ -91,7 +91,12 @@
 <section class="section" id="news">
   <h2>Hírek</h2>
   <div class="cont">
-  <?php foreach($news as $new){ ?>
+    <div class="flex-container">
+      <div class="flexslider2">
+        <ul class="slides">
+          
+            <?php foreach($news as $new){ ?>
+            <li>
     <div class="news">
       <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
       <div class="bd">
@@ -100,8 +105,23 @@
         <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['slug'], array('escape' => false)); ?>
       </div>
     </div>
+     </li>
+     <li>
+    <div class="news">
+      <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
+      <div class="bd">
+        <h3><?php echo $new['News']['title']; ?></h3>
+        <p><?php echo $new['News']['content']; ?></p>
+        <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['slug'], array('escape' => false)); ?>
+      </div>
+    </div>
+     </li>
   <?php } ?>
-  </div>
+         
+        </ul>
+      </div>
+    </div>
+    </div>
 </section>
 
 <section id="newsletter" class="section">
