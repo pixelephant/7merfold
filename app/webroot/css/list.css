@@ -181,9 +181,13 @@
       .offer-list a.offer .img img {
         max-width: 100%; }
     .offer-list a.offer .stars {
-      text-align: left; }
+      display: inline;
+      text-align: left;
+      padding: 0 0.2em; }
     .offer-list a.offer h3 {
       padding-left: 0; }
+    .offer-list a.offer .lead {
+      clear: both; }
 
   .offer .data {
     float: left;
