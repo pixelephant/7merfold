@@ -102,4 +102,31 @@ class AppHelper extends Helper {
 
     }
 
+    public function trimText($text=null,$length=200,$showDots=true,$cutFirstWord=false ){
+        $textArr = explode(" ",$text);
+        if($showDots){
+            $dotString = "...";
+        }else{
+            $dotString = "";
+        }
+        
+        if($length == 0){
+            return ucfirst($text);
+        }else{
+            if(!$cutFirstWord && strlen($textArr[0])>$length){
+                return ucfirst($textArr[0]).$dotString;
+            }elseif(strlen($textArr[0])>$length){
+                return ucfirst(substr($textArr[0],0,$length)).$dotString;
+            }else{
+                if(strlen($text)>$length){
+                    $newText = substr($text,0,$length);
+                    $newText = substr($newText,0,strrpos($newText," "));
+                    return ucfirst($newText).$dotString;
+                }else{
+                    return ucfirst($text);
+                }
+            }
+        }
+    }
+
 }
