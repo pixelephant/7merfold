@@ -153,6 +153,18 @@
   color: #4897c8 !important;
   margin-right: 5%; }
 
+h2.info a, h3.info a {
+  text-decoration: none !important; }
+
+h2.info .icon, h3.info .icon {
+  font-style: normal;
+  margin: 0;
+  float: none;
+  padding: 0;
+  color: #4897c8;
+  position: relative;
+  top: 2px; }
+
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
   .offer-list a.offer .data {
     margin-top: 20px; }
