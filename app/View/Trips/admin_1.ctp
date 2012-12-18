@@ -19,8 +19,8 @@
 					<td><?php echo $trip['Trip']['created']; ?></td>
 					<td><?php echo $trip['Trip']['id']; ?></td>
 					<td class="actions">
-						<a href="/7merfold/admin/trips/edit/<?php echo $trip['Trip']['id']; ?>">Szerkeszt</a>
-						<form action="/7merfold/admin/trips/delete/<?php echo $trip['Trip']['id']; ?>" name="post_<?php echo $trip['Trip']['id']; ?>" id="post_<?php echo $trip['Trip']['id']; ?>" style="display:none;" method="post">
+						<a href="/admin/trips/edit/<?php echo $trip['Trip']['id']; ?>">Szerkeszt</a>
+						<form action="/admin/trips/delete/<?php echo $trip['Trip']['id']; ?>" name="post_<?php echo $trip['Trip']['id']; ?>" id="post_<?php echo $trip['Trip']['id']; ?>" style="display:none;" method="post">
 						<input type="hidden" name="_method" value="POST"></form>
 						<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $trip['Trip']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
 					</td>
