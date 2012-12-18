@@ -7,7 +7,7 @@ class RegionsController extends AppController {
 	public $scaffold = 'admin';
 	public $name = 'Regions';
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Region', 'RegionImage');
+	public $uses = array('Region', 'RegionImage', 'Country');
 
 	public function show() {
 
@@ -38,6 +38,9 @@ class RegionsController extends AppController {
 
 	public function admin_new(){
 
+		$countries = $this->Country->find('list');
+		$this->set('countries', $countries);
+
 		if(!empty($this->request->data['Region'])){
 			if(isset($this->request->data['Region']['id'])){
 				$this->Region->findById($this->request->data['Region']['id']);	
@@ -45,7 +48,8 @@ class RegionsController extends AppController {
 				$this->Region->create();
 			}
 			$c = $this->Region->save($this->request->data);
-			$this->redirect('/admin/regions/edit/'.$c['Region']['id']);
+			$id = $c['Region']['id'];
+			$this->redirect('/admin/regions/edit/'.$id);
 		}
 	}
 
@@ -55,10 +59,12 @@ class RegionsController extends AppController {
 		$params = $this->request->params;
 
 		$this->request->data = $this->Region->findById($params['pass'][0]);
-		// $this->set('regions', $this->Region->find('list'));
 
 		$images = $this->RegionImage->find('all', array('conditions' => array('RegionImage.region_id' => $params['pass'][0])));
 		$this->set('images', $images);
+
+		$countries = $this->Country->find('list');
+		$this->set('countries', $countries);
 	}
 
 	/* Törlés */

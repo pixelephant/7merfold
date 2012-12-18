@@ -9,6 +9,7 @@
 	echo $this->Form->create('Region', array('type' => 'file', 'url' => '/admin/regions/new'));
 	echo $this->Form->input('id', array('type' => 'hidden', 'value' => $this->request->data['Region']['id']));
 	echo $this->Form->input('name');
+	echo $this->Form->input('country_id');
 	echo $this->Form->input('description');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');

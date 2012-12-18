@@ -8,8 +8,8 @@
 	print_r($this->validationErrors);
 	echo $this->Form->create('Region', array('type' => 'file', 'url' => '/admin/regions/new'));
 	echo $this->Form->input('name');
-	echo $this->Form->input('information');
-	echo $this->Form->input('useful_information');
+	echo $this->Form->input('description');
+	echo $this->Form->input('country_id');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
 	echo $this->Form->end(__d('cake', __('Submit')));

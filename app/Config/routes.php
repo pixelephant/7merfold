@@ -30,7 +30,6 @@
 /**
  * Admin routes
  */
-
 	Router::redirect('/admin', '/admin/trips/1');	
 	// Router::connect('/admin', array('controller' => 'admins', 'action' => 'index', 'admin' => true));
 
