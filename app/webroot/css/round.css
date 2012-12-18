@@ -243,6 +243,9 @@ p.accommodation, p.price {
       top: -0.2em;
       position: relative; }
 
+#leiras .cont p {
+  margin: 1em 0; }
+
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
   .section .cont {
     display: block !important; }
