@@ -3,6 +3,7 @@ class Region extends AppModel {
     public $name = 'Region';
 
     public $belongsTo = 'Country';
+    public $hasMany = 'RegionImage';
 
     public $validate = array(
 	    'name' => array(
