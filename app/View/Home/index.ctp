@@ -107,10 +107,14 @@
 <section id="newsletter" class="section">
   <h2>Iratkozzon fel hírlevelünkre!</h2>
   <h3>és nyerhet 10% kedvezményt bármelyik útra</h3>
-  <form action="#" id="newsletter-form">
-    <input type="text" name="name" id="name" placeholder="Név">
-    <input type="email" name="email" id="email" placeholder="Email cím">
-    <input type="submit" value="Feliratkozom &raquo;">
+  <form action="http://7merfold.us6.list-manage.com/subscribe/post?u=a5fca53bbee651c275c0e433d&amp;id=69f5fed3b9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+   <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" placeholder="Név">
+   <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Cím">
+  <input type="submit" value="Feliratkozom &raquo;" name="subscribe" id="mc-embedded-subscribe" class="button">
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>
   </form>
 </section>
 
