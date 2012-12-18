@@ -7,7 +7,7 @@ class CountriesController extends AppController {
 	public $scaffold = 'admin';
 	public $name = 'Countries';
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country');
+	public $uses = array('Country', 'CountryImage');
 
 	public function show() {
 
@@ -23,6 +23,38 @@ class CountriesController extends AppController {
 		$this->set('page_keywords', $country['Country']['keywords']);
 
 		$this->render('show');
+	}
+
+	/* Admin */
+
+	public function admin_index(){
+		$this->paginate = array('limit' => 2);
+
+		$countries = $this->paginate('Country');
+
+		$this->set('name', 'Országok');
+		$this->set('countries', $countries);
+	}
+
+	public function admin_new(){
+
+		if(!empty($this->request->data['Country'])){
+			$this->Country->create();
+			$this->Country->save($this->request->data);
+		}
+	}
+
+	/* Szerkesztés */
+
+	public function admin_edit(){
+		$params = $this->request->params;
+
+		$this->request->data = $this->Country->findById($params['pass'][0]);
+		$this->set('countries', $this->Country->find('list'));
+
+		$images = $this->CountryImage->find('all', array('conditions' => array('CountryImage.country_id' => $params['pass'][0])));
+		$this->set('images', $images);
+	
 	}
 
 }
