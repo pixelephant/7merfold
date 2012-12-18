@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 17. 14:44
+-- Létrehozás ideje: 2012. dec. 18. 15:19
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -97,6 +97,29 @@ INSERT INTO `countries` (`id`, `information`, `useful_information`, `created`, `
 (4, 'országinformáció: Skócia', 'Skócia (angolul Scotland, skót gaelül Alba) Nyugat-Európában található, Nagy-Britannia második legnagyobb országrésze terület és népesség alapján. A Brit-sziget északi harmadát foglalja el, délről Anglia, keletről az Északi-tenger, északról és nyugatról az Atlanti-óceán határolja, délnyugatról pedig az Északi-csatorna és az Ír-tenger. Mintegy 790 sziget tartozik hozzá.', '2012-12-13 12:35:30', 'Skócia', 'vízum információ: Skócia', '3.jpeg', 'Skócia4', 'Skócia', 'Skócia'),
 (5, 'A Német Szövetségi Köztársaság (németül Bundesrepublik Deutschland; nemzetközi szerződésekben, okmányokban, hivatalos fórumokon a Németországi Szövetségi Köztársaság megnevezés szerepel hivatalos országnévként) Európa vezető, s a világ negyedik vezető ipari és gazdasági nagyhatalma (az USA, Kína és Japán után), Közép-Európában fekszik.', 'A Német Szövetségi Köztársaság (németül Bundesrepublik Deutschland; nemzetközi szerződésekben, okmányokban, hivatalos fórumokon a Németországi Szövetségi Köztársaság megnevezés szerepel hivatalos országnévként) Európa vezető, s a világ negyedik vezető ipari és gazdasági nagyhatalma (az USA, Kína és Japán után), Közép-Európában fekszik.', '2012-12-15 14:52:11', 'Németország', NULL, 'franciao.png', 'nemetorszag', 'Németország', 'Németország'),
 (6, 'A Magyarországnál hétszer kisebb területű szigetcsoport 690 szigete és több mint 2000 korallszirtje Floridától délkeletre ívelődik az Atlanti-óceánban.', 'A Magyarországnál hétszer kisebb területű szigetcsoport 690 szigete és több mint 2000 korallszirtje Floridától délkeletre ívelődik az Atlanti-óceánban.', '2012-12-15 14:52:46', 'Bahamák/Bermudák', NULL, 'franciao.png', 'bahamak-bermudak', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet: `country_images`
+--
+
+DROP TABLE IF EXISTS `country_images`;
+CREATE TABLE IF NOT EXISTS `country_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `image_file` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `country_id` int(11) NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=2 ;
+
+--
+-- A tábla adatainak kiíratása `country_images`
+--
+
+INSERT INTO `country_images` (`id`, `title`, `image_file`, `country_id`, `created`) VALUES
+(1, 'Kép címe', 'Atlantis_Cove8.jpg', 2, '2012-12-18 13:42:08');
 
 -- --------------------------------------------------------
 
@@ -225,6 +248,9 @@ CREATE TABLE IF NOT EXISTS `regions` (
   `description` text COLLATE utf8_hungarian_ci,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `name` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
+  `slug` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
+  `keywords` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `country` (`country_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci COMMENT='Országok régióinak tárolása';
@@ -233,11 +259,27 @@ CREATE TABLE IF NOT EXISTS `regions` (
 -- A tábla adatainak kiíratása `regions`
 --
 
-INSERT INTO `regions` (`id`, `country_id`, `description`, `created`, `name`) VALUES
-(1, 1, 'Kréta leírása', '2012-12-06 08:51:26', 'Kréta'),
-(2, 1, 'Korfu leírása', '0000-00-00 00:00:00', 'Korfu'),
-(3, 2, 'Korzika (franciául: Corse, korzikaiul: Corsica) a Földközi-tenger negyedik legnagyobb szigete (Szicília, Szardínia, és Ciprus után). Olaszországtól nyugatra, Szardínia szigetétől északra, Franciaországtól pedig délkeletre fekszik. A szigetet a Ligúr-tenger választja el a szárazföldtől.\r\n\r\n<p>Korzika Franciaország 26 régiójának egyike, noha a jog magát Korzika szigetét "kollektív territórumként" határozza meg. Számos olyan fontos jogot élvez, amely nagyobb hatáskört biztosít számára, mint amennyi a többi régió rendelkezésére áll, de összességében jogi helyzete mégiscsak a többi régióéhoz hasonló. A köznyelvben Korzikát mindenesetre csak mint régiont említik meg.</p>', '2012-12-15 14:24:00', 'Korzika'),
-(4, 2, 'Cote d azur', '0000-00-00 00:00:00', 'Cote d azur');
+INSERT INTO `regions` (`id`, `country_id`, `description`, `created`, `name`, `slug`, `title`, `keywords`) VALUES
+(1, 1, 'Kréta leírása', '2012-12-18 14:15:52', 'Kréta', 'n-a', '', ''),
+(2, 1, 'Korfu leírása', '0000-00-00 00:00:00', 'Korfu', '', '', ''),
+(3, 2, 'Korzika (franciául: Corse, korzikaiul: Corsica) a Földközi-tenger negyedik legnagyobb szigete (Szicília, Szardínia, és Ciprus után). Olaszországtól nyugatra, Szardínia szigetétől északra, Franciaországtól pedig délkeletre fekszik. A szigetet a Ligúr-tenger választja el a szárazföldtől.\r\n\r\n<p>Korzika Franciaország 26 régiójának egyike, noha a jog magát Korzika szigetét "kollektív territórumként" határozza meg. Számos olyan fontos jogot élvez, amely nagyobb hatáskört biztosít számára, mint amennyi a többi régió rendelkezésére áll, de összességében jogi helyzete mégiscsak a többi régióéhoz hasonló. A köznyelvben Korzikát mindenesetre csak mint régiont említik meg.</p>', '2012-12-18 13:50:03', 'Korzika', 'korzika', '', ''),
+(4, 2, 'Cote d azur', '0000-00-00 00:00:00', 'Cote d azur', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet: `region_images`
+--
+
+DROP TABLE IF EXISTS `region_images`;
+CREATE TABLE IF NOT EXISTS `region_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `region_id` int(11) NOT NULL,
+  `title` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `image_file` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -315,10 +357,7 @@ INSERT INTO `sights_trips` (`sight_id`, `trip_id`) VALUES
 (14, 14),
 (16, 15),
 (17, 15),
-(18, 15),
-(1, 1),
-(19, 1),
-(20, 1);
+(18, 15);
 
 -- --------------------------------------------------------
 
@@ -366,9 +405,8 @@ CREATE TABLE IF NOT EXISTS `trips` (
 --
 
 INSERT INTO `trips` (`id`, `description`, `name`, `price`, `travel_date`, `image_file`, `updated`, `created`, `short_description`, `travel_price_includes`, `country_id`, `circle_image_file`, `hajozz`, `region_id`, `category_id`, `accommodation`, `travel_method`, `minimal_persons`, `extra`, `extra_title`, `star_rating`, `day`, `special`, `service`, `slug`, `keywords`, `title`) VALUES
-(1, 'Spanyolország második legnagyobb városa évek óta vonzza az utazókat, művészeket és építészeket. A területét és népességét illetően az első helyen álló főváros, Madrid „örök riválisa” nem csak a focipályán. Érseki központ, egyetemváros, kongresszusi centrum és jelentős kikötőváros. 1992-ben itt rendezték a XXV. nyári olimpiai játékokat. A várost történeti eredetüknek megfelelően tíz kerületre osztották és szinte mindegyikben világhírű látnivalók várnak minket.', 'Barcelona', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-15 16:15:14', '0000-00-00 00:00:00', 'Spanyolország második legnagyobb városa évek óta vonzza az utazókat, művészeket és építészeket. A területét és népességét illetően az első helyen álló főváros, Madrid „örök riválisa” nem csak a focipályán.', 'Büféreggeli, transzfer', 3, 'temp.png', 1, 1, 1, 'Ellátás az úthoz', 'Budapestről közvetlen járatot a Wizzair, fapados légitársaság üzemeltet. Menetrendszerinti járatokkal átszállással lehet eljutni a katalán fővárosba.\r\nA repülőtérről taxival, busszal és metróval lehet a központba jutni.\r\nVárosi közlekedés: leggyorsabb a metró, de a buszhálózat is elég sűrű. Jegyek minden állomáson kaphatók, gyűjtőjegy és pár napos travelcard is vehető, ami korlátlan utazást biztosít.\r\nÉrdemes megvenni a Barcelona cardot, programunktól függően 2, 3, 4 vagy 5 napra, amivel ingyenes a tömegközlekedés, 90 nevezetességhez a belépés, valamint számos múzeumba és egyéb közlekedési eszközön kínál kedvezményt. Várostérképet és egy kis útikönyvet is adnak mellé', 12, 'Extra leírás', 'Extra szöveges blokk címe', NULL, NULL, NULL, NULL, 'barcelona', 'Barcelona', 'Barcelona'),
 (2, '<p>A teherhajóktól a hatalmas óceánjárókig és a legkülönlegesebb vitorláshajókig mindenféle hajó megfordult már a kikötőben.</p>\r\n<p>1850 és 1939 között Hamburg más szempontból is a Világ kapuját jelentette. 5 millió európai emigrált innen. A kikötőben egykor több épületet tartottak fenn számukra, ahol az indulásra várhattak. Ezek közül az egyiket eredeti állapotába állították vissza és egy interaktív múzeumként működik, hogy bemutassa milyen nehéz döntés lehetett elhagyni a megszokott mindennapokat az ismeretlenért.</p>\r\n<p>A kikötőn kívül azonban még sok más is vonzza a látogatókat. 1,7 millió lakosával a második legnépesebb város Németországban. Vonzáskörzeteivel együtt Hamburg hétszer akkora, mint Párizs és két és félszer nagyobb területű, mint London. A város 14%-a parkokból és zöld területekből áll. 2302 hídjával megelőzi Amszterdamot és Velencét is. Jelentőségét mutatja, hogy a világon – New York után – itt található a legtöbb konzulátus, szám szerint 90.</p>\r\n<p>A kikötőn kívül azonban még sok más is vonzza a látogatókat. 1,7 millió lakosával a második legnépesebb város Németországban. Vonzáskörzeteivel együtt Hamburg hétszer akkora, mint Párizs és két és félszer nagyobb területű, mint London. A város 14%-a parkokból és zöld területekből áll. 2302 hídjával megelőzi Amszterdamot és Velencét is. Jelentőségét mutatja, hogy a világon – New York után – itt található a legtöbb konzulátus, szám szerint 90.</p>\r\n<p>A szórakoztatásról 31 színház, 6 koncertterem, 10 kabaré, 50 állami és privát múzeum gondoskodik. Az újonnan épült ultramodern kereskedelmi és üzleti központ, a Hafen-city az Elba partján fekszik.</p>\r\n<p>A városközpontban a leglátogatottabb nevezetességek az Alster-tó, a Városháza és a halpiac. A St. Michaelis templom a város egyik jelképe, közkedvelt nevén Michel. A barokk templom tornyába lépcsőn és lifttel is felmehetünk, hogy a városra nyíló panorámában gyönyörködhessünk. A város legnépszerűbb utcája a Reeperbahn negyedben a St. Pauli, ahol éjszakai bárok, mulatók, színházak, éttermek és diszkók találhatók. Itt van a piroslámpás negyed is.</p>\r\n<p>Látogasson el Ön is Hamburgba!</p>', 'Hamburg', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-15 13:51:27', '0000-00-00 00:00:00', '„A szabadságot, melyet a régiek kiharcoltak, méltón kell óvnia az utókornak”.\r\nEz Hamburg Szabad- és Hanzaváros jelmondata.\r\nA kozmopolita város az Elbának és a régi időktől fennálló kereskedelmi jogosultságának köszönheti egész létét.\r\nRotterdam és Antwerpen után Európa legnagyobb forgalmú kikötővárosa, ezért a németek a Világ Kapujának is emlegetik. Hamburgban működik a világ legmodernebb, teljesen automatizált konténerkikötője, így hiába van 120 km-re a tengertől a világ 7. legnagyobb forgalmú konténerkikötőjének számít.', 'Büféreggeli, transzfer', 5, 'temp.png', 0, 2, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'hamburg', 'Hamburg', 'Hamburg'),
-(3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Skócia szépségei', '319 000 Ft/fő + kb. 62 000 Ft/fő repülőtéri illeték', '2012.: május 22–29., szeptember 11–18.', 'lisabon.jpeg', '2012-12-15 16:15:30', '0000-00-00 00:00:00', 'Hangulatos várak, festői tájak és az esetleges hűvös időjárás tökéletes ellenszere, a lélekmelegítő skót whisky vár Skóciában.', 'az utazást és programot a fenitek szerint magyar idegenvezetéssel, 7 éjszaka szállást kétágyas szobában, félpanziót, a betegség-, baleset-, poggyász- és útlemondási biztosítást.\r\n\r\nBelépők ára kb. 39 000 Ft/fő. Egyágyas felár 85 000 Ft/fő.', 4, 'temp.png', 0, NULL, 2, 'félpanzió, középkategóriájú (helyi háromcsillagos) szállodákban, kétágyas szobákban, 2 éj Edinburgh, 2 éj Fort William környéke, 2 éj Inverness környéke, 1 éj Perth.', 'Menetrend szerinti járatokkal Budapest – Edinburgh – Budapest útvonalon átszállással, a körutazás alatt légkondicionált autóbusszal. ', 20, NULL, NULL, NULL, NULL, NULL, NULL, 'skocia-szepsegei', 'Skócia szépségei', 'Skócia szépségei'),
+(3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Skócia szépségei', '319 000 Ft/fő + kb. 62 000 Ft/fő repülőtéri illeték', '2012.: május 22–29., szeptember 11–18.', 'lisabon.jpeg', '2012-12-17 16:03:40', '0000-00-00 00:00:00', 'Hangulatos várak, festői tájak és az esetleges hűvös időjárás tökéletes ellenszere, a lélekmelegítő skót whisky vár Skóciában.', 'az utazást és programot a fenitek szerint magyar idegenvezetéssel, 7 éjszaka szállást kétágyas szobában, félpanziót, a betegség-, baleset-, poggyász- és útlemondási biztosítást.\r\n\r\nBelépők ára kb. 39 000 Ft/fő. Egyágyas felár 85 000 Ft/fő.', 4, 'temp.png', 0, 1, 2, 'félpanzió, középkategóriájú (helyi háromcsillagos) szállodákban, kétágyas szobákban, 2 éj Edinburgh, 2 éj Fort William környéke, 2 éj Inverness környéke, 1 éj Perth.', 'Menetrend szerinti járatokkal Budapest – Edinburgh – Budapest útvonalon átszállással, a körutazás alatt légkondicionált autóbusszal. ', 20, '', '', NULL, '', '', '', 'skocia-szepsegei-1', 'Skócia szépségei', 'Skócia szépségei'),
 (4, 'Szobái tágasak, óceánra néző francia erkéllyel, tágas terekkel és gardróbbal, márvány fürdőszobával és bárral felszereltek. Egy lépéssel lejjebb, a hálóval egy légtérben egy kis nappali rész is tartozik minden szobához kanapéval, íróasztallal. Természetesen a legújabb technikai megoldások sem maradnak el: síkképernyős HD tv, Ipod-, MP3- és laptop-töltő is van a szobában.\r\n<p>Éttermeiben ázsiai, francia és grill ételek mellett, a fine dining és a tenger gyümölcsei szerelmesei is megtalálják számításaikat, de ha ahhoz van kedved, a nemzetközi svédasztalról is válogathatsz. További kávézók és bárok is a vendégek rendelkezésére állnak.</p>\r\n<p>Szolgáltatásai: kaszinó, éjszakai klub, tradicionális balinéz masszázst és európai kezeléseket, gőzfürdőt és szaunát kínáló spa, festői elhelyezkedésű, 18-lyukú golfpálya, fitneszterem, hat teniszpálya bérelhető felszereléssel és oktatással, kézműves foglalkozások, sziklamászás, videojáték-terem, színház, könyvtár, yacht-kikötő, romváros-jellegű merülőhely a búvárkodás kedvelőinek.</p>\r\n<p>A szállóvendégek közelebbről megismerkedhetnek a fókákkal, rájákkal, delfinekkel és cápákkal is. A delfineket a sekély vízben simogathatják az úszni tudó kisgyerekek is, a mély vízben a jó úszók akár együtt is úszhatnak velük. A cápák közt egy speciális bukósisakban lehet sétálgatni a tengervízben, míg egy másik medencében az üvegfalú csúszdán keresztül láthatod a körülötted úszkáló cápákat.</p>\r\n<p>További „vizes programok” a szállodában: 24 órás aquapark csúszdákkal, játékokkal, hullámfürdővel, 20 medencével (ebből három gyerekmedence), egy gyerekeknek fenntartott vizesjátékokkal tarkított várral, egy 11-tagú fürdőmedence-rendszerrel, egy 25 méteres úszómedence, akváriumok és az óceán élővilágát bemutató különféle medencék (rájás, cápás, korallos, stb.)</p>\r\n<p>A gyerekeket az előbb felsoroltakon kívül rengeteg foglalkozás várja (főzőprogram, sportverseny, játékok, stb.), a tiniket külön diszkó várja a legtrendibb játékokkal, zenékkel, „igazi” bárpulttal egy felnőttmentes övezetben. A szálló vendégei akár a rengeteg vizi élőlény etetésében is részt vehetnek.</p>', 'The Cove Atlantis, Bahamák', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-15 16:21:15', '0000-00-00 00:00:00', 'Az Atlantis szállodacsoport egyik tagja a Bahamákon, közvetlenül a mesés tengerparton fekszik. Különlegessége exkluzív részlege, ahol egy 800 m2-es medence és két kisebb medence, napozóágyak (akár 360 fokos kilátással), festői partszakasz, privát pavilonok és egy kaszinó várja csak a felnőtteket.', 'Büféreggeli, transzfer', 6, 'temp.png', 0, NULL, 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'the-cove-bahamak', 'Teszt út 4.', 'The Cove Atlantis, Bahamák'),
 (6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget velit sapien. Curabitur nulla nibh, ornare a posuere nec, hendrerit non elit. Sed vestibulum lacus non est posuere eget adipiscing libero faucibus. Vivamus laoreet lorem a tortor feugiat non viverra velit pharetra. Cras ac tellus et urna blandit sodales vel ut ligula. Suspendisse potenti. Duis id elit elit. Quisque at nisl vel neque ultrices egestas. Vestibulum sit amet arcu ut libero placerat ornare id sed nibh. Sed molestie laoreet fermentum. Morbi aliquet, turpis in tristique pulvinar, mi nibh dictum mi, sed bibendum est ligula nec nulla. ', 'Skócia felfedezése', '120000', '2012-11-11', 'lisabon.jpeg', '2012-12-15 16:52:03', '0000-00-00 00:00:00', 'Hangulatos várak, festői tájak és az esetleges hűvös időjárás tökéletes ellenszere, a lélekmelegítő skót whisky vár Skóciában.', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 1, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'skocia-felfedezese', 'Teszt út 6.', 'Skócia felfedezése'),
 (7, 'Egy frissen felújított picike ház, összesen 11 szobával, melyek mindegyike nagyon hangulatosan berendezett. A házban található egy kis kávéház, a reggeli és a vacsora egy kis családi vendéglőben kerül felszolgálásra, mely kb. 700 méterre található a szállodától. Szép idő esetén a reggelit a szálloda teraszán szolgálják fel. A szállodában van ezen kívül egy kis panorámaterasz, bár és Internet, valamint parkoló.\r\n<p>A szobák színesek és nagyon hangulatosak, fürdőszobával és WC-vel, valamint műholdas TV-vel felszereltek és remek kilátás nyílik a szobákból a hegyekre. Foglalhatóak családi szobák, melyek két egymásba nyíló kétágyas szobából állnak, melyeknek közös a fürdőszobája.</p>\r\n<p>Sport és szórakozás: Térítés ellenében: lovaglás. Ezen kívül lehetőség van fürdőzésre a közeli patakban és rengeteg túrázási- és hegymászási kaland várja a környéken az ide érkezőket. Lehetőség van a GR20-as túraútvonalba is bekapcsolódni is innen.</p>', 'Hotel U Frascone', '12 100 Ft/fő/éj-től', '2012-11-11', 'lisabon.jpeg', '2012-12-15 15:07:17', '0000-00-00 00:00:00', 'A hotel kategóriájához képest jó minőségű, szép, barátságos és tiszta. Félúton van Ajaccio és Bastia között, kb. 600 méterre a tengerszint felett és kb. 1 km-re Venaco településtől, remek kilátással a hegyekre. Ez nem tengerparti szállás, de tökéletes kiindulópontja lehet a hegyi túráknak.', 'Büféreggeli, transzfer', 2, 'temp.png', 0, 3, 4, 'reggeli', NULL, 0, NULL, NULL, 2, NULL, NULL, NULL, 'hotel-u-frascone', 'Teszt út 9.', 'Hotel U Frascone'),
