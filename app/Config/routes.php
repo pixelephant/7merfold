@@ -42,6 +42,9 @@
 	Router::connect('/szolgaltatasok', array('controller' => 'home', 'action' => 'static_page'));
 	Router::connect('/ajandekutalvany', array('controller' => 'home', 'action' => 'static_page'));
 
+	Router::connect('/orszag/:country_slug', array('controller' => 'countries', 'action' => 'show'));
+	Router::connect('/regio/:region_slug', array('controller' => 'regions', 'action' => 'show'));
+
 	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
 	Router::connect('/menu/get_sub_menu/:category_slug', array('controller' => 'home', 'action' => 'get_sub_menu'));
 	Router::connect('/region/get_trips/:region_id/:category_id', array('controller' => 'home', 'action' => 'get_trips'));

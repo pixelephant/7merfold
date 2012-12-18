@@ -2,7 +2,7 @@
 class Country extends AppModel {
     public $name = 'Country';
 
-    public $hasMany = array('Trip', 'Region');
+    public $hasMany = array('Trip', 'Region', 'CountryImage');
 
     public $validate = array(
 	    'name' => array(

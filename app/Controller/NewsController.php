@@ -45,7 +45,7 @@ class NewsController extends AppController {
 
 		$params = $this->request->params;
 		$news_slug = $params['news_slug'];
-		$news = $this->News->find('first', array('condition' => array('News.slug' => $news_slug)));
+		$news = $this->News->find('first', array('conditions' => array('News.slug' => $news_slug)));
 
 		$breadcrumb = array(('hirek/' . $news_slug) => $news['News']['title']);
 
