@@ -57,4 +57,37 @@ class NewsController extends AppController {
 		$this->render('show');
 	}
 
+	/* Admin */
+
+	public function admin_index(){
+		$this->paginate = array('limit' => 2);
+
+		$news = $this->paginate('News');
+
+		$this->set('name', 'Hírek');
+		$this->set('news', $news);
+	}
+
+	public function admin_new(){
+
+		if(!empty($this->request->data['News'])){
+			if(isset($this->request->data['News']['id'])){
+				$this->News->findById($this->request->data['News']['id']);
+			}else{
+				$this->News->create();
+			}
+			$c = $this->News->save($this->request->data);
+			$this->redirect('/admin/news/edit/'.$c['News']['id']);
+		}
+	}
+
+	/* Szerkesztés */
+
+	public function admin_edit(){
+		$params = $this->request->params;
+
+		$this->request->data = $this->News->findById($params['pass'][0]);
+		$this->set('news', $this->News->find('list'));
+	}
+
 }

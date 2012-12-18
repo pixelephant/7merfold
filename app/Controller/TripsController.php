@@ -183,7 +183,11 @@ class TripsController extends AppController {
 
 		if(!empty($this->request->data['Trip'])){
 			$type = $this->request->data['Trip']['category_id'];
-			$this->Trip->create();
+			if(isset($this->request->data['Trip']['id'])){
+				$this->Trip->findById($this->request->data['Trip']['id']);
+			}else{
+				$this->Trip->create();
+			}
 			$this->Trip->save($this->request->data);
 			$this->set('type', $type);
 		}else{

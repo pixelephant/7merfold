@@ -39,7 +39,11 @@ class CountriesController extends AppController {
 	public function admin_new(){
 
 		if(!empty($this->request->data['Country'])){
-			$this->Country->create();
+			if(isset($this->request->data['Country']['id'])){
+				$this->Country->findById($this->request->data['Country']['id']);	
+			}else{
+				$this->Country->create();
+			}
 			$c = $this->Country->save($this->request->data);
 			$this->redirect('/admin/countries/edit/'.$c['Country']['id']);
 		}

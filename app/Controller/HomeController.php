@@ -168,4 +168,14 @@ class HomeController extends AppController {
 		$this->render('email_thankyou');
 	}
 
+	public function country_regions(){
+
+		$country_id = (int)($this->request->params['country_id']);
+
+		$c = $this->Region->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Region.country_id' => $country_id)));
+
+		$this->set('content', json_encode($c));
+		$this->render('ajax', 'ajax');
+	}
+
 }
