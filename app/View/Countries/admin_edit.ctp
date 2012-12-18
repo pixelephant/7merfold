@@ -7,6 +7,7 @@
 <?php
 	print_r($this->validationErrors);
 	echo $this->Form->create('Country', array('type' => 'file', 'url' => '/admin/countries/new'));
+	echo $this->Form->input('id', array('type' => 'hidden', 'value' => $this->request->data['Country']['id']));
 	echo $this->Form->input('name');
 	echo $this->Form->input('information');
 	echo $this->Form->input('useful_information');
@@ -20,7 +21,7 @@
 
 	<?php 
 		foreach ($images as $image){
-			echo $this->element('admin/admin_delete', array('id' => $image['CountryImage']['id'], 'url' => 'admin/country_images/delete/'));
+			echo $this->element('admin/admin_delete', array('id' => $image['CountryImage']['id'], 'url' => '/admin/country_images/delete/'));
 			echo $this->Form->create('CountryImage', array('type' => 'file', 'url' => '/admin/country_images/new'));
 			echo $this->Form->input('country_id', array('type' => 'hidden', 'value' => $this->request->data['Country']['id']));
 			echo $this->Form->input('id', array('type' => 'hidden', 'value' => $image['CountryImage']['id']));

@@ -40,7 +40,8 @@ class CountriesController extends AppController {
 
 		if(!empty($this->request->data['Country'])){
 			$this->Country->create();
-			$this->Country->save($this->request->data);
+			$c = $this->Country->save($this->request->data);
+			$this->redirect('/admin/countries/edit/'.$c['Country']['id']);
 		}
 	}
 

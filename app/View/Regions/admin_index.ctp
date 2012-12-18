@@ -4,7 +4,7 @@
 
 <div class="trips index">
 	<h2><?php echo $name; ?></h2>
-	<?php echo $this->Html->link('Új ország', '/admin/countries/new'); ?>
+	<?php echo $this->Html->link('Új régió', '/admin/regions/new'); ?>
 	<table cellpadding="0" cellspacing="0">
 		<tbody>
 			<tr>
@@ -13,16 +13,16 @@
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
 					<th>Műveletek</th>
 			</tr>
-			<?php foreach ($countries as $key => $country) { ?>				
+			<?php foreach ($regions as $key => $region) { ?>				
 				<tr>
-					<td><?php echo $country['Country']['name']; ?></td>
-					<td><?php echo $country['Country']['created']; ?></td>
-					<td><?php echo $country['Country']['id']; ?></td>
+					<td><?php echo $region['Region']['name']; ?></td>
+					<td><?php echo $region['Region']['created']; ?></td>
+					<td><?php echo $region['Region']['id']; ?></td>
 					<td class="actions">						
-						<?php echo $this->Html->link('Szerkeszt', '/admin/countries/edit/'.$country['Country']['id']); ?>
-						<form action="<?php echo $this->Html->url('/admin/countries/delete/' . $country['Country']['id']); ?>" name="post_<?php echo $country['Country']['id']; ?>" id="post_<?php echo $country['Country']['id']; ?>" style="display:none;" method="post">
+						<?php echo $this->Html->link('Szerkeszt', '/admin/regions/edit/'.$region['Region']['id']); ?>
+						<form action="<?php echo $this->Html->url('/admin/regions/delete/' . $region['Region']['id']); ?>" name="post_<?php echo $region['Region']['id']; ?>" id="post_<?php echo $region['Region']['id']; ?>" style="display:none;" method="post">
 						<input type="hidden" name="_method" value="POST"></form>
-						<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $country['Country']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
+						<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $region['Region']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
 					</td>
 				</tr>
 			<?php } ?>
