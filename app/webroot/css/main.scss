@@ -526,7 +526,7 @@ a.offer{
   &.boat{
     span{
       color: #fff;
-      font-size: 8em;
+      font-size: 5em;
       line-height: 1;
     }
   }
@@ -543,7 +543,7 @@ a.offer{
     padding-top: 1em;
   }
   h2 a{
-    font-size: 1.5em;
+    font-size: 1em;
     @include gi;
     color:#fff;
   }
@@ -576,16 +576,6 @@ a.offer{
     text-decoration: none;
     color: #fff;
     font-weight: 200;
-  }
-
-  .totop{
-    text-align: center;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid $blue;
-    span{
-      display: block;
-    }
   }
   p{
     text-align: center;
@@ -967,14 +957,10 @@ a.offer{
     text-align:center;
     padding:0.5em 0;
     font-size:0.8em;
-    &:last-child{
+    &:last-child,&:nth-last-child(2){
       border-bottom:none;
     }
   }
-  }
-
-  .totop{
-    display:none !important;
   }
 
   #top-contact{
@@ -1100,6 +1086,9 @@ a.offer{
     margin-top:0;
     margin-bottom:20px;
   }
+  input[type="checkbox"]{
+   margin-bottom:20px; 
+  }
   input[type="submit"]{
     @include purple-button;
   }
@@ -1148,7 +1137,7 @@ a.offer{
      }
   }
 
-  #contact a,.totop {
+  #contact a{
     @include t;
     &:hover,&:focus{
       background: #1A7DBA;

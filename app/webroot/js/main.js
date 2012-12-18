@@ -185,13 +185,7 @@ $(document).ready(function(){
           $(".white-arrow").removeClass("white-arrow");
         }
       });
-
-      $("#sub-grid li a").click(function(){
-        if($("#mobile-nav").css("display") === "none" && $(this).hasClass("drop")){
-         
-          return false;
-        }
-      });
+      
 
       $("#contact-trigger").click(function(){
         $("html,body").animate({ scrollTop: $("#contact").offset().top }, "slow");
