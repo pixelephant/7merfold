@@ -138,7 +138,8 @@
   transition: all 0.3s ease-in-out;
   /* Firefox 16+, Opera 12.50+ */
   font-size: 1em;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: 1.2; }
 
 .offer {
   overflow: hidden; }
@@ -218,7 +219,6 @@ h2.info .icon, h3.info .icon {
 @media all and (min-width: 79em) {
   .offer-list a.offer {
     width: 50% !important;
-    height: 315px;
     float: left; } }
 .no-touch .offer-list a.offer img {
   -webkit-transition: all 0.3s ease-in-out;

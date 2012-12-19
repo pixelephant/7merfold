@@ -73,6 +73,7 @@
   @include purple-button;
   font-size: 1em;
   text-decoration: none;
+  line-height:1.2;
 }
 
 
@@ -188,7 +189,7 @@ h2.info .icon,h3.info .icon{
 @media all and (min-width: 79em){
   .offer-list a.offer{
     width:50% !important;
-     height: 315px;
+     
     float:left;
   }
 }
