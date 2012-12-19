@@ -376,8 +376,7 @@ body {
 
 #sub-grid {
   list-style: none;
-  position: relative;
-  overflow-y: scroll; }
+  position: relative; }
   #sub-grid li {
     border-bottom: 1px solid #cccccc;
     text-align: center;
@@ -484,6 +483,8 @@ body {
         content: '← '; }
       .breadcrumb ul li.home a:before {
         content: ''; }
+      .breadcrumb ul li.home, .breadcrumb ul li.home a {
+        font-style: normal !important; }
       .breadcrumb ul li:last-child, .breadcrumb ul li:last-child:before, .breadcrumb ul li:last-child:after {
         border: none; }
       .breadcrumb ul li a {

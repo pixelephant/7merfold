@@ -30,25 +30,25 @@
                       <?php echo $this->Html->image('logo.png', array('alt' => '7mérföld Utazási Iroda')); ?>
                     </a>
                     <section id="top-contact">
-                      <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Bp, Bécsi út 81.</span></a>
-                      <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 70 634-8889</span></a>
-                       <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 1 240-1978</span></a>
-                        <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
-              <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">7Mérföld hírlevél</span></a>
-                      <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
+                      <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="&#xe002;"></span> <span class="data">1037 Bp, Bécsi út 81.</span></a>
+                      <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 70 634-8889</span></a>
+                       <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 1 240-1978</span></a>
+                        <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="&#xe004;"></span><span class="data">Likeolj minket!</span></a>
+              <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="&#xe001;"></span><span class="data">7Mérföld hírlevél</span></a>
+                      <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">info@7merfold.com</span></a>
                      <!-- <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
                       <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a> -->
                     </section>
                   <nav id="mobile-nav">
                       <ul class="clearfix">
                           <li><a id="contact-trigger" href="#contact">
-                          <span aria-hidden="true" data-icon="c"></span>
+                          <span aria-hidden="true" data-icon="&#xe006;"></span>
                           Kapcsolat</a></li>
                           <li><a id="search-trigger" href="#">
-                          <span aria-hidden="true" data-icon="s"></span>
+                          <span aria-hidden="true" data-icon="&#xe007;"></span>
                           Keresés</a></li>
                           <li><a id="sub-trigger" href="#">
-                          <span aria-hidden="true" data-icon="m"></span>
+                          <span aria-hidden="true" data-icon="&#xe008;"></span>
                           Menü</a></li>
                       </ul>
                   </nav>
@@ -71,14 +71,14 @@
             <?php echo $this->fetch('sidebar'); ?>
           <footer id="main-footer">
             <div id="contact">
-              <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="a"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
-              <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 70 634-8889</span></a>
-              <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="t"></span> <span class="data">+36 1 240-1978</span></a>
-              <a href="tel:+3612401978"><span class="icon fax" aria-hidden="true" data-icon="x"></span> <span class="data">+36 1 240-1978</span></a>
-              <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="e"></span> <span class="data">info@7merfold.com</span></a>
-              <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
-              <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
-              <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="u"></span>Oldal tetejére</a>
+              <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="&#xe002;"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 70 634-8889</span></a>
+              <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="tel:+3612401978"><span class="icon fax" aria-hidden="true" data-icon="&#xe00c;"></span> <span class="data">+36 1 240-1978</span></a>
+              <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span> <span class="data">info@7merfold.com</span></a>
+              <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="&#xe004;"></span><span class="data">Likeolj minket!</span></a>
+              <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="&#xe001;"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+              <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="&#xe009;"></span>Oldal tetejére</a>
             </div>
             <p>
               <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <a href="#">utazási feltételek</a> | <a href="#">állás</a>

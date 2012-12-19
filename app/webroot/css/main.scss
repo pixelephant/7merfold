@@ -24,6 +24,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
+
+
+
 ::-webkit-validation-bubble{
   z-index:10000;
   position: relative;
@@ -148,7 +151,6 @@ body{
 #sub-grid{
   list-style: none;
   position: relative;
-  overflow-y:scroll;
   li{
     //border:1px solid $gray;
     border-bottom:1px solid $gray;
@@ -279,6 +281,9 @@ body{
       }
       &.home a:before{
        content: ''; 
+      }
+      &.home,&.home a{
+        font-style:normal !important;
       }
       &:last-child,&:last-child:before,&:last-child:after{
         border:none;

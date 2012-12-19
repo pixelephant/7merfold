@@ -126,7 +126,7 @@
 <?php if($trip['Trip']['hajozz'] == 1){ ?>
   <div class="cta boat">
     <h3>Gyere hajózni!</h3>
-    <span class="icon" aria-hidden="true" data-icon="b"></span>
+    <span class="icon" aria-hidden="true" data-icon="&#xe005;"></span>
     <h2><a href="http://www.hajozz.eu" target="_blank">hajozz.eu</a></h2>
   </div>
 <?php } ?>

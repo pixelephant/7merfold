@@ -40,7 +40,7 @@ class AppHelper extends Helper {
 		if($star_number > 0){
         	$content .= '<span class="stars">';
         		for($i=0;$i<$star_number;$i++){
-        			$content .= '<span class="icon star" aria-hidden="true" data-icon="*"></span>';
+        			$content .= '<span class="icon star" aria-hidden="true" data-icon="&#xe00a;"></span>';
         		}
         	$content .= '</span>';
         }
