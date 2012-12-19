@@ -138,6 +138,14 @@ p.accommodation,p.price{
   display:none;
 }
 
+#sidebar.fixed{
+      position: fixed;
+      z-index: 1000;
+      right: 5%;
+      width: 22.75%;
+      //border-bottom:2px solid $border-gray;
+}
+
 #inline-nav{
   display:none;
 

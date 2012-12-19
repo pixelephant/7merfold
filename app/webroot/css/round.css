@@ -205,6 +205,12 @@ p.accommodation, p.price {
 #prices .getquote, #hotelek .getquote, #leiras .getquote, #arak .getquote {
   display: none; }
 
+#sidebar.fixed {
+  position: fixed;
+  z-index: 1000;
+  right: 5%;
+  width: 22.75%; }
+
 #inline-nav {
   display: none; }
   #inline-nav a {
