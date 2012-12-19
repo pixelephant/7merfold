@@ -138,13 +138,16 @@ p.accommodation,p.price{
   display:none;
 }
 
-#sidebar.fixed{
+.no-touch{
+  #sidebar.fixed{
       position: fixed;
       z-index: 1000;
-      right: 5%;
+      right: 4.8%;
       width: 22.75%;
-      top:0;
+      top:1%;
+    
       //border-bottom:2px solid $border-gray;
+}
 }
 
 #inline-nav{
@@ -207,10 +210,10 @@ position: relative;
   .halfer{
     width: 49.5%;
     float:left;
+  }
+
+  #vizum{
     margin-right:1%;
-    &:nth-child(odd){
-      margin-right:0;
-    }
   }
 
  #main-content{

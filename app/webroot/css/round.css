@@ -205,12 +205,12 @@ p.accommodation, p.price {
 #prices .getquote, #hotelek .getquote, #leiras .getquote, #arak .getquote {
   display: none; }
 
-#sidebar.fixed {
+.no-touch #sidebar.fixed {
   position: fixed;
   z-index: 1000;
-  right: 5%;
+  right: 4.8%;
   width: 22.75%;
-  top: 0; }
+  top: 1%; }
 
 #inline-nav {
   display: none; }
@@ -256,10 +256,10 @@ p.accommodation, p.price {
 
   .halfer {
     width: 49.5%;
-    float: left;
+    float: left; }
+
+  #vizum {
     margin-right: 1%; }
-    .halfer:nth-child(odd) {
-      margin-right: 0; }
 
   #main-content {
     width: 74%;

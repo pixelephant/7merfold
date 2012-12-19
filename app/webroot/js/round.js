@@ -44,15 +44,14 @@ b.wrap;break;case "over":c=b.inner;break;default:c=b.skin,d.appendTo("body"),f.b
 k=h.get(0)[j]),k&&(""!==k&&"nofollow"!==k)&&(h=c.length?f(c):e,h=h.filter("["+j+'="'+k+'"]'),i=h.index(this)),a.index=i,!1!==b.open(h,a)&&g.preventDefault())},a=a||{};d=a.index||0;!c||!1===a.live?e.unbind("click.fb-start").bind("click.fb-start",j):m.undelegate(c,"click.fb-start").delegate(c+":not('.fancybox-item, .fancybox-nav')","click.fb-start",j);this.filter("[data-fancybox-start=1]").trigger("click");return this};m.ready(function(){f.scrollbarWidth===q&&(f.scrollbarWidth=function(){var a=f('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo("body"),
 b=a.children(),b=b.innerWidth()-b.height(99).innerWidth();a.remove();return b});if(f.support.fixedPosition===q){var a=f.support,d=f('<div style="position:fixed;top:20px;"></div>').appendTo("body"),e=20===d[0].offsetTop||15===d[0].offsetTop;d.remove();a.fixedPosition=e}f.extend(b.defaults,{scrollbarWidth:f.scrollbarWidth(),fixed:f.support.fixedPosition,parent:f("body")})})})(window,document,jQuery);
 
-$(document).ready(function(){
 
-
-var el = $('#sidebar');
+$(window).load(function(){
+	var el = $('#sidebar');
       var stickyTop = $('#sidebar').offset().top; // returns number
       var stickyHeight = $('#sidebar').height();
 
       $(window).scroll(function(){ // scroll event
-          var limit = $('#main-footer').offset().top - stickyHeight;
+          var limit = $('#main-footer').offset().top - stickyHeight - 10;
 
           var windowTop = $(window).scrollTop(); // returns number
 
@@ -67,7 +66,16 @@ var el = $('#sidebar');
           var diff = limit - windowTop;
           el.css({top: diff});
           }
+          else{
+          	el.css({top: '1%'});
+          }
         });
+});
+
+$(document).ready(function(){
+
+
+	  
 
 /*
 var topos = $("#sidebar").offset().top;
@@ -79,8 +87,8 @@ $(window).scroll(function (event) {
 	    } else {
 	      $('#sidebar').removeClass('fixed');
 	    }
-	  });
-*/
+	  }); 
+*/  
 $(".important,#inline-nav a").click(function(e){
    e.preventDefault();
    var href = $(this).attr("href");
