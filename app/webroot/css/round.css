@@ -209,7 +209,8 @@ p.accommodation, p.price {
   position: fixed;
   z-index: 1000;
   right: 5%;
-  width: 22.75%; }
+  width: 22.75%;
+  top: 0; }
 
 #inline-nav {
   display: none; }

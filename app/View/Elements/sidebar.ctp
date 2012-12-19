@@ -1,4 +1,4 @@
-<div id="sidebar">
+<div id="sidebar" class="no-flick">
   <section class="section">
   	<h2>Tartalom</h2>
   	<div class="cont">
