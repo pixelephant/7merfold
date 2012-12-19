@@ -1,7 +1,7 @@
 <section class="section collapsible <?php echo $closed ? "closed" : ""; ?>" id="arak">
 <h2 <?php echo $closed ? "" : 'class="open"'; ?>><a href="#">Árak és infók<span><?php echo $closed ? "+" : "-"; ?></span></a></h2>
 <div class="cont">
-    <div>
+    <!-- <div>
         <div class="block">
         <h3>Érkezési nap/minimum tartózkodás</h3>
         <p><?php echo $trip['Trip']['day']; ?></p>
@@ -12,7 +12,7 @@
         
     </div>
     <div class="block">
-            <!-- <table class="table">
+            <table class="table">
             <thead>
                 <th>Indulási időpontok (9 nap/7 éj) </th>
                 <th>Ft/fő</th>
@@ -31,7 +31,7 @@ aug. 3., 10.</td>
 <td>119 990</td>
                 </tr>
             </tbody>
-        </table> -->
+        </table>
         </div>
     <div class="block">
         <h3>Ár tartalmazza</h3>
@@ -41,6 +41,7 @@ aug. 3., 10.</td>
         <h3>Bomba ajánlat</h3>
         <p><?php echo $trip['Trip']['special']; ?></p>
     </div>
-    </div>
+    </div> -->
+    <p><?php echo $trip['Trip']['price']; ?></p>
 </div>
 </section>

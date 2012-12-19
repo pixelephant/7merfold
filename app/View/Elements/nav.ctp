@@ -8,10 +8,12 @@
 <?php if($trip_type == '2'){ ?>
 	<a href="#program">Program</a>
 	<a href="#arak">Árak és infók</a>
+	<a href="#latnivalok">Látnivalók</a>
 <?php } ?>
 
 <?php if($trip_type == '3' || $trip_type == '4'){ ?>
 	<a href="#leiras">Leírás</a>
+	<a href="#ellatas">Ellátás</a>
 	<a href="#hotel">Képek a hotelről</a>
 	<a href="#arak">Árak és infók</a>
 <?php } ?>
@@ -20,4 +22,5 @@
 	<a href="#program">Program</a>
 	<a href="#arak">Árak és infók</a>
 	<a href="#utvonal">Útvonal</a>
+	<a href="#kepek">Képgaléria</a>
 <?php } ?>

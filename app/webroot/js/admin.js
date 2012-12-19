@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var country = $('#TripCountryId').val();
 	  $.post('/7merfold/regions/' + country, function(data) {
 	  	  data = $.parseJSON(data);
-	  	  var options = '';
+	  	  var options = '<option value="">Nincs régió</option>';
 		  $.each(data, function(id, name) {
 		    options += '<option value="' + id + '">' + name + '</option>';
 		  });

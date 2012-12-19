@@ -4,18 +4,18 @@ class Trip extends AppModel {
 
     public $belongsTo = array('Country', 'Region', 'Category');
 
-    public $hasMany = array('Program','Hotel','Map');
+    public $hasMany = array('Program','Hotel','Map','Sight');
 
-    public $hasAndBelongsToMany = array(
-        'Sight' =>
-            array(
-                'className'              => 'Sight',
-                'joinTable'              => 'sights_trips',
-                'foreignKey'             => 'trip_id',
-                'associationForeignKey'  => 'sight_id',
-                'unique'                 => true,
-            )
-    );
+    // public $hasAndBelongsToMany = array(
+    //     'Sight' =>
+    //         array(
+    //             'className'              => 'Sight',
+    //             'joinTable'              => 'sights_trips',
+    //             'foreignKey'             => 'trip_id',
+    //             'associationForeignKey'  => 'sight_id',
+    //             'unique'                 => true,
+    //         )
+    // );
 
     // public $validate = array(
     //     'name' => array(

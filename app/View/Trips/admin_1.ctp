@@ -11,6 +11,14 @@
 					<th><?php echo $this->Paginator->sort('name', 'Cím'); ?></th>
 					<th><?php echo $this->Paginator->sort('created', 'Létrehozás'); ?></th>
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
+					<?php 
+						if($id == 4 || $id == 3){
+					?>
+						<th><?php echo $this->Paginator->sort('country', 'Ország'); ?></th>
+						<th><?php echo $this->Paginator->sort('region', 'Régió'); ?></th>
+					<?php
+						}
+					 ?>
 					<th>Műveletek</th>
 			</tr>
 			<?php foreach ($trips as $key => $trip) { ?>				
@@ -18,9 +26,19 @@
 					<td><?php echo $trip['Trip']['name']; ?></td>
 					<td><?php echo $trip['Trip']['created']; ?></td>
 					<td><?php echo $trip['Trip']['id']; ?></td>
+
+					<?php 
+						if($id == 4 || $id == 3){
+					?>
+						<td><?php echo $trip['Country']['name']; ?></td>
+						<td><?php echo $trip['Region']['name']; ?></td>
+					<?php
+						}
+					 ?>
+
 					<td class="actions">
-						<a href="/admin/trips/edit/<?php echo $trip['Trip']['id']; ?>">Szerkeszt</a>
-						<form action="/admin/trips/delete/<?php echo $trip['Trip']['id']; ?>" name="post_<?php echo $trip['Trip']['id']; ?>" id="post_<?php echo $trip['Trip']['id']; ?>" style="display:none;" method="post">
+						<a href="<?php echo $this->Html->url('/admin/trips/edit/'); ?><?php echo $trip['Trip']['id']; ?>">Szerkeszt</a>
+						<form action="<?php echo $this->Html->url('/admin/trips/delete/'); ?><?php echo $trip['Trip']['id']; ?>" name="post_<?php echo $trip['Trip']['id']; ?>" id="post_<?php echo $trip['Trip']['id']; ?>" style="display:none;" method="post">
 						<input type="hidden" name="_method" value="POST"></form>
 						<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $trip['Trip']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
 					</td>

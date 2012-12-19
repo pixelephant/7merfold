@@ -737,3 +737,13 @@ pre {
 #url-rewriting-warning {
 	display:none;
 }
+
+.cancel_button{
+	position: relative;
+	top: -50px;
+	right: -100px;
+}
+
+input["type=text"]{
+	
+}

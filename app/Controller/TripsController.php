@@ -33,7 +33,7 @@ class TripsController extends AppController {
 
 	public $scaffold = 'admin';
 	public $name = 'Trips';
-	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight', 'TripSight');
+	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -188,14 +188,23 @@ class TripsController extends AppController {
 			}else{
 				$this->Trip->create();
 			}
-			$this->Trip->save($this->request->data);
+			/* új sor */
+				foreach ($this->request->data['Trip'] as $key => $value) {
+					if(!stripos($key, 'file')){
+						$this->request->data['Trip'][$key] = nl2br(h($value));
+					}
+				}
+			/* új sor vége */
+			$c = $this->Trip->save($this->request->data);
 			$this->set('type', $type);
+			$id = $c['Trip']['id'];
+			$this->redirect('/admin/trips/edit/'.$id);
 		}else{
 			$type = $_GET['type_id'];
 
 			$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
 
-			$countries = $this->Country->find('list');
+			$countries = $this->Country->find('list', array('fields' => array('id','name')));
 			$this->set('countries', $countries);
 
 			reset($countries);
@@ -214,7 +223,7 @@ class TripsController extends AppController {
 		$params = $this->request->params;
 
 		$this->request->data = $this->Trip->findById($params['pass'][0]);
-		$this->set('countries', $this->Country->find('list'));
+		$this->set('countries', $this->Country->find('list', array('fields' => array('id','name'))));
 
 		$programs = $this->Program->find('all', array('conditions' => array('Program.trip_id' => $params['pass'][0])));
 		$this->set('programs', $programs);
@@ -222,8 +231,7 @@ class TripsController extends AppController {
 		$hotels = $this->Hotel->find('all', array('conditions' => array('Hotel.trip_id' => $params['pass'][0])));
 		$this->set('hotels', $hotels);
 
-		// $sights = $this->Trip->find('all', array('conditions' => array('trip_id' => $params['pass'][0])))->Sight->find('all');
-		$sights = array();
+		$sights = $this->Sight->find('all', array('conditions' => array('Sight.trip_id' => $params['pass'][0])));
 		$this->set('sights', $sights);
 	}
 

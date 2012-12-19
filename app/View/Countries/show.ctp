@@ -1,5 +1,6 @@
 <?php $this->Html->script('round', array('inline' => false)); ?>
 <?php $this->Html->css('round', null, array('inline' => false)); ?>
+
 <section class="section">
 	<h2><?php echo $country['Country']['name']; ?></h2>
 	<div class="cont formatted">

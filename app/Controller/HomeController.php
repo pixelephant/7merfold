@@ -104,7 +104,12 @@ class HomeController extends AppController {
 
 			if($cat_slug == 'nyaralasok-uveghegyen-innen' || $cat_slug == 'nyaralasok-uveghegyen-tul'){
 				$countries = $this->Trip->find('list', array('fields' => array('Trip.id', 'Trip.country_id'), 'conditions' => array('Trip.category_id' => $cat['Category']['id']), 'group' => 'Trip.country_id'));
-				$ids = implode(",", $countries);
+				$ids = array();
+
+				foreach ($countries as $key => $value) {
+					$ids[] = $value;
+				}
+
 				$countries = $this->Country->find('list', array('fields' => array('Country.slug', 'Country.name'), 'conditions' => array('Country.id' => $ids)));
 				foreach ($countries as $country_slug => $name) {
 					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';

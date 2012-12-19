@@ -44,19 +44,21 @@ class EmailConfig {
 
 	public $default = array(
 		'transport' => 'Mail',
-		'from' => 'you@localhost',
+		'from' => 'weboldal@7merfold.com',
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
-		'host' => 'localhost',
+		'from' => array('weboldal@7merfold.com' => '7Mérföld utazási iroda'),
+		'to' => array('0antalbalazs0@gmail.com' => '7Mérföld utazási iroda'),
+		'subject' => 'Érdeklődés a weboldalról',
+		'host' => 'mail.pixelephant.hu',
 		'port' => 25,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'test1@pixelephant.hu',
+		'password' => 'pix3l3phant',
 		'client' => null,
 		'log' => false,
 		//'charset' => 'utf-8',
