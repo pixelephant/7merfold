@@ -4,6 +4,12 @@
 <?php 
   if($regioned){
     echo $this->element('region_selector', array('country_name' => $trips[0]['Country']['name'], 'country_slug' => $trips[0]['Country']['slug'], 'regions' => $regions));
+  }elseif($country_name != '' && $country_slug != ''){
+?>
+  <section class="section selecter">
+    <h2 class="clearfix info"><span><?php echo $country_name; ?><?php echo $this->Html->link('<span class="icon" aria-hidden="true" data-icon="i"></span>', '/orszag/'.$country_slug, array("escape"=>false)); ?></span></h2>
+  </section>
+<?php
   }
 ?>
 <section class="section offer-list">
