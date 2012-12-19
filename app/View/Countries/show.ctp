@@ -8,13 +8,15 @@
 	</div>
 </section>
 
-<section class="section gallery">
-<h2><?php echo $country['Country']['name']; ?> képekben</h2>
-<div class="cont">
-  <?php
-    foreach($country['CountryImage'] as $sight){
-      echo $this->Html->link(($this->Html->image('/img/thumbnails/'.$sight['image_file'], array('alt' => $sight['title'])) . '<span>' . $sight['title'] . '</span>'), '/img/' . $sight['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $sight['title']));
-    } 
-  ?>
-</div>
-</section>
+<?php if(!empty($country['CountryImage'])){ ?>
+	<section class="section gallery">
+	<h2><?php echo $country['Country']['name']; ?> képekben</h2>
+	<div class="cont">
+	  <?php
+	    foreach($country['CountryImage'] as $sight){
+	      echo $this->Html->link(($this->Html->image('/img/thumbnails/'.$sight['image_file'], array('alt' => $sight['title'])) . '<span>' . $sight['title'] . '</span>'), '/img/' . $sight['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $sight['title']));
+	    } 
+	  ?>
+	</div>
+	</section>
+<?php } ?>

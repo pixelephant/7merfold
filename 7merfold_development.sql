@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Hoszt: localhost
--- Létrehozás ideje: 2012. dec. 18. 15:51
+-- Létrehozás ideje: 2012. dec. 19. 10:02
 -- Szerver verzió: 5.5.16
 -- PHP verzió: 5.3.8
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
   `keywords` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   `title` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=14 ;
 
 --
 -- A tábla adatainak kiíratása `countries`
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `countries` (
 
 INSERT INTO `countries` (`id`, `information`, `useful_information`, `created`, `name`, `visa_info`, `image_file`, `slug`, `keywords`, `title`) VALUES
 (1, 'Görögország', 'Görögország hasznos', '2012-12-13 12:34:53', 'Görögország', 'vízum információ: Görögország', 'gorogo.png', 'Görögország1', 'Görögország', 'Görögország'),
-(2, 'Deviza előírások: a belföldi és külföldi fizetőeszközök be- és kivitele nem korlátozott.\r\nEgészségügyi előírások: kötelező védőoltás nincs, több helyen a palackozott víz fogyasztása javasolt.\r\nElektromos feszültség: 220 V.\r\nPénznem: euro, 1 EUR = 100 cent. Nemzetközi hitelkártyák széles körben elfogadottak.\r\nIdőjárás: kontinentális', 'Franciaország nemzeti szimbóluma Marianne, a gall-sapkás nőalak, aki egyben a szabadság és a francia forradalom jelképe is. Az előző szimbólum a Gall Kakas volt, a vakmerő bátorság jelképe.', '2012-12-15 14:44:09', 'Franciaország', 'vízum információ: Franciaország', 'franciao.png', 'franciaorszag', 'Franciaország', 'Franciaország'),
+(2, 'Deviza előírások: a belföldi és külföldi fizetőeszközök be- és kivitele nem korlátozott.\r\nEgészségügyi előírások: kötelező védőoltás nincs, több helyen a palackozott víz fogyasztása javasolt.\r\nElektromos feszültség: 220 V.\r\nPénznem: euro, 1 EUR = 100 cent. Nemzetközi hitelkártyák széles körben elfogadottak.\r\nIdőjárás: kontinentális', 'Franciaország nemzeti szimbóluma Marianne, a gall-sapkás nőalak, aki egyben a szabadság és a francia forradalom jelképe is. Az előző szimbólum a Gall Kakas volt, a vakmerő bátorság jelképe.\r\n\r\n<p>Szomszédai Belgium, Luxemburg, Németország, Svájc, Olaszország, Monaco, Andorra és Spanyolország. Tengerentúli függőségein keresztül határos Brazíliával, Suriname-mal és a Holland Antillákkal. Franciaországot és Nagy-Britanniát a La Manche-csatorna alatt futó Csalagút köti össze. Franciaország a legnagyobb területű nyugat-európai ország és a második legnagyobb kizárólagos gazdasági övezettel rendelkezik, mely több mint 11 millió négyzetkilométer területű.</p>', '2012-12-19 08:58:54', 'Franciaország', 'vízum információ: Franciaország', 'franciao.png', 'franciaorszag', 'Franciaország', 'Franciaország'),
 (3, 'országinformáció: Spanyolország', 'A spanyol szó végső eredete a latin HISPANIOLUS, azaz kb. ’hispánka’, amely espaignol alakban került a provanszálba, onnan español írásmóddal a spanyolba, majd a többi (újlatin) nyelvbe. A magyar nyelvben egy északolasz nyelvjárási – s-sel ejtett – spagnol alak honosodott meg.', '2012-12-15 14:52:04', 'Spanyolország', 'vízum információ: Spanyolország', 'franciao.png', 'Spanyolország3', 'Spanyolország', 'Spanyolország'),
 (4, 'országinformáció: Skócia', 'Skócia (angolul Scotland, skót gaelül Alba) Nyugat-Európában található, Nagy-Britannia második legnagyobb országrésze terület és népesség alapján. A Brit-sziget északi harmadát foglalja el, délről Anglia, keletről az Északi-tenger, északról és nyugatról az Atlanti-óceán határolja, délnyugatról pedig az Északi-csatorna és az Ír-tenger. Mintegy 790 sziget tartozik hozzá.', '2012-12-13 12:35:30', 'Skócia', 'vízum információ: Skócia', '3.jpeg', 'Skócia4', 'Skócia', 'Skócia'),
 (5, 'A Német Szövetségi Köztársaság (németül Bundesrepublik Deutschland; nemzetközi szerződésekben, okmányokban, hivatalos fórumokon a Németországi Szövetségi Köztársaság megnevezés szerepel hivatalos országnévként) Európa vezető, s a világ negyedik vezető ipari és gazdasági nagyhatalma (az USA, Kína és Japán után), Közép-Európában fekszik.', 'A Német Szövetségi Köztársaság (németül Bundesrepublik Deutschland; nemzetközi szerződésekben, okmányokban, hivatalos fórumokon a Németországi Szövetségi Köztársaság megnevezés szerepel hivatalos országnévként) Európa vezető, s a világ negyedik vezető ipari és gazdasági nagyhatalma (az USA, Kína és Japán után), Közép-Európában fekszik.', '2012-12-15 14:52:11', 'Németország', NULL, 'franciao.png', 'nemetorszag', 'Németország', 'Németország'),
@@ -112,14 +112,7 @@ CREATE TABLE IF NOT EXISTS `country_images` (
   `country_id` int(11) NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=2 ;
-
---
--- A tábla adatainak kiíratása `country_images`
---
-
-INSERT INTO `country_images` (`id`, `title`, `image_file`, `country_id`, `created`) VALUES
-(1, 'Kép címe', 'Atlantis_Cove8.jpg', 2, '2012-12-18 13:42:08');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=4 ;
 
 -- --------------------------------------------------------
 
@@ -262,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `regions` (
 INSERT INTO `regions` (`id`, `country_id`, `description`, `created`, `name`, `slug`, `title`, `keywords`) VALUES
 (1, 1, 'Kréta leírása', '2012-12-18 14:15:52', 'Kréta', 'n-a', '', ''),
 (2, 1, 'Korfu leírása', '0000-00-00 00:00:00', 'Korfu', '', '', ''),
-(3, 2, 'Korzika (franciául: Corse, korzikaiul: Corsica) a Földközi-tenger negyedik legnagyobb szigete (Szicília, Szardínia, és Ciprus után). Olaszországtól nyugatra, Szardínia szigetétől északra, Franciaországtól pedig délkeletre fekszik. A szigetet a Ligúr-tenger választja el a szárazföldtől.\r\n\r\n<p>Korzika Franciaország 26 régiójának egyike, noha a jog magát Korzika szigetét "kollektív territórumként" határozza meg. Számos olyan fontos jogot élvez, amely nagyobb hatáskört biztosít számára, mint amennyi a többi régió rendelkezésére áll, de összességében jogi helyzete mégiscsak a többi régióéhoz hasonló. A köznyelvben Korzikát mindenesetre csak mint régiont említik meg.</p>', '2012-12-18 13:50:03', 'Korzika', 'korzika', '', ''),
+(3, 2, 'Korzika (franciául: Corse, korzikaiul: Corsica) a Földközi-tenger negyedik legnagyobb szigete (Szicília, Szardínia, és Ciprus után). Olaszországtól nyugatra, Szardínia szigetétől északra, Franciaországtól pedig délkeletre fekszik. A szigetet a Ligúr-tenger választja el a szárazföldtől.\r\n\r\n<p>Korzika Franciaország 26 régiójának egyike, noha a jog magát Korzika szigetét "kollektív territórumként" határozza meg. Számos olyan fontos jogot élvez, amely nagyobb hatáskört biztosít számára, mint amennyi a többi régió rendelkezésére áll, de összességében jogi helyzete mégiscsak a többi régióéhoz hasonló. A köznyelvben Korzikát mindenesetre csak mint régiont említik meg.</p>\r\n\r\n<p>A sziget Bonaparte Napóleon szülőhelyeként ismert és igazi kis paradicsom, "karnyújtásnyira" a Földközi-tenger szívében, egy mindössze dunántúlnyi területen. Egy sziget, mely dúskál a fényben, az ízekben és az illatokban... Az ezerarcú sziget szintén találó jelző Korzikáról szólva, mert olyan, mint egy nagy könyv, melyben lapozgatva egymás után fedezzük fel titkait. A fellegvárak és falvak szigorú és büszke arculatát, barokk templomainak népies kedélyességét, a genovai őrtornyok füzérét, de mindenekelőtt természeti szépségeit, a kristálytiszta, türkízkék öblöket, 2000 méternél is magasabb hegyeket, a köztük megbúvó tengerszemeket, a vadregényes folyóvölgyeket, a szédítően meredek sziklafalakat....</p>', '2012-12-19 08:52:54', 'Korzika', 'korzika', '', ''),
 (4, 2, 'Cote d azur', '0000-00-00 00:00:00', 'Cote d azur', '', '', '');
 
 -- --------------------------------------------------------
@@ -279,7 +272,15 @@ CREATE TABLE IF NOT EXISTS `region_images` (
   `image_file` varchar(100) COLLATE utf8_hungarian_ci NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci AUTO_INCREMENT=3 ;
+
+--
+-- A tábla adatainak kiíratása `region_images`
+--
+
+INSERT INTO `region_images` (`id`, `region_id`, `title`, `image_file`, `created`) VALUES
+(1, 3, 'Korzika', 'korzika_01.jpg', '2012-12-19 08:50:49'),
+(2, 3, 'Korzika', 'korzika_03.jpg', '2012-12-19 08:50:49');
 
 -- --------------------------------------------------------
 
