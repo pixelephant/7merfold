@@ -7,7 +7,7 @@
 	echo $this->Form->input('travel_date');
 	echo $this->Form->input('hajozz');
 	echo $this->Form->input('country_id');
-	echo $this->Form->input('region_id');
+	echo $this->Form->input('region_id', array('empty' => 'Nincs régió'));
 	echo $this->Form->input('accommodation');
 	echo $this->Form->input('travel_method');
 	echo $this->Form->input('minimal_persons');
