@@ -247,8 +247,18 @@ p.accommodation, p.price {
   margin: 1em 0; }
 
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
+  .cta {
+    clear: both; }
+
+  .halfer {
+    width: 49.5%;
+    float: left;
+    margin-right: 1%; }
+    .halfer:nth-child(even) {
+      margin-right: 0; }
+
   #main-content {
-    width: 75%;
+    width: 74%;
     float: left; }
 
   #side-share .shares {
@@ -258,8 +268,8 @@ p.accommodation, p.price {
 
   #sidebar {
     display: block !important;
-    width: 22%;
-    margin-left: 3%;
+    width: 25%;
+    margin-left: 1%;
     float: left;
     font-size: 80%; }
     #sidebar .getquote {
@@ -273,7 +283,11 @@ p.accommodation, p.price {
     clear: both; }
 
   .section .cont {
-    display: block !important; }
+    display: block; }
+  .section.halfer .cont {
+    display: none; }
+  .section.halfer h2 a span {
+    display: block; }
   .section h2 a span {
     display: none; }
 

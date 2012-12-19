@@ -209,7 +209,8 @@ $(document).ready(function(){
 
 
 $(".collapsible h2 a").click(function(){
-   if($("#mobile-nav").css("display") === "none"){
+  console.log($(this).parents("section"));
+   if($("#mobile-nav").css("display") === "none" && !$(this).parents("section").hasClass("halfer")){
     return false;
    }
   var $this = $(this);

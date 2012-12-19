@@ -193,8 +193,21 @@ position: relative;
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
  
 
+ .cta{
+    clear:both;
+  }
+
+  .halfer{
+    width: 49.5%;
+    float:left;
+    margin-right:1%;
+    &:nth-child(even){
+      margin-right:0;
+    }
+  }
+
  #main-content{
-  width:75%;
+  width:74%;
   float:left;
  }
 
@@ -208,8 +221,8 @@ position: relative;
 
  #sidebar{
   display:block !important;
-  width:22%;
-  margin-left:3%;
+  width:25%;
+  margin-left:1%;
   float:left;
   font-size:80%;
   .getquote{
@@ -230,8 +243,16 @@ position: relative;
 
 .section{
   .cont{
-    display:block !important;
+    display:block;
   }
+    &.halfer .cont{
+    display:none;
+  }
+  &.halfer{
+    h2 a span{
+    display:block;
+  }
+}
   h2 a span{
     display:none;
   }
