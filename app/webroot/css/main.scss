@@ -39,6 +39,22 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
 }
 
 
+.lt-ie9{
+  .breadcrumb ul li{
+    display:block !important;
+  }
+  .flex-direction-nav{
+    display:none !important;
+  }
+
+  #sub-grid li{
+    border-bottom:1px solid $gray !important;
+  }
+  #sidebar{
+    position:static !important;
+  }
+} 
+
 #sidebar{
   display:none;
 }

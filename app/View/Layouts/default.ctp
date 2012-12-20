@@ -89,7 +89,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <!--[if lt IE 9]>
-          <script type="text/javascript" src="js/lte-ie7.js"></script>
+          <script type="text/javascript" src="<?php echo $this->webroot; ?>js/lte-ie7.js"></script>
           <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
         <![endif]-->
         <?php echo $this->Html->script(array('jpanel','main')); ?>

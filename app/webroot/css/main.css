@@ -278,6 +278,15 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
   -webkit-border-radius: 0;
   border-radius: 0; }
 
+.lt-ie9 .breadcrumb ul li {
+  display: block !important; }
+.lt-ie9 .flex-direction-nav {
+  display: none !important; }
+.lt-ie9 #sub-grid li {
+  border-bottom: 1px solid #cccccc !important; }
+.lt-ie9 #sidebar {
+  position: static !important; }
+
 #sidebar {
   display: none; }
 
