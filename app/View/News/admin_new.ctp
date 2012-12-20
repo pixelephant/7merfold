@@ -5,7 +5,7 @@
 
 <div class="news form">
 <?php
-	print_r($this->validationErrors);
+	// print_r($this->validationErrors);
 	echo $this->Form->create('News', array('type' => 'file', 'url' => '/admin/news/new'));
 	echo $this->Form->input('title');
 	echo $this->Form->input('content');

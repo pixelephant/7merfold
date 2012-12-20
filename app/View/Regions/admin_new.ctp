@@ -5,7 +5,7 @@
 
 <div class="regions form">
 <?php
-	print_r($this->validationErrors);
+	// print_r($this->validationErrors);
 	echo $this->Form->create('Region', array('type' => 'file', 'url' => '/admin/regions/new'));
 	echo $this->Form->input('name');
 	echo $this->Form->input('description');

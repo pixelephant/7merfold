@@ -189,11 +189,11 @@ class TripsController extends AppController {
 				$this->Trip->create();
 			}
 			/* új sor */
-				foreach ($this->request->data['Trip'] as $key => $value) {
-					if(!stripos($key, 'file')){
-						$this->request->data['Trip'][$key] = nl2br(h($value));
-					}
-				}
+				// foreach ($this->request->data['Trip'] as $key => $value) {
+				// 	if(!stripos($key, 'file')){
+				// 		$this->request->data['Trip'][$key] = nl2br(h($value));
+				// 	}
+				// }
 			/* új sor vége */
 			$c = $this->Trip->save($this->request->data);
 			$this->set('type', $type);

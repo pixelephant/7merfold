@@ -744,6 +744,6 @@ pre {
 	right: -100px;
 }
 
-input["type=text"]{
-	
+#admin_h1{
+	font: default !important;
 }
