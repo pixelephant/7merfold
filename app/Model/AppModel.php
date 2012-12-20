@@ -51,11 +51,20 @@ class AppModel extends Model {
     		if(stripos($field, 'file')){
     			if(!empty($this->data[$model][$field]['name'])){
     				$name = $this->data[$model][$field]['name'];
+    				$i = 1;
+    				$ext = pathinfo($name, PATHINFO_EXTENSION);
+	    			$bname = pathinfo($name, PATHINFO_FILENAME);
 	    			while(file_exists($this->webroot.'img/'.$name)){
-	    				$name = '1' . $name;
+	    				// $name = '1' . $name;
+	    				$name = $bname . "_" . $i . "." . $ext;
+	    				$i++;
 	    			}
 	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
-	    			$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200);
+	    			if($ext == 'jpg' || $ext == 'jpeg'){
+	    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200);
+	    			}else{
+	    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
+	    			}
 	    			$this->data[$model][$field] = $name;
     			}else{
     				unset($this->data[$model][$field]);
