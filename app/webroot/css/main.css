@@ -988,7 +988,8 @@ a.offer {
     padding: 0.5em 0; }
 
 .stars {
-  color: #fbb03b; }
+  color: #fbb03b;
+  font-style: normal !important; }
 
 .slides a.offer {
   width: auto; }
