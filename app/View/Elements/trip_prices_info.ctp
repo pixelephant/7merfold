@@ -22,6 +22,10 @@
             <h3>Minimum létszám</h3>
             <p><?php echo $trip['Trip']['minimal_persons']; ?></p>
         </div>
+        <div class="block">
+            <h3>Árleírás</h3>
+            <p><?php echo $trip['Trip']['price']; ?></p>
+        </div>
     </div>
 </div>
 </section>
