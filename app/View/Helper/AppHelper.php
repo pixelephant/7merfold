@@ -103,6 +103,7 @@ class AppHelper extends Helper {
     }
 
     public function trimText($text=null,$length=200,$showDots=true,$cutFirstWord=false ){
+        $text = strip_tags($text);
         $textArr = explode(" ",$text);
         if($showDots){
             $dotString = "...";
