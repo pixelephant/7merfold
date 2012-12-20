@@ -7,7 +7,7 @@
   }elseif($country_name != '' && $country_slug != ''){
 ?>
   <section class="section selecter">
-    <h2 class="clearfix info"><span><?php echo $country_name; ?><?php echo $this->Html->link('<span class="icon" aria-hidden="true" data-icon="i"></span>', '/orszag/'.$country_slug, array("escape"=>false)); ?></span></h2>
+    <h2 class="clearfix info"><span><?php echo $country_name; ?><?php echo $this->Html->link('<span class="icon" aria-hidden="true" data-icon="&#xe00d;"></span>', '/orszag/'.$country_slug, array("escape"=>false)); ?></span></h2>
   </section>
 <?php
   }
