@@ -138,8 +138,6 @@ var jPM;
 
 $(document).ready(function(){  
   
-
-
   $(".totop").click(function(){
     $("html,body").animate({ scrollTop: 0 }, "slow");
     return false;
@@ -148,18 +146,20 @@ $(document).ready(function(){
 	jPM = $.jPanelMenu({
         menu: '#mobile-submenu',
         trigger: '#sub-trigger',
-        openPosition:"80%",
+        direction: "right",
+        openPosition: "80%",
         keyboardShortcuts: false
       });
      jPM.on();
 
-
      if(window.matchMedia){
       var width1000Check = window.matchMedia("(min-width: 62.5em)");
-      width1000Check.addListener(jPM.off());
+      if(width1000Check.addListener){
+        width1000Check.addListener(jPM.off());
 
-      var width1000MaxCheck = window.matchMedia("(max-width: 62.5em)");
-      width1000MaxCheck.addListener(jPM.on());
+        var width1000MaxCheck = window.matchMedia("(max-width: 62.5em)");
+        width1000MaxCheck.addListener(jPM.on());
+      }
      }
 
       $("#jPanelMenu-menu").delegate(".close","click",function(){

@@ -466,7 +466,8 @@ body {
   -webkit-box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   box-shadow: 0px 5px 5px rgba(50, 50, 50, 0.2);
-  /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */ }
+  /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+  overflow: hidden; }
   .breadcrumb ul {
     overflow: hidden; }
     .breadcrumb ul li {
@@ -496,7 +497,8 @@ body {
         color: #333333;
         text-decoration: none;
         text-align: center;
-        padding: 0 0.5em; }
+        padding: 0 0.4em;
+        word-wrap: break-word; }
 
 .bread-arrow, .breadcrumb ul li {
   position: relative;
@@ -818,7 +820,7 @@ a.offer {
     transition: all 0.3s ease-in-out;
     /* Firefox 16+, Opera 12.50+ */
     display: block;
-    width: 40%;
+    width: 80%;
     margin: 20px auto; }
   .getquote p {
     width: 60%;
@@ -1239,6 +1241,12 @@ a.offer {
 
   #news .cont {
     padding: 20px !important; } }
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-device-width: 550px) and (orientation: landscape) {
+  #sub-grid li a {
+    padding: 1em; }
+    #sub-grid li a img {
+      display: none; } }
 @media all and (min-width: 43.75em) {
   .breadcrumb li {
     display: block !important; }

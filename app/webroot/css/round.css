@@ -79,7 +79,7 @@ p.accommodation, p.price {
   font-weight: normal;
   font-style: italic;
   font-size: 1.25em;
-  padding: 1em; }
+  padding: 0.5em; }
 .sum div {
   overflow: hidden;
   padding: 1em;

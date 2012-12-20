@@ -11,9 +11,9 @@
         <meta name="keywords" content="<?php echo $page_keywords ?>">
         <meta name="viewport" content="width=device-width">
         <meta name="apple-mobile-web-app-capable" content="yes" />
+
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,200italic,400italic,600italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
         <?php echo $this->fetch('css'); ?>
         <?php echo $this->Html->css(array('main')); ?>
         <?php echo $this->Html->script(array('vendor/modernizr-2.6.2.min')); ?>
@@ -90,9 +90,10 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <!--[if lt IE 9]>
           <script type="text/javascript" src="js/lte-ie7.js"></script>
+          <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
         <![endif]-->
         <?php echo $this->Html->script(array('jpanel','main')); ?>
-        <!--<?php echo $this->fetch('script'); ?>-->
+        <?php echo $this->fetch('script'); ?>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
