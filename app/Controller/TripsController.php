@@ -33,7 +33,7 @@ class TripsController extends AppController {
 
 	public $scaffold = 'admin';
 	public $name = 'Trips';
-	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight');
+	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight', 'Continent');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -204,6 +204,9 @@ class TripsController extends AppController {
 
 			$scaffoldFields = array('name', 'description', 'short_description', 'price', 'travel_date', 'travel_price_includes', 'country_id', 'region_id');
 
+			$continents = $this->Continent->find('list', array('fields' => array('id','name')));
+			$this->set('continents', $continents);
+
 			$countries = $this->Country->find('list', array('fields' => array('id','name')));
 			$this->set('countries', $countries);
 
@@ -223,7 +226,16 @@ class TripsController extends AppController {
 		$params = $this->request->params;
 
 		$this->request->data = $this->Trip->findById($params['pass'][0]);
-		$this->set('countries', $this->Country->find('list', array('fields' => array('id','name'))));
+
+		$continents = $this->Continent->find('list', array('fields' => array('id','name')));
+		$this->set('continents', $continents);
+
+		$conditions = array();
+		if(!empty($this->request->data['Trip']['continent_id'])){
+			$conditions = array("continent_id" => $this->request->data['Trip']['continent_id']);
+		}
+
+		$this->set('countries', $this->Country->find('list', array('fields' => array('id','name'), 'conditions' => $conditions)));
 
 		$programs = $this->Program->find('all', array('conditions' => array('Program.trip_id' => $params['pass'][0])));
 		$this->set('programs', $programs);

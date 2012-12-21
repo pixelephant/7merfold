@@ -108,7 +108,7 @@ object,
 embed,
 video,
 iframe {
-  width: auto;
+  /*width: auto;*/
   max-width: 100%;
 }
 /* Responsive images aspeсt ratio */

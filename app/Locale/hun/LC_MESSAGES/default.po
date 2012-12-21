@@ -267,6 +267,15 @@ msgstr "Útvonal"
 msgid "Maps"
 msgstr "Útvonalak"
 
+msgid "Map Image File"
+msgstr "Térkép"
+
+msgid "Continent"
+msgstr "Kontinens"
+
+msgid "Continents"
+msgstr "Kontinensek"
+
 #: egyéb
 msgid "saved"
 msgstr "mentése"

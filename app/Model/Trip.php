@@ -2,7 +2,7 @@
 class Trip extends AppModel {
     public $name = 'Trip';
 
-    public $belongsTo = array('Country', 'Region', 'Category');
+    public $belongsTo = array('Country', 'Region', 'Category', 'Continent');
 
     public $hasMany = array('Program','Hotel','Map','Sight');
 

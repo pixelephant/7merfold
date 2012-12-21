@@ -16,6 +16,7 @@
 	<li><?php echo $this->Html->link('Országok', '/admin/countries'); ?></li>
 	<!-- <li><?php echo $this->Html->link('Új ország', '/admin/countries/add'); ?></li> -->
 	<li><?php echo $this->Html->link('Régiók', '/admin/regions'); ?></li>
+	<!-- <li><?php echo $this->Html->link('Kontinensek', '/admin/continents'); ?></li> -->
 	<!-- <li><?php echo $this->Html->link('Új régió', '/admin/regions/add'); ?></li> -->
 	<li><?php echo $this->Html->link('Kategóriák', '/admin/categories'); ?></li>
 	<!-- <li><?php echo $this->Html->link('Új kategória', '/admin/categories/add'); ?></li> -->

@@ -8,18 +8,23 @@
 	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => ''));
 
 	echo $this->Form->input('name');
+	echo $this->Form->input('continent_id');
 	echo $this->Form->input('country_id');
-	echo $this->Form->input('region_id');
+	// echo $this->Form->input('region_id');
 	echo $this->Form->input('short_description');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
 	echo $this->Form->input('image_file', array('type' => 'file'));
-	if(isset($this->request->data['Trip']['image_file'])){
+	if(isset($this->request->data['Trip']['image_file']) && !empty($this->request->data['Trip']['image_file'])){
 		echo $this->Html->image($this->request->data['Trip']['image_file'], array('width' => 100));	
 	}
 	echo $this->Form->input('circle_image_file', array('type' => 'file'));
-	if(isset($this->request->data['Trip']['circle_image_file'])){
+	if(isset($this->request->data['Trip']['circle_image_file']) && !empty($this->request->data['Trip']['circle_image_file'])){
 		echo $this->Html->image($this->request->data['Trip']['circle_image_file'], array('width' => 100));
+	}
+	echo $this->Form->input('map_image_file', array('type' => 'file'));
+	if(isset($this->request->data['Trip']['map_image_file']) && !empty($this->request->data['Trip']['map_image_file'])){
+		echo $this->Html->image($this->request->data['Trip']['map_image_file'], array('width' => 100));	
 	}
 	echo $this->Form->input('price');
 	

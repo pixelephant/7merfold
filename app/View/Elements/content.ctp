@@ -23,7 +23,7 @@
 	echo $this->element('trip_programs', array('programs' => $trip['Program'], 'closed' => false));
 	// echo $this->element('trip_prices_info', array('trip' => $trip, 'closed' => $closed));
 	echo $this->element('trip_prices_info_uveghegy', array('trip' => $trip, 'closed' => $closed));
-	// echo $this->element('trip_map', array('trip' => $trip, 'closed' => $closed));
+	echo $this->element('trip_map', array('trip' => $trip, 'closed' => $closed));
 	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Képgaléria', 'id' => 'kepek', 'closed' => $closed));
 } ?>
 

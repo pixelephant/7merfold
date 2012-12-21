@@ -7,7 +7,7 @@ class CountriesController extends AppController {
 	public $scaffold = 'admin';
 	public $name = 'Countries';
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country', 'CountryImage');
+	public $uses = array('Country', 'CountryImage', 'Continent');
 
 	public function show() {
 
@@ -44,15 +44,22 @@ class CountriesController extends AppController {
 			}else{
 				$this->Country->create();
 			}
+
 			$c = $this->Country->save($this->request->data);
 			$this->redirect('/admin/countries/edit/'.$c['Country']['id']);
 		}
+
+		$continents = $this->Continent->find('list', array('fields' => array('id','name')));
+		$this->set('continents', $continents);
 	}
 
 	/* Szerkesztés */
 
 	public function admin_edit(){
 		$params = $this->request->params;
+
+		$continents = $this->Continent->find('list', array('fields' => array('id','name')));
+		$this->set('continents', $continents);
 
 		$this->request->data = $this->Country->findById($params['pass'][0]);
 		$this->set('countries', $this->Country->find('list'));

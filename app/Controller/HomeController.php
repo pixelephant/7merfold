@@ -45,7 +45,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country');
+	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent');
 
 /**
  * Displays a view
@@ -178,6 +178,16 @@ class HomeController extends AppController {
 		$country_id = (int)($this->request->params['country_id']);
 
 		$c = $this->Region->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Region.country_id' => $country_id)));
+
+		$this->set('content', json_encode($c));
+		$this->render('ajax', 'ajax');
+	}
+
+	public function continent_countries(){
+
+		$continent_id = (int)($this->request->params['continent_id']);
+
+		$c = $this->Country->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Country.continent_id' => $continent_id)));
 
 		$this->set('content', json_encode($c));
 		$this->render('ajax', 'ajax');

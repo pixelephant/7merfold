@@ -38,7 +38,7 @@ class RegionsController extends AppController {
 
 	public function admin_new(){
 
-		$countries = $this->Country->find('list');
+		$countries = $this->Country->find('list', array('fields' => array('id','name')));
 		$this->set('countries', $countries);
 
 		if(!empty($this->request->data['Region'])){

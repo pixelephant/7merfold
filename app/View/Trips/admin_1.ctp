@@ -14,8 +14,17 @@
 					<?php 
 						if($id == 4 || $id == 3){
 					?>
-						<th><?php echo $this->Paginator->sort('country', 'Ország'); ?></th>
-						<th><?php echo $this->Paginator->sort('region', 'Régió'); ?></th>
+						<th><?php echo $this->Paginator->sort('Country.name', 'Ország'); ?></th>
+						<th><?php echo $this->Paginator->sort('Region.name', 'Régió'); ?></th>
+					<?php
+						}
+					 ?>
+
+					 <?php 
+						if($id == 5){
+					?>
+						<th><?php echo $this->Paginator->sort('Country.name', 'Ország'); ?></th>
+						<th><?php echo $this->Paginator->sort('Continent.name', 'Kontinens'); ?></th>
 					<?php
 						}
 					 ?>
@@ -32,6 +41,15 @@
 					?>
 						<td><?php echo $trip['Country']['name']; ?></td>
 						<td><?php echo $trip['Region']['name']; ?></td>
+					<?php
+						}
+					 ?>
+
+					<?php 
+						if($id == 5){
+					?>
+						<td><?php echo $trip['Country']['name']; ?></td>
+						<td><?php echo $trip['Continent']['name']; ?></td>
 					<?php
 						}
 					 ?>
