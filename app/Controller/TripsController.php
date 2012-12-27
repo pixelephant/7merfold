@@ -212,7 +212,7 @@ class TripsController extends AppController {
 
 			reset($countries);
 			$c_id = key($countries);
-			$regions = $this->Region->find('list', array('conditions' => array('country_id' => $c_id)));
+			$regions = $this->Region->find('list', array('conditions' => array('country_id' => $c_id), 'fields' => array('id','name')));
 
 			$this->set('regions', $regions);
 			$this->set('scaffoldFields', $scaffoldFields);
