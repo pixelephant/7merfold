@@ -78,7 +78,7 @@ p.accommodation, p.price {
   font-family: 'Gentium Basic';
   font-weight: normal;
   font-style: italic;
-  font-size: 1.25em;
+  font-size: 1.15em;
   padding: 0.5em; }
 .sum div {
   overflow: hidden;
@@ -584,3 +584,7 @@ p.accommodation, p.price {
   padding: 10px;
   background: #000;
   background: rgba(0, 0, 0, 0.8); }
+
+#leiras > div.cont{
+  font-size: 0.8em !important;
+}

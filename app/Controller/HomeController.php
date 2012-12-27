@@ -110,12 +110,12 @@ class HomeController extends AppController {
 					$ids[] = $value;
 				}
 
-				$countries = $this->Country->find('list', array('fields' => array('Country.slug', 'Country.name'), 'conditions' => array('Country.id' => $ids)));
+				$countries = $this->Country->find('list', array('order' => 'Country.name', 'fields' => array('Country.slug', 'Country.name'), 'conditions' => array('Country.id' => $ids)));
 				foreach ($countries as $country_slug => $name) {
 					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';
 				}
 			}else{
-				$trips = $this->Trip->find('list', array('fields' => array('Trip.slug', 'Trip.name'), 'conditions' => array('Trip.category_id' => $cat['Category']['id'])));
+				$trips = $this->Trip->find('list', array('order' => 'Trip.name', 'fields' => array('Trip.slug', 'Trip.name'), 'conditions' => array('Trip.category_id' => $cat['Category']['id'])));
 				foreach ($trips as $slug => $name){
 					$content .= '<li><a href="' . $this->webroot . 'utjaink/' . $slug . '">' . $name . '</a></li>';
 				}
