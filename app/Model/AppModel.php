@@ -62,7 +62,7 @@ class AppModel extends Model {
 	    			}
 	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
 	    			if($ext == 'jpg' || $ext == 'jpeg'){
-	    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200);
+	    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200, $max_height = 150);
 	    			}else{
 	    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
 	    			}
@@ -119,7 +119,7 @@ class AppModel extends Model {
 	  return $text;
 	}
 
-	function make_thumb($src, $dest, $desired_width) {
+	function make_thumb($src, $dest, $desired_width, $max_height) {
 	  /* read the source image */
 	  $source_image = imagecreatefromjpeg($src);
 	  $width = imagesx($source_image);
@@ -128,6 +128,11 @@ class AppModel extends Model {
 	  /* find the "desired height" of this thumbnail, relative to the desired width  */
 	  $desired_height = floor($height * ($desired_width / $width));
 	  
+	  if($desired_height > $max_height){
+	  	$width = floor($width * ($max_height / $height));
+	  	$desired_height = $max_height;
+	  }
+
 	  /* create a new, "virtual" image */
 	  $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
 	  
