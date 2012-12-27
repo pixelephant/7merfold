@@ -33,7 +33,7 @@ var RTOOLBAR = {};
 		// Element
 		this.$el = $(element);
 	
-		// Options
+		// Options 			focus: true,
 		this.opts = $.extend({
 	
 			lang: 'en',
@@ -43,7 +43,6 @@ var RTOOLBAR = {};
 		
 			path: false,
 			css: 'style.css',
-			focus: true,
 			resize: true,
 			autoresize: false,
 			fixed: false,
