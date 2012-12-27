@@ -12,7 +12,7 @@ class ContinentsController extends AppController {
 	/* Admin */
 
 	public function admin_index(){
-		$this->paginate = array('limit' => 2);
+		$this->paginate = array('limit' => 15);
 
 		$continents = $this->paginate('Continent');
 

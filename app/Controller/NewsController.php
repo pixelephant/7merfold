@@ -60,7 +60,7 @@ class NewsController extends AppController {
 	/* Admin */
 
 	public function admin_index(){
-		$this->paginate = array('limit' => 2);
+		$this->paginate = array('limit' => 15);
 
 		$news = $this->paginate('News');
 

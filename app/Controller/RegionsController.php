@@ -28,7 +28,7 @@ class RegionsController extends AppController {
 	/* Admin */
 
 	public function admin_index(){
-		$this->paginate = array('limit' => 2);
+		$this->paginate = array('limit' => 15);
 
 		$regions = $this->paginate('Region');
 
