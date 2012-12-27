@@ -63,7 +63,7 @@ class RegionsController extends AppController {
 		$images = $this->RegionImage->find('all', array('conditions' => array('RegionImage.region_id' => $params['pass'][0])));
 		$this->set('images', $images);
 
-		$countries = $this->Country->find('list');
+		$countries = $this->Country->find('list', array('fields' => array('id','name')));
 		$this->set('countries', $countries);
 	}
 
