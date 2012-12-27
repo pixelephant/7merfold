@@ -35,8 +35,9 @@ class AppModel extends Model {
 	public function beforeValidate($options = array()) {
 		/* SLUG */
     foreach($this->data as $model => $v){
+    	$text = '';
     	foreach($this->data[$model] as $field => $value){
-    		if($field == 'title' || $field == 'name'){
+    		if(($field == 'title' || $field == 'name') && !empty($this->data[$model][$field]) && $text == ''){
     			$text = $value;
     		}
     	}
