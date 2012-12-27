@@ -37,9 +37,10 @@
  * ...and connect the rest of 'Pages' controller's urls.
  */
 
-	Router::connect('/cegeknek', array('controller' => 'home', 'action' => 'static_page'));
-	Router::connect('/szolgaltatasok', array('controller' => 'home', 'action' => 'static_page'));
-	Router::connect('/ajandekutalvany', array('controller' => 'home', 'action' => 'static_page'));
+	Router::connect('/cegeknek', array('controller' => 'contents', 'action' => 'show', 'cegeknek'));
+	Router::connect('/szolgaltatasok', array('controller' => 'contents', 'action' => 'show', 'szolgaltatasok'));
+	Router::connect('/ajandekutalvany', array('controller' => 'contents', 'action' => 'show', 'ajandekutalvany'));
+	Router::connect('/utazasi-feltetelek', array('controller' => 'contents', 'action' => 'show', 'utazasi-feltetelek'));
 
 	Router::connect('/orszag/:country_slug', array('controller' => 'countries', 'action' => 'show'));
 	Router::connect('/regio/:region_slug', array('controller' => 'regions', 'action' => 'show'));

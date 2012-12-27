@@ -19,6 +19,7 @@
 	<!-- <li><?php echo $this->Html->link('Kontinensek', '/admin/continents'); ?></li> -->
 	<!-- <li><?php echo $this->Html->link('Új régió', '/admin/regions/add'); ?></li> -->
 	<li><?php echo $this->Html->link('Kategóriák', '/admin/categories'); ?></li>
+	<li><?php echo $this->Html->link('Tartalmak', '/admin/contents'); ?></li>
 	<!-- <li><?php echo $this->Html->link('Új kategória', '/admin/categories/add'); ?></li> -->
 	<!-- <li><?php echo $this->Html->link('Programok', '/admin/programs'); ?></li> -->
 	<!-- <li><?php echo $this->Html->link('Új program', '/admin/programs/add'); ?></li> -->
