@@ -129,7 +129,7 @@ class AppModel extends Model {
 	  $desired_height = floor($height * ($desired_width / $width));
 	  
 	  if($desired_height > $max_height){
-	  	$width = floor($width * ($max_height / $height));
+	  	$desired_width = $desired_width * ($max_height / $desired_height);
 	  	$desired_height = $max_height;
 	  }
 
