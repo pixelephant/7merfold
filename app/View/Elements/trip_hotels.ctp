@@ -11,8 +11,8 @@
 		    <p class="price"><?php echo $hotel['price']; ?></p>
 		   </div>
 		   <?php echo $this->Html->link(($this->Html->image('/img/thumbnails/' . $hotel['image_file'], array('alt' => $hotel['name'])) . '<span>' . $hotel['name'] . '</span>'), '/img/'.$hotel['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $hotel['name'])); ?>
-			<?php } ?>
 	  </div>
+	<?php } ?>
 	</div>
 	<div class="half getquote">
         <a href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>

@@ -14,6 +14,10 @@
 		echo $this->Form->input('trip_id', array('type' => 'hidden', 'value' => $hotel['Hotel']['trip_id']));
 		echo $this->Form->input('name', array('value' => $hotel['Hotel']['name']));
 		echo $this->Form->input('star_rating', array('value' => $hotel['Hotel']['star_rating']));
+		echo $this->Form->input('image_file', array('type' => 'file'));
+		if(isset($hotel['Hotel']['image_file']) && !empty($hotel['Hotel']['image_file'])){
+			echo $this->Html->image($hotel['Hotel']['image_file'], array('width' => 100));	
+		}
 		// echo $this->Form->input('accommodation', array('value' => $hotel['Hotel']['accommodation']));
 		echo $this->Form->input('price', array('value' => $hotel['Hotel']['price']));
 		echo $this->Form->input('description', array('value' => $hotel['Hotel']['description']));
@@ -25,6 +29,7 @@
 		echo $this->Form->input('trip_id', array('type' => 'hidden', 'value' => $this->request->data['Trip']['id']));
 		echo $this->Form->input('name');
 		echo $this->Form->input('star_rating');
+		echo $this->Form->input('image_file', array('type' => 'file'));
 		// echo $this->Form->input('accommodation');
 		echo $this->Form->input('price');
 		echo $this->Form->input('description');
