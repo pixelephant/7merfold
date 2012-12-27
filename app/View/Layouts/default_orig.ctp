@@ -64,5 +64,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<?php echo $this->Html->script('redactor/redactor'); ?>
 	<?php echo $this->Html->script('redactor/langs/hu'); ?>
 	<?php echo $this->Html->script('admin_editor'); ?>
+		<?php echo $this->Html->script('admin'); ?>
 </body>
 </html>
