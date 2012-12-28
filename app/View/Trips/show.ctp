@@ -4,7 +4,7 @@
 <?php $this->assign('sidebar', $this->element('sidebar')); ?>
 
 <section class="sum section">
-<h2><?php echo $trip['Trip']['name']; ?></h2>
+<h2><?php echo $trip['Trip']['name']; ?><?php echo (empty($trip['Trip']['star_rating']) ? '' : $this->App->hotel_stars($trip['Trip']['star_rating'])); ?></h2>
 <?php echo $this->Html->image($trip['Trip']['image_file'], array('alt' => $trip['Trip']['name'])); ?>
 <div class="clearfix">
 
