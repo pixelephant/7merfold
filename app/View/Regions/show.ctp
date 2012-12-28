@@ -7,6 +7,7 @@
 		<h3>Hasznos információk</h3>
 		<?php echo $region['Region']['description']; ?>
 	</div>
+	<?php echo (empty($region['RegionImage']) ? $this->element('totop') : ''); ?>
 </section>
 
 <?php if(!empty($region['RegionImage'])){ ?>
@@ -19,5 +20,6 @@
 	    } 
 	  ?>
 	</div>
+	<?php echo $this->element('totop'); ?>
 	</section>
 <?php } ?>

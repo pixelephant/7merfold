@@ -19,5 +19,6 @@
 	    } 
 	  ?>
 	</div>
+	<?php echo $this->element('totop'); ?>
 	</section>
 <?php } ?>

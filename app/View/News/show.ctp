@@ -3,4 +3,5 @@
 	<div class="cont formatted">
 		<p><?php echo $news['News']['content']; ?></p>
 	</div>
+	<?php echo $this->element('totop'); ?>
 </section>

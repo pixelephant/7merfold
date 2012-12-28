@@ -3,4 +3,9 @@
 <div class="cont">
   <?php echo $content; ?>
 </div>
+<?php 
+	if(isset($last)){
+		echo $this->element('totop');
+	}
+?>
 </section>

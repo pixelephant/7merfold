@@ -7,4 +7,9 @@
     } 
   ?>
 </div>
+<?php 
+	if(isset($last)){
+		echo $this->element('totop');
+	}
+?>
 </section>
