@@ -5,6 +5,15 @@
       <span class="shares"><span>Megosztás</span><a href="mailto: ?body=<?php echo strip_tags($trip['Trip']['short_description']); ?>&subject=<?php echo $trip['Trip']['name']; ?>"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=<?php echo $this->Html->url( null, true ); ?>"><?php echo $this->Html->image('f_logo.png'); ?></a></span>
     </div>
   </section>
+  <section id="side-news" class="section">
+    <h2>Legfrisebb hír</h2>
+    <div class="cont">
+      <a href="#">
+        <img src="/7merfold/img/3.jpeg" alt="">
+        <h3>Sokan szeretnek nyaralni!</h3>
+      </a>
+    </div>
+  </section>
   <section class="section" id="side-hajozz">
   <?php if($trip['Trip']['hajozz'] == 1){ ?>
   <div class="cta boat">

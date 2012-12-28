@@ -130,7 +130,7 @@ p.accommodation,p.price{
   }
 }
 
-#prices .cont,#hotelek .cont,#leiras .cont,#arak .cont{
+#prices .cont,#hotelek .cont,#leiras .cont,#arak .cont,#fontosinformaciok .cont{
   overflow:hidden;
 }
 
@@ -196,11 +196,25 @@ position: relative;
   }
 }
 
-#leiras .cont p{
+#leiras .cont p,#fontosinformaciok .cont p,#Kirándulástippek .cont p{
   margin:1em 0;
 }
 
+#side-hajozz{
+  @include box-shadow(none !important);
+}
 
+#side-news a{
+  img{
+    display:block;
+    max-width:100%;
+    margin:0 auto;
+    margin-bottom:10px;
+  }
+  text-align:center;
+  
+  color:$blue;
+}
 
 //large tablet (1000px,62.5em)
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {

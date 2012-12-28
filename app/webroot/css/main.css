@@ -1353,8 +1353,7 @@ a.offer {
   -o-transition: all 0.3s ease-in-out;
   /* Opera 10.5–12.00 */
   transition: all 0.3s ease-in-out;
-  /* Firefox 16+, Opera 12.50+ */
-  margin-top: 5px; }
+  /* Firefox 16+, Opera 12.50+ */ }
   .no-touch .sub li a:hover, .no-touch .sub li a:focus {
     background: #e6e6e6; }
 .no-touch #mobile-nav ul li a, .no-touch #sub-grid li a {
