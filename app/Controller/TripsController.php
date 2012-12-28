@@ -243,6 +243,9 @@ class TripsController extends AppController {
 		$hotels = $this->Hotel->find('all', array('conditions' => array('Hotel.trip_id' => $params['pass'][0])));
 		$this->set('hotels', $hotels);
 
+		$regions = $this->Region->find('list', array('fields' => array('id','name'), 'conditions' => array('Region.country_id' => $this->request->data['Trip']['country_id'])));
+		$this->set('regions', $regions);
+
 		$sights = $this->Sight->find('all', array('conditions' => array('Sight.trip_id' => $params['pass'][0])));
 		$this->set('sights', $sights);
 	}
