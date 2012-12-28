@@ -18,7 +18,6 @@
 	if(isset($this->request->data['Country']['image_file']) && !empty($this->request->data['Country']['image_file'])){
 		echo $this->Html->image($this->request->data['Country']['image_file'], array('width' => 100));	
 	}
-	echo $this->Html->image($this->request->data['Country']['image_file']);
 	echo $this->Form->end(__d('cake', __('Submit')));
 ?>
 	<a href="javascript:history.back()">Mégsem</a>
