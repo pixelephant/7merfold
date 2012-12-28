@@ -1,7 +1,7 @@
 $(document).ready(
 	function()
 	{
-		$('textarea').redactor({
+		$('textarea:not(.non-redactor)').redactor({
 			toolbar: 'custom'
 		});
 	}

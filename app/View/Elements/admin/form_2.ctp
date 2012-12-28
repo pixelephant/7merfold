@@ -11,7 +11,7 @@
 	// echo $this->Form->input('description');
 	echo $this->Form->input('country_id');
 	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => ''));
-	echo $this->Form->input('short_description');
+	echo $this->Form->input('short_description', array("class" => 'non-redactor'));
 	echo $this->Form->input('travel_date');
 	echo $this->Form->input('travel_method');
 	echo $this->Form->input('accommodation');

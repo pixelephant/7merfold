@@ -11,7 +11,7 @@
 	echo $this->Form->input('continent_id');
 	echo $this->Form->input('country_id');
 	// echo $this->Form->input('region_id');
-	echo $this->Form->input('short_description');
+	echo $this->Form->input('short_description', array("class" => 'non-redactor'));
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
 	echo $this->Form->input('image_file', array('type' => 'file'));

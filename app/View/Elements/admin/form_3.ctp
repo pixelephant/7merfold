@@ -10,7 +10,7 @@
 	echo $this->Form->input('star_rating');
 	echo $this->Form->input('country_id');
 	echo $this->Form->input('region_id', array('empty' => 'Nincs régió'));
-	echo $this->Form->input('short_description');
+	echo $this->Form->input('short_description', array("class" => 'non-redactor'));
 	echo $this->Form->input('description');
 	echo $this->Form->input('service');
 	echo $this->Form->input('price');
