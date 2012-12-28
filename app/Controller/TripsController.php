@@ -33,7 +33,7 @@ class TripsController extends AppController {
 
 	public $scaffold = 'admin';
 	public $name = 'Trips';
-	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight', 'Continent');
+	public $uses = array('Trip', 'Country', 'Category', 'Region', 'Program', 'Hotel', 'Sight', 'Continent', 'News');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -77,6 +77,9 @@ class TripsController extends AppController {
 		$this->set('page_keywords', $trip['Trip']['keywords']);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
+
+		$news = $this->News->find('first', array('order' => 'created'));
+		$this->set('news', $news);
 
 		$this->render('show');
 	}
