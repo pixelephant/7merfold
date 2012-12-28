@@ -9,6 +9,11 @@
 <div class="clearfix">
 
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
+  <nav id="inline-nav">
+    <?php echo $this->element('nav', array('trip_type' => $trip_type)) ?>
+    <a href="#vizum">Vízum</a>
+    <a href="#<?php echo $trip['Country']['name']; ?>"><?php echo $trip['Country']['name']; ?></a>
+  </nav>
 <div>
   <?php echo $this->App->important_link($trip['Trip']['category_id']); ?>
   <a class="quote" href="<?php echo $this->webroot; ?>ajanlat">Ajánlatkérés &raquo;</a>

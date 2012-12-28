@@ -143,4 +143,7 @@
   <div class="cont">
     <p>Talán mindenki gyermekkori emlékei között ott él még az a csodálatos hétmérföldes csizma, amellyel a legkisebb fiú túllépett teret és időt, és messzi vidékekre juthatott el. Ki ne vágyna egy ilyen <strong>csodás csizmára?!</strong></p>
   </div>
+  <div class="totop-wrap">
+    <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="&#xe009;"></span>Oldal tetejére</a>
+  </div>
 </section>

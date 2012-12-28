@@ -152,9 +152,12 @@ p.accommodation,p.price{
 
 #inline-nav{
   display:none;
-
+  background:#eee;
+  padding:1em;
+  width:30%;
+  float:right;
   a{
-    font-size:1.3em;
+    font-size:0.8em;
     display:block;
     color:$blue;
     line-height:1;
@@ -296,8 +299,13 @@ position: relative;
   display:none;
  }
 
+ .lead{
+  font-size:1.1em !important;
+  width:70%;
+  float:left;
+ }
 
- .lead + div{
+ #inline-nav + div{
   display:none;
  }
 
@@ -322,6 +330,7 @@ position: relative;
     a{
       float: left;
       width: 28%;
+      padding-left:2%;
     }
   }
 }

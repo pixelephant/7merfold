@@ -202,6 +202,19 @@ body{
   border-left: 10px solid $blue;
 }
 
+.totop-wrap{
+  overflow:hidden;
+  display:none;
+}
+
+.section .totop{
+  text-decoration:none;
+  color:$blue;
+  float:right;
+  padding:1em;
+  font-size:0.8em;
+}
+
 #main-content,#sidebar{
   margin-top: 10px;
     .section{
@@ -553,6 +566,7 @@ a.offer{
   &.boat{
     h2{
       padding-top:0 !important;
+      border:none !important;
     }
     span{
       color: #fff;
@@ -889,10 +903,10 @@ a.offer{
 
 #top-contact{
   float:left;
-  width:41%;
+  width:50%;
   background:none;
   @include box-shadow(none);
-  padding-top:1em;
+  padding-top:0.5em;
   a{    
     font-size:0.8em;
     width:33.33333%;
@@ -988,27 +1002,10 @@ a.offer{
     clear:both;
   } 
 
-  #contact{
-    overflow:hidden;
-    border-bottom:1px solid $blue;
-    a{
-    display:block;
-    float:left;
-    text-decoration:none;
-    color:#fff;
-    width:33.333333%;
-    text-align:center;
-    padding:0.5em 0;
-    font-size:0.8em;
-    &:last-child,&:nth-last-child(2){
-      border-bottom:none;
-    }
-  }
-  }
 
   #top-contact{
     display:block;
-    font-size:0.8em;
+    font-size:0.9em;
     .icon{
       font-size:1.2em;
       position:relative;
@@ -1040,7 +1037,7 @@ a.offer{
   #search-form{
     display:block !important;
     clear: none;
-    width:30%;
+    width:20%;
     margin-right: 20px;
     float:right;
     
@@ -1052,11 +1049,11 @@ a.offer{
       margin-top:0;
       padding-left:2%;
       padding-right:2%;
-      width:70%;
+      width:60%;
     }
     input[type="submit"]{
       float:left;
-      width:25%;
+      width:30%;
       border:none !important;
     }
   }
@@ -1118,6 +1115,31 @@ a.offer{
 //small tablet (700px,43.75em)
 
 @media all and (min-width: 43.75em){
+
+  .totop-wrap{
+    display:block;
+  }
+
+  #contact{
+    overflow:hidden;
+    border-bottom:1px solid $blue;
+    a{
+      display:block;
+      float:left;
+      text-decoration:none;
+      color:#fff;
+      width:33.333333%;
+      text-align:center;
+      padding:0.5em 0;
+      font-size:0.8em;
+      &.totop{
+        display:none;
+      }
+    &:last-child,&:nth-last-child(2){
+      border-bottom:none;
+    }
+  }
+  }
 
   .breadcrumb{
     li{

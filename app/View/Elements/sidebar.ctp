@@ -1,14 +1,4 @@
 <div id="sidebar" class="no-flick">
-  <section class="section">
-  	<h2>Tartalom</h2>
-  	<div class="cont">
-  		<nav id="inline-nav">
-    <?php echo $this->element('nav', array('trip_type' => $trip_type)) ?>
-    <a href="#vizum">Vízum</a>
-    <a href="#<?php echo $trip['Country']['name']; ?>"><?php echo $trip['Country']['name']; ?></a>
-  </nav>
-  	</div>
-  </section>
    <?php echo $this->element('quote_box'); ?>
    <section class="section" id="side-share">
     <div class="cont">

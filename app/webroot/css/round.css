@@ -68,7 +68,7 @@ p.accommodation, p.price {
 .sum h2 {
   border-bottom: none !important;
   text-align: center;
-  font-size: 2em !important; }
+  font-size: 1.7em !important; }
 .sum img {
   max-width: 100%;
   display: block;
@@ -78,7 +78,7 @@ p.accommodation, p.price {
   font-family: 'Gentium Basic';
   font-weight: normal;
   font-style: italic;
-  font-size: 1.05em;
+  font-size: 1.25em;
   padding: 0.5em; }
 .sum div {
   overflow: hidden;
@@ -213,9 +213,13 @@ p.accommodation, p.price {
   top: 1%; }
 
 #inline-nav {
-  display: none; }
+  display: none;
+  background: #eee;
+  padding: 1em;
+  width: 30%;
+  float: right; }
   #inline-nav a {
-    font-size: 1.3em;
+    font-size: 0.8em;
     display: block;
     color: #4897c8;
     line-height: 1;
@@ -317,7 +321,12 @@ p.accommodation, p.price {
   .important {
     display: none; }
 
-  .lead + div {
+  .lead {
+    font-size: 1.1em !important;
+    width: 70%;
+    float: left; }
+
+  #inline-nav + div {
     display: none; }
 
   .sum .quote {
@@ -334,7 +343,8 @@ p.accommodation, p.price {
     float: left; }
   .day a {
     float: left;
-    width: 28%; } }
+    width: 28%;
+    padding-left: 2%; } }
 .no-touch .day a, .no-touch .gallery a {
   -webkit-transition: all 0.3s ease-in-out;
   /* Safari 3.2+, Chrome */
@@ -584,7 +594,3 @@ p.accommodation, p.price {
   padding: 10px;
   background: #000;
   background: rgba(0, 0, 0, 0.8); }
-
-#leiras > div.cont{
-  font-size: 0.8em !important;
-}
