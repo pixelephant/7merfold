@@ -103,11 +103,8 @@ $(".important,#inline-nav a").click(function(e){
     return false;
 });
 
-
-if(!$("html").hasClass("touch")){
 	$('.fancybox').fancybox({
-	openEffect  : 'elastic'
-});
-}
+		openEffect  : 'elastic'
+	});
 
 });
