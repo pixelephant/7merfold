@@ -1233,7 +1233,7 @@ a.offer {
     overflow: hidden;
     width: 100%; }
     .sub li {
-      width: 25%;
+      width: 20%;
       float: left;
       text-align: center;
       border-bottom: 1px solid #cccccc;
