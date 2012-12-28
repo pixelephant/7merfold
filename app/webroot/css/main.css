@@ -1007,7 +1007,6 @@ a.offer {
     float: left;
     text-decoration: none;
     color: #333333;
-    width: 20%;
     padding: 0.5em 0; }
 
 .stars {
@@ -1074,15 +1073,15 @@ a.offer {
     margin-right: 20px; }
 
   #top-contact {
-    font-size: 0.65em !important; }
+    font-size: 0.75em !important; }
 
   #logo img {
-    padding-top: 10px;
+    padding-top: 5px;
     width: 120px !important; }
 
   #top-contact {
-    padding-top: 1.5em !important;
-    width: 40% !important; } }
+    padding-top: 1em !important;
+    width: 50% !important; } }
 @media all and (min-width: 59.375em), (device-width: 768px) and (device-height: 1024px) and (orientation: landscape) {
   #sub-grid li a {
     font-size: 0.7em; }
