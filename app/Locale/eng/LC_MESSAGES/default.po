@@ -282,3 +282,21 @@ msgstr "mentése"
 
 msgid "updated"
 msgstr "frissítése"
+
+msgid "Block 1 Title"
+msgstr "1. blokk címe"
+
+msgid "Block 2 Title"
+msgstr "2. blokk címe"
+
+msgid "Block 3 Title"
+msgstr "3. blokk címe"
+
+msgid "Block 1 Content"
+msgstr "1. blokk tartalma"
+
+msgid "Block 2 Content"
+msgstr "2. blokk tartalma"
+
+msgid "Block 3 Content"
+msgstr "3. blokk tartalma"

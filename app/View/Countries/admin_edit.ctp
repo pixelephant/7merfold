@@ -24,7 +24,9 @@
 	<a href="javascript:history.back()">Mégsem</a>
 
 	<?php 
+		$i = 1;
 		foreach ($images as $image){
+			echo '<h3>' . $i . '. kép</h3>';
 			echo $this->element('admin/admin_delete', array('id' => $image['CountryImage']['id'], 'url' => '/admin/country_images/delete/'));
 			echo $this->Form->create('CountryImage', array('type' => 'file', 'url' => '/admin/country_images/new'));
 			echo $this->Form->input('country_id', array('type' => 'hidden', 'value' => $this->request->data['Country']['id']));
@@ -35,8 +37,10 @@
 				echo $this->Html->image($this->request->data['CountryImage']['image_file'], array('width' => 100));	
 			}
 			echo $this->Form->end(__d('cake', __('Submit')));
+			$i++;
 		}
 
+		echo '<h3>' . $i . '. kép</h3>';
 		echo $this->Form->create('CountryImage', array('type' => 'file', 'url' => '/admin/country_images/new'));
 			echo $this->Form->input('title');
 			echo $this->Form->input('country_id', array('type' => 'hidden', 'value' => $this->request->data['Country']['id']));

@@ -259,3 +259,8 @@ h2.info .icon, h3.info .icon {
   color: #bc193c !important; }
 .no-touch .select-trigger:hover, .no-touch .select-trigger:focus {
   background: #875497; }
+
+.mask-img{
+  position: relative;
+  left: -50%;
+}
