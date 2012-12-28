@@ -6,10 +6,8 @@
       <a href="<?php echo $this->webroot . $category['Category']['slug'] . '/' . $country['Country']['slug']; ?>" class="offer">
         <div class="img">
           <?php echo $this->Html->image($country['Country']['image_file'], array('alt' => $country['Country']['name'])); ?>
+          <?php echo $this->Html->image('proba.png', array('class' => 'mask-img')); ?>
         </div>
-        <div class="mask-img">
-          <?php echo $this->Html->image('proba.png'); ?>
-        </div>            
         <div class="data">
           <h3><?php echo $country['Country']['name']; ?></h3>
           <p class="lead"><?php echo $this->App->trimText($country['Country']['useful_information']); ?></p>
