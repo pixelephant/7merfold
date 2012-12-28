@@ -7,6 +7,7 @@
 <?php
 	// print_r($this->validationErrors);
 	echo $this->Form->create('News', array('type' => 'file', 'url' => '/admin/news/new'));
+	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => ''));
 	echo $this->Form->input('title');
 	echo $this->Form->input('content');
 	echo $this->Form->input('image_file', array('type' => 'file'));

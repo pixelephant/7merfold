@@ -96,7 +96,7 @@
         <ul class="slides">
           
             <?php foreach($news as $new){ ?>
-            <li>
+    <!--         <li>
     <div class="news">
       <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
       <div class="bd">
@@ -105,7 +105,7 @@
         <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['slug'], array('escape' => false)); ?>
       </div>
     </div>
-     </li>
+     </li> -->
      <li>
     <div class="news">
       <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
