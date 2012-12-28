@@ -287,6 +287,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 .lt-ie9 #sidebar {
   position: static !important; }
 
+.cont li {
+  list-style-position: inside; }
+
 #sidebar {
   display: none; }
 
@@ -414,7 +417,8 @@ body {
 
 .totop-wrap {
   overflow: hidden;
-  display: none; }
+  display: none;
+  clear: both; }
 
 .section .totop {
   text-decoration: none !important;

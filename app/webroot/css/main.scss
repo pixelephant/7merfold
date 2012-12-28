@@ -55,6 +55,10 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
   }
 } 
 
+.cont li{
+  list-style-position:inside;
+}
+
 #sidebar{
   display:none;
 }
@@ -205,6 +209,7 @@ body{
 .totop-wrap{
   overflow:hidden;
   display:none;
+  clear:both;
 }
 
 .section .totop{
