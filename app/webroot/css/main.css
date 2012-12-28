@@ -417,11 +417,13 @@ body {
   display: none; }
 
 .section .totop {
-  text-decoration: none;
-  color: #4897c8;
+  text-decoration: none !important;
+  color: #4897c8 !important;
   float: right;
   padding: 1em;
   font-size: 0.8em; }
+  .section .totop span {
+    color: #4897c8 !important; }
 
 #main-content, #sidebar {
   margin-top: 10px; }
