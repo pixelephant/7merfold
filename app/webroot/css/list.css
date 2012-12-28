@@ -262,5 +262,7 @@ h2.info .icon, h3.info .icon {
 
 .mask-img{
   position: relative;
-  left: -50%;
+  left: -30%;
+  float: left;
+  width: 30%;
 }
