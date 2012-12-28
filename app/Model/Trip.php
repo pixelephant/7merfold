@@ -2,7 +2,7 @@
 class Trip extends AppModel {
     public $name = 'Trip';
 
-    public $order = 'Trip.name';
+    public $order = 'Trip.star_rating DESC, Trip.name ASC';
 
     public $belongsTo = array('Country', 'Region', 'Category', 'Continent');
 
