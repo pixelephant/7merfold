@@ -80,9 +80,9 @@ class AppModel extends Model {
 	public function create_slug($string, $model){
 		$unique = false;
 		$i = 0;
+		$orig = $string;
 		while(!$unique){
 			$slug = $this->slugify($string);
-			$orig = $string;
 			/* Kérdéses model használata */
 			$m = ClassRegistry::init($model);
 			$count = $m->find('count', array('conditions' => array(($model . '.slug') => $slug)));

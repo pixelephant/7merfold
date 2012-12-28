@@ -7,6 +7,12 @@ RTOOLBAR['custom'] = {
 		func: 'show', 				
 		dropdown: 
 	    {
+	    p:
+			 {
+			 	title: RLANG.paragraph,			 
+			 	exec: 'formatblock',
+			 	param: '<p>'
+			 },
 			 h3:
 			 {
 			 	title: RLANG.header3,			 

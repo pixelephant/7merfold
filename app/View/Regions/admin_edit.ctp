@@ -26,7 +26,9 @@
 			echo $this->Form->input('id', array('type' => 'hidden', 'value' => $image['RegionImage']['id']));
 			echo $this->Form->input('title', array('value' => $image['RegionImage']['title']));
 			echo $this->Form->input('image_file', array('type' => 'file'));
-			echo $this->Html->image($image['RegionImage']['image_file']);
+			if(isset($this->request->data['RegionImage']['image_file']) && !empty($this->request->data['RegionImage']['image_file'])){
+				echo $this->Html->image($this->request->data['RegionImage']['image_file'], array('width' => 100));	
+			}
 			echo $this->Form->end(__d('cake', __('Submit')));
 		}
 

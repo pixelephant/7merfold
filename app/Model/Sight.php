@@ -20,13 +20,14 @@ class Sight extends AppModel {
             'rule' => 'notEmpty',
             'required'   => true,
             'message'    => 'Kötelező megadni'
-        ),
-        'image_file' => array(
-            'rule' => 'notEmpty',
-            'required'   => true,
-            'message'    => 'Kötelező megadni',
-            'on' => 'create'
         )
+        // ,
+        // 'image_file' => array(
+        //     'rule' => 'notEmpty',
+        //     'required'   => true,
+        //     'message'    => 'Kötelező megadni',
+        //     'on' => 'create'
+        // )
     );
 }
 ?>
