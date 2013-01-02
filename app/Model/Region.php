@@ -5,6 +5,8 @@ class Region extends AppModel {
     public $belongsTo = 'Country';
     public $hasMany = 'RegionImage';
 
+    public $order = 'Region.name ASC';
+
     public $validate = array(
 	    'name' => array(
 	    		'rule' => 'notEmpty',

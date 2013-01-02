@@ -130,7 +130,7 @@ class TripsController extends AppController {
 
 	public function admin_2(){
 
-		$this->paginate = array('conditions' => array('Category.id' => 2), 'limit' => 15);
+		$this->paginate = array('conditions' => array('Category.id' => 2), 'limit' => 30);
 
 		$trips = $this->paginate('Trip');
 
@@ -143,7 +143,7 @@ class TripsController extends AppController {
 
 	public function admin_3(){
 
-		$this->paginate = array('conditions' => array('Category.id' => 3), 'limit' => 15);
+		$this->paginate = array('conditions' => array('Category.id' => 3), 'limit' => 30);
 
 		$trips = $this->paginate('Trip');
 

@@ -41,7 +41,7 @@ class AppModel extends Model {
     			$text = $value;
     		}
     	}
-    	if(isset($this->data[$model]['slug'])){
+    	if(isset($this->data[$model]['slug']) && $this->data[$model]['slug'] == ''){
   			$this->data[$model]['slug'] = $this->create_slug($text, $model);
   		}
     }

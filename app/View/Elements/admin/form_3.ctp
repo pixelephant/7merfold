@@ -5,7 +5,7 @@
 	if(isset($id)){
 		echo $this->Form->input('id', array('type' => 'hidden', 'value' => $id));		
 	}
-	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => ''));
+	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => (empty($this->request->data['Trip']['slug']) ? '' : $this->request->data['Trip']['slug'])));
 	echo $this->Form->input('name');
 	echo $this->Form->input('star_rating');
 	echo $this->Form->input('country_id');
