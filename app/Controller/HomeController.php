@@ -45,7 +45,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent');
+	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent', 'MailchimpSubscriber');
 
 /**
  * Displays a view
@@ -171,6 +171,8 @@ class HomeController extends AppController {
 		$user_message = $params['message'];
 		$user_referal = $params['referal'];
 
+		$newsletter = $params['newsl'];
+
 		$email = new CakeEmail('smtp');
 		$email->from(array($user_email => $user_name));
 		$email->template('default');
@@ -178,6 +180,14 @@ class HomeController extends AppController {
 		$email->viewVars(array('name' => $user_name, 'email' => $user_email, 'phone' => $user_phone, 'message' => $user_message, 'referal' => $user_referal));
 
 		$email->send();
+
+		if($newsletter == 'on'){
+			$data = array();
+			$data['emailaddress'] = $user_email;
+			$data['LNAME'] = $user_name;
+			// $this->MailchimpSubscriber->create($data);
+			$this->MailchimpSubscriber->save($data);
+		}
 
 		$this->set('breadcrumb', array());
 		$this->set('page_title', 'Köszönjük a leveledet!');
