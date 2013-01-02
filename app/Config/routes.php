@@ -54,10 +54,12 @@
 	Router::connect('/regions/:country_id', array('controller' => 'home', 'action' => 'country_regions'));
 	Router::connect('/countries/:continent_id', array('controller' => 'home', 'action' => 'continent_countries'));
 
+	Router::connect('/korutazasok', array('controller' => 'categories', 'action' => 'inner', '2'));
 	Router::connect('/nyaralasok-uveghegyen-innen', array('controller' => 'categories', 'action' => 'inner', '4'));
 	Router::connect('/nyaralasok-uveghegyen-tul', array('controller' => 'categories', 'action' => 'inner', '3'));
 	Router::connect('/felfedezoutak', array('controller' => 'categories', 'action' => 'inner', '5'));
 
+	Router::connect('/korutazasok/:country_slug', array('controller' => 'categories', 'action' => 'show', 'korutazasok'));
 	Router::connect('/nyaralasok-uveghegyen-innen/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-innen'));
 	Router::connect('/nyaralasok-uveghegyen-tul/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-tul'));
 	Router::connect('/felfedezoutak/:continent_slug', array('controller' => 'categories', 'action' => 'show', 'felfedezoutak'));
