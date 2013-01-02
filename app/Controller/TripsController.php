@@ -210,7 +210,13 @@ class TripsController extends AppController {
 			$continents = $this->Continent->find('list', array('fields' => array('id','name')));
 			$this->set('continents', $continents);
 
-			$countries = $this->Country->find('list', array('fields' => array('id','name')));
+			if($type == 5){
+				reset($continents);
+				$c_id = key($continents);
+				$countries = $this->Country->find('list', array('fields' => array('id','name'), 'conditions' => array('continent_id' => $c_id)));
+			}else{
+				$countries = $this->Country->find('list', array('fields' => array('id','name')));
+			}
 			$this->set('countries', $countries);
 
 			reset($countries);

@@ -177,7 +177,7 @@ class HomeController extends AppController {
 
 		$country_id = (int)($this->request->params['country_id']);
 
-		$c = $this->Region->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Region.country_id' => $country_id)));
+		$c = $this->Region->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Region.country_id' => $country_id), 'order' => 'Region.name'));
 
 		$this->set('content', json_encode($c));
 		$this->render('ajax', 'ajax');
@@ -187,7 +187,7 @@ class HomeController extends AppController {
 
 		$continent_id = (int)($this->request->params['continent_id']);
 
-		$c = $this->Country->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Country.continent_id' => $continent_id)));
+		$c = $this->Country->find('list', array('fields' => array('id', 'name'), 'conditions' => array('Country.continent_id' => $continent_id), 'order' => 'Country.name'));
 
 		$this->set('content', json_encode($c));
 		$this->render('ajax', 'ajax');
