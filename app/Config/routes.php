@@ -56,9 +56,11 @@
 
 	Router::connect('/nyaralasok-uveghegyen-innen', array('controller' => 'categories', 'action' => 'inner', '4'));
 	Router::connect('/nyaralasok-uveghegyen-tul', array('controller' => 'categories', 'action' => 'inner', '3'));
+	Router::connect('/felfedezoutak', array('controller' => 'categories', 'action' => 'inner', '5'));
 
 	Router::connect('/nyaralasok-uveghegyen-innen/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-innen'));
 	Router::connect('/nyaralasok-uveghegyen-tul/:country_slug', array('controller' => 'categories', 'action' => 'show', 'nyaralasok-uveghegyen-tul'));
+	Router::connect('/felfedezoutak/:continent_slug', array('controller' => 'categories', 'action' => 'show', 'felfedezoutak'));
 
 	Router::connect('/utjaink/:trip_slug', array('controller' => 'trips', 'action' => 'show'));
 	Router::connect('/hirek/:news_slug', array('controller' => 'news', 'action' => 'show'));

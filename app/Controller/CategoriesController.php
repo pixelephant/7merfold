@@ -6,7 +6,7 @@ class CategoriesController extends AppController {
 
 	public $scaffold = 'admin';
 	public $name = 'Categories';
-	public $uses = array('Category', 'Trip', 'Region', 'Country');
+	public $uses = array('Category', 'Trip', 'Region', 'Country', 'Continent');
 	public $helpers = array('Html', 'Form');
 
 	public function index() {
@@ -26,7 +26,7 @@ class CategoriesController extends AppController {
 		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
 
 		$breadcrumb = array($slug => $category['Category']['name']);
-		$page_title = $category['Category']['title'];
+		$page_title = ($category['Category']['title'] == '' ? $category['Category']['name'] : $category['Category']['title']);
 		$page_keywords = $category['Category']['keywords'];
 
 		$this->set('country_name', '');
@@ -34,14 +34,25 @@ class CategoriesController extends AppController {
 
 		$cond = array('Trip.category_id' => $category['Category']['id']);
 		if(isset($params['pass'][0])){
-			$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $params['country_slug'])));
-			$cond['Trip.country_id'] = $country['Country']['id'];
-			$breadcrumb[($slug . '/' . $params['country_slug'])] = $country['Country']['name'];
-			$page_title .= " - " . $country['Country']['title'];
-			$page_keywords .= "," . $country['Country']['keywords'];
+			if($category['Category']['id'] == 5){
+				$continent = $this->Continent->find('first', array('conditions' => array('Continent.slug' => $params['continent_slug'])));
+				$cond['Trip.continent_id'] = $continent['Continent']['id'];
+				$breadcrumb[($slug . '/' . $params['continent_slug'])] = $continent['Continent']['name'];
+				$page_title .= " - " . $continent['Continent']['title'];
+				$page_keywords .= "," . $continent['Continent']['keywords'];
 
-			$this->set('country_name', $country['Country']['name']);
-			$this->set('country_slug', $country['Country']['slug']);
+				$this->set('continent_name', $continent['Continent']['name']);
+				$this->set('continent_slug', $continent['Continent']['slug']);
+			}else{
+				$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $params['country_slug'])));
+				$cond['Trip.country_id'] = $country['Country']['id'];
+				$breadcrumb[($slug . '/' . $params['country_slug'])] = $country['Country']['name'];
+				$page_title .= " - " . $country['Country']['title'];
+				$page_keywords .= "," . $country['Country']['keywords'];
+
+				$this->set('country_name', $country['Country']['name']);
+				$this->set('country_slug', $country['Country']['slug']);
+			}
 		}
 		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC'));
 
@@ -74,22 +85,33 @@ class CategoriesController extends AppController {
 		$cat_id = (int)$params['pass'][0];
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $cat_id)));
-		$countries = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.country_id'));
-
+		
+		/* Nyaralások */
+		if($cat_id == 5){
+			$continents = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.continent_id', 'order' => 'Continent.name'));
+			$this->Session->write('quote_text', 'Felfedezőút');
+			$this->set('continents', $continents);
+		}else{
+			$countries = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.country_id', 'order' => 'Country.name'));
+			$this->Session->write('quote_text', 'Nyaralás');
+			$this->set('countries', $countries);
+		}
+		
 		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
-
-		$this->Session->write('quote_text', 'Nyaralás');
 
 		$this->set('trips', array());
 		$this->set('regions', array());
 		$this->set('regioned', false);
-		$this->set('countries', $countries);
 		$this->set('category', $category);
 
 		$this->set('breadcrumb', $breadcrumb);
 		$this->set('page_title', $category['Category']['title']);
 		$this->set('page_keywords', $category['Category']['keywords']);
 
-		$this->render('inner');
+		if($cat_id == 5){
+			$this->render('inner_felfedezo');
+		}else{
+			$this->render('inner');
+		}
 	}
 }

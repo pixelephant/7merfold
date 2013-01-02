@@ -300,3 +300,6 @@ msgstr "2. blokk tartalma"
 
 msgid "Block 3 Content"
 msgstr "3. blokk tartalma"
+
+msgid "Image Name"
+msgstr "Kép neve"

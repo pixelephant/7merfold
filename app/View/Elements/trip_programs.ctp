@@ -7,7 +7,9 @@
         <h3><?php echo $program['name']; ?></h3>
         <p><?php echo $program['description']; ?></p>
       </div>
-       <?php echo $this->Html->link(($this->Html->image('/img/thumbnails/' . $program['image_file'], array('alt' => $program['name'])) . '<span>' . $program['name'] . '</span>'), '/img/'.$program['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $program['name'])); ?>
+       <?php 
+       	$name = ($program['image_name'] == '' ? $program['name'] : $program['image_name']);
+       	echo $this->Html->link(($this->Html->image('/img/thumbnails/' . $program['image_file'], array('alt' => $name)) . '<span>' . $name . '</span>'), '/img/'.$program['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $name)); ?>
     </div>
   <?php } ?>
 </div>

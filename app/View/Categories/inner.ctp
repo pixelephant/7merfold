@@ -5,7 +5,13 @@
   <?php foreach($countries as $country){ ?>
       <a href="<?php echo $this->webroot . $category['Category']['slug'] . '/' . $country['Country']['slug']; ?>" class="offer">
         <div class="img">
-          <?php echo $this->Html->image($country['Country']['image_file'], array('alt' => $country['Country']['name'])); ?>
+          <?php 
+            if($country['Country']['image_file'] != ''){
+              echo $this->Html->image($country['Country']['image_file'], array('alt' => $country['Country']['name']));   
+            }else{
+              echo $this->Html->image('franciao.png', array('alt' => $country['Country']['name'])); 
+            }
+          ?>
           <?php #echo $this->Html->image('proba.png', array('class' => 'mask-img')); ?>
         </div>
         <div class="data">

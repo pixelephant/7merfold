@@ -1,6 +1,12 @@
 <a href="<?php echo $this->webroot; ?>utjaink/<?php echo $trip['Trip']['slug']; ?>" class="offer">
   <div class="img">
-    <?php echo $this->Html->image($trip['Trip']['circle_image_file']); ?>
+    <?php 
+    	if($trip['Trip']['circle_image_file'] == ''){
+    		echo $this->Html->image('franciao.png');
+    	}else{
+    		echo $this->Html->image($trip['Trip']['circle_image_file']);
+    	}
+    ?>
     <?php #echo $this->Html->image('proba.png', array('class' => 'mask-img')); ?>
   </div>
   <div class="data">

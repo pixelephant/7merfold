@@ -114,6 +114,18 @@ class HomeController extends AppController {
 				foreach ($countries as $country_slug => $name) {
 					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';
 				}
+			}elseif($cat_slug == 'felfedezoutak'){
+				$continents = $this->Trip->find('list', array('fields' => array('Trip.id', 'Trip.country_id'), 'conditions' => array('Trip.category_id' => $cat['Category']['id']), 'group' => 'Trip.continent_id'));
+				$ids = array();
+
+				foreach ($continents as $key => $value) {
+					$ids[] = $value;
+				}
+
+				$continents = $this->Continent->find('list', array('order' => 'Continent.name', 'fields' => array('Continent.slug', 'Continent.name'), 'conditions' => array('Continent.id' => $ids)));
+				foreach ($continents as $country_slug => $name) {
+					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';
+				}
 			}else{
 				$trips = $this->Trip->find('list', array('order' => 'Trip.name', 'fields' => array('Trip.slug', 'Trip.name'), 'conditions' => array('Trip.category_id' => $cat['Category']['id'])));
 				foreach ($trips as $slug => $name){

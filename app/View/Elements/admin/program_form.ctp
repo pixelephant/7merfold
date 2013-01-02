@@ -16,6 +16,7 @@
 		echo $this->Form->input('description', array('value' => $program['Program']['description']));
 		echo $this->Form->input('image_file', array('type' => 'file'));
 		echo $this->Html->image($program['Program']['image_file'], array('width' => 100));
+		echo $this->Form->input('image_name', array('value' => $program['Program']['image_name']));
 		echo $this->Form->end(__d('cake', __('Submit')));
 		$i++;
 	}
@@ -25,6 +26,7 @@
 		echo $this->Form->input('name');
 		echo $this->Form->input('description');
 		echo $this->Form->input('image_file', array('type' => 'file'));
+		echo $this->Form->input('image_name');
 		echo $this->Form->end(__d('cake', __('Submit')));
 	?>
 

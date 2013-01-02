@@ -49,9 +49,11 @@ class NewsController extends AppController {
 
 		$breadcrumb = array(('hirek/' . $news_slug) => $news['News']['title']);
 
+		$title = ($news['News']['page_title'] == '' ? $news['News']['title'] : $news['News']['page_title']);
+
 		$this->set('news', $news);
 		$this->set('breadcrumb', $breadcrumb);
-		$this->set('page_title', $news['News']['page_title']);
+		$this->set('page_title', $title);
 		$this->set('page_keywords', $news['News']['keywords']);
 
 		$this->render('show');

@@ -72,8 +72,10 @@ class TripsController extends AppController {
 		$this->set('trip_type', $trip_type);
 		$this->set('country', $country);
 
+		$title = ($trip['Trip']['title'] == '' ? $trip['Trip']['name'] : $trip['Trip']['title']);
+
 		$this->set('breadcrumb', $breadcrumb);
-		$this->set('page_title', $trip['Trip']['title']);
+		$this->set('page_title', $title);
 		$this->set('page_keywords', $trip['Trip']['keywords']);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
