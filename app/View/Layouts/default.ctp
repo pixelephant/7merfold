@@ -83,7 +83,7 @@
             <p>
               <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <?php echo $this->Html->link('utazási feltételek', '/utazasi-feltetelek'); ?> | <a href="#">állás</a>
             </p>
-            <p>7Mérföld Utazási Iroda &copy; 2012 | Eng. szám: U-001052</p>
+            <p>7Mérföld Utazási Iroda &copy; <?php echo date('Y'); ?> | Eng. szám: U-001052</p>
           </footer>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
