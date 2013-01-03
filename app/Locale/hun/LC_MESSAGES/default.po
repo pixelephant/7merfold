@@ -203,7 +203,7 @@ msgid "Useful Information"
 msgstr "Hasznos információk"
 
 msgid "Interesting Information"
-msgstr "Hasznos információk"
+msgstr "Érdekes információk"
 
 msgid "Visa Info"
 msgstr "Vízum információ"
