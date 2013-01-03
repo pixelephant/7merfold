@@ -202,6 +202,9 @@ msgstr "Országinformáció"
 msgid "Useful Information"
 msgstr "Hasznos információk"
 
+msgid "Interesting Information"
+msgstr "Hasznos információk"
+
 msgid "Visa Info"
 msgstr "Vízum információ"
 

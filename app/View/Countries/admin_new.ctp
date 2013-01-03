@@ -11,6 +11,7 @@
 	echo $this->Form->input('continent_id');
 	echo $this->Form->input('information');
 	echo $this->Form->input('useful_information');
+	echo $this->Form->input('interesting_information');
 	echo $this->Form->input('visa_info');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
