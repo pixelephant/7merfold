@@ -74,7 +74,7 @@
 
 
 <section id="newest" class="slider section">
-<h2>Legfrisebb utak</h2>
+<h2>Legfrissebb utak</h2>
   <div class="cont">
     <div class="flex-container">
       <div class="flexslider">

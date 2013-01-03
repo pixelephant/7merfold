@@ -6,7 +6,7 @@
     </div>
   </section>
   <section id="side-news" class="section">
-    <h2>Legfrisebb hír</h2>
+    <h2>Legfrissebb hír</h2>
     <div class="cont">
       <a href="<?php echo $this->webroot . 'hirek/' . $news['News']['slug']; ?>">
         <?php echo (!empty($news['News']['image_file']) ? $this->Html->image($news['News']['image_file']) : ''); ?>
