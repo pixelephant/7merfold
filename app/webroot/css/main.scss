@@ -75,6 +75,14 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
 
 .no-flick{-webkit-transform:translate3d(0,0,0);}
 
+figure.image{
+  img{
+    max-width:100%;
+    position:absolute;
+  } 
+}
+
+
 body{
     background:#eee;
     font-family: 'Source Sans Pro';
