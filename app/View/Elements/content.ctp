@@ -1,4 +1,4 @@
-<?php $closed = false; ?>
+<?php $closed = true; ?>
 <?php if($trip_type == '1'){
 	echo $this->element('trip_description', array('description' => $trip['Trip']['description'], 'closed' => false));
 	echo $this->element('trip_sights', array('trip' => $trip, 'name' => 'Látnivalók', 'id' => 'latnivalok', 'closed' => $closed));
