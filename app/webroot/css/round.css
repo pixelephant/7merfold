@@ -183,7 +183,9 @@ p.accommodation, p.price {
   overflow: hidden;
   padding: 1em 0; }
   .day p {
-    padding-right: 1%; }
+    padding-right: 1%; 
+    font-size: 0.9em;
+          }
   .day a {
     padding-top: 15px;
     text-align: center; }
