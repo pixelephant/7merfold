@@ -55,7 +55,7 @@ class HomeController extends AppController {
  */
 	public function index() {
 
-		$newest_trips = $this->Trip->find('all', array('order' => 'updated desc', 'limit' => 12));
+		$newest_trips = $this->Trip->find('all', array('order' => 'updated desc', 'conditions' => array('newest' => 1)));
 		$news = $this->News->find('all', array('order' => 'created desc', 'limit' => 3));
 		$categories_top = $this->Category->find('all', array('limit' => 3));
 		$categories_bottom = $this->Category->find('all', array('offset' => 3, 'limit' => 2));

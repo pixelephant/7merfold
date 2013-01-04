@@ -24,6 +24,7 @@
 	// echo $this->Form->input('special');
 	// echo $this->Form->input('service');
 	echo $this->Form->input('hajozz');
+	echo $this->Form->input('newest');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
 	echo $this->Form->input('image_file', array('type' => 'file'));

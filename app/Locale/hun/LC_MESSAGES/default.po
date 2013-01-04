@@ -306,3 +306,6 @@ msgstr "3. blokk tartalma"
 
 msgid "Image Name"
 msgstr "Kép neve"
+
+msgid "Newest"
+msgstr "Legújabb utak közé?"

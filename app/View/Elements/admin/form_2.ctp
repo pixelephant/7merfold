@@ -28,6 +28,7 @@
 	// echo $this->Form->input('star_rating');
 	// echo $this->Form->input('day');
 	// echo $this->Form->input('special');
+	echo $this->Form->input('newest');
 	echo $this->Form->input('keywords');
 	echo $this->Form->input('title');
 	echo $this->Form->input('image_file', array('type' => 'file'));
