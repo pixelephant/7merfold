@@ -7,6 +7,10 @@
 		<h3>Hasznos információk</h3>
 		<?php echo $country['Country']['useful_information']; ?>
 	</div>
+	<div class="cont formatted">
+		<h3>Érdekes információk</h3>
+		<?php echo $country['Country']['interesting_information']; ?>
+	</div>
 </section>
 
 <?php if(!empty($country['CountryImage'])){ ?>

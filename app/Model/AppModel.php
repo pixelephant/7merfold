@@ -61,7 +61,7 @@ class AppModel extends Model {
 	    				$i++;
 	    			}
 	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
-	    			if($ext == 'jpg' || $ext == 'jpeg'){
+	    			if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG'){
 	    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200, $max_height = 150);
 	    			}else{
 	    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
