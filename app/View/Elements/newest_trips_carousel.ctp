@@ -9,7 +9,6 @@
     		$image = 'temp.png';
     	}
     	echo $this->Html->link($this->Html->image($image, array('alt' => $trips[$i]['Trip']['name'])) . '<p class="flex-caption">' . $this->App->trimText($trips[$i]['Trip']['name'], 30, false) . '</p>', '/utjaink/' . $trips[$i]['Trip']['slug'] , array('class' => 'offer', 'escape' => false));
-    	echo $this->Html->image('mask.png');
   	} 
   ?>
   </figure>

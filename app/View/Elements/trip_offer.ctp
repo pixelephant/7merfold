@@ -7,7 +7,6 @@
     		echo $this->Html->image($trip['Trip']['circle_image_file']);
     	}
     ?>
-    <?php echo $this->Html->image('mask.png'); ?>
   </figure>
   <div class="data">
     <h3><?php echo $trip['Trip']['name']; ?> <?php echo $this->App->hotel_stars($trip['Trip']['star_rating']); ?></h3>
