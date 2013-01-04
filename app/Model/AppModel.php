@@ -63,6 +63,8 @@ class AppModel extends Model {
 	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
 	    			if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG'){
 	    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200, $max_height = 150);
+	    			}elseif($ext == 'PNG' || $ext == 'png'){
+	    				$this->make_thumb_png(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), 200, 150);
 	    			}else{
 	    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
 	    			}
@@ -132,21 +134,32 @@ class AppModel extends Model {
 	  $height = imagesy($source_image);
 	  
 	  /* find the "desired height" of this thumbnail, relative to the desired width  */
-	  $desired_height = floor($height * ($desired_width / $width));
+	  // $desired_height = floor($height * ($desired_width / $width));
 	  
-	  if($desired_height > $max_height){
-	  	$desired_width = $desired_width * ($max_height / $desired_height);
-	  	$desired_height = $max_height;
-	  }
+	  // if($desired_height > $max_height){
+	  // 	$desired_width = $desired_width * ($max_height / $desired_height);
+	  // 	$desired_height = $max_height;
+	  // }
 
 	  /* create a new, "virtual" image */
-	  $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+	  // $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+	  $virtual_image = imagecreatetruecolor($desired_width, $max_height);
 	  
 	  /* copy source image at a resized size */
 	  imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
 	  
 	  /* create the physical thumbnail image to its destination */
 	  imagejpeg($virtual_image, $dest);
+	}
+
+	function make_thumb_png($src, $dest, $width, $height){
+		list($width_orig, $height_orig) = getimagesize( $src );
+		$image_p = imagecreatetruecolor($width, $height);
+		imagealphablending( $image_p, false );
+    imagesavealpha( $image_p, true );
+    $image = imagecreatefrompng( $src );
+    imagecopyresampled( $image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
+    imagepng($image_p, $dest);
 	}
 
 }
