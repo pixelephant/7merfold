@@ -680,6 +680,7 @@ a.offer {
   float: none;
   margin: 0 auto; }
   #newest a.offer img {
+    width: auto !important;
     max-width: 100%; }
 
 #search-form {
