@@ -75,12 +75,7 @@ input[type="text"],input[type="password"],input[type="email"],input[type="tel"],
 
 .no-flick{-webkit-transform:translate3d(0,0,0);}
 
-figure.image{
-  img{
-    max-width:100%;
-    position:absolute;
-  } 
-}
+
 
 
 body{
@@ -435,7 +430,7 @@ body{
   }
   a{
     @include purple-button;
-    @include box-shadow;
+    
     position: absolute;
     right:3%;
     bottom:5%;
@@ -452,7 +447,7 @@ body{
   }
   a{
     @include purple-button;
-    @include box-shadow;
+    
     position: absolute;
     right:3%;
     bottom:5%;
@@ -486,8 +481,10 @@ a.offer{
 
 #newest a.offer{
   width:145px;
+  float:none;
+  margin:0 auto;
   img{
-    max-width:auto;
+    max-width:100%;
   }
 }
 
@@ -626,8 +623,8 @@ a.offer{
 }
 
 #main-footer{
-  background:#3885AB;
-  border-top:1px solid $blue;
+  background:#4d226d;
+  //border-top:1px solid #875497;
   
   font-weight: 200;
   width: 100%;
@@ -647,7 +644,7 @@ a.offer{
 #contact a{
   display: block;
   font-size: 1em;
-  border-bottom: 1px solid $blue;
+  border-bottom: 1px solid #875497;
   text-align:center;
   padding:0.5em 0;
   line-height:1;
@@ -805,6 +802,7 @@ a.offer{
 
 .slides a.offer{
   width: auto;
+  max-width:100%;
 }
 
 .section .cont table{
@@ -1137,7 +1135,7 @@ a.offer{
 
   #contact{
     overflow:hidden;
-    border-bottom:1px solid $blue;
+    border-bottom:1px solid #875497;
     a{
       display:block;
       float:left;
@@ -1150,7 +1148,7 @@ a.offer{
       &.totop{
         display:none;
       }
-    &:last-child,&:nth-last-child(2){
+    &:last-child,&:nth-last-child(2),&:nth-last-child(3){
       border-bottom:none;
     }
   }
@@ -1245,7 +1243,7 @@ a.offer{
   #contact a{
     @include t;
     &:hover,&:focus{
-      background: #1A7DBA;
+      background: #714e8a;
     }
   }
 

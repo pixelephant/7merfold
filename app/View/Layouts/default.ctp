@@ -78,6 +78,7 @@
               <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span> <span class="data">info@7merfold.com</span></a>
               <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="&#xe004;"></span><span class="data">Likeolj minket!</span></a>
               <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="&#xe001;"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a>
+              <a href="https://plus.google.com/107222235496895279847/posts"><span class="icon" aria-hidden="true" data-icon="&#xe00e;"></span><span class="data">Google+</span></a>
               <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="&#xe009;"></span>Oldal tetejére</a>
             </div>
             <p>
