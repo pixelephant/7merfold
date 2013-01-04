@@ -427,7 +427,8 @@ body {
   padding: 1em;
   font-size: 0.8em; }
   .section .totop span {
-    color: #4897c8 !important; }
+    color: #4897c8 !important;
+    float: none !important; }
 
 #main-content, #sidebar {
   margin-top: 10px; }
