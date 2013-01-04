@@ -12,7 +12,6 @@
               echo $this->Html->image('franciao.png', array('alt' => $country['Country']['name'])); 
             }
           ?>
-          <?php echo $this->Html->image('mask.png'); ?>
         </figure>
         <div class="data">
           <h3><?php echo $country['Country']['name']; ?></h3>
