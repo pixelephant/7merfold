@@ -4,6 +4,10 @@
 <section class="section">
 	<h2><?php echo $country['Country']['name']; ?></h2>
 	<div class="cont formatted">
+		<h3>Általános információk</h3>
+		<?php echo $country['Country']['information']; ?>
+	</div>
+	<div class="cont formatted">
 		<h3>Hasznos információk</h3>
 		<?php echo $country['Country']['useful_information']; ?>
 	</div>
