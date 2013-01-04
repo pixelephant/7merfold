@@ -220,6 +220,7 @@ body{
   color:$blue !important;
   span{
     color:$blue !important;
+    float:none !important;
   }
   float:right;
   padding:1em;
@@ -484,6 +485,7 @@ a.offer{
   float:none;
   margin:0 auto;
   img{
+    width:auto !important;
     max-width:100%;
   }
 }
