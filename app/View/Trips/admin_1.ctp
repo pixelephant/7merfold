@@ -9,7 +9,7 @@
 		<tbody>
 			<tr>
 					<th><?php echo $this->Paginator->sort('name', 'Cím'); ?></th>
-					<th><?php echo $this->Paginator->sort('created', 'Létrehozás'); ?></th>
+					<th><?php echo $this->Paginator->sort('updated', 'Létrehozás'); ?></th>
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
 					<?php 
 						if($id == 4 || $id == 3){
