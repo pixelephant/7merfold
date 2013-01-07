@@ -35,7 +35,7 @@
                        <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 1 240-1978</span></a>
                         <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="&#xe004;"></span><span class="data">Likeolj minket!</span></a>
               <a href="http://eepurl.com/s8v4D"><span class="icon" aria-hidden="true" data-icon="&#xe001;"></span><span class="data">7Mérföld hírlevél</span></a>
-                      <a href="mailto:info@7merfold.hu"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">info@7merfold.com</span></a>
+                      <a href="mailto:info@7merfold.com"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span> <span class="data">info@7merfold.com</span></a>
                      <!-- <a target="_blank" href="https://www.facebook.com/7MerfoldUtazasiIroda"><span class="icon" aria-hidden="true" data-icon="f"></span><span class="data">Likeolj minket!</span></a>
                       <a href="#"><span class="icon" aria-hidden="true" data-icon="n"></span><span class="data">Iratkozz fel hírlevelünkre!</span></a> -->
                     </section>
