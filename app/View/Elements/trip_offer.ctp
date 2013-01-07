@@ -1,4 +1,4 @@
-<a href="<?php echo $this->webroot; ?>utjaink/<?php echo $trip['Trip']['slug']; ?>" class="offer">
+<a href="<?php echo $this->webroot; ?>utjaink/<?php echo $trip['Trip']['slug']; ?>" class="offer no-flick">
   <figure class="img">
     <?php 
     	if($trip['Trip']['circle_image_file'] == ''){
