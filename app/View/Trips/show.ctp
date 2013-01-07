@@ -115,18 +115,27 @@
 
 <?php echo $this->element('quote_box'); ?>
 
-<section id="vizum" class="section collapsible halfer">
-  <h2><?php echo $this->Html->link('Vízum <span>+</span>', '#', array('escape' => false)); ?></h2>
-  <div class="cont hidden">
-    <?php echo $trip['Country']['visa_info']; ?>    
-  </div>
-</section>
-<section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible halfer">
-  <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
-  <div class="cont hidden">
-    <?php echo $trip['Country']['information']; ?>
-  </div>
-</section>                                
+<?php if($trip['Category']['id'] == 1){ ?>
+  <section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible">
+    <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
+    <div class="cont hidden">
+      <?php echo $trip['Country']['information']; ?>
+    </div>
+  </section>
+<?php }else{ ?>
+  <section id="vizum" class="section collapsible halfer">
+    <h2><?php echo $this->Html->link('Vízum <span>+</span>', '#', array('escape' => false)); ?></h2>
+    <div class="cont hidden">
+      <?php echo $trip['Country']['visa_info']; ?>    
+    </div>
+  </section>
+  <section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible halfer">
+    <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
+    <div class="cont hidden">
+      <?php echo $trip['Country']['information']; ?>
+    </div>
+  </section>                                
+<?php } ?>
 
 <?php if($trip['Trip']['hajozz'] == 1){ ?>
   <!-- <div class="cta boat">
