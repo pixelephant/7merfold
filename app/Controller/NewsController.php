@@ -76,7 +76,7 @@ class NewsController extends AppController {
 			if(isset($this->request->data['News']['id'])){
 				$this->News->findById($this->request->data['News']['id']);
 			}else{
-				$this->News->create();
+				$this->News->create(array('created' => date("Y-m-d H:i:s")));
 			}
 			$c = $this->News->save($this->request->data);
 			$this->redirect('/admin/news/edit/'.$c['News']['id']);

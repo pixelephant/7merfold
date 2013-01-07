@@ -191,7 +191,7 @@ class TripsController extends AppController {
 			if(isset($this->request->data['Trip']['id'])){
 				$this->Trip->findById($this->request->data['Trip']['id']);
 			}else{
-				$this->Trip->create();
+				$this->Trip->create(array('updated' => date("Y-m-d H:i:s"), 'created' => date("Y-m-d H:i:s")));
 			}
 			/* új sor */
 				// foreach ($this->request->data['Trip'] as $key => $value) {

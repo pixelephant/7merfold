@@ -45,7 +45,7 @@ class RegionsController extends AppController {
 			if(isset($this->request->data['Region']['id'])){
 				$this->Region->findById($this->request->data['Region']['id']);	
 			}else{
-				$this->Region->create();
+				$this->Region->create(array('created' => date("Y-m-d H:i:s")));
 			}
 			$c = $this->Region->save($this->request->data);
 			$id = $c['Region']['id'];

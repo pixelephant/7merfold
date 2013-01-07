@@ -13,8 +13,10 @@
 		echo $this->Form->input('id', array('type' => 'hidden', 'value' => $sight['Sight']['id']));
 		echo $this->Form->input('trip_id', array('type' => 'hidden', 'value' => $sight['Sight']['trip_id']));
 		echo $this->Form->input('name', array('value' => $sight['Sight']['name']));
-		echo $this->Html->image($sight['Sight']['image_file'], array('width' => 100));
 		echo $this->Form->input('image_file', array('type' => 'file'));
+		if(isset($sight['Sight']['image_file']) && !empty($sight['Sight']['image_file'])){
+			echo $this->Html->image($sight['Sight']['image_file'], array('width' => 100));
+		}
 		echo $this->Form->end(__d('cake', __('Submit')));
 		$i++;
 	}

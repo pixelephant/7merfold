@@ -13,7 +13,7 @@ class SightsController extends AppController {
 			if(isset($this->request->data['Sight']['id'])){
 				$this->Sight->findById($this->request->data['Sight']['id']);
 			}else{
-				$this->Sight->create();
+				$this->Sight->create(array('created' => date("Y-m-d H:i:s")));
 			}
 			$this->Sight->save($this->request->data);
 			$this->redirect('/admin/trips/edit/'.$this->request->data['Sight']['trip_id']);

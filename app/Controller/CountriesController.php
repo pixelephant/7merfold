@@ -42,7 +42,7 @@ class CountriesController extends AppController {
 			if(isset($this->request->data['Country']['id'])){
 				$this->Country->findById($this->request->data['Country']['id']);	
 			}else{
-				$this->Country->create();
+				$this->Country->create(array('created' => date("Y-m-d H:i:s")));
 			}
 
 			$c = $this->Country->save($this->request->data);
