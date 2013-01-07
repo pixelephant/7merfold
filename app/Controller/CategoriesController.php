@@ -54,7 +54,7 @@ class CategoriesController extends AppController {
 				$this->set('country_slug', $country['Country']['slug']);
 			}
 		}
-		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC'));
+		$trips = $this->Trip->find('all', array('conditions' => $cond, 'order' => 'Trip.region_id ASC, Trip.name ASC'));
 
 		$regions = array();
 
