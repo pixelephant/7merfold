@@ -71,7 +71,7 @@
             <?php echo $this->fetch('sidebar'); ?>
           <footer id="main-footer">
             <div id="contact">
-              <a target="_blank" href="http://goo.gl/maps/3zeka"><span class="icon" aria-hidden="true" data-icon="&#xe002;"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
+              <a target="_blank" href="http://goo.gl/maps/cZA37"><span class="icon" aria-hidden="true" data-icon="&#xe002;"></span> <span class="data">1037 Budapest, Bécsi út 81.</span></a>
               <a href="tel:+36706348889"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 70 634-8889</span></a>
               <a href="tel:+3612401978"><span class="icon" aria-hidden="true" data-icon="&#xe000;"></span> <span class="data">+36 1 240-1978</span></a>
               <a href="tel:+3612401978"><span class="icon fax" aria-hidden="true" data-icon="&#xe00c;"></span> <span class="data">+36 1 240-1978</span></a>
@@ -82,7 +82,7 @@
               <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="&#xe009;"></span>Oldal tetejére</a>
             </div>
             <p>
-              <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <?php echo $this->Html->link('utazási feltételek', '/utazasi-feltetelek'); ?> | <a href="#">állás</a>
+              <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <?php echo $this->Html->link('utazási feltételek', '/utazasi-feltetelek'); ?> | <?php echo $this->Html->link('állás', '/allasajanlatok'); ?>
             </p>
             <p>7Mérföld Utazási Iroda &copy; <?php echo date('Y'); ?> | Eng. szám: U-001052</p>
           </footer>

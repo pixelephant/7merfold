@@ -45,7 +45,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent', 'MailchimpSubscriber');
+	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent', 'Content', 'MailchimpSubscriber');
 
 /**
  * Displays a view
@@ -60,10 +60,13 @@ class HomeController extends AppController {
 		$categories_top = $this->Category->find('all', array('limit' => 3));
 		$categories_bottom = $this->Category->find('all', array('offset' => 3, 'limit' => 2));
 
+		$irodankrol = $this->Content->find('first', array('conditions' => array('slug' => 'irodankrol')));
+
 		$this->set('newest_trips', $newest_trips);
 		$this->set('news', $news);
 		$this->set('categories_top', $categories_top);
 		$this->set('categories_bottom', $categories_bottom);
+		$this->set('irodankrol', $irodankrol);
 
 		$this->set('breadcrumb', array());
 		$this->set('page_title', 'Főoldal');
@@ -91,7 +94,7 @@ class HomeController extends AppController {
 
 	public function get_menu(){
 		if ($this->request->is('requested')){
-			return $this->Category->find('list', array('fields' => array('Category.slug', 'Category.name')));
+			return $this->Category->find('list', array('fields' => array('Category.slug', 'Category.name'), 'order' => 'position asc'));
 		}
 	}
 

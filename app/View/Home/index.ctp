@@ -141,7 +141,8 @@
 <section class="section">
   <h2>Utazási irodánkról</h2>
   <div class="cont">
-    <p>Talán mindenki gyermekkori emlékei között ott él még az a csodálatos hétmérföldes csizma, amellyel a legkisebb fiú túllépett teret és időt, és messzi vidékekre juthatott el. Ki ne vágyna egy ilyen <strong>csodás csizmára?!</strong></p>
+    <!-- <p>Talán mindenki gyermekkori emlékei között ott él még az a csodálatos hétmérföldes csizma, amellyel a legkisebb fiú túllépett teret és időt, és messzi vidékekre juthatott el. Ki ne vágyna egy ilyen <strong>csodás csizmára?!</strong></p> -->
+    <?php echo $irodankrol['Content']['block_1_content']; ?>
   </div>
   <?php echo $this->element('totop'); ?>
 </section>
