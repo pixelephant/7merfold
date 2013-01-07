@@ -69,6 +69,7 @@ p.accommodation,p.price{
   img{
     display: block;
     max-width: 100%;
+    margin:0 auto;
   }
 }
 
@@ -268,7 +269,11 @@ position: relative;
   clear:both;
  }
 
-.section{
+#main-content .section.collapsible.closed .cont{
+    display:block !important;
+}
+
+#main-content .section{
   .cont{
     display:block;
   }
