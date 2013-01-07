@@ -269,8 +269,8 @@ position: relative;
   clear:both;
  }
 
-#main-content.section.collapsible.closed .cont{
-    display:block;
+#main-content .section.collapsible.closed .cont{
+    display:block !important;
 }
 
 #main-content .section{
