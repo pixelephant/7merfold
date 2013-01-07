@@ -24,6 +24,6 @@ class HotelsController extends AppController {
 		$params = $this->request->params;
 		$hotel = $this->Hotel->find('first', array('conditions' => array('Hotel.id' => $params['pass'][0])));
 		$this->Hotel->delete($params['pass'][0]);
-		$this->redirect('/admin/trips/edit/'.$sight['Hotel']['trip_id']);
+		$this->redirect('/admin/trips/edit/'.$hotel['Hotel']['trip_id']);
 	}
 }
