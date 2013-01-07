@@ -119,6 +119,8 @@
     font-style: italic;
     font-size: 1.25em;
     padding: 0.8em 1em; }
+    .region h3 a {
+      font-weight: bold; }
 
 .select-trigger {
   float: right;
@@ -158,7 +160,8 @@
   margin-right: 5%; }
 
 h2.info a, h3.info a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+  color: #69297d; }
 
 h2.info .icon, h3.info .icon {
   font-style: normal;
@@ -191,11 +194,16 @@ h2.info .icon, h3.info .icon {
     height: auto;
     float: none;
     overflow: hidden; }
+    .offer-list a.offer .data {
+      position: relative;
+      z-index: 2; }
     .offer-list a.offer .img {
       float: left;
       width: 30%; }
       .offer-list a.offer .img img {
-        max-width: 100%; }
+        max-width: 100%;
+        position: relative;
+        z-index: 1; }
     .offer-list a.offer .stars {
       display: inline;
       text-align: left;
