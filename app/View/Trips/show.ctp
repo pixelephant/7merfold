@@ -118,9 +118,9 @@
 <?php if($trip['Category']['id'] == 1){ ?>
   <section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible">
     <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
-    <div class="cont hidden">
+    <!-- <div class="cont hidden">
       <?php echo $trip['Country']['information']; ?>
-    </div>
+    </div> -->
   </section>
 <?php }else{ ?>
   <section id="vizum" class="section collapsible halfer">
