@@ -4,7 +4,7 @@
 	foreach($hotels as $hotel){
 		echo '<h3>'.$i . ". hotel</h3>";
 	?>
-		<form action="/7merfold/admin/hotels/delete/<?php echo $hotel['Hotel']['id']; ?>" name="post_<?php echo $hotel['Hotel']['id']; ?>" id="post_<?php echo $hotel['Hotel']['id']; ?>" style="display:none;" method="post">
+		<form action="<?php echo $this->webroot; ?>admin/hotels/delete/<?php echo $hotel['Hotel']['id']; ?>" name="post_<?php echo $hotel['Hotel']['id']; ?>" id="post_<?php echo $hotel['Hotel']['id']; ?>" style="display:none;" method="post">
 		<input type="hidden" name="_method" value="POST"></form>
 		<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $hotel['Hotel']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
 

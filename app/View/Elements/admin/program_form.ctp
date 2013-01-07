@@ -4,7 +4,7 @@
 	foreach($programs as $program){
 		echo '<h3>'.$i . ". nap programja</h3>";
 	?>
-		<form action="/7merfold/admin/programs/delete/<?php echo $program['Program']['id']; ?>" name="post_<?php echo $program['Program']['id']; ?>" id="post_<?php echo $program['Program']['id']; ?>" style="display:none;" method="post">
+		<form action="<?php echo $this->webroot; ?>admin/programs/delete/<?php echo $program['Program']['id']; ?>" name="post_<?php echo $program['Program']['id']; ?>" id="post_<?php echo $program['Program']['id']; ?>" style="display:none;" method="post">
 		<input type="hidden" name="_method" value="POST"></form>
 		<a href="#" onclick="if (confirm('Biztosan törlöd?')) { document.post_<?php echo $program['Program']['id']; ?>.submit(); } event.returnValue = false; return false;">Töröl</a>
 
