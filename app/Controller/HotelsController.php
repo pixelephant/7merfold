@@ -22,7 +22,7 @@ class HotelsController extends AppController {
 
 	public function admin_delete(){
 		$params = $this->request->params;
-		$hotel = $this->Sight->find('first', array('conditions' => array('Hotel.id' => $params['pass'][0])));
+		$hotel = $this->Hotel->find('first', array('conditions' => array('Hotel.id' => $params['pass'][0])));
 		$this->Hotel->delete($params['pass'][0]);
 		$this->redirect('/admin/trips/edit/'.$sight['Hotel']['trip_id']);
 	}
