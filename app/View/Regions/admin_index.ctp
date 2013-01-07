@@ -9,14 +9,14 @@
 		<tbody>
 			<tr>
 					<th><?php echo $this->Paginator->sort('name', 'Név'); ?></th>
-					<th><?php echo $this->Paginator->sort('updated', 'Frissítve'); ?></th>
+					<th><?php echo $this->Paginator->sort('created', 'Frissítve'); ?></th>
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
 					<th>Műveletek</th>
 			</tr>
 			<?php foreach ($regions as $key => $region) { ?>				
 				<tr>
 					<td><?php echo $region['Region']['name']; ?></td>
-					<td><?php echo $region['Region']['updated']; ?></td>
+					<td><?php echo $region['Region']['created']; ?></td>
 					<td><?php echo $region['Region']['id']; ?></td>
 					<td class="actions">						
 						<?php echo $this->Html->link('Szerkeszt', '/admin/regions/edit/'.$region['Region']['id']); ?>
