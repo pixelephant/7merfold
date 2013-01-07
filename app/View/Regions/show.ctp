@@ -23,3 +23,6 @@
 	<?php echo $this->element('totop'); ?>
 	</section>
 <?php } ?>
+<section class="section">
+	<?php echo $this->element('back_block'); ?>
+</section>

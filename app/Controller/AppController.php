@@ -39,6 +39,7 @@ class AppController extends Controller {
 	}
 
 	function beforeRender(){
+		$this->set('referer',$this->referer());
 		/* Kiszedi a nem kellő mezőket */
 		// if($this->request->action == 'index' && $this->request->prefix == 'admin'){
 		// 	$not_to_display = array('keywords', 'slug', 'image_file');
