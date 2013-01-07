@@ -164,9 +164,9 @@ class AppModel extends Model {
 	  /* create a new, "virtual" image */
 	  // $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
 	  $virtual_image = imagecreatetruecolor($desired_width, $max_height);
-	  
+
 	  /* copy source image at a resized size */
-	  imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $desired_height, $width, $height);
+	  $a = imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $max_height, $width, $height);
 	  
 	  /* create the physical thumbnail image to its destination */
 	  imagejpeg($virtual_image, $dest);
