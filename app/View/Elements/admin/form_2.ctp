@@ -13,6 +13,7 @@
 	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => (empty($this->request->data['Trip']['slug']) ? '' : $this->request->data['Trip']['slug'])));
 	echo $this->Form->input('short_description', array("class" => 'non-redactor'));
 	echo $this->Form->input('travel_date');
+	echo $this->Form->input('day', array("class" => 'non-redactor', 'label' => 'Út időtartama', 'type' => "text"));
 	echo $this->Form->input('travel_method');
 	echo $this->Form->input('accommodation');
 	echo $this->Form->input('service');

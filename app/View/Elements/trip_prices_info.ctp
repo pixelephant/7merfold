@@ -7,6 +7,10 @@
             <p><?php echo $trip['Trip']['travel_date']; ?></p>
         </div>
         <div class="block">
+            <h3>Utazás időtartama</h3>
+            <p><?php echo $trip['Trip']['day']; ?></p>
+        </div>
+        <div class="block">
             <h3>Utazás</h3>
             <p><?php echo $trip['Trip']['travel_method']; ?></p>
         </div>
