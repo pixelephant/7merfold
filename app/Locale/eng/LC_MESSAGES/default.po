@@ -309,3 +309,6 @@ msgstr "Kép neve"
 
 msgid "Newest"
 msgstr "Legújabb utak közé?"
+
+msgid "Important Information"
+msgstr "Fontos információk"

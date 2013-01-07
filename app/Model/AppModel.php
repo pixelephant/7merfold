@@ -124,8 +124,8 @@ class AppModel extends Model {
 	  $text = strtolower($text);
 
 	  // replace accent characters
-		$accent = array("á","é","í","ó","ö","ő","ü","ű");
-		$non_accent = array("a","e","i","o","o","o","u","u");
+		$accent = array("á","é","í","ó","ö","ő","ü","ű","ú");
+		$non_accent = array("a","e","i","o","o","o","u","u","u");
 		$text = str_replace($accent, $non_accent, $text);
 
 	  // replace non letter or digits by -
@@ -167,7 +167,7 @@ class AppModel extends Model {
 
 	  /* copy source image at a resized size */
 	  $a = imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $max_height, $width, $height);
-	  
+
 	  /* create the physical thumbnail image to its destination */
 	  imagejpeg($virtual_image, $dest);
 	}
