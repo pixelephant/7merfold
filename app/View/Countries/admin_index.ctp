@@ -9,14 +9,14 @@
 		<tbody>
 			<tr>
 					<th><?php echo $this->Paginator->sort('name', 'Név'); ?></th>
-					<th><?php echo $this->Paginator->sort('created', 'Létrehozás'); ?></th>
+					<th><?php echo $this->Paginator->sort('updated', 'Frissítve'); ?></th>
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
 					<th>Műveletek</th>
 			</tr>
 			<?php foreach ($countries as $key => $country) { ?>				
 				<tr>
 					<td><?php echo $country['Country']['name']; ?></td>
-					<td><?php echo $country['Country']['created']; ?></td>
+					<td><?php echo $country['Country']['updated']; ?></td>
 					<td><?php echo $country['Country']['id']; ?></td>
 					<td class="actions">						
 						<?php echo $this->Html->link('Szerkeszt', '/admin/countries/edit/'.$country['Country']['id']); ?>

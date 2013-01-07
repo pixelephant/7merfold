@@ -9,14 +9,14 @@
 		<tbody>
 			<tr>
 					<th><?php echo $this->Paginator->sort('title', 'Cím'); ?></th>
-					<th><?php echo $this->Paginator->sort('created', 'Létrehozás'); ?></th>
+					<th><?php echo $this->Paginator->sort('updated', 'Frissítve'); ?></th>
 					<th><?php echo $this->Paginator->sort('id', 'Id'); ?></th>
 					<th>Műveletek</th>
 			</tr>
 			<?php foreach ($news as $key => $news) { ?>				
 				<tr>
 					<td><?php echo $news['News']['title']; ?></td>
-					<td><?php echo $news['News']['created']; ?></td>
+					<td><?php echo $news['News']['updated']; ?></td>
 					<td><?php echo $news['News']['id']; ?></td>
 					<td class="actions">						
 						<?php echo $this->Html->link('Szerkeszt', '/admin/news/edit/'.$news['News']['id']); ?>
