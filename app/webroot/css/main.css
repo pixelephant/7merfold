@@ -1,12 +1,4 @@
 @import url(normalize.css);
-#reszveteli-dij table, #info table{
-  text-align: center !important;
-}
-
-#leiras p, #fontosinformaciok p, #reszveteli-dij p, #program p, #arak p, #ellatas p, #info p{
-  text-align: justify !important;
-}
-
 .white-arrow {
   position: relative;
   background: #fff;
@@ -311,6 +303,12 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
 
 .no-flick {
   -webkit-transform: translate3d(0, 0, 0); }
+
+.error {
+  color: #bc193c;
+  margin-bottom: 15px;
+  margin-top: -10px;
+  display: block; }
 
 body {
   background: #eee;
