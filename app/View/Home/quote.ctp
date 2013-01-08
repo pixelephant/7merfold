@@ -1,3 +1,4 @@
+<?php $this->Html->script(array('jquery.validate.min', 'quote'), array('inline' => false)); ?>
 <section class="section">
 	
 	<h2>Árajánlatkérés - <?php echo $quote_text; ?></h2>
@@ -9,15 +10,15 @@
 			</div>
 			<div>
 				<label for="name">Név</label>
-				<input type="text" name="name" id="name" required>
+				<input type="text" name="name" id="name" class="required" required>
 			</div>
 			<div>
 				<label for="telephone">Telefonszám</label>
-				<input  type="tel" step="0" name="telephone" id="telephone" required>
+				<input  type="tel" step="0" name="telephone" class="required" id="telephone" required>
 			</div>
 			<div>
 				<label for="e-mail">Email cím</label>
-				<input type="email" name="e-mail" id="e-mail" required>
+				<input type="email" name="e-mail" id="e-mail" class="required email" required>
 			</div>
 			<div>
 				<label for="message">Üzeneted, kívánságaid</label>
