@@ -11,7 +11,9 @@
 <p class="lead"><?php echo $trip['Trip']['short_description']; ?></p>
   <nav id="inline-nav">
     <?php echo $this->element('nav', array('trip_type' => $trip_type)) ?>
-    <a href="#vizum">Vízum</a>
+    <?php if($trip['Category']['id'] != '1'){ ?>
+      <a href="#vizum">Vízum</a>
+    <?php } ?>
     <a href="#<?php echo $trip['Country']['name']; ?>"><?php echo $trip['Country']['name']; ?></a>
   </nav>
 <div>
