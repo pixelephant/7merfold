@@ -1,4 +1,8 @@
 @import url(normalize.css);
+#reszveteli-dij table, #info table{
+  text-align: center !important;
+}
+
 .white-arrow {
   position: relative;
   background: #fff;

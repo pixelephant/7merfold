@@ -7,7 +7,8 @@
 
 <?php if($trip_type == '2'){ ?>
 	<a href="#program">Program</a>
-	<a href="#arak">Árak és infók</a>
+	<a href="#info">Információk</a>
+	<a href="#reszveteli-dij">Részvételi díj</a>
 	<a href="#latnivalok">Látnivalók</a>
 <?php } ?>
 
