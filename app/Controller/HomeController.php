@@ -174,7 +174,11 @@ class HomeController extends AppController {
 		$user_message = $params['message'];
 		$user_referal = $params['referal'];
 
-		$newsletter = $params['newsl'];
+		if(isset($params['newsl'])){
+			$newsletter = $params['newsl'];
+		}else{
+			$newsletter = 'off';
+		}
 
 		$email = new CakeEmail('smtp');
 		$email->from(array($user_email => $user_name));
