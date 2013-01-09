@@ -4,7 +4,7 @@
 	<p class="search-text">
 		<?php
 			if(count($trips) > 0){
-				echo "Találatok a(z) <strong>\"".$_GET['search']."\"</strong> kifejeztésre:";
+				echo "Találatok a(z) <strong>\"".$_GET['search']."\"</strong> kifejezésre:";
 			}
 			else{
 				echo "A(z) <strong>\"".$_GET['search']."\"</strong> kifejezésre sajnos nincs találat. Próbáld meg más kifejezéssel.";

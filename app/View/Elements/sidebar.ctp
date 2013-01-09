@@ -2,7 +2,7 @@
    <?php echo $this->element('quote_box'); ?>
    <section class="section" id="side-share">
     <div class="cont">
-      <span class="shares"><span>Megosztás</span><a href="mailto: ?body=<?php echo strip_tags($trip['Trip']['short_description']); ?>&subject=<?php echo $trip['Trip']['name']; ?>"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=<?php echo $this->Html->url( null, true ); ?>"><?php echo $this->Html->image('f_logo.png'); ?></a></span>
+      <span class="shares"><span>Megosztás</span><a href="mailto: ?body=<?php echo 'A teljes ajánlat elérhető az alábbi címen: ' . $this->Html->url( null, true ) . "%0D" . strip_tags($trip['Trip']['short_description']); ?>&subject=7Mérföld Utazási Iroda - <?php echo $trip['Trip']['name']; ?>"><span class="icon" aria-hidden="true" data-icon="&#xe003;"></span></a><a target="_blank" href="http://www.facebook.com/share.php?u=<?php echo $this->Html->url( null, true ); ?>"><?php echo $this->Html->image('f_logo.png'); ?></a></span>
     </div>
   </section>
   <section id="side-news" class="section">
