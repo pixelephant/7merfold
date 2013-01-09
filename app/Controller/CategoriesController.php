@@ -25,6 +25,11 @@ class CategoriesController extends AppController {
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.slug' => $slug)));
 
+		if(empty($category)){
+			// $this->redirect('/');
+				throw new NotFoundException('');
+		}
+
 		$breadcrumb = array($slug => $category['Category']['name']);
 		$page_title = ($category['Category']['title'] == '' ? $category['Category']['name'] : $category['Category']['title']);
 		$page_keywords = $category['Category']['keywords'];
@@ -36,6 +41,12 @@ class CategoriesController extends AppController {
 		if(isset($params['pass'][0])){
 			if($category['Category']['id'] == 5){
 				$continent = $this->Continent->find('first', array('conditions' => array('Continent.slug' => $params['continent_slug'])));
+				
+				if(empty($continent)){
+					// $this->redirect('/');
+					throw new NotFoundException('');
+				}
+
 				$cond['Trip.continent_id'] = $continent['Continent']['id'];
 				$breadcrumb[($slug . '/' . $params['continent_slug'])] = $continent['Continent']['name'];
 				$page_title .= " - " . $continent['Continent']['title'];
@@ -45,6 +56,12 @@ class CategoriesController extends AppController {
 				$this->set('continent_slug', $continent['Continent']['slug']);
 			}else{
 				$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $params['country_slug'])));
+
+				if(empty($country)){
+					// $this->redirect('/');
+					throw new NotFoundException('');
+				}
+
 				$cond['Trip.country_id'] = $country['Country']['id'];
 				$breadcrumb[($slug . '/' . $params['country_slug'])] = $country['Country']['name'];
 				$page_title .= " - " . $country['Country']['title'];

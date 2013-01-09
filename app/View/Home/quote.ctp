@@ -10,19 +10,37 @@
 			</div>
 			<div>
 				<label for="name">Név</label>
-				<input type="text" name="name" id="name" class="required" >
+				<input type="text" name="name" id="name" class="required" value="<?php echo strip_tags($this->Session->flash('user_name')); ?>">
+				<?php 
+					$a = $this->Session->flash('name_error');
+					if(!empty($a)){
+						echo '<label for="name" generated="true" class="error" style="">Kötelező megadni.</label>';
+					}
+				?>
 			</div>
 			<div>
 				<label for="telephone">Telefonszám</label>
-				<input  type="tel" step="0" name="telephone" class="required" id="telephone" >
+				<input  type="tel" step="0" name="telephone" class="required" id="telephone" value="<?php echo strip_tags($this->Session->flash('user_telephone')); ?>">
+				<?php 
+					$a = $this->Session->flash('telephone_error');
+					if(!empty($a)){
+						echo '<label for="name" generated="true" class="error" style="">Kötelező megadni.</label>';
+					}
+				?>
 			</div>
 			<div>
 				<label for="e-mail">Email cím</label>
-				<input type="email" name="e-mail" id="e-mail" class="required email" >
+				<input type="email" name="e-mail" id="e-mail" class="required email" value="<?php echo strip_tags($this->Session->flash('user_email')); ?>">
+				<?php 
+					$a = $this->Session->flash('email_error');
+					if(!empty($a)){
+						echo '<label for="name" generated="true" class="error" style="">' . $a . '</label>';
+					}
+				?>
 			</div>
 			<div>
 				<label for="message">Üzeneted, kívánságaid</label>
-				<textarea name="message" id="message" rows="5"></textarea>
+				<textarea name="message" id="message" rows="5"><?php echo strip_tags($this->Session->flash('user_message')); ?></textarea>
 			</div>
 			<div>
 				<label for="newsl">Feliratkozom a 7Mérföld hírlevélre.</label>

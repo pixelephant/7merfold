@@ -16,16 +16,9 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 ?>
-<h2><?php echo $name; ?></h2>
-<p class="error">
-	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
-	<?php printf(
-		__d('cake', 'The requested address %s was not found on this server.'),
-		"<strong>'{$url}'</strong>"
-	); ?>
-</p>
-<?php
-if (Configure::read('debug') > 0 ):
-	echo $this->element('exception_stack_trace');
-endif;
-?>
+ <section class="section">
+		<h2>Ilyen oldalunk sajnos még nincsen!</h2>
+		<div class="cont formatted">
+			<p>Használd a menüt vagy az oldal tetején található keresőt, hogy megtaláld a neked szóló 7Mérföldes ajánlatot!</p>
+		</div>
+	</section>

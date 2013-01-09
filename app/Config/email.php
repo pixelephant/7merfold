@@ -52,7 +52,7 @@ class EmailConfig {
 	public $smtp = array(
 		'transport' => 'Smtp',
 		'from' => array('weboldal@7merfold.com' => '7Mérföld utazási iroda'),
-		'to' => array('0antalbalazs0@gmail.com' => '7Mérföld utazási iroda'),
+		'to' => array('0antalbalazs0@gmail.com' => '7Mérföld utazási iroda', 'balazs.antal@pixelephant.hu' => '7Mérföld utazási iroda'),
 		'subject' => 'Érdeklődés a weboldalról',
 		'host' => 'mail.pixelephant.hu',
 		'port' => 25,

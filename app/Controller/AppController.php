@@ -40,31 +40,24 @@ class AppController extends Controller {
 
 	function beforeRender(){
 		$this->set('referer',$this->referer());
-		/* Kiszedi a nem kellő mezőket */
-		// if($this->request->action == 'index' && $this->request->prefix == 'admin'){
-		// 	$not_to_display = array('keywords', 'slug', 'image_file');
 
-		// 	foreach($this->viewVars['scaffoldFields'] as $key => $field){
-		// 		if(in_array($field, $not_to_display)){
-		// 			unset($this->viewVars['scaffoldFields'][$key]);
-		// 		}
-		// 	}
-		// }
-		/* Kiszedi a nem kellő mezőket */
+		if(!isset($this->viewVars['breadcrumb'])){
+			$this->set('breadcrumb', array());
+		}
 
-		// $file_fields = array();
-		// $form_type = 'post';
-		// if($this->request->action == 'add' || $this->request->action == 'edit'){
-		// 	foreach($this->viewVars['scaffoldFields'] as $k => $v){
-		// 		if(stripos($v, 'file')){
-		// 			$form_type = 'file';
-		// 			array_push($file_fields, $this->viewVars['scaffoldFields'][$k]);
-		// 			unset($this->viewVars['scaffoldFields'][$k]);
-		// 		}
-		// 	}
-		// }
-		// $this->set('file_fields', $file_fields);
-		// $this->set('form_type', $form_type);
+		if(!isset($this->viewVars['page_title'])){
+			$this->set('page_title', 'Ilyen oldalunk sajnos még nincs');
+		}
+
+		if(!isset($this->viewVars['page_keywords'])){
+			$this->set('page_keywords', 'Ilyen oldalunk sajnos még nincs');
+		}
+	}
+
+	public function beforeError(){
+		$this->set('breadcrumb', array());
+   	$this->set('page_title', 'Ilyen oldalunk sajnos még nincs');
+   	$this->set('page_keywords', '404');
 	}
 
 }

@@ -174,6 +174,34 @@ class HomeController extends AppController {
 		$user_phone = $params['telephone'];
 		$user_message = $params['message'];
 		$user_referal = $params['referal'];
+		$error = false;
+
+		$this->Session->setFlash($user_email, '', array(), 'user_email');
+		$this->Session->setFlash($user_name, 'default', array(), 'user_name');
+		$this->Session->setFlash($user_phone, 'default', array(), 'user_telephone');
+		$this->Session->setFlash($user_message, 'default', array(), 'user_message');
+
+		if(empty($user_name)){
+			$this->Session->setFlash('Kérjük adja meg a nevét', 'default', array(), 'name_error');
+			$error = true;
+		}
+
+		if(empty($user_phone)){
+			$this->Session->setFlash('Kérjük adja meg a telefonszámát!', 'default', array(), 'telephone_error');
+			$error = true;
+		}
+
+		if(empty($user_email)){
+			$this->Session->setFlash('Kötelező megadni.', 'default', array(), 'email_error');	
+			$error = true;
+		}elseif(!$this->checkEmail($user_email)){
+			$this->Session->setFlash('Érvényes e-mail címnek kell lennie.', 'default', array(), 'email_error');	
+			$error = true;
+		}
+
+		if($error){
+			$this->redirect('/ajanlat');
+		}
 
 		if(isset($params['newsl'])){
 			$newsletter = $params['newsl'];
@@ -222,6 +250,17 @@ class HomeController extends AppController {
 
 		$this->set('content', json_encode($c));
 		$this->render('ajax', 'ajax');
+	}
+
+	private function checkEmail($email) {
+	  if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$email)){
+	    list($username,$domain)=split('@',$email);
+	    if(!checkdnsrr($domain,'MX')) {
+	      return false;
+	    }
+	    return true;
+	  }
+	  return false;
 	}
 
 }

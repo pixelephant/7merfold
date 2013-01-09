@@ -78,6 +78,7 @@
 
 	Router::connect('/:category_slug', array('controller' => 'categories', 'action' => 'show'));
 
+	Router::redirect('*', '/');	
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
