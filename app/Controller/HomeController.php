@@ -21,7 +21,7 @@
 
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
-
+App::uses('Sanitize', 'Utility');
 
 /**
  * Static content controller
@@ -152,8 +152,8 @@ class HomeController extends AppController {
 
 	public function search(){
 		$params = $this->request->query;
-		// $search = mysql_real_escape_string($params['search']);
-		$search = $params['search'];
+		$search = Sanitize::escape($params['search'], 'default');
+		// $search = $params['search'];
 
 		$cond = array('OR' => array("LOWER(Trip.description) LIKE LOWER('%$search%') collate utf8_bin","LOWER(Trip.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.short_description) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.accommodation) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.travel_method) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.extra) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.extra_title) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.service) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.important_information) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Country.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Continent.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Region.name) LIKE LOWER('%$search%') collate utf8_bin"));
 		$trips = $this->Trip->find('all', array('conditions' => $cond));
