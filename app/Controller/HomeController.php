@@ -169,6 +169,10 @@ class HomeController extends AppController {
 
 		$params = $this->params['data'];
 
+		if(!isset($params['e-mail']) || !isset($params['name']) || !isset($params['telephone']) || !isset($params['message']) || !isset($params['referal'])){
+			$this->redirect('/ajanlat');
+		}
+
 		$user_email = $params['e-mail'];
 		$user_name = $params['name'];
 		$user_phone = $params['telephone'];
