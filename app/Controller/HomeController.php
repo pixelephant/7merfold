@@ -152,9 +152,9 @@ class HomeController extends AppController {
 
 	public function search(){
 		$params = $this->request->query;
-		$search = $params['search'];
+		$search = mysql_real_escape_string($params['search']);
 
-		$cond = array('OR' => array("Trip.description LIKE '%$search%' collate utf8_bin","Trip.name LIKE '%$search%' collate utf8_bin", "Trip.short_description LIKE '%$search%' collate utf8_bin", "Trip.accommodation LIKE '%$search%' collate utf8_bin", "Trip.travel_method LIKE '%$search%' collate utf8_bin", "Trip.extra LIKE '%$search%' collate utf8_bin", "Trip.extra_title LIKE '%$search%' collate utf8_bin", "Trip.service LIKE '%$search%' collate utf8_bin", "Trip.important_information LIKE '%$search%' collate utf8_bin", "Country.name LIKE '%$search%' collate utf8_bin", "Continent.name LIKE '%$search%' collate utf8_bin", "Region.name LIKE '%$search%' collate utf8_bin"));
+		$cond = array('OR' => array("LOWER(Trip.description) LIKE LOWER('%$search%') collate utf8_bin","LOWER(Trip.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.short_description) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.accommodation) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.travel_method) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.extra) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.extra_title) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.service) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Trip.important_information) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Country.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Continent.name) LIKE LOWER('%$search%') collate utf8_bin", "LOWER(Region.name) LIKE LOWER('%$search%') collate utf8_bin"));
 		$trips = $this->Trip->find('all', array('conditions' => $cond));
 
 		$this->set('breadcrumb', array());
