@@ -154,7 +154,7 @@ class HomeController extends AppController {
 		$params = $this->request->query;
 		$search = $params['search'];
 
-		$cond = array('OR' => array("Trip.description LIKE '%$search%'","Trip.name LIKE '%$search%'", "Trip.short_description LIKE '%$search%'", "Trip.accommodation LIKE '%$search%'", "Trip.travel_method LIKE '%$search%'", "Trip.extra LIKE '%$search%'", "Trip.extra_title LIKE '%$search%'", "Trip.service LIKE '%$search%'", "Trip.important_information LIKE '%$search%'", "Country.name LIKE '%$search%'", "Continent.name LIKE '%$search%'", "Region.name LIKE '%$search%'"));
+		$cond = array('OR' => array("Trip.description LIKE '%$search%' collate utf8_bin","Trip.name LIKE '%$search%' collate utf8_bin", "Trip.short_description LIKE '%$search%' collate utf8_bin", "Trip.accommodation LIKE '%$search%' collate utf8_bin", "Trip.travel_method LIKE '%$search%' collate utf8_bin", "Trip.extra LIKE '%$search%' collate utf8_bin", "Trip.extra_title LIKE '%$search%' collate utf8_bin", "Trip.service LIKE '%$search%' collate utf8_bin", "Trip.important_information LIKE '%$search%' collate utf8_bin", "Country.name LIKE '%$search%' collate utf8_bin", "Continent.name LIKE '%$search%' collate utf8_bin", "Region.name LIKE '%$search%' collate utf8_bin"));
 		$trips = $this->Trip->find('all', array('conditions' => $cond));
 
 		$this->set('breadcrumb', array());
