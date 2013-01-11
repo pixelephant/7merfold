@@ -1149,7 +1149,7 @@ a.offer {
     max-width: 80em;
     margin: 0 auto;
     padding: 0 5%;
-    background: url(../img/bg.png) no-repeat center top #4897c8; }
+    background: url(../img/bg.png) repeat top #4897c8; }
 
   #logo {
     height: auto;
