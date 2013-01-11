@@ -55,6 +55,11 @@ class TripsController extends AppController {
 
 		$trip = $this->Trip->find('first', array('conditions' => array('Trip.slug' => $trip_slug)));
 
+		if(empty($trip)){
+			// $this->redirect('/');
+				throw new NotFoundException('');
+		}
+
 		$trip_type = $trip['Trip']['category_id'];
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $trip_type)));
