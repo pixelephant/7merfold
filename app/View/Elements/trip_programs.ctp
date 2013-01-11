@@ -9,7 +9,9 @@
       </div>
        <?php 
        	$name = ($program['image_name'] == '' ? $program['name'] : $program['image_name']);
-       	echo $this->Html->link(($this->Html->image('/img/thumbnails/' . $program['image_file'], array('alt' => $name)) . '<span>' . $name . '</span>'), '/img/'.$program['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $name)); ?>
+        if(!empty($program['image_file'])){
+       	  echo $this->Html->link(($this->Html->image('/img/thumbnails/' . $program['image_file'], array('alt' => $name)) . '<span>' . $name . '</span>'), '/img/'.$program['image_file'], array('escape' => false, 'rel' => 'gallery', 'class' => 'fancybox', 'title' => $name)); ?>
+        }
     </div>
   <?php } ?>
 </div>

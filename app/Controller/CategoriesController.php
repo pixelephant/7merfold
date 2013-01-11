@@ -105,7 +105,7 @@ class CategoriesController extends AppController {
 		
 		/* Nyaralások */
 		if($cat_id == 5){
-			$continents = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.continent_id', 'order' => 'Continent.name'));
+			$continents = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.continent_id', 'order' => 'Continent.position'));
 			$this->Session->write('quote_text', 'Felfedezőút');
 			$this->set('continents', $continents);
 		}else{
