@@ -18,7 +18,7 @@
     <?php if($trip['Category']['id'] != '1'){ ?>
       <a href="#vizum">Vízum</a>
     <?php } ?>
-    <a href="#<?php echo $trip['Country']['name']; ?>"><?php echo $trip['Country']['name']; ?></a>
+    <a href="#<?php echo $trip['Country']['slug']; ?>"><?php echo $trip['Country']['name']; ?></a>
   </nav>
 <div>
   <?php echo $this->App->important_link($trip['Trip']['category_id']); ?>
@@ -122,7 +122,7 @@
 <?php echo $this->element('quote_box'); ?>
 
 <?php if($trip['Category']['id'] == 1){ ?>
-  <section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible">
+  <section id="<?php echo $trip['Country']['slug']; ?>" class="section collapsible">
     <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
     <!-- <div class="cont hidden">
       <?php echo $trip['Country']['information']; ?>
@@ -135,7 +135,7 @@
       <?php echo $trip['Country']['visa_info']; ?>    
     </div>
   </section>
-  <section id="<?php echo $trip['Country']['name']; ?>" class="section collapsible halfer">
+  <section id="<?php echo $trip['Country']['slug']; ?>" class="section collapsible halfer">
     <h2><?php echo $this->Html->link(($trip['Country']['name'] . ' <span>+</span>'), '#', array('escape' => false)); ?></h2>
     <div class="cont hidden">
       <?php echo $trip['Country']['information']; ?>
