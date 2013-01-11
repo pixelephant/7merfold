@@ -81,9 +81,9 @@ class AppModel extends Model {
 	    				}
 	    			}else{
 		    			if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG'){
-		    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 200, $max_height = 150);
+		    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 250, $max_height = 150);
 		    			}elseif($ext == 'PNG' || $ext == 'png'){
-		    				$this->make_thumb_png(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), 200, 150);
+		    				$this->make_thumb_png(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), 250, 150);
 		    			}else{
 		    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
 		    			}
@@ -163,10 +163,18 @@ class AppModel extends Model {
 
 	  /* create a new, "virtual" image */
 	  // $virtual_image = imagecreatetruecolor($desired_width, $desired_height);
+	  if(($width / $height) > ($desired_width / $max_height)){
+	  	$h = $height;
+	  	$w = ($desired_width / $max_height) * $h;
+	  }else{
+	  	$w = $width;
+	  	$h = ($max_height / $desired_width) * $w;
+	  }
+
 	  $virtual_image = imagecreatetruecolor($desired_width, $max_height);
 
 	  /* copy source image at a resized size */
-	  $a = imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $max_height, $width, $height);
+	  $a = imagecopyresampled($virtual_image, $source_image, 0, 0, 0, 0, $desired_width, $max_height, $w, $h);
 
 	  /* create the physical thumbnail image to its destination */
 	  imagejpeg($virtual_image, $dest);
@@ -178,7 +186,16 @@ class AppModel extends Model {
 		imagealphablending( $image_p, false );
     imagesavealpha( $image_p, true );
     $image = imagecreatefrompng( $src );
-    imagecopyresampled( $image_p, $image, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
+
+    if(($width_orig / $height_orig) > ($width / $height)){
+	  	$h = $height_orig;
+	  	$w = ($width / $height) * $h;
+	  }else{
+	  	$w = $width_orig;
+	  	$h = ($height / $width) * $w;
+	  }
+
+    imagecopyresampled( $image_p, $image, 0, 0, 0, 0, $width, $height, $w, $h);
     imagepng($image_p, $dest);
 	}
 
