@@ -127,7 +127,7 @@ class HomeController extends AppController {
 					$ids[] = $value;
 				}
 
-				$continents = $this->Continent->find('list', array('order' => 'Continent.name', 'fields' => array('Continent.slug', 'Continent.name'), 'conditions' => array('Continent.id' => $ids)));
+				$continents = $this->Continent->find('list', array('order' => 'Continent.name', 'fields' => array('Continent.slug', 'Continent.name'), 'conditions' => array('Continent.id' => $ids), 'order' => 'Continent.position asc'));
 				foreach ($continents as $country_slug => $name) {
 					$content .= '<li><a href="' . $this->webroot . $cat_slug . '/' . $country_slug . '">' . $name . '</a></li>';
 				}

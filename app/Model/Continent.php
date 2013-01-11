@@ -2,6 +2,8 @@
 class Continent extends AppModel {
     public $name = 'Continent';
 
+    public $order = 'Region.position ASC';
+
     public $hasMany = array('Country', 'ContinentImage', 'Trip');
 
   //   public $validate = array(
