@@ -34,8 +34,8 @@
 			echo $this->Form->input('id', array('type' => 'hidden', 'value' => $image['CountryImage']['id']));
 			echo $this->Form->input('title', array('value' => $image['CountryImage']['title']));
 			echo $this->Form->input('image_file', array('type' => 'file'));
-			if(isset($this->request->data['CountryImage']['image_file']) && !empty($this->request->data['CountryImage']['image_file'])){
-				echo $this->Html->image($this->request->data['CountryImage']['image_file'], array('width' => 100));	
+			if(isset($image['CountryImage']['image_file'])){
+				echo $this->Html->image($image['CountryImage']['image_file'], array('width' => 100));	
 			}
 			echo $this->Form->end(__d('cake', __('Submit')));
 			$i++;

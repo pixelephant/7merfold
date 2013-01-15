@@ -46,6 +46,7 @@
 
 	Router::connect('/orszag/:country_slug', array('controller' => 'countries', 'action' => 'show'));
 	Router::connect('/regio/:region_slug', array('controller' => 'regions', 'action' => 'show'));
+	Router::connect('/kontinens/:continent_slug', array('controller' => 'continents', 'action' => 'show'));
 
 	Router::connect('/menu/get_menu', array('controller' => 'home', 'action' => 'get_menu'));
 	Router::connect('/menu/get_sub_menu/:category_slug', array('controller' => 'home', 'action' => 'get_sub_menu'));

@@ -9,6 +9,22 @@ class ContinentsController extends AppController {
 	public $helpers = array('Html', 'Form');
 	public $uses = array('Continent', 'ContinentImage');
 
+	public function show() {
+
+		$params = $this->request->params;
+		$continent_slug = $params['continent_slug'];
+		$continent = $this->Continent->find('first', array('conditions' => array('Continent.slug' => $continent_slug)));
+
+		$breadcrumb = array(('orszag/' . $continent_slug) => $continent['Continent']['name']);
+
+		$this->set('continent', $continent);
+		$this->set('breadcrumb', $breadcrumb);
+		$this->set('page_title', $continent['Continent']['title']);
+		$this->set('page_keywords', $continent['Continent']['keywords']);
+
+		$this->render('show');
+	}
+
 	/* Admin */
 
 	public function admin_index(){
@@ -41,8 +57,8 @@ class ContinentsController extends AppController {
 		$this->request->data = $this->Continent->findById($params['pass'][0]);
 		$this->set('continents', $this->Continent->find('list'));
 
-		// $images = $this->ContinentImage->find('all', array('conditions' => array('ContinentImage.Continent_id' => $params['pass'][0])));
-		// $this->set('images', $images);
+		$images = $this->ContinentImage->find('all', array('conditions' => array('ContinentImage.Continent_id' => $params['pass'][0])));
+		$this->set('images', $images);
 	
 	}
 
