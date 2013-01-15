@@ -46,4 +46,4 @@
   <?php } ?>
 <?php } ?>
 
-<?php echo $this->element('quote'); ?>
+<?php #echo $this->element('quote'); ?>
