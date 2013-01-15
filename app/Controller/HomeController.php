@@ -192,6 +192,7 @@ class HomeController extends AppController {
 		$user_phone = $params['telephone'];
 		$user_message = $params['message'];
 		$user_referal = $params['referal'];
+		$user_referal_breadcrumb = $params['referal-breadcrumb'];
 		$error = false;
 
 		$this->Session->setFlash($user_email, '', array(), 'user_email');
@@ -231,7 +232,7 @@ class HomeController extends AppController {
 		$email->from(array($user_email => $user_name));
 		$email->template('default');
 		$email->emailFormat('both');
-		$email->viewVars(array('name' => $user_name, 'email' => $user_email, 'phone' => $user_phone, 'message' => $user_message, 'referal' => $user_referal));
+		$email->viewVars(array('name' => $user_name, 'email' => $user_email, 'phone' => $user_phone, 'message' => $user_message, 'referal' => $user_referal_breadcrumb));
 
 		$email->send();
 
