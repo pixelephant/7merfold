@@ -312,3 +312,15 @@ msgstr "Legújabb utak közé?"
 
 msgid "Important Information"
 msgstr "Fontos információk"
+
+msgid "Display"
+msgstr "Megjelenés"
+
+msgid "Value"
+msgstr "Hivatkozás"
+
+msgid "Contact Type"
+msgstr "Kapcsolat típusa"
+
+msgid "Position"
+msgstr "Pozíció"
