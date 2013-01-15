@@ -470,7 +470,7 @@ body {
       font-family: 'Gentium Basic';
       font-weight: normal;
       font-style: italic;
-      color: #69297d;
+      color: #69297d !important;
       font-size: 1.25em;
       width: 100%;
       border-bottom: 1px solid #cccccc;
@@ -1441,3 +1441,7 @@ a.offer {
   background: #875497; }
 .no-touch .getquote a:hover, .no-touch .getquote a:focus {
   background: #c94763; }
+
+.cont{
+  text-align: justify !important;
+}
