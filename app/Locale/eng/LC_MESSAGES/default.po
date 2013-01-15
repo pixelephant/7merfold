@@ -324,3 +324,6 @@ msgstr "Kapcsolat típusa"
 
 msgid "Position"
 msgstr "Pozíció"
+
+msgid "Top"
+msgstr "Felső sávban?"

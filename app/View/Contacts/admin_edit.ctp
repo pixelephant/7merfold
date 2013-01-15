@@ -12,6 +12,7 @@
 	echo $this->Form->input('value');
 	echo $this->Form->input('contact_type', array('options' => array('Telefon', 'Google Maps', 'Fax', 'Email', 'Facebook', 'Hírlevél', 'Google+')));
 	echo $this->Form->input('position');
+	echo $this->Form->input('top');
 	echo $this->Form->end(__d('cake', __('Submit')));
 ?>
 	<a href="javascript:history.back()">Mégsem</a>
