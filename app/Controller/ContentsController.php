@@ -23,26 +23,26 @@ class ContentsController extends AppController {
 		$this->set('page_keywords', $page_keywords);
 
 		/* jav */
-		$trips = $this->Trip->find('all');
-		foreach($trips as $trip){
-			$this->Trip->read(null, $trip['Trip']['id']);
-			$this->Trip->set('slug', $this->slugify($trip['Trip']['name']));
-			$this->Trip->save();
-		}
+		// $trips = $this->Trip->find('all');
+		// foreach($trips as $trip){
+		// 	$this->Trip->read(null, $trip['Trip']['id']);
+		// 	$this->Trip->set('slug', $this->slugify($trip['Trip']['name']));
+		// 	$this->Trip->save();
+		// }
 
-		$countries = $this->Country->find('all');
-		foreach($countries as $country){
-			$this->Country->read(null, $country['Country']['id']);
-			$this->Country->set('slug', $this->slugify($country['Country']['name']));
-			$this->Country->save();
-		}	  
+		// $countries = $this->Country->find('all');
+		// foreach($countries as $country){
+		// 	$this->Country->read(null, $country['Country']['id']);
+		// 	$this->Country->set('slug', $this->slugify($country['Country']['name']));
+		// 	$this->Country->save();
+		// }	  
 
-		$regions = $this->Region->find('all');
-		foreach($regions as $region){
-			$this->Region->read(null, $region['Region']['id']);
-			$this->Region->set('slug', $this->slugify($region['Region']['name']));
-			$this->Region->save();
-		}
+		// $regions = $this->Region->find('all');
+		// foreach($regions as $region){
+		// 	$this->Region->read(null, $region['Region']['id']);
+		// 	$this->Region->set('slug', $this->slugify($region['Region']['name']));
+		// 	$this->Region->save();
+		// }
 		/* jav */
 
 	}
