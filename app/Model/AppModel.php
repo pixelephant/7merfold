@@ -144,7 +144,7 @@ class AppModel extends Model {
 	  {
 	    return 'n-a';
 	  }
-	  return $text;
+	  return strtolower($text);
 	}
 
 	function make_thumb($src, $dest, $desired_width, $max_height) {
