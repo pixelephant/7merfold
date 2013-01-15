@@ -82,7 +82,7 @@
               <a href="#" class="totop"><span class="icon" aria-hidden="true" data-icon="&#xe009;"></span>Oldal tetejére</a>
             </div>
             <p>
-              <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <?php echo $this->Html->link('utazási feltételek', '/utazasi-feltetelek'); ?> | <?php echo $this->Html->link('állás', '/allasajanlatok'); ?>
+              <a target="_blank" href="http://www.hajozz.eu">hajozz.eu</a> | <a href="http://www.felfedezoutak.hu">felfedezoutak.hu</a> | <a href="http://www.enutazasom.hu">enutazasom.hu</a> | <?php echo $this->Html->link('utazási feltételek', '/utazasi-feltetelek'); ?> | <?php echo $this->Html->link('állás', '/allasajanlatok'); ?> | <?php echo $this->Html->link('biztosítás', '/biztositas'); ?>
             </p>
             <p>7Mérföld Utazási Iroda &copy; <?php echo date('Y'); ?> | Eng. szám: U-001052</p>
           </footer>

@@ -69,6 +69,8 @@ class TripsController extends AppController {
 
 		if($trip_type == 3 || $trip_type == 4){
 			$breadcrumb[($category['Category']['slug'] . '/' . $country['Country']['slug'])] = $country['Country']['name'];
+		}elseif($trip_type == 5){
+			$breadcrumb[($category['Category']['slug'] . '/' . $trip['Continent']['slug'])] = $trip['Continent']['name'];			
 		}
 
 		$breadcrumb[('utjaink/' . $trip_slug)] = $trip['Trip']['name'];
@@ -84,6 +86,7 @@ class TripsController extends AppController {
 		$this->set('page_keywords', $trip['Trip']['keywords']);
 
 		$this->Session->write('quote_text', $trip['Trip']['name']);
+		$this->Session->write('quote_breadcrumb', $breadcrumb);
 
 		$news = $this->News->find('first', array('order' => 'created'));
 		$this->set('news', $news);

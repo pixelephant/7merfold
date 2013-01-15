@@ -3,10 +3,11 @@
 	
 	<h2>Árajánlatkérés - <?php echo $quote_text; ?></h2>
 	<div class="cont">
-	<p>Ha már kezd körvonalazódni álmaid utazása, írd le nekünk elképzeléseidet és mi segítünk a legmegfelelőbb utat megszervezni! Kérlek ne felejtsd el megírni, hogy mikor, hányan és mennyi időre utaznátok! Köszönjük.</p>
+	<p>Ha már kezd körvonalazódni álmaid utazása, írd le nekünk elképzeléseidet és mi segítünk a legmegfelelőbb utat megszervezni! </p>
 		<form action="<?php echo $this->webroot; ?>ajanlat/email" method="POST" id="quote-form" novalidate>
 			<div>
 				<input type="hidden" name="referal" id="referal" value="<?php echo $quote_text; ?>">
+				<input type="hidden" name="referal-breadcrumb" id="referal-breadcrumb" value="<?php echo $quote_breadcrumb; ?>">
 			</div>
 			<div>
 				<label for="name">Név</label>
@@ -39,7 +40,7 @@
 				?>
 			</div>
 			<div>
-				<label for="message">Üzeneted, kívánságaid</label>
+				<label for="message">Üzeneted, kívánságaid (Kérlek ne felejtsd el megírni, hogy mikor, hányan és mennyi időre utaznátok! Köszönjük.)</label>
 				<textarea name="message" id="message" rows="5"><?php echo strip_tags($this->Session->flash('user_message')); ?></textarea>
 			</div>
 			<div>

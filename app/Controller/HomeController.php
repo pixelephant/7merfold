@@ -80,6 +80,13 @@ class HomeController extends AppController {
 		$this->set('page_title', $this->Session->read('quote_text'));
 		$this->set('page_keywords', 'utazás, utazási iroda');
 
+		$breadcrumb = '';
+		foreach($this->Session->read('quote_breadcrumb') as $menu_level){
+			$breadcrumb .= $menu_level . " - ";
+		}
+		$breadcrumb = substr($breadcrumb, 0, -3);
+
+		$this->set('quote_breadcrumb', $breadcrumb);
 		$this->set('quote_text', $this->Session->read('quote_text'));
 		$this->render('quote');
 	}

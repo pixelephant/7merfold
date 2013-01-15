@@ -42,6 +42,7 @@
 	Router::connect('/ajandekutalvany', array('controller' => 'contents', 'action' => 'show', 'ajandekutalvany'));
 	Router::connect('/utazasi-feltetelek', array('controller' => 'contents', 'action' => 'show', 'utazasi-feltetelek'));
 	Router::connect('/allasajanlatok', array('controller' => 'contents', 'action' => 'show', 'allasajanlatok'));
+	Router::connect('/biztositas', array('controller' => 'contents', 'action' => 'show', 'biztositas'));
 
 	Router::connect('/orszag/:country_slug', array('controller' => 'countries', 'action' => 'show'));
 	Router::connect('/regio/:region_slug', array('controller' => 'regions', 'action' => 'show'));

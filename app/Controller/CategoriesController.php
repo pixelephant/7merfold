@@ -83,6 +83,7 @@ class CategoriesController extends AppController {
 		}
 		
 		$this->Session->write('quote_text', $category['Category']['name']);
+		$this->Session->write('quote_breadcrumb', $breadcrumb);
 
 		$this->set('trips', $trips);
 		$this->set('regions', $regions);
@@ -115,6 +116,8 @@ class CategoriesController extends AppController {
 		}
 		
 		$breadcrumb = array($category['Category']['slug'] => $category['Category']['name']);
+
+		$this->Session->write('quote_breadcrumb', $breadcrumb);
 
 		$this->set('trips', array());
 		$this->set('regions', array());
