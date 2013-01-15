@@ -120,13 +120,15 @@ class AppModel extends Model {
 
 	static public function slugify($text){ 
 
-		// lowercase
-	  $text = strtolower($text);
+		
 
 	  // replace accent characters
-		$accent = array("á","é","í","ó","ö","ő","ü","ű","ú");
-		$non_accent = array("a","e","i","o","o","o","u","u","u");
+		$accent = array("á","é","í","ó","ö","ő","ü","ű","ú", "Á", "É","Í","Ó","Ö", "Ő","Ü","Ű","Ú");
+		$non_accent = array("a","e","i","o","o","o","u","u","u", "a","e","i","o","o","o","u","u","u");
 		$text = str_replace($accent, $non_accent, $text);
+
+		// lowercase
+	  $text = strtolower($text);
 
 	  // replace non letter or digits by -
 	  $text = preg_replace('~[^\\pL\d]+~u', '-', $text);
