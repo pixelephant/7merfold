@@ -111,7 +111,7 @@
       <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
       <div class="bd">
         <h3><?php echo $new['News']['title']; ?></h3>
-        <p><?php echo $new['News']['content']; ?></p>
+        <p><?php echo $this->App->trimText($new['News']['content']); ?></p>
         <?php echo $this->Html->link('Tovább &raquo;', '/hirek/' . $new['News']['slug'], array('escape' => false)); ?>
       </div>
     </div>
