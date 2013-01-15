@@ -45,7 +45,7 @@ class HomeController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent', 'Content', 'MailchimpSubscriber');
+	public $uses = array('Trip', 'Category', 'Region', 'News', 'Country', 'Continent', 'Content', 'MailchimpSubscriber', 'Contact');
 
 /**
  * Displays a view
@@ -97,6 +97,12 @@ class HomeController extends AppController {
 		$this->set('page_keywords', 'utazás, utazási iroda');
 
 		$this->render('static_page');
+	}
+
+	public function get_contacts(){
+		if ($this->request->is('requested')){
+			return $this->Contact->find('all', array('order' => 'position asc'));
+		}
 	}
 
 	public function get_menu(){

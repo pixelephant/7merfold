@@ -34,67 +34,67 @@ class AppModel extends Model {
 
 	public function beforeValidate($options = array()) {
 		/* SLUG */
-    foreach($this->data as $model => $v){
-    	$text = '';
-    	foreach($this->data[$model] as $field => $value){
-    		if(($field == 'title' || $field == 'name') && !empty($this->data[$model][$field]) && $text == ''){
-    			$text = $value;
-    		}
-    	}
-    	if(isset($this->data[$model]['slug']) && $this->data[$model]['slug'] == ''){
-  			$this->data[$model]['slug'] = $this->create_slug($text, $model);
-  		}
-    }
-    /* SLUG */
-    /* FILE */
-    foreach($this->data as $model => $v){
-    	foreach($this->data[$model] as $field => $value){
-    		if(stripos($field, 'file')){
-    			if(!empty($this->data[$model][$field]['name'])){
-    				$name = $this->data[$model][$field]['name'];
-    				$i = 1;
-    				$ext = pathinfo($name, PATHINFO_EXTENSION);
-	    			$bname = pathinfo($name, PATHINFO_FILENAME);
-	    			while(file_exists($this->webroot.'img/'.$name)){
-	    				// $name = '1' . $name;
-	    				$name = $bname . "_" . $i . "." . $ext;
-	    				$i++;
-	    			}
-	    			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
-	    			if($field == 'circle_image_file' || $model == 'Country' || $model == 'Continent'){
-	    				$png = imagecreatefrompng($this->webroot.'img/mask.png');
-	    				if($ext == 'JPG' || $ext == 'JPEG' || $ext == 'jpg' || $ext == 'jpeg'){
-	    					$jpeg = imagecreatefromjpeg($this->webroot.'img/'.$name);	
-	    				}elseif($ext == 'png' || $ext == 'PNG'){
-	    					$jpeg = imagecreatefrompng($this->webroot.'img/'.$name);	
-	    				}
-							list($width, $height) = getimagesize($this->webroot.'img/'.$name);
-							list($newwidth, $newheight) = getimagesize($this->webroot.'img/mask.png');
-							$out = imagecreatetruecolor($newwidth, $newheight);
-							imagecopyresampled($out, $jpeg, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-							imagecopyresampled($out, $png, 0, 0, 0, 0, $newwidth, $newheight, $newwidth, $newheight);
+    // foreach($this->data as $model => $v){
+    // 	$text = '';
+    // 	foreach($this->data[$model] as $field => $value){
+    // 		if(($field == 'title' || $field == 'name') && !empty($this->data[$model][$field]) && $text == ''){
+    // 			$text = $value;
+    // 		}
+    // 	}
+    // 	if(isset($this->data[$model]['slug']) && $this->data[$model]['slug'] == ''){
+  		// 	$this->data[$model]['slug'] = $this->create_slug($text, $model);
+  		// }
+    // }
+    // /* SLUG */
+    // /* FILE */
+    // foreach($this->data as $model => $v){
+    // 	foreach($this->data[$model] as $field => $value){
+    // 		if(stripos($field, 'file')){
+    // 			if(!empty($this->data[$model][$field]['name'])){
+    // 				$name = $this->data[$model][$field]['name'];
+    // 				$i = 1;
+    // 				$ext = pathinfo($name, PATHINFO_EXTENSION);
+	   //  			$bname = pathinfo($name, PATHINFO_FILENAME);
+	   //  			while(file_exists($this->webroot.'img/'.$name)){
+	   //  				// $name = '1' . $name;
+	   //  				$name = $bname . "_" . $i . "." . $ext;
+	   //  				$i++;
+	   //  			}
+	   //  			move_uploaded_file($this->data[$model][$field]['tmp_name'], $this->webroot.'img/'.$name);
+	   //  			if($field == 'circle_image_file' || $model == 'Country' || $model == 'Continent'){
+	   //  				$png = imagecreatefrompng($this->webroot.'img/mask.png');
+	   //  				if($ext == 'JPG' || $ext == 'JPEG' || $ext == 'jpg' || $ext == 'jpeg'){
+	   //  					$jpeg = imagecreatefromjpeg($this->webroot.'img/'.$name);	
+	   //  				}elseif($ext == 'png' || $ext == 'PNG'){
+	   //  					$jpeg = imagecreatefrompng($this->webroot.'img/'.$name);	
+	   //  				}
+				// 			list($width, $height) = getimagesize($this->webroot.'img/'.$name);
+				// 			list($newwidth, $newheight) = getimagesize($this->webroot.'img/mask.png');
+				// 			$out = imagecreatetruecolor($newwidth, $newheight);
+				// 			imagecopyresampled($out, $jpeg, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+				// 			imagecopyresampled($out, $png, 0, 0, 0, 0, $newwidth, $newheight, $newwidth, $newheight);
 							
-							if($ext == 'JPG' || $ext == 'JPEG' || $ext == 'jpg' || $ext == 'jpeg'){
-	    					imagejpeg($out, $this->webroot.'img/'.$name, 100);
-	    				}elseif($ext == 'png' || $ext == 'PNG'){
-	    					imagepng($out, $this->webroot.'img/'.$name, 0);
-	    				}
-	    			}else{
-		    			if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG'){
-		    				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 250, $max_height = 150);
-		    			}elseif($ext == 'PNG' || $ext == 'png'){
-		    				$this->make_thumb_png(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), 250, 150);
-		    			}else{
-		    				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
-		    			}
-		    		}
-	    			$this->data[$model][$field] = $name;
-    			}else{
-    				unset($this->data[$model][$field]);
-    			}
-    		}
-    	}
-    }
+				// 			if($ext == 'JPG' || $ext == 'JPEG' || $ext == 'jpg' || $ext == 'jpeg'){
+	   //  					imagejpeg($out, $this->webroot.'img/'.$name, 100);
+	   //  				}elseif($ext == 'png' || $ext == 'PNG'){
+	   //  					imagepng($out, $this->webroot.'img/'.$name, 0);
+	   //  				}
+	   //  			}else{
+		  //   			if($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG'){
+		  //   				$this->make_thumb(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), $desired_width = 250, $max_height = 150);
+		  //   			}elseif($ext == 'PNG' || $ext == 'png'){
+		  //   				$this->make_thumb_png(($this->webroot.'img/'.$name), ($this->webroot.'img/thumbnails/'.$name), 250, 150);
+		  //   			}else{
+		  //   				copy($this->webroot.'img/'.$name, $this->webroot.'img/thumbnails/'.$name);
+		  //   			}
+		  //   		}
+	   //  			$this->data[$model][$field] = $name;
+    // 			}else{
+    // 				unset($this->data[$model][$field]);
+    // 			}
+    // 		}
+    // 	}
+    // }
     /* FILE */
    	return true;
 	}
