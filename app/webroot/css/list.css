@@ -216,7 +216,8 @@ h2.info .icon, h3.info .icon {
     .offer-list a.offer h3 {
       padding-left: 0; }
     .offer-list a.offer .lead {
-      clear: both; }
+      clear: both; 
+      text-align: justify;}
 
   .offer .data {
     float: left;
