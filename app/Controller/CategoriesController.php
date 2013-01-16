@@ -139,4 +139,33 @@ class CategoriesController extends AppController {
 			$this->render('inner');
 		}
 	}
+
+	/* Admin */
+
+	public function admin_index(){
+		$this->paginate = array('limit' => 15);
+		$categories = $this->paginate('Category');
+
+		$this->set('name', 'Kategóriák');
+		$this->set('categories', $categories);
+	}
+
+	public function admin_new(){
+
+		if(!empty($this->request->data['Category'])){
+			if(isset($this->request->data['Category']['id'])){
+				$this->Category->findById($this->request->data['Category']['id']);	
+			}else{
+				// $this->Category->create();
+			}
+			$c = $this->Category->save($this->request->data);
+			$this->redirect('/admin/categories/edit/'.$c['Category']['id']);
+		}
+	}
+
+	public function admin_edit(){
+		$params = $this->request->params;
+
+		$this->request->data = $this->Category->findById($params['pass'][0]);
+	}
 }
