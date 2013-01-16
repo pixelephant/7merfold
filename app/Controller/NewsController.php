@@ -47,11 +47,14 @@ class NewsController extends AppController {
 		$news_slug = $params['news_slug'];
 		$news = $this->News->find('first', array('conditions' => array('News.slug' => $news_slug)));
 
+		$all_news = $this->News->find('all', array('conditions' => array('NOT' => array('News.slug' => $news_slug))));
+
 		$breadcrumb = array(('hirek/' . $news_slug) => $news['News']['title']);
 
 		$title = ($news['News']['page_title'] == '' ? $news['News']['title'] : $news['News']['page_title']);
 
 		$this->set('news', $news);
+		$this->set('all_news', $all_news);
 		$this->set('breadcrumb', $breadcrumb);
 		$this->set('page_title', $title);
 		$this->set('page_keywords', $news['News']['keywords']);
