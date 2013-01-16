@@ -83,7 +83,8 @@ p.price {
   font-weight: normal;
   font-style: italic;
   font-size: 1.25em;
-  padding: 0.5em; }
+  padding: 0.5em; 
+  text-align: justify !important;}
 .sum div {
   overflow: hidden;
   padding: 1em;
