@@ -65,6 +65,10 @@
 p.accommodation, p.price {
   margin-top: 10px; }
 
+p.price {
+  font-style: italic;
+}
+
 .sum h2 {
   border-bottom: none !important;
   text-align: center;

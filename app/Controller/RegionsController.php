@@ -7,7 +7,7 @@ class RegionsController extends AppController {
 	public $scaffold = 'admin';
 	public $name = 'Regions';
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Region', 'RegionImage', 'Country');
+	public $uses = array('Region', 'RegionImage', 'Country', 'News');
 
 	public function show() {
 
@@ -16,6 +16,12 @@ class RegionsController extends AppController {
 		$region = $this->Region->find('first', array('conditions' => array('Region.slug' => $region_slug)));
 
 		$breadcrumb = array(('regio/' . $region_slug) => $region['Region']['name']);
+
+		$news = $this->News->find('first', array('order' => 'created'));
+		$this->set('news', $news);
+
+		$this->Session->write('quote_text', $region['Region']['name']);
+		$this->Session->write('quote_breadcrumb', $breadcrumb);
 
 		$this->set('region', $region);
 		$this->set('breadcrumb', $breadcrumb);

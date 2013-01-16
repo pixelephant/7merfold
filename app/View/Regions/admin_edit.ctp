@@ -8,7 +8,7 @@
 	// print_r($this->validationErrors);
 	echo $this->Form->create('Region', array('type' => 'file', 'url' => '/admin/regions/new'));
 	echo $this->Form->input('id', array('type' => 'hidden', 'value' => $this->request->data['Region']['id']));
-	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => ''));
+	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => $this->request->data['Region']['slug']));
 	echo $this->Form->input('name');
 	echo $this->Form->input('country_id');
 	echo $this->Form->input('description');
@@ -28,8 +28,8 @@
 			echo $this->Form->input('id', array('type' => 'hidden', 'value' => $image['RegionImage']['id']));
 			echo $this->Form->input('title', array('value' => $image['RegionImage']['title']));
 			echo $this->Form->input('image_file', array('type' => 'file'));
-			if(isset($this->request->data['RegionImage']['image_file']) && !empty($this->request->data['RegionImage']['image_file'])){
-				echo $this->Html->image($this->request->data['RegionImage']['image_file'], array('width' => 100));	
+			if(isset($image['RegionImage']['image_file'])){
+				echo $this->Html->image($image['RegionImage']['image_file'], array('width' => 100));	
 			}
 			echo $this->Form->end(__d('cake', __('Submit')));
 			$i++;

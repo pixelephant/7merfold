@@ -7,7 +7,7 @@ class CountriesController extends AppController {
 	public $scaffold = 'admin';
 	public $name = 'Countries';
 	public $helpers = array('Html', 'Form');
-	public $uses = array('Country', 'CountryImage', 'Continent');
+	public $uses = array('Country', 'CountryImage', 'Continent', 'News');
 
 	public function show() {
 
@@ -16,6 +16,12 @@ class CountriesController extends AppController {
 		$country = $this->Country->find('first', array('conditions' => array('Country.slug' => $country_slug)));
 
 		$breadcrumb = array(('orszag/' . $country_slug) => $country['Country']['name']);
+
+		$this->Session->write('quote_text', $country['Country']['name']);
+		$this->Session->write('quote_breadcrumb', $breadcrumb);
+
+		$news = $this->News->find('first', array('order' => 'created'));
+		$this->set('news', $news);
 
 		$this->set('country', $country);
 		$this->set('breadcrumb', $breadcrumb);

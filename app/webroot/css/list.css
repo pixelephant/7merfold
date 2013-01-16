@@ -160,7 +160,9 @@
   margin-right: 5%; }
 
 h2.info a, h3.info a {
-  text-decoration: none !important; }
+  text-decoration: none !important; 
+  color: #69297D !important; 
+}
 
 h3.info a {
   color: #333333;

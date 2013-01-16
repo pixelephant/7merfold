@@ -1,6 +1,8 @@
 <?php $this->Html->script('round', array('inline' => false)); ?>
 <?php $this->Html->css('round', null, array('inline' => false)); ?>
 
+<?php $this->assign('sidebar', $this->element('region_sidebar')); ?>
+
 <section class="section">
 	<h2><?php echo $region['Region']['name']; ?></h2>
 	<div class="cont formatted">

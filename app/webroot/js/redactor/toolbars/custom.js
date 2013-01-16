@@ -64,5 +64,25 @@ RTOOLBAR['custom'] = {
 			delete_row: { name: 'delete_row', title: RLANG.delete_row, func: 'deleteRow' },									
 			delete_table: { name: 'delete_table', title: RLANG.delete_table, func: 'deleteTable' }																		
 		}								
+	},
+	link:
+	{ 
+		title: RLANG.link,
+		func: 'show', 				
+		dropdown: 
+		{
+			link:
+			{
+				title: RLANG.link_insert, 
+				func: 'showLink'
+			},
+			unlink: 
+			{
+				title: RLANG.unlink,
+				exec: 'unlink', 
+			 	param: null
+			}
+		},
+		separator: true															
 	}
 };

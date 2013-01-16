@@ -8,6 +8,7 @@
 	// print_r($this->validationErrors);
 	echo $this->Form->create('Content', array('type' => 'file', 'url' => '/admin/contents/new'));
 	echo $this->Form->input('id', array('type' => 'hidden', 'value' => $this->request->data['Content']['id']));
+	echo $this->Form->input('slug', array('type' => 'hidden', 'value' => $this->request->data['Content']['slug']));
 	echo $this->Form->input('title');
 	echo $this->Form->input('block_1_title');
 	echo $this->Form->input('block_1_content');
