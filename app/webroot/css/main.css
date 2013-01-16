@@ -811,7 +811,7 @@ a.offer {
     border: none !important; }
   .cta.boat span {
     color: #fff;
-    font-size: 5em;
+    font-size: 3em;
     line-height: 1; }
   .cta h3 {
     color: #fff;
@@ -1444,4 +1444,8 @@ a.offer {
 
 .cont, .block{
   text-align: justify !important;
+}
+
+#side-share > .cont{
+  padding: 0 !important;
 }
