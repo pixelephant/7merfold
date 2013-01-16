@@ -104,6 +104,11 @@ class CategoriesController extends AppController {
 
 		$category = $this->Category->find('first', array('conditions' => array('Category.id' => $cat_id)));
 		
+		if(empty($category)){
+			// $this->redirect('/');
+			throw new NotFoundException('');
+		}
+
 		/* Nyaralások */
 		if($cat_id == 5){
 			$continents = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.continent_id', 'order' => 'Continent.position'));
@@ -111,7 +116,7 @@ class CategoriesController extends AppController {
 			$this->set('continents', $continents);
 		}else{
 			$countries = $this->Trip->find('all', array('conditions' => array('category_id' => $cat_id), 'group' => 'Trip.country_id', 'order' => 'Country.name'));
-			$this->Session->write('quote_text', 'Nyaralás');
+			$this->Session->write('quote_text', $category['Category']['name']);
 			$this->set('countries', $countries);
 		}
 		

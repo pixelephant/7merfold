@@ -22,3 +22,5 @@
   <?php } ?>
   <?php echo $this->element('totop'); ?>
 </section>
+
+<?php echo $this->element('quote_box'); ?>
