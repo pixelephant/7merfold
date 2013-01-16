@@ -13,7 +13,7 @@
 	// echo $this->Form->input('country_id');
 	echo $this->Form->input('information');
 	echo $this->Form->input('image_file', array('type' => 'file'));
-	if(isset($this->request->data['Continent']['image_file'])){
+	if(isset($this->request->data['Continent']['image_file']) && !empty($this->request->data['Continent']['image_file'])){
 				echo $this->Html->image($this->request->data['Continent']['image_file'], array('width' => 100));	
 			}
 	echo $this->Form->input('keywords');
