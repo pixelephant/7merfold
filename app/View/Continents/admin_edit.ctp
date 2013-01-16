@@ -21,7 +21,7 @@
 	echo $this->Form->end(__d('cake', __('Submit')));
 ?>
 	<a href="javascript:history.back()">Mégsem</a>
-
+<!-- 
 	<?php 
 		$i = 1;
 		foreach ($images as $image){
@@ -46,6 +46,6 @@
 			echo $this->Form->input('continent_id', array('type' => 'hidden', 'value' => $this->request->data['Continent']['id']));
 			echo $this->Form->input('image_file', array('type' => 'file'));
 			echo $this->Form->end(__d('cake', __('Submit')));
-	?>
+	?> -->
 
 </div>
