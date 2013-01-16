@@ -1,3 +1,9 @@
+<?php 
+	if($content['Content']['slug'] == 'utazasi-feltetelek'){
+		$this->Html->css('utazasi', null, array('inline' => false)); 
+	}
+?>
+
 <?php if(!empty($content['Content']['block_1_content'])){ ?>
 	<section class="section">
 		<h2><?php echo $content['Content']['block_1_title']; ?></h2>
