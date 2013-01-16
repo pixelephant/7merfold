@@ -9,7 +9,7 @@
     ?>
   </figure>
   <div class="data">
-    <?php $len = ((strlen($trip['Trip']['name']) > 19) ? 150 : 200); ?>
+    <?php $len = ((strlen($trip['Trip']['name']) > 19) ? 110 : 200); ?>
     <h3><?php echo $trip['Trip']['name']; ?> <?php echo $this->App->hotel_stars($trip['Trip']['star_rating']); ?></h3>
     <p class="lead"><?php echo $this->App->trimText($trip['Trip']['short_description'], $len); ?></p>
     <span class="fake-a">Tovább &raquo;</span>
