@@ -1442,6 +1442,6 @@ a.offer {
 .no-touch .getquote a:hover, .no-touch .getquote a:focus {
   background: #c94763; }
 
-.cont{
+.cont, .block{
   text-align: justify !important;
 }

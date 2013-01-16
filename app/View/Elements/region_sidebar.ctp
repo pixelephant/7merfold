@@ -12,6 +12,18 @@
         <?php echo (!empty($news['News']['image_file']) ? $this->Html->image($news['News']['image_file']) : ''); ?>
         <h3><?php echo $news['News']['title']; ?></h3>
       </a>
-    </div>
+      <p>
+        További híreink: 
+        <?php 
+          for($i=0;$i<count($all_news);$i++){
+            //$all_news[$i]['News']['title']
+            echo $this->Html->link(($i + 1), '/hirek/' . $all_news[$i]['News']['slug']);
+            if(($i + 1) < count($all_news)){
+              echo ',';
+            }
+          }
+        ?>
+      </p>
+    </div>    
   </section>
 </div>

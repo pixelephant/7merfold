@@ -20,6 +20,9 @@ class RegionsController extends AppController {
 		$news = $this->News->find('first', array('order' => 'created'));
 		$this->set('news', $news);
 
+		$all_news = $this->News->find('all', array('conditions' => array('NOT' => array('News.slug' => $news['News']['slug']))));
+		$this->set('all_news', $all_news);
+
 		$this->Session->write('quote_text', $region['Region']['name']);
 		$this->Session->write('quote_breadcrumb', $breadcrumb);
 

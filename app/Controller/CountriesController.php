@@ -23,6 +23,9 @@ class CountriesController extends AppController {
 		$news = $this->News->find('first', array('order' => 'created'));
 		$this->set('news', $news);
 
+		$all_news = $this->News->find('all', array('conditions' => array('NOT' => array('News.slug' => $news['News']['slug']))));
+		$this->set('all_news', $all_news);
+
 		$this->set('country', $country);
 		$this->set('breadcrumb', $breadcrumb);
 		$this->set('page_title', $country['Country']['title']);
