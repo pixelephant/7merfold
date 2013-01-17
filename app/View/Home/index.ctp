@@ -108,7 +108,7 @@
      </li> -->
      <li>
     <div class="news">
-      <?php echo $this->Html->image($new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
+      <?php echo $this->Html->image('thumbnails/' . $new['News']['image_file'], array('alt' => $new['News']['title'], 'class' => 'img')); ?>
       <div class="bd">
         <h3><?php echo $new['News']['title']; ?></h3>
         <p><?php echo $this->App->trimText($new['News']['content']); ?></p>
