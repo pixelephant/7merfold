@@ -33,6 +33,13 @@ App::uses('Model', 'Model');
 class AppModel extends Model {
 
 	public function beforeValidate($options = array()) {
+		foreach($this->data as $model => $v){
+			foreach($this->data[$model] as $field => $value){
+				if($this->_schema[$field]['type'] == 'text'){
+					$this->data[$model][$field] = str_replace("--", "&mdash;", $this->data[$model][$field]);
+				}
+			}
+		}
 		/* SLUG */
     foreach($this->data as $model => $v){
     	$text = '';
